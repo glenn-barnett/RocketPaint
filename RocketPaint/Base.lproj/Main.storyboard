@@ -1,25 +1,300 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYy-XD-0ez" userLabel="Right Tools View">
+                                <rect key="frame" x="440" y="0.0" width="160" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-64-CN3" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="38" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="38" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="dismissToolsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkE-rk-6yH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-ah-n4R" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Color"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="150" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="colorToolTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lC-2V-MPh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-Me-2ej" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Load Pic"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="262" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loadPictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEw-Jj-omi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-RQ-B5T" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Save Pic"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="368" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="savePictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pc9-Lr-6sw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.20295877659574468" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="eO4-6n-EJi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="GR6-Me-2ej"/>
+                                        <exclude reference="kbe-RQ-B5T"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="GR6-Me-2ej"/>
+                                        <include reference="kbe-RQ-B5T"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeH-ta-YoF" userLabel="Palette Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="nLV-Lp-BLU" kind="embed" id="Zv4-ae-Ere"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-Qm-5NZ" userLabel="Left Tools View">
+                                <rect key="frame" x="440" y="0.0" width="160" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSh-Sm-vPA" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="38" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Undo"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="38" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="undoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c38-10-gQg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-Yu-GIr" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Redo"/>
+                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="150" width="144" height="81"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="redoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37E-y0-sYK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84924691519999995" green="1" blue="0.80485862070000003" alpha="0.43262411347517732" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Bea-P8-Y4S"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="SaV-2G-kAp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SaV-2G-kAp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="SaV-2G-kAp"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KYy-XD-0ez" secondAttribute="bottom" id="4Q6-oR-rxb"/>
+                            <constraint firstItem="KYy-XD-0ez" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5Hf-8I-acC"/>
+                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jkl-RZ-Bjs"/>
+                            <constraint firstItem="QeH-ta-YoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WdD-Uz-VRL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ndy-Qm-5NZ" secondAttribute="bottom" id="nd9-L5-UvP"/>
+                            <constraint firstItem="QeH-ta-YoF" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pYz-1q-5ql"/>
+                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qnE-xl-Zdv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KYy-XD-0ez" secondAttribute="trailing" constant="-20" id="smG-jQ-Xyy"/>
+                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="weC-MO-BIl"/>
+                            <constraint firstItem="QeH-ta-YoF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="244" id="yvJ-kB-wPf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="149"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="QeH-ta-YoF" secondAttribute="trailing" constant="159" id="zRu-cS-pJN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QeH-ta-YoF"/>
+                                <exclude reference="ndy-Qm-5NZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WdD-Uz-VRL"/>
+                                <exclude reference="yvJ-kB-wPf"/>
+                                <exclude reference="zRu-cS-pJN"/>
+                                <exclude reference="smG-jQ-Xyy"/>
+                                <exclude reference="nd9-L5-UvP"/>
+                                <exclude reference="Jkl-RZ-Bjs"/>
+                                <exclude reference="qnE-xl-Zdv"/>
+                                <exclude reference="weC-MO-BIl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="QeH-ta-YoF"/>
+                                <include reference="ndy-Qm-5NZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WdD-Uz-VRL"/>
+                                <include reference="yvJ-kB-wPf"/>
+                                <include reference="zRu-cS-pJN"/>
+                                <include reference="smG-jQ-Xyy"/>
+                                <include reference="nd9-L5-UvP"/>
+                                <include reference="Jkl-RZ-Bjs"/>
+                                <include reference="qnE-xl-Zdv"/>
+                                <include reference="weC-MO-BIl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="ColorButton" destination="zP4-ah-n4R" id="nNs-1Z-QjJ"/>
+                        <outlet property="ColorPaletteView" destination="QeH-ta-YoF" id="crM-CI-fUK"/>
+                        <outlet property="DismissButton" destination="tCe-64-CN3" id="EWw-Yl-DVy"/>
+                        <outlet property="DrawingView" destination="8bC-Xf-vdC" id="194-Vm-SDG"/>
+                        <outlet property="LeftToolsView" destination="ndy-Qm-5NZ" id="b68-FH-ay3"/>
+                        <outlet property="LoadPictureButton" destination="GR6-Me-2ej" id="0Y5-kg-s4E"/>
+                        <outlet property="RedoButton" destination="WgB-Yu-GIr" id="JdB-vv-jhM"/>
+                        <outlet property="RightToolsView" destination="KYy-XD-0ez" id="Cng-08-3FV"/>
+                        <outlet property="SavePictureButton" destination="kbe-RQ-B5T" id="MDe-YN-52D"/>
+                        <outlet property="UndoButton" destination="eSh-Sm-vPA" id="qXi-N6-Lu8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="82.5" y="370.5"/>
+        </scene>
+        <!--Color Palette View Controller-->
+        <scene sceneID="5uK-be-48Q">
+            <objects>
+                <collectionViewController id="nLV-Lp-BLU" customClass="ColorPaletteViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gE0-Gn-SbX">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="kRH-KK-E4f">
+                            <size key="itemSize" width="144" height="81"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell" id="erq-wj-bWy" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="48" y="0.0" width="144" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSm-5l-djO">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="98" y="30" width="22" height="22"/>
+                                            </variation>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="HSm-5l-djO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="HSm-5l-djO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="CloseButton" destination="HSm-5l-djO" id="Klx-OK-Z3a"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell2" id="OzW-2o-DGe" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="48" y="85" width="144" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell3" id="5gH-16-6vx" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="48" y="170" width="144" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell4" id="ISe-uh-sL2" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="48" y="255" width="144" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell5" id="1Gg-od-Rsw" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="48" y="340" width="144" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nLV-Lp-BLU" id="xiz-YO-IYI"/>
+                            <outlet property="delegate" destination="nLV-Lp-BLU" id="QG7-ka-CT6"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAC-CM-mgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.125" y="1065.375"/>
         </scene>
     </scenes>
 </document>
