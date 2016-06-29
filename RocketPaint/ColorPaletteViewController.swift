@@ -10,6 +10,9 @@ import UIKit
 
 let reuseIdentifier = "Cell"
 
+// o convert to sections with supplemental headers:   "Favorites", "Variants", "Basics", "Explore"
+// load/save pic
+
 class ColorPaletteViewController: UICollectionViewController
 {
     
@@ -134,20 +137,23 @@ class ColorPaletteViewController: UICollectionViewController
         
         // third, create saturation variants from 0% to 100% in 8 steps
 //        for(var i=0.0f; i<7.5f; i+=1.0f) {
-        for(var i=0; i<8; i++) {
-            var newSaturation: CGFloat = 0.125 * CGFloat(i)
-            variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:srcBrightness, alpha:1))
-            
+        for(var x=1; x<=4; x++) {
+            for(var y=1; y<=4; y++) {
+                let newSaturation: CGFloat = 0.25 * CGFloat(x)
+                let newBrightness: CGFloat = 0.25 * CGFloat(y)
+                variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
+            }
         }
+        
+        collectionView?.reloadData()
 
     }
 
     func colorUsed(notification:NSNotification){
         print("Palette.colorUsed()")
         
-        // don't add dupes of favorites (sessions) or defaults (statics)
-        if(!sessionColorArray.contains(self.selectedColor)
-        && !staticColorArray.contains(self.selectedColor)) {
+        // don't add dupes of favorites (sessions) 
+        if(!sessionColorArray.contains(self.selectedColor)) {
             sessionColorArray.append(self.selectedColor)
         }
         

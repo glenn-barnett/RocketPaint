@@ -15,183 +15,511 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYy-XD-0ez" userLabel="Right Tools View">
-                                <rect key="frame" x="440" y="0.0" width="160" height="600"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-64-CN3" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="38" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Dismiss"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="38" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="dismissToolsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkE-rk-6yH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-ah-n4R" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Color"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="150" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="colorToolTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lC-2V-MPh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-Me-2ej" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Load Pic"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="262" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="loadPictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEw-Jj-omi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-RQ-B5T" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Save Pic"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="368" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="savePictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pc9-Lr-6sw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.20295877659574468" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-XS-e1d">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="280" y="336" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hva-ee-yGZ" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="eO4-6n-EJi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1024" id="mgm-0q-YSC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1024" id="yW2-lC-8f2"/>
                                 </constraints>
                                 <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="GR6-Me-2ej"/>
-                                        <exclude reference="kbe-RQ-B5T"/>
+                                    <mask key="constraints">
+                                        <exclude reference="mgm-0q-YSC"/>
+                                        <exclude reference="yW2-lC-8f2"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="GR6-Me-2ej"/>
-                                        <include reference="kbe-RQ-B5T"/>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="190" y="130" width="464" height="670"/>
+                                    <mask key="constraints">
+                                        <include reference="mgm-0q-YSC"/>
+                                        <include reference="yW2-lC-8f2"/>
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSh-Sm-vPA" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="38" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="BvR-tX-fS0"/>
+                                    <constraint firstAttribute="width" constant="144" id="kzs-ez-cMc"/>
+                                </constraints>
+                                <state key="normal" title="Undo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BvR-tX-fS0"/>
+                                        <exclude reference="kzs-ez-cMc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="BvR-tX-fS0"/>
+                                        <include reference="kzs-ez-cMc"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="undoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c38-10-gQg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-Yu-GIr" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="PYU-0O-GgN"/>
+                                    <constraint firstAttribute="width" constant="144" id="uim-6J-Kdn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Redo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PYU-0O-GgN"/>
+                                        <exclude reference="uim-6J-Kdn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="PYU-0O-GgN"/>
+                                        <include reference="uim-6J-Kdn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="redoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37E-y0-sYK"/>
+                                </connections>
+                            </button>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeH-ta-YoF" userLabel="Palette Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="609" id="7Oz-3R-SiS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Oz-3R-SiS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="7Oz-3R-SiS"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="nLV-Lp-BLU" kind="embed" id="Zv4-ae-Ere"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-Qm-5NZ" userLabel="Left Tools View">
-                                <rect key="frame" x="440" y="0.0" width="160" height="600"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSh-Sm-vPA" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="38" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Undo"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="38" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="undoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c38-10-gQg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-Yu-GIr" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
-                                        <rect key="frame" x="0.0" y="156" width="160" height="90"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Redo"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="150" width="144" height="81"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="redoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37E-y0-sYK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.84924691519999995" green="1" blue="0.80485862070000003" alpha="0.43262411347517732" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-RQ-B5T" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="Bea-P8-Y4S"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="SaV-2G-kAp"/>
+                                    <constraint firstAttribute="height" constant="81" id="Mx7-bR-ZD7"/>
+                                    <constraint firstAttribute="width" constant="144" id="lT2-sO-PV8"/>
                                 </constraints>
+                                <state key="normal" title="Save Pic"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="SaV-2G-kAp"/>
+                                        <exclude reference="Mx7-bR-ZD7"/>
+                                        <exclude reference="lT2-sO-PV8"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="SaV-2G-kAp"/>
+                                        <include reference="Mx7-bR-ZD7"/>
+                                        <include reference="lT2-sO-PV8"/>
                                     </mask>
                                 </variation>
-                            </view>
+                                <connections>
+                                    <action selector="savePictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pc9-Lr-6sw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-Me-2ej" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="v4a-mE-7pW"/>
+                                    <constraint firstAttribute="height" constant="81" id="xq4-lT-hcH"/>
+                                </constraints>
+                                <state key="normal" title="Load Pic"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="v4a-mE-7pW"/>
+                                        <exclude reference="xq4-lT-hcH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="v4a-mE-7pW"/>
+                                        <include reference="xq4-lT-hcH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loadPictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEw-Jj-omi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQc-z9-3QX" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="8bJ-PZ-Xmz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="E1D-x8-dh9"/>
+                                    <constraint firstAttribute="height" constant="81" id="SIu-rl-uGw"/>
+                                    <constraint firstAttribute="width" constant="144" id="r34-6L-c7M"/>
+                                </constraints>
+                                <state key="normal" title="Brush"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8bJ-PZ-Xmz"/>
+                                        <exclude reference="E1D-x8-dh9"/>
+                                        <exclude reference="SIu-rl-uGw"/>
+                                        <exclude reference="r34-6L-c7M"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8bJ-PZ-Xmz"/>
+                                        <include reference="E1D-x8-dh9"/>
+                                        <include reference="SIu-rl-uGw"/>
+                                        <include reference="r34-6L-c7M"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="brushButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aX4-P2-IcS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-dd-xrD" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="1c9-tK-Xng"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="81" id="1ca-FQ-2SO"/>
+                                    <constraint firstAttribute="width" constant="144" id="B0b-IE-7KL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="L4C-ne-sB2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="Zzv-fd-LYF"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="144" id="jEy-bw-F1b"/>
+                                </constraints>
+                                <state key="normal" title="Pen"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1c9-tK-Xng"/>
+                                        <exclude reference="1ca-FQ-2SO"/>
+                                        <exclude reference="B0b-IE-7KL"/>
+                                        <exclude reference="L4C-ne-sB2"/>
+                                        <exclude reference="Zzv-fd-LYF"/>
+                                        <exclude reference="jEy-bw-F1b"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1c9-tK-Xng"/>
+                                        <include reference="1ca-FQ-2SO"/>
+                                        <include reference="B0b-IE-7KL"/>
+                                        <include reference="L4C-ne-sB2"/>
+                                        <include reference="Zzv-fd-LYF"/>
+                                        <include reference="jEy-bw-F1b"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="penButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8G-ip-mR4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-Zj-H4h" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="81" id="Cw0-Vw-tem"/>
+                                    <constraint firstAttribute="width" constant="144" id="MwG-cE-OtZ"/>
+                                    <constraint firstAttribute="height" constant="81" id="WIR-9b-fCM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="Zo0-b6-7kD"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="144" id="nHI-nl-3oA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="w6y-9t-fE9"/>
+                                </constraints>
+                                <state key="normal" title="Line"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cw0-Vw-tem"/>
+                                        <exclude reference="MwG-cE-OtZ"/>
+                                        <exclude reference="WIR-9b-fCM"/>
+                                        <exclude reference="Zo0-b6-7kD"/>
+                                        <exclude reference="nHI-nl-3oA"/>
+                                        <exclude reference="w6y-9t-fE9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Cw0-Vw-tem"/>
+                                        <include reference="MwG-cE-OtZ"/>
+                                        <include reference="WIR-9b-fCM"/>
+                                        <include reference="Zo0-b6-7kD"/>
+                                        <include reference="nHI-nl-3oA"/>
+                                        <include reference="w6y-9t-fE9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="lineButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xq-qZ-CtA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO8-wa-rVK" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="144" id="8gM-qC-0Ur"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="8uf-nH-WFs"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="81" id="Yyw-rx-2QY"/>
+                                    <constraint firstAttribute="width" constant="144" id="g0E-wH-RBY"/>
+                                    <constraint firstAttribute="height" constant="81" id="ghr-xI-Vfv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="wM6-0K-eCn"/>
+                                </constraints>
+                                <state key="normal" title="Box"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8gM-qC-0Ur"/>
+                                        <exclude reference="8uf-nH-WFs"/>
+                                        <exclude reference="Yyw-rx-2QY"/>
+                                        <exclude reference="g0E-wH-RBY"/>
+                                        <exclude reference="ghr-xI-Vfv"/>
+                                        <exclude reference="wM6-0K-eCn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8gM-qC-0Ur"/>
+                                        <include reference="8uf-nH-WFs"/>
+                                        <include reference="Yyw-rx-2QY"/>
+                                        <include reference="g0E-wH-RBY"/>
+                                        <include reference="ghr-xI-Vfv"/>
+                                        <include reference="wM6-0K-eCn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="boxButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bnm-sn-neF"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iQ-pU-8Oj" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="DhG-3p-x1O"/>
+                                    <constraint firstAttribute="height" constant="81" id="Ynr-DL-gfa"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="81" id="iu5-Tz-IcP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="tzt-3c-cYX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="w7L-jv-ggf"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="144" id="zsl-qw-N4c"/>
+                                </constraints>
+                                <state key="normal" title="Text"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DhG-3p-x1O"/>
+                                        <exclude reference="Ynr-DL-gfa"/>
+                                        <exclude reference="iu5-Tz-IcP"/>
+                                        <exclude reference="tzt-3c-cYX"/>
+                                        <exclude reference="w7L-jv-ggf"/>
+                                        <exclude reference="zsl-qw-N4c"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="DhG-3p-x1O"/>
+                                        <include reference="Ynr-DL-gfa"/>
+                                        <include reference="iu5-Tz-IcP"/>
+                                        <include reference="tzt-3c-cYX"/>
+                                        <include reference="w7L-jv-ggf"/>
+                                        <include reference="zsl-qw-N4c"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="textButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gX0-AJ-p6a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-ah-n4R" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="156" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="IwA-Ns-RJT"/>
+                                    <constraint firstAttribute="width" constant="144" id="xaf-S2-9Xt"/>
+                                </constraints>
+                                <state key="normal" title="Color"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IwA-Ns-RJT"/>
+                                        <exclude reference="xaf-S2-9Xt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="IwA-Ns-RJT"/>
+                                        <include reference="xaf-S2-9Xt"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="colorToolTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lC-2V-MPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-64-CN3" customClass="VRMaskColoredButton" customModule="VRMaskColoredButton">
+                                <rect key="frame" x="0.0" y="38" width="160" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="326-yZ-Fzm"/>
+                                    <constraint firstAttribute="height" constant="81" id="AG9-jR-vi3"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="326-yZ-Fzm"/>
+                                        <exclude reference="AG9-jR-vi3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="326-yZ-Fzm"/>
+                                        <include reference="AG9-jR-vi3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="dismissToolsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkE-rk-6yH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KYy-XD-0ez" secondAttribute="bottom" id="4Q6-oR-rxb"/>
-                            <constraint firstItem="KYy-XD-0ez" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5Hf-8I-acC"/>
-                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jkl-RZ-Bjs"/>
-                            <constraint firstItem="QeH-ta-YoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WdD-Uz-VRL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ndy-Qm-5NZ" secondAttribute="bottom" id="nd9-L5-UvP"/>
+                            <constraint firstItem="kbe-RQ-B5T" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2Kh-js-KGt"/>
+                            <constraint firstItem="hva-ee-yGZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AWj-hY-nWN"/>
+                            <constraint firstItem="ddj-Zj-H4h" firstAttribute="leading" secondItem="lO8-wa-rVK" secondAttribute="trailing" constant="8" id="DTI-6j-ZhS"/>
+                            <constraint firstItem="tCe-64-CN3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DTa-x9-NPY"/>
+                            <constraint firstItem="jQc-z9-3QX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JRx-aF-Dbr"/>
+                            <constraint firstItem="eSh-Sm-vPA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JTx-eh-JTL"/>
+                            <constraint firstItem="ddj-Zj-H4h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="Lnk-Ey-6Ih"/>
+                            <constraint firstItem="WgB-Yu-GIr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S6m-G0-005"/>
+                            <constraint firstItem="eSh-Sm-vPA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Sof-PR-Ria"/>
+                            <constraint firstItem="kbe-RQ-B5T" firstAttribute="top" secondItem="GR6-Me-2ej" secondAttribute="bottom" constant="8" id="VuQ-as-2od"/>
+                            <constraint firstItem="zP4-ah-n4R" firstAttribute="top" secondItem="tCe-64-CN3" secondAttribute="bottom" constant="8" id="Xns-fj-YIW"/>
+                            <constraint firstItem="jQc-z9-3QX" firstAttribute="leading" secondItem="j4O-dd-xrD" secondAttribute="trailing" constant="8" id="Yko-dd-q5a"/>
+                            <constraint firstItem="lO8-wa-rVK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="Z2r-gl-Qpb"/>
+                            <constraint firstItem="3iQ-pU-8Oj" firstAttribute="top" secondItem="eSh-Sm-vPA" secondAttribute="bottom" constant="97" id="dgs-zU-51J"/>
+                            <constraint firstItem="tCe-64-CN3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hXS-Jx-3CZ"/>
+                            <constraint firstItem="jQc-z9-3QX" firstAttribute="top" secondItem="zP4-ah-n4R" secondAttribute="bottom" constant="8" id="igz-DU-BOd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WgB-Yu-GIr" secondAttribute="bottom" constant="20" id="lC1-cy-7af"/>
+                            <constraint firstItem="lO8-wa-rVK" firstAttribute="leading" secondItem="3iQ-pU-8Oj" secondAttribute="trailing" constant="8" id="lVd-SI-b4e"/>
+                            <constraint firstItem="zP4-ah-n4R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n4y-mO-PfV"/>
                             <constraint firstItem="QeH-ta-YoF" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pYz-1q-5ql"/>
-                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qnE-xl-Zdv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KYy-XD-0ez" secondAttribute="trailing" constant="-20" id="smG-jQ-Xyy"/>
-                            <constraint firstItem="ndy-Qm-5NZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="weC-MO-BIl"/>
-                            <constraint firstItem="QeH-ta-YoF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="244" id="yvJ-kB-wPf">
-                                <variation key="heightClass=regular-widthClass=regular" constant="149"/>
+                            <constraint firstItem="j4O-dd-xrD" firstAttribute="leading" secondItem="ddj-Zj-H4h" secondAttribute="trailing" constant="8" id="s9H-1c-Vgq"/>
+                            <constraint firstItem="GR6-Me-2ej" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="upU-5d-Mq5"/>
+                            <constraint firstItem="j4O-dd-xrD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="y8d-Cl-PuA"/>
+                            <constraint firstItem="QeH-ta-YoF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="5" id="yvJ-kB-wPf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="QeH-ta-YoF" secondAttribute="trailing" constant="159" id="zRu-cS-pJN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kbe-RQ-B5T" secondAttribute="bottom" constant="20" id="zfT-tZ-f8T"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="2Kp-XS-e1d"/>
+                                <exclude reference="hva-ee-yGZ"/>
+                                <exclude reference="eSh-Sm-vPA"/>
+                                <exclude reference="WgB-Yu-GIr"/>
                                 <exclude reference="QeH-ta-YoF"/>
-                                <exclude reference="ndy-Qm-5NZ"/>
+                                <exclude reference="kbe-RQ-B5T"/>
+                                <exclude reference="GR6-Me-2ej"/>
+                                <exclude reference="jQc-z9-3QX"/>
+                                <exclude reference="j4O-dd-xrD"/>
+                                <exclude reference="ddj-Zj-H4h"/>
+                                <exclude reference="lO8-wa-rVK"/>
+                                <exclude reference="3iQ-pU-8Oj"/>
+                                <exclude reference="zP4-ah-n4R"/>
+                                <exclude reference="tCe-64-CN3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WdD-Uz-VRL"/>
+                                <exclude reference="lC1-cy-7af"/>
+                                <exclude reference="zfT-tZ-f8T"/>
                                 <exclude reference="yvJ-kB-wPf"/>
                                 <exclude reference="zRu-cS-pJN"/>
-                                <exclude reference="smG-jQ-Xyy"/>
-                                <exclude reference="nd9-L5-UvP"/>
-                                <exclude reference="Jkl-RZ-Bjs"/>
-                                <exclude reference="qnE-xl-Zdv"/>
-                                <exclude reference="weC-MO-BIl"/>
+                                <exclude reference="JTx-eh-JTL"/>
+                                <exclude reference="Sof-PR-Ria"/>
+                                <exclude reference="AWj-hY-nWN"/>
+                                <exclude reference="DTa-x9-NPY"/>
+                                <exclude reference="hXS-Jx-3CZ"/>
+                                <exclude reference="dgs-zU-51J"/>
+                                <exclude reference="upU-5d-Mq5"/>
+                                <exclude reference="S6m-G0-005"/>
+                                <exclude reference="DTI-6j-ZhS"/>
+                                <exclude reference="Lnk-Ey-6Ih"/>
+                                <exclude reference="s9H-1c-Vgq"/>
+                                <exclude reference="y8d-Cl-PuA"/>
+                                <exclude reference="JRx-aF-Dbr"/>
+                                <exclude reference="Yko-dd-q5a"/>
+                                <exclude reference="igz-DU-BOd"/>
+                                <exclude reference="2Kh-js-KGt"/>
+                                <exclude reference="VuQ-as-2od"/>
+                                <exclude reference="Z2r-gl-Qpb"/>
+                                <exclude reference="lVd-SI-b4e"/>
+                                <exclude reference="Xns-fj-YIW"/>
+                                <exclude reference="n4y-mO-PfV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
+                                <include reference="2Kp-XS-e1d"/>
+                                <include reference="hva-ee-yGZ"/>
+                                <include reference="eSh-Sm-vPA"/>
+                                <include reference="WgB-Yu-GIr"/>
                                 <include reference="QeH-ta-YoF"/>
-                                <include reference="ndy-Qm-5NZ"/>
+                                <include reference="kbe-RQ-B5T"/>
+                                <include reference="GR6-Me-2ej"/>
+                                <include reference="jQc-z9-3QX"/>
+                                <include reference="j4O-dd-xrD"/>
+                                <include reference="ddj-Zj-H4h"/>
+                                <include reference="lO8-wa-rVK"/>
+                                <include reference="3iQ-pU-8Oj"/>
+                                <include reference="zP4-ah-n4R"/>
+                                <include reference="tCe-64-CN3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WdD-Uz-VRL"/>
+                                <include reference="lC1-cy-7af"/>
+                                <include reference="zfT-tZ-f8T"/>
                                 <include reference="yvJ-kB-wPf"/>
                                 <include reference="zRu-cS-pJN"/>
-                                <include reference="smG-jQ-Xyy"/>
-                                <include reference="nd9-L5-UvP"/>
-                                <include reference="Jkl-RZ-Bjs"/>
-                                <include reference="qnE-xl-Zdv"/>
-                                <include reference="weC-MO-BIl"/>
+                                <include reference="JTx-eh-JTL"/>
+                                <include reference="Sof-PR-Ria"/>
+                                <include reference="AWj-hY-nWN"/>
+                                <include reference="DTa-x9-NPY"/>
+                                <include reference="hXS-Jx-3CZ"/>
+                                <include reference="dgs-zU-51J"/>
+                                <include reference="upU-5d-Mq5"/>
+                                <include reference="S6m-G0-005"/>
+                                <include reference="DTI-6j-ZhS"/>
+                                <include reference="Lnk-Ey-6Ih"/>
+                                <include reference="s9H-1c-Vgq"/>
+                                <include reference="y8d-Cl-PuA"/>
+                                <include reference="JRx-aF-Dbr"/>
+                                <include reference="Yko-dd-q5a"/>
+                                <include reference="igz-DU-BOd"/>
+                                <include reference="2Kh-js-KGt"/>
+                                <include reference="VuQ-as-2od"/>
+                                <include reference="Z2r-gl-Qpb"/>
+                                <include reference="lVd-SI-b4e"/>
+                                <include reference="Xns-fj-YIW"/>
+                                <include reference="n4y-mO-PfV"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="BoxButton" destination="lO8-wa-rVK" id="yiB-yn-JUG"/>
+                        <outlet property="BrushButton" destination="jQc-z9-3QX" id="Aj3-iZ-kmM"/>
                         <outlet property="ColorButton" destination="zP4-ah-n4R" id="nNs-1Z-QjJ"/>
                         <outlet property="ColorPaletteView" destination="QeH-ta-YoF" id="crM-CI-fUK"/>
                         <outlet property="DismissButton" destination="tCe-64-CN3" id="EWw-Yl-DVy"/>
-                        <outlet property="DrawingView" destination="8bC-Xf-vdC" id="194-Vm-SDG"/>
-                        <outlet property="LeftToolsView" destination="ndy-Qm-5NZ" id="b68-FH-ay3"/>
+                        <outlet property="DrawingView" destination="hva-ee-yGZ" id="jy2-Xi-NOh"/>
+                        <outlet property="LineButton" destination="ddj-Zj-H4h" id="i2U-M1-QGa"/>
                         <outlet property="LoadPictureButton" destination="GR6-Me-2ej" id="0Y5-kg-s4E"/>
+                        <outlet property="PenButton" destination="j4O-dd-xrD" id="Fbj-XZ-FuP"/>
                         <outlet property="RedoButton" destination="WgB-Yu-GIr" id="JdB-vv-jhM"/>
-                        <outlet property="RightToolsView" destination="KYy-XD-0ez" id="Cng-08-3FV"/>
                         <outlet property="SavePictureButton" destination="kbe-RQ-B5T" id="MDe-YN-52D"/>
+                        <outlet property="TextButton" destination="3iQ-pU-8Oj" id="u0o-bI-Me0"/>
                         <outlet property="UndoButton" destination="eSh-Sm-vPA" id="qXi-N6-Lu8"/>
                     </connections>
                 </viewController>
