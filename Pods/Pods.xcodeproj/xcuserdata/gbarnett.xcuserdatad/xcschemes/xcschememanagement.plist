@@ -24,6 +24,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RFQuiltLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VRMaskColoredButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10351FD6D96469CA96B3E85E369D13ED</key>
+		<key>211D9AD82658A857B1AC6165950C2A5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>877E87CAE5A8259113FC97CD0B9D8538</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8AA3DDB8797222294E1288CB197A8347</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3D8426C7D00FA14A4469AED01A2B7E5</key>
+		<key>BE6B9A78AE049FA4B36A2A56E67AA411</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D64FEEC8DDA6E4EC41292166473022D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

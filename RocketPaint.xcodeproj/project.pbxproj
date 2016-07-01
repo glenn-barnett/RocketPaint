@@ -10,6 +10,12 @@
 		2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */; };
 		2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1582871CCF19D80030BB45 /* ColorCell.swift */; };
 		2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1582B61CD8CF500030BB45 /* Notifications.swift */; };
+		2A19C4771D24735D0099D1E8 /* RocketPaintStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */; };
+		2A19C47A1D24739A0099D1E8 /* IconColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19C4791D24739A0099D1E8 /* IconColoredButton.swift */; };
+		2A19C47C1D247AF20099D1E8 /* UndoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19C47B1D247AF20099D1E8 /* UndoButton.swift */; };
+		2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4041D253D360066FAD0 /* RedoButton.swift */; };
+		2A43D4071D2542B60066FAD0 /* PaletteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4061D2542B60066FAD0 /* PaletteButton.swift */; };
+		2A43D4091D25CC3B0066FAD0 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */; };
 		2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */; };
 		2A9FA2B91CC2BC28000FF2A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */; };
 		2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */; };
@@ -25,6 +31,12 @@
 		2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewController.swift; sourceTree = "<group>"; };
 		2A1582871CCF19D80030BB45 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		2A1582B61CD8CF500030BB45 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketPaintStyleKit.swift; sourceTree = "<group>"; };
+		2A19C4791D24739A0099D1E8 /* IconColoredButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconColoredButton.swift; sourceTree = "<group>"; };
+		2A19C47B1D247AF20099D1E8 /* UndoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndoButton.swift; sourceTree = "<group>"; };
+		2A43D4041D253D360066FAD0 /* RedoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedoButton.swift; sourceTree = "<group>"; };
+		2A43D4061D2542B60066FAD0 /* PaletteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteButton.swift; sourceTree = "<group>"; };
+		2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		2A9FA2B31CC2BC28000FF2A4 /* RocketPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +68,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2A19C4781D24738C0099D1E8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2A19C4791D24739A0099D1E8 /* IconColoredButton.swift */,
+				2A19C47B1D247AF20099D1E8 /* UndoButton.swift */,
+				2A43D4041D253D360066FAD0 /* RedoButton.swift */,
+				2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */,
+				2A43D4061D2542B60066FAD0 /* PaletteButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		2A9FA2AA1CC2BC28000FF2A4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +101,9 @@
 		2A9FA2B51CC2BC28000FF2A4 /* RocketPaint */ = {
 			isa = PBXGroup;
 			children = (
+				2A19C4781D24738C0099D1E8 /* Buttons */,
 				2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */,
+				2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */,
 				2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */,
 				2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */,
 				2A9FA2C21CC2BC28000FF2A4 /* Info.plist */,
@@ -225,7 +251,13 @@
 				2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */,
 				2A9FA2B91CC2BC28000FF2A4 /* ViewController.swift in Sources */,
 				2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */,
+				2A19C47C1D247AF20099D1E8 /* UndoButton.swift in Sources */,
+				2A19C4771D24735D0099D1E8 /* RocketPaintStyleKit.swift in Sources */,
+				2A43D4091D25CC3B0066FAD0 /* HamburgerButton.swift in Sources */,
+				2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */,
 				2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */,
+				2A19C47A1D24739A0099D1E8 /* IconColoredButton.swift in Sources */,
+				2A43D4071D2542B60066FAD0 /* PaletteButton.swift in Sources */,
 				2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 			);

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B7A234ACF10FF2A5A366F203'
+               BlueprintIdentifier = 'E42A9045D492EF0FABABAA13'
                BlueprintName = 'VRMaskColoredButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'VRMaskColoredButton.framework'>

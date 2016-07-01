@@ -84,14 +84,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             object: nil)
         
         
-        rightButtonArray.append(DismissButton!)
-        rightButtonArray.append(ColorButton!)
-        rightButtonArray.append(LoadPictureButton!)
-        rightButtonArray.append(SavePictureButton!)
-        
-        leftButtonArray.append(UndoButton!)
-        leftButtonArray.append(RedoButton!)
-        
+//        rightButtonArray.append(ColorButton!)
+//        rightButtonArray.append(LoadPictureButton!)
+//        rightButtonArray.append(SavePictureButton!)
+//        
+//        leftButtonArray.append(UndoButton!)
+//        leftButtonArray.append(RedoButton!)
+//        
         brushButtonArray.append(PenButton!)
         brushButtonArray.append(LineButton!)
         brushButtonArray.append(BoxButton!)
@@ -240,8 +239,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func colorSelected(notification:NSNotification){
         let selectedColor : UIColor = notification.object as! UIColor
 
-        ColorButton!.backgroundColor = selectedColor
-        
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
         var brightness: CGFloat = 0

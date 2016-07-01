@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E00EBBFE8853EA382359A788'
-               BlueprintName = 'BSGridCollectionViewLayout'
+               BlueprintIdentifier = '969B49D1021AEC9922B279AF'
+               BlueprintName = 'RESideMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BSGridCollectionViewLayout.framework'>
+               BuildableName = 'RESideMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

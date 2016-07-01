@@ -10,88 +10,25 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>01C9BDAE6662F0781AC5554D2FBB2AC1</key>
+		<key>002F93504C79F31FEBEED8D4053CD48F</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>9AD7D56AD4CA8F8FC3507E7207540997</string>
-				<string>4C99A51A79351A97B5F7A1B76A38CF91</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>01FC9F98444873FFD1C208D502BA8EAE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FC7993050289585DC052209EAAB31925</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_RocketPaint</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>UIViewController+RESideMenu.h</string>
+			<key>path</key>
+			<string>RESideMenu/UIViewController+RESideMenu.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>024DDF98DE70E13F75B58144EA37EDAF</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>93D64CBE3D5844A86EEF978D4FF7169A</string>
+			<string>5502283A7122634B8147D910733AA30F</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -144,26 +81,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>039F606ED4EFB953DD16F31148B481FA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E1F10C2028DE06EC658E6A732E75C6B</string>
-				<string>079A05E18C75D14DA32053B5DF62E943</string>
-				<string>C9B102EF65C16EB7FEDC86460C35BFC5</string>
-				<string>FB9B7588C34CB936F1CD9076512AE518</string>
-				<string>C1B069001D3FF81F17A052FA227F40ED</string>
-				<string>20E59F645AE56251DB742F5C06615A26</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/BSGridCollectionViewLayout</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>03C93C0853AB901D2957F0A98BFD4E5E</key>
 		<dict>
 			<key>children</key>
@@ -177,37 +94,61 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>04367A8829976DE13F878E1944857567</key>
+		<key>04DFABECC453675078A4C53CF29D20DD</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>80816EDEA6DA23592449E989420F4217</string>
-				<string>E0C313700540FABAD75F5A38D056E5F6</string>
-				<string>A2382E31054869404ABFD7646040D356</string>
-				<string>E322340D2B8B147ED4C02857915CE890</string>
-				<string>D6A93EFDDB3ECE25AB345519AC78F83C</string>
-			</array>
+			<key>baseConfigurationReference</key>
+			<string>24DEA8601CC4133C263B93977F525F7E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/RESideMenu/RESideMenu-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/RESideMenu/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/RESideMenu/RESideMenu.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>RESideMenu</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>ACEDrawingView</string>
-			<key>path</key>
-			<string>ACEDrawingView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0495421A68FBE3ADC3FBAEDB2B53F5AF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>VRMaskColoredButton-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>Release</string>
 		</dict>
 		<key>050FE17BC31C98DB5C2FFEE8DCF03C74</key>
 		<dict>
@@ -220,86 +161,147 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>079A05E18C75D14DA32053B5DF62E943</key>
+		<key>05D740092BB3480C003E7DFA98C3A941</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>BSGridCollectionViewLayout.xcconfig</string>
+			<string>BSGridCollectionViewLayout-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0A8C902BBB84F1B47C282D7F044B8AB3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>61FA8F1AAEC077170A9D32484C7C8781</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>10351FD6D96469CA96B3E85E369D13ED</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F9751B83A0ED3F11EFEC1D45F91FA248</string>
-			<key>buildPhases</key>
-			<array>
-				<string>31BA0AFE0DA46D0C6B78CFD25301801F</string>
-				<string>9E416691E66ADF92BC29329CC0FE6CA0</string>
-				<string>7AE3BFFBD21A88DF05FCB25D466FB1E5</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>383B3780EDD01044F94C26BD15A52F63</string>
-				<string>5B314E988BF6E3B8DEA499D247B86E75</string>
-				<string>1983385A9C8D212DE1A0C28FEAE8638E</string>
-				<string>68F718328487D260639126BD99E084AE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-RocketPaint</string>
-			<key>productName</key>
-			<string>Pods-RocketPaint</string>
-			<key>productReference</key>
-			<string>9DD767A7E426A0B5A39A18C4E83B6BB3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>10DD95CF597C469FDDB8DB0DB71A2C7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>122DA2E5084A4393C29BE363C764795C</key>
+		<key>05EA4E6505B92DA7D1F28D43EA258765</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>E35B3E289DB984DA75A774080D293670</string>
+				<string>31DE321CD3CAB4BB9C15001E5237EFB6</string>
+				<string>71B0151BA075FC5EA6375EF6E71A4142</string>
+				<string>D86906751AA14D18F43CA20E6FD577E6</string>
+				<string>1E85FCCFB95591B7033C9A079157C286</string>
+				<string>1DB76972753BA2B2452B3C18369A6FA3</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>ACEDrawingView</string>
+			<key>path</key>
+			<string>ACEDrawingView</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>15AD7E3EE74373C6BF7275EC32E6379F</key>
+		<key>05F0AC2A1938309F348F360086321E46</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>KRLCollectionViewGridLayout</string>
+			<key>target</key>
+			<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
+			<key>targetProxy</key>
+			<string>6D2511E15282280D0EDC1DB05F146F98</string>
+		</dict>
+		<key>0724213F62C3ED12F6FC0B8F4B9E2307</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>93589C16B0D2B9C3BE7964E313D32249</string>
+				<string>04DFABECC453675078A4C53CF29D20DD</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>07DBDEB8CE894A54CD73B3F7E1AE7354</key>
 		<dict>
 			<key>fileRef</key>
-			<string>43B18229260C9BEB4C08C053C23CB62B</string>
+			<string>78EBB5E79A344CC0C690967A548D571D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08C44F3E3800EBCFBF8CD01281FBF13B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2316913E7A6C7A19E0A6B57A8A035F06</string>
+				<string>D91F3DF7CEE00416ED0DE201E373C488</string>
+				<string>3942226C5CEC859940DC38D370F3A413</string>
+				<string>8FEA3EBCA41666F28CF389532BFC3C83</string>
+				<string>6CD6EA9FFF42336D6649ED1124FAA065</string>
+				<string>CE4C090C5C9186EF051CB3185497CFC6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/VRMaskColoredButton</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0DD25CA4A497622D5ABF4C433D79E4DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>110304AC0CCE81BC4BB6C364BA99FDA8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>RESideMenu</string>
+			<key>target</key>
+			<string>877E87CAE5A8259113FC97CD0B9D8538</string>
+			<key>targetProxy</key>
+			<string>1F1306B82DAD98912E80F4682892DD4D</string>
+		</dict>
+		<key>119A1CD38AB82262EC92E5009B11108E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>795FE18D7508845643148A407E1C7EB6</string>
+				<string>1528380F73271881B9206D3336EAA7C1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11B8972CFA3C96F0B8C11B7DC5271368</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>ACEDrawingView.framework</string>
+			<key>path</key>
+			<string>ACEDrawingView.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>126C95A804FD5A2848F301F32A7DADB1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C84C5AA59179E6C5FFE000C36F47C5E1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -309,6 +311,71 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>1351ED64C6F1AA968E2B85EA83831AC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ED04AE2201316F6590E7AD9952706C7B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>14B8B9B15ECBE87983FF987239AB2D7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9203A0FF197B8764CD853B6EE3A159E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>14E6ABEE3B349BB986B06EEB70E48AB9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>RFQuiltLayout</string>
+			<key>target</key>
+			<string>BE6B9A78AE049FA4B36A2A56E67AA411</string>
+			<key>targetProxy</key>
+			<string>7E749B7BE4EFC3F2EEB2E76BC00B00C5</string>
+		</dict>
+		<key>1528380F73271881B9206D3336EAA7C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0DD25CA4A497622D5ABF4C433D79E4DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>15AD7E3EE74373C6BF7275EC32E6379F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8D6C9022DE5D198772C86E30F2F6898B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>15ECF43BA13F949A79EF61BF2E02377C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RFQuiltLayout-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>161EAB24B57B168B52F33C760B603BB7</key>
 		<dict>
@@ -323,6 +390,21 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>16E9EA8587EB45ECCC8F553215CA3E23</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>BSGridCollectionViewLayout.framework</string>
+			<key>path</key>
+			<string>BSGridCollectionViewLayout.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>171F8CC9E696B0550236ADA80CF83C37</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -336,53 +418,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>185EBE0387925C6E0A1E430ED1912F7A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ACEDrawingView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1983385A9C8D212DE1A0C28FEAE8638E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>KRLCollectionViewGridLayout</string>
-			<key>target</key>
-			<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
-			<key>targetProxy</key>
-			<string>7011F588978EFA22B99EEAC3929939D6</string>
-		</dict>
-		<key>1C081442A4D5BB246B318AE6FA1D4C3D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>99AA3D34C13DE8AA7376209FA5E25715</string>
-				<string>915FD16A8E8ADC8AC6A506B13B201A08</string>
-				<string>77C0429BB5F78624860497BA29BD74B3</string>
-				<string>409142B6FED19197BF3638DC6B15F68B</string>
-				<string>C764D44D130FF58A775F9E471441B66A</string>
-				<string>0A8C902BBB84F1B47C282D7F044B8AB3</string>
-				<string>B017233D3192D6BD5A51B5BBAD678B09</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>1C33FD78005932356FF3E937998CBCC5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C1B069001D3FF81F17A052FA227F40ED</string>
+			<string>572B9632E99DE66F169116286B555F0E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -392,26 +431,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>1D3544E79D8AF7EEB765B71609D97AF2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>99998E14E564BC1141A39922A8A8A3E4</string>
-				<string>EB6205DC7D86BD0C3F616FDA0A2572C0</string>
-				<string>93D64CBE3D5844A86EEF978D4FF7169A</string>
-				<string>24D7CF30526D050E3EB7CCC1550B6150</string>
-				<string>AE7110F2D32018D92DE5596426BC24D2</string>
-				<string>F6FB3722C0ECD90A1E49D941321F1605</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/KRLCollectionViewGridLayout</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1D64443E2D141FC3D75612FEDB946E16</key>
 		<dict>
@@ -427,6 +446,55 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>1DB76972753BA2B2452B3C18369A6FA3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D02483E2B1D27DACACF41FB7B2729F52</string>
+				<string>2CE04254BC8EB3A79E10AA47F658714B</string>
+				<string>7CBEF12110756BFD8E849BDC54158B5B</string>
+				<string>ED0CDD27A8D0419D43860E2F886B0E15</string>
+				<string>3449CFA19E8F7E178535E427C214EC71</string>
+				<string>2B1A41AB537F53B658DA729E59BAB9E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/ACEDrawingView</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E46DC00D66179EE088496773FAC4B34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>002F93504C79F31FEBEED8D4053CD48F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1E85FCCFB95591B7033C9A079157C286</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ACEDrawingView.m</string>
+			<key>path</key>
+			<string>ACEDrawingView/ACEDrawingView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1EDF9BEBCDF1D666CC56D4D58EB96263</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -441,7 +509,52 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>20E59F645AE56251DB742F5C06615A26</key>
+		<key>1F1306B82DAD98912E80F4682892DD4D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>877E87CAE5A8259113FC97CD0B9D8538</string>
+			<key>remoteInfo</key>
+			<string>RESideMenu</string>
+		</dict>
+		<key>211D9AD82658A857B1AC6165950C2A5A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DB5732123E9573FD81E072253EE4A0CF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>327B07DC64C232A6D3F0124AF72F59C7</string>
+				<string>56BEE0067A1600FB30F52DD410B3B79E</string>
+				<string>5BF744D96A46D88F7C2BEA8DC72372E5</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>6DD46551951EC9CD688E7F7920154D6A</string>
+				<string>8337629AEE5569E3BB0B3DEC161BF341</string>
+				<string>05F0AC2A1938309F348F360086321E46</string>
+				<string>110304AC0CCE81BC4BB6C364BA99FDA8</string>
+				<string>14E6ABEE3B349BB986B06EEB70E48AB9</string>
+				<string>B138087391C12AA4BB2F312063267185</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-RocketPaint</string>
+			<key>productName</key>
+			<string>Pods-RocketPaint</string>
+			<key>productReference</key>
+			<string>A361D41761CA7B095DF8B756FA91A56F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>2316913E7A6C7A19E0A6B57A8A035F06</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -454,57 +567,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>217301E0698364FB9D534458F3916ED3</key>
+		<key>24DEA8601CC4133C263B93977F525F7E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImageMaskColor.swift</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pod/Classes/UIImageMaskColor.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21D01E03EBC5EB2EC5C59FD51220F5BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>23B3C2F7A60189AA38D256A0120B8730</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>24D7CF30526D050E3EB7CCC1550B6150</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout-dummy.m</string>
+			<string>RESideMenu.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -521,18 +593,25 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>28A6C95E6429907F63CF99718E762EA1</key>
+		<key>28C09C00F6BC881D178C889DF1CA9473</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>45FD77F30AC7C24AE5CC18EA841E954F</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2B1A41AB537F53B658DA729E59BAB9E6</key>
+		<dict>
+			<key>includeInIndex</key>
 			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E3D8426C7D00FA14A4469AED01A2B7E5</string>
-			<key>remoteInfo</key>
-			<string>VRMaskColoredButton</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
 		<dict>
@@ -607,19 +686,31 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>2CAF693CAE6619B2A716BC27BD8FFDA6</key>
+		<key>2CE04254BC8EB3A79E10AA47F658714B</key>
 		<dict>
-			<key>fileRef</key>
-			<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>ACEDrawingView.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D3134BCE8D8BFF793A7DD6209C61B94</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8AA3DDB8797222294E1288CB197A8347</string>
+			<key>remoteInfo</key>
+			<string>BSGridCollectionViewLayout</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -635,162 +726,7 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2F371D9FC872E751E1C7210C1E9CAAA2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImageMerge.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/UIImageMerge.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31BA0AFE0DA46D0C6B78CFD25301801F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4D2FCC11CF0037507194024D3B1D3A8D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>366FD399B9BE5D5882A6F2079617BF67</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95FA9D6C62076D7840475E09238EED1E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>383B3780EDD01044F94C26BD15A52F63</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>ACEDrawingView</string>
-			<key>target</key>
-			<string>F23EF643357DE4902A2E6096F77BF758</string>
-			<key>targetProxy</key>
-			<string>7DE4A6F8FB10DACC340713E60088B733</string>
-		</dict>
-		<key>389D81682E801B7A5D5D0C679FC5E285</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>BSGridCollectionViewLayout.framework</string>
-			<key>path</key>
-			<string>BSGridCollectionViewLayout.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>38BD68EAF4E91166D1CA3CDAC1A3E71E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>185EBE0387925C6E0A1E430ED1912F7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>391C5D21EE39486ED5F137310584F72E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A4C1E367053685545A9D76A7C6C148D1</string>
-				<string>389D81682E801B7A5D5D0C679FC5E285</string>
-				<string>8AEB3BF9D66E63CACE35360B823E2774</string>
-				<string>9DD767A7E426A0B5A39A18C4E83B6BB3</string>
-				<string>A6C3538380DAADEA19AFFE6430FBE9FF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>396A55BBBF114755900F410C0B79AB59</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>VRImagePainter.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/VRImagePainter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B76A9BBB908E16EB84916CCDFD05725</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>GridCollectionViewLayout.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/GridCollectionViewLayout.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CE624596783DB51679D00246464C47C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7BC5D97EE9AD967B31B0F05C75A1C0ED</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3E1F10C2028DE06EC658E6A732E75C6B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BSGridCollectionViewLayout.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>409142B6FED19197BF3638DC6B15F68B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>396A55BBBF114755900F410C0B79AB59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>42038F619C9D17E77449F652C619338D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CE1012DDE0F7B47D04E0BC4DBCC75D46</string>
-				<string>71BA344E55D650F44DC890F9D02F2B3B</string>
-				<string>E8C7A409A9D302234282A8819DCFCF34</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>43B18229260C9BEB4C08C053C23CB62B</key>
+		<key>31DE321CD3CAB4BB9C15001E5237EFB6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -799,56 +735,158 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>KRLCollectionViewGridLayout.h</string>
+			<string>ACEDrawingTools.h</string>
 			<key>path</key>
-			<string>Classes/KRLCollectionViewGridLayout.h</string>
+			<string>ACEDrawingView/ACEDrawingTools.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>44903B3744ADB19FBDED188A0BEE31AF</key>
+		<key>327B07DC64C232A6D3F0124AF72F59C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DABDD25E341C86255761143470A4EFF8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>32E7069575ABE119192C3BDABAD10F6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7515B43EBD5B8A5C7906004057812E4D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>330743354CF17E501D2B9AA88E04BE36</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F23EF643357DE4902A2E6096F77BF758</string>
+			<key>remoteInfo</key>
+			<string>ACEDrawingView</string>
+		</dict>
+		<key>336EBF744B710C9CF087FB9CF126C99D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>977E72CB5DDDBF01CB4EF5794159DE47</string>
+				<string>474DBD1DF5C45005CC83BFAFC4B61680</string>
+				<string>667B04F429C8ACFC3B4262C0AEF2C361</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RFQuiltLayout</string>
+			<key>path</key>
+			<string>RFQuiltLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>33DBB10083C597B5A6C6FE1BCC7A9283</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8D6C9022DE5D198772C86E30F2F6898B</string>
+				<string>A6956F251282C87AE37A354E72C94314</string>
+				<string>D37DA6A60E845ECDDDA7EA14A7432AAA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>KRLCollectionViewGridLayout</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3449CFA19E8F7E178535E427C214EC71</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Pods-RocketPaint-acknowledgements.markdown</string>
+			<string>ACEDrawingView-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>48DBD435A7644314EF06789A10FC7DDB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A2DF94799D4D4F241BDD567D4B3A21C8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4994887923EB0FFBF83F89806E15E9CB</key>
+		<key>34AD49961F165795F8B02D67A38186EA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F6FB3722C0ECD90A1E49D941321F1605</string>
+			<string>B21FB94BED17EBE977A8DB026474C5E1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
-		<key>4C99A51A79351A97B5F7A1B76A38CF91</key>
+		<key>35E4A7BE9AD9AA6215ECC278CF2BE0E8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>366FD399B9BE5D5882A6F2079617BF67</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38BD68EAF4E91166D1CA3CDAC1A3E71E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7CBEF12110756BFD8E849BDC54158B5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3942226C5CEC859940DC38D370F3A413</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>VRMaskColoredButton.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>39761F1B22AD4C0C658B34940C51407D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>78EBB5E79A344CC0C690967A548D571D</string>
+				<string>826692B0BD1FDA1EB498DF45E384CEBC</string>
+				<string>C46DCE07FDC601800CEDC4A85F5CC64B</string>
+				<string>7515B43EBD5B8A5C7906004057812E4D</string>
+				<string>B21FB94BED17EBE977A8DB026474C5E1</string>
+				<string>CAAF0E82B6EA2AB17610B0250D282066</string>
+				<string>08C44F3E3800EBCFBF8CD01281FBF13B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>VRMaskColoredButton</string>
+			<key>path</key>
+			<string>VRMaskColoredButton</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3B680D0EFE88087180708BD76E0586F3</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>5967E5E33042686B60557DE3D2904B32</string>
+			<string>695EE56F299DA82638717DC52A729E24</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -866,9 +904,9 @@
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/VRMaskColoredButton/VRMaskColoredButton-prefix.pch</string>
+				<string>Target Support Files/RFQuiltLayout/RFQuiltLayout-prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/VRMaskColoredButton/Info.plist</string>
+				<string>Target Support Files/RFQuiltLayout/Info.plist</string>
 				<key>INSTALL_PATH</key>
 				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -880,11 +918,11 @@
 					<string>@loader_path/Frameworks</string>
 				</array>
 				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/VRMaskColoredButton/VRMaskColoredButton.modulemap</string>
+				<string>Target Support Files/RFQuiltLayout/RFQuiltLayout.modulemap</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
 				<string>NO</string>
 				<key>PRODUCT_NAME</key>
-				<string>VRMaskColoredButton</string>
+				<string>RFQuiltLayout</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
@@ -901,14 +939,197 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>4D2FCC11CF0037507194024D3B1D3A8D</key>
+		<key>3CD66215B521CD5890FC98BB4DB91FBC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RESideMenu.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CE624596783DB51679D00246464C47C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>171F8CC9E696B0550236ADA80CF83C37</string>
+			<string>A6956F251282C87AE37A354E72C94314</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>5967E5E33042686B60557DE3D2904B32</key>
+		<key>405E55827BB71AA49A923960D2C90D30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BSGridCollectionViewLayout-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42F7E454F0A178A46AAE8750042BE74C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>891133EA561B6C30BF36D38C396A1264</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>44903B3744ADB19FBDED188A0BEE31AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-RocketPaint-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>45804A035FBCE27942CA549C025E7B94</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIViewController+RESideMenu.m</string>
+			<key>path</key>
+			<string>RESideMenu/UIViewController+RESideMenu.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>45FD77F30AC7C24AE5CC18EA841E954F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RESideMenu.m</string>
+			<key>path</key>
+			<string>RESideMenu/RESideMenu.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>46D04235CE8E8C428A9F4EFDAD9EE1D8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RESideMenu-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>474DBD1DF5C45005CC83BFAFC4B61680</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RFQuiltLayout.m</string>
+			<key>path</key>
+			<string>RFQuiltLayout/RFQuiltLayout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>48C99DD4B593881CE1118D0872698E08</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>KRLCollectionViewGridLayout.framework</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>48DBD435A7644314EF06789A10FC7DDB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A2DF94799D4D4F241BDD567D4B3A21C8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>497BD502E3514FA4DCE1A0A413048529</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11B8972CFA3C96F0B8C11B7DC5271368</string>
+				<string>16E9EA8587EB45ECCC8F553215CA3E23</string>
+				<string>48C99DD4B593881CE1118D0872698E08</string>
+				<string>A361D41761CA7B095DF8B756FA91A56F</string>
+				<string>F87C8D0F179202B232F21CEA4C1B8553</string>
+				<string>BDD6C6BE57841C2705667567DF71FC36</string>
+				<string>63B78EED2DE9C0843C2C29B45DD506EC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4994887923EB0FFBF83F89806E15E9CB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A0586A03503C111E9C7C5FA82E7DEE07</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4AE7FD0E16F3FACCFE19068F1E872D9F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>4C9BAD9B7EE9084DB82E2E486E161092</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4AE7FD0E16F3FACCFE19068F1E872D9F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5502283A7122634B8147D910733AA30F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -917,7 +1138,33 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>VRMaskColoredButton.xcconfig</string>
+			<string>KRLCollectionViewGridLayout.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56BEE0067A1600FB30F52DD410B3B79E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>35E4A7BE9AD9AA6215ECC278CF2BE0E8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>572B9632E99DE66F169116286B555F0E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BSGridCollectionViewLayout-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -989,47 +1236,32 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>5B1125BE677CF3D0983804F6FA8F29BE</key>
+		<key>5AC8CF4579AC3AF7DB2323BE67DC0BE3</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>VRMaskColoredButtonBase.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/VRMaskColoredButtonBase.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>5B314E988BF6E3B8DEA499D247B86E75</key>
+		<key>5BF744D96A46D88F7C2BEA8DC72372E5</key>
 		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>BSGridCollectionViewLayout</string>
-			<key>target</key>
-			<string>8AA3DDB8797222294E1288CB197A8347</string>
-			<key>targetProxy</key>
-			<string>BE33561FA0915B0C04A4983217E8C21C</string>
-		</dict>
-		<key>60A14740278D99AA3C87A2F1E86C100F</key>
-		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>04367A8829976DE13F878E1944857567</string>
-				<string>FDED22A90883CC8F465B788B3576E689</string>
-				<string>AEA2E9B329B640D9A3C6C99AC19B1ADD</string>
-				<string>9294B4D74583C28381ECC89C303C1A58</string>
+				<string>93F3CAED52441B43441D0E800AE91E3C</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5C1A329DB1CA8E9E55B57DA242AD71FB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>474DBD1DF5C45005CC83BFAFC4B61680</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>6164C3678AA64E69F88F90A2D6E1CE0A</key>
 		<dict>
@@ -1047,7 +1279,7 @@
 		<key>61B3E8B44D6F2EA17EDE942B24371232</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C9B102EF65C16EB7FEDC86460C35BFC5</string>
+			<string>405E55827BB71AA49A923960D2C90D30</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1066,25 +1298,32 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>61FA8F1AAEC077170A9D32484C7C8781</key>
+		<key>6322B23AF4AF3AB3F9EA6EF859151F2E</key>
 		<dict>
+			<key>fileRef</key>
+			<string>864DBF709AB62E2948326B74CCE10CBF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>63B78EED2DE9C0843C2C29B45DD506EC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>VRMaskColoredButton.swift</string>
+			<string>VRMaskColoredButton.framework</string>
 			<key>path</key>
-			<string>Pod/Classes/VRMaskColoredButton.swift</string>
+			<string>VRMaskColoredButton.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>64CC02DFCC7AF367F38B84792F8145D5</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>079A05E18C75D14DA32053B5DF62E943</string>
+			<string>897BCAA9CFAFBAC3EE22B2AD03D837FD</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1137,10 +1376,30 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>667B04F429C8ACFC3B4262C0AEF2C361</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F1B83D7D3ED78227DE98ED8C31FFE308</string>
+				<string>8F88F5096863ADEC6A5F48EC3BAD0548</string>
+				<string>695EE56F299DA82638717DC52A729E24</string>
+				<string>891133EA561B6C30BF36D38C396A1264</string>
+				<string>EBD45801448B63777D6D3ACA500F0DC6</string>
+				<string>15ECF43BA13F949A79EF61BF2E02377C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/RFQuiltLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>670FF62206E9D4ED85B7CB2E4288BBD4</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>6FEB13D6F899B2CED5B0480006E781A7</string>
+			<string>2CE04254BC8EB3A79E10AA47F658714B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1196,20 +1455,91 @@
 		<key>683A05EA3B03D839FC0D157C9A74F1AD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E0C313700540FABAD75F5A38D056E5F6</string>
+			<string>71B0151BA075FC5EA6375EF6E71A4142</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>68F718328487D260639126BD99E084AE</key>
+		<key>695EE56F299DA82638717DC52A729E24</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>RFQuiltLayout.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6CD6EA9FFF42336D6649ED1124FAA065</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VRMaskColoredButton-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D2511E15282280D0EDC1DB05F146F98</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
+			<key>remoteInfo</key>
+			<string>KRLCollectionViewGridLayout</string>
+		</dict>
+		<key>6DD46551951EC9CD688E7F7920154D6A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>VRMaskColoredButton</string>
+			<string>ACEDrawingView</string>
 			<key>target</key>
-			<string>E3D8426C7D00FA14A4469AED01A2B7E5</string>
+			<string>F23EF643357DE4902A2E6096F77BF758</string>
 			<key>targetProxy</key>
-			<string>28A6C95E6429907F63CF99718E762EA1</string>
+			<string>330743354CF17E501D2B9AA88E04BE36</string>
+		</dict>
+		<key>6E81D2D3A7E61F3B970C1C5FF66FA111</key>
+		<dict>
+			<key>fileRef</key>
+			<string>15ECF43BA13F949A79EF61BF2E02377C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6F2E1BE701F1F3DB69829D747F7E3FDF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>05EA4E6505B92DA7D1F28D43EA258765</string>
+				<string>A74BCFC4E22B08E971F8C040310756DF</string>
+				<string>33DBB10083C597B5A6C6FE1BCC7A9283</string>
+				<string>9059612FDB12187E7C117A383289C90C</string>
+				<string>336EBF744B710C9CF087FB9CF126C99D</string>
+				<string>39761F1B22AD4C0C658B34940C51407D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6FACE30FFDD69CD562F6E8526FA562EB</key>
 		<dict>
@@ -1232,35 +1562,9 @@
 			<key>productName</key>
 			<string>KRLCollectionViewGridLayout</string>
 			<key>productReference</key>
-			<string>8AEB3BF9D66E63CACE35360B823E2774</string>
+			<string>48C99DD4B593881CE1118D0872698E08</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>6FEB13D6F899B2CED5B0480006E781A7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ACEDrawingView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7011F588978EFA22B99EEAC3929939D6</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
-			<key>remoteInfo</key>
-			<string>KRLCollectionViewGridLayout</string>
 		</dict>
 		<key>7113E7DBB53F20AC423FDDD34E8C2B46</key>
 		<dict>
@@ -1275,30 +1579,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>71BA344E55D650F44DC890F9D02F2B3B</key>
+		<key>7183445C11DA24F946BE44AEFA66F1AA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>95FA9D6C62076D7840475E09238EED1E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>72AB1520E074F0BCF61DEE82D024C7FA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>VRMaskColoredButton-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73BA68C60CB5242394F07F1A0206270B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>80816EDEA6DA23592449E989420F4217</string>
+			<string>977E72CB5DDDBF01CB4EF5794159DE47</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1309,28 +1593,69 @@
 				</array>
 			</dict>
 		</dict>
-		<key>74C31B819CB453623373B15FA7245F6C</key>
+		<key>71B0151BA075FC5EA6375EF6E71A4142</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ACEDrawingTools.m</string>
 			<key>path</key>
-			<string>ACEDrawingView.modulemap</string>
+			<string>ACEDrawingView/ACEDrawingTools.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>77C0429BB5F78624860497BA29BD74B3</key>
+		<key>73BA68C60CB5242394F07F1A0206270B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2F371D9FC872E751E1C7210C1E9CAAA2</string>
+			<string>31DE321CD3CAB4BB9C15001E5237EFB6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>7515B43EBD5B8A5C7906004057812E4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>VRImagePainter.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/VRImagePainter.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78EBB5E79A344CC0C690967A548D571D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIImageCopyAttributes.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/UIImageCopyAttributes.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>792EAC7B1A1A962922497CD239F36E36</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>079A05E18C75D14DA32053B5DF62E943</string>
+			<string>897BCAA9CFAFBAC3EE22B2AD03D837FD</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1385,20 +1710,32 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>7AE3BFFBD21A88DF05FCB25D466FB1E5</key>
+		<key>795FE18D7508845643148A407E1C7EB6</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2CAF693CAE6619B2A716BC27BD8FFDA6</string>
-			</array>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>7BC5D97EE9AD967B31B0F05C75A1C0ED</key>
+		<key>7C8BB1B09BAAE74DE6BD1483EA78300C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>BSGridCollectionViewLayout.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C9DA2FC75DBBBA1A1B278C598C349EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7CBEF12110756BFD8E849BDC54158B5B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1406,28 +1743,32 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>KRLCollectionViewGridLayout.m</string>
 			<key>path</key>
-			<string>Classes/KRLCollectionViewGridLayout.m</string>
+			<string>ACEDrawingView-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7C9DA2FC75DBBBA1A1B278C598C349EA</key>
+		<key>7D14283478EDF0EC21C3C8EA72C16722</key>
 		<dict>
-			<key>fileRef</key>
-			<string>95FA9D6C62076D7840475E09238EED1E</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>122DA2E5084A4393C29BE363C764795C</string>
-				<string>60A14740278D99AA3C87A2F1E86C100F</string>
-				<string>391C5D21EE39486ED5F137310584F72E</string>
+				<string>14B8B9B15ECBE87983FF987239AB2D7B</string>
+				<string>6F2E1BE701F1F3DB69829D747F7E3FDF</string>
+				<string>497BD502E3514FA4DCE1A0A413048529</string>
 				<string>03C93C0853AB901D2957F0A98BFD4E5E</string>
 			</array>
 			<key>isa</key>
@@ -1435,7 +1776,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7DE4A6F8FB10DACC340713E60088B733</key>
+		<key>7E749B7BE4EFC3F2EEB2E76BC00B00C5</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -1444,44 +1785,82 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>F23EF643357DE4902A2E6096F77BF758</string>
+			<string>BE6B9A78AE049FA4B36A2A56E67AA411</string>
 			<key>remoteInfo</key>
-			<string>ACEDrawingView</string>
+			<string>RFQuiltLayout</string>
 		</dict>
-		<key>7F79ACD206D7284CF469DA6B24AFACE9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>803F89104707637C863FF21ED796CB57</key>
+		<key>81C99807A7D0DA5BB72E1F06E1365E41</key>
 		<dict>
 			<key>fileRef</key>
-			<string>95FA9D6C62076D7840475E09238EED1E</string>
+			<string>CAAF0E82B6EA2AB17610B0250D282066</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>80816EDEA6DA23592449E989420F4217</key>
+		<key>826692B0BD1FDA1EB498DF45E384CEBC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>ACEDrawingTools.h</string>
+			<string>UIImageMaskColor.swift</string>
 			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingTools.h</string>
+			<string>Pod/Classes/UIImageMaskColor.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8337629AEE5569E3BB0B3DEC161BF341</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>BSGridCollectionViewLayout</string>
+			<key>target</key>
+			<string>8AA3DDB8797222294E1288CB197A8347</string>
+			<key>targetProxy</key>
+			<string>2D3134BCE8D8BFF793A7DD6209C61B94</string>
+		</dict>
+		<key>864DBF709AB62E2948326B74CCE10CBF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RECommonFunctions.m</string>
+			<key>path</key>
+			<string>RESideMenu/RECommonFunctions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>877E87CAE5A8259113FC97CD0B9D8538</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0724213F62C3ED12F6FC0B8F4B9E2307</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C6DE8D2F5E6A9CB38FD584B9C5B764A0</string>
+				<string>119A1CD38AB82262EC92E5009B11108E</string>
+				<string>F1C8B0BF4F3FAA41AC7A7862B6BB056D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RESideMenu</string>
+			<key>productName</key>
+			<string>RESideMenu</string>
+			<key>productReference</key>
+			<string>F87C8D0F179202B232F21CEA4C1B8553</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>879BECC79464962D26658B8396DADEB5</key>
 		<dict>
@@ -1496,226 +1875,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8AA3DDB8797222294E1288CB197A8347</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B63412E7E42A91BBEB478A10316F237E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D518FFBEA35BDE226139B5CE2081F913</string>
-				<string>26E2C710DCBB6BEB3C8CCF8EA1ED724F</string>
-				<string>CCE611FF59203C57951C5EA18DC90FC9</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BSGridCollectionViewLayout</string>
-			<key>productName</key>
-			<string>BSGridCollectionViewLayout</string>
-			<key>productReference</key>
-			<string>389D81682E801B7A5D5D0C679FC5E285</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>8AEB3BF9D66E63CACE35360B823E2774</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>KRLCollectionViewGridLayout.framework</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8D19671B80D607DBE94E50122C7BF1A0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>683A05EA3B03D839FC0D157C9A74F1AD</string>
-				<string>38BD68EAF4E91166D1CA3CDAC1A3E71E</string>
-				<string>8E3E3E654A441FE44617004A01C7DBE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8E3E3E654A441FE44617004A01C7DBE9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E322340D2B8B147ED4C02857915CE890</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8FFEB50698C421907C0C82945C9F4B27</key>
+		<key>891133EA561B6C30BF36D38C396A1264</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>ACEDrawingView-prefix.pch</string>
+			<string>RFQuiltLayout-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>915FD16A8E8ADC8AC6A506B13B201A08</key>
-		<dict>
-			<key>fileRef</key>
-			<string>217301E0698364FB9D534458F3916ED3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9294B4D74583C28381ECC89C303C1A58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D76ACDAA7B5A9A7B65BC94BD26ABDC11</string>
-				<string>217301E0698364FB9D534458F3916ED3</string>
-				<string>2F371D9FC872E751E1C7210C1E9CAAA2</string>
-				<string>396A55BBBF114755900F410C0B79AB59</string>
-				<string>61FA8F1AAEC077170A9D32484C7C8781</string>
-				<string>5B1125BE677CF3D0983804F6FA8F29BE</string>
-				<string>DA7E1B4744860AF51FFC97B43C1C72A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>VRMaskColoredButton</string>
-			<key>path</key>
-			<string>VRMaskColoredButton</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93D64CBE3D5844A86EEF978D4FF7169A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95FA9D6C62076D7840475E09238EED1E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>960F07B82141C501150B3E1C7286A666</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>VRMaskColoredButton.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96209ECB5AAC24063342E9D320A1FF5A</key>
+		<key>896DEFF39D5EA01BD434926341C77484</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>6FEB13D6F899B2CED5B0480006E781A7</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ACEDrawingView/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>ACEDrawingView</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>99998E14E564BC1141A39922A8A8A3E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99AA3D34C13DE8AA7376209FA5E25715</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D76ACDAA7B5A9A7B65BC94BD26ABDC11</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9AD7D56AD4CA8F8FC3507E7207540997</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5967E5E33042686B60557DE3D2904B32</string>
+			<string>3942226C5CEC859940DC38D370F3A413</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1749,15 +1925,13 @@
 				<key>MODULEMAP_FILE</key>
 				<string>Target Support Files/VRMaskColoredButton/VRMaskColoredButton.modulemap</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>PRODUCT_NAME</key>
 				<string>VRMaskColoredButton</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
 				<key>TARGETED_DEVICE_FAMILY</key>
 				<string>1,2</string>
 				<key>VERSIONING_SYSTEM</key>
@@ -1768,137 +1942,9 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
-		<key>9B2AE6BC54A4FF8A63BF841BE982914F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B8A43530E7AAD9635F21DBFB598247A3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9D85010140D5D7C51D2CA58407E561CD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A2382E31054869404ABFD7646040D356</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9DD767A7E426A0B5A39A18C4E83B6BB3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_RocketPaint.framework</string>
-			<key>path</key>
-			<string>Pods_RocketPaint.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9E04BEF12694477A6DA0170D69F9D74E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>24D7CF30526D050E3EB7CCC1550B6150</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9E258F3AF3B4A6AF83CB22DF100AA695</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E416691E66ADF92BC29329CC0FE6CA0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>803F89104707637C863FF21ED796CB57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A2382E31054869404ABFD7646040D356</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ACEDrawingView.h</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2DF94799D4D4F241BDD567D4B3A21C8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95FA9D6C62076D7840475E09238EED1E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A4C1E367053685545A9D76A7C6C148D1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ACEDrawingView.framework</string>
-			<key>path</key>
-			<string>ACEDrawingView.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A6C3538380DAADEA19AFFE6430FBE9FF</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>VRMaskColoredButton.framework</string>
-			<key>path</key>
-			<string>VRMaskColoredButton.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>AAA2AFC623A5483E19C489BCB54E7952</key>
+		<key>897BCAA9CFAFBAC3EE22B2AD03D837FD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1907,381 +1953,19 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-RocketPaint.release.xcconfig</string>
+			<string>BSGridCollectionViewLayout.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AB374F239ECAC6401511027E0F61E1BB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>670FF62206E9D4ED85B7CB2E4288BBD4</string>
-				<string>96209ECB5AAC24063342E9D320A1FF5A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>ABE311B0B762B40BC4773CCF0B5F7F1D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9E258F3AF3B4A6AF83CB22DF100AA695</string>
-				<string>050FE17BC31C98DB5C2FFEE8DCF03C74</string>
-				<string>44903B3744ADB19FBDED188A0BEE31AF</string>
-				<string>6164C3678AA64E69F88F90A2D6E1CE0A</string>
-				<string>171F8CC9E696B0550236ADA80CF83C37</string>
-				<string>879BECC79464962D26658B8396DADEB5</string>
-				<string>E8523C70CA8C29F952E40A5097FACA3E</string>
-				<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
-				<string>FC7993050289585DC052209EAAB31925</string>
-				<string>AAA2AFC623A5483E19C489BCB54E7952</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-RocketPaint</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-RocketPaint</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ACA3751B7CAB1FC099AA5F86701D408D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E90C65B36F6C38780224E88810DF34C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>AE7110F2D32018D92DE5596426BC24D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AEA2E9B329B640D9A3C6C99AC19B1ADD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>43B18229260C9BEB4C08C053C23CB62B</string>
-				<string>7BC5D97EE9AD967B31B0F05C75A1C0ED</string>
-				<string>1D3544E79D8AF7EEB765B71609D97AF2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>KRLCollectionViewGridLayout</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B017233D3192D6BD5A51B5BBAD678B09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B1125BE677CF3D0983804F6FA8F29BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B63412E7E42A91BBEB478A10316F237E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>792EAC7B1A1A962922497CD239F36E36</string>
-				<string>64CC02DFCC7AF367F38B84792F8145D5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B8A43530E7AAD9635F21DBFB598247A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>VRMaskColoredButton-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BE33561FA0915B0C04A4983217E8C21C</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8AA3DDB8797222294E1288CB197A8347</string>
-			<key>remoteInfo</key>
-			<string>BSGridCollectionViewLayout</string>
-		</dict>
-		<key>C1B069001D3FF81F17A052FA227F40ED</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BSGridCollectionViewLayout-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C764D44D130FF58A775F9E471441B66A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0495421A68FBE3ADC3FBAEDB2B53F5AF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C9B102EF65C16EB7FEDC86460C35BFC5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BSGridCollectionViewLayout-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE611FF59203C57951C5EA18DC90FC9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1C33FD78005932356FF3E937998CBCC5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CCEA26201F74E01FD9621E1CACAD85A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3B76A9BBB908E16EB84916CCDFD05725</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CE1012DDE0F7B47D04E0BC4DBCC75D46</key>
-		<dict>
-			<key>fileRef</key>
-			<string>23B3C2F7A60189AA38D256A0120B8730</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>391C5D21EE39486ED5F137310584F72E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>F23EF643357DE4902A2E6096F77BF758</string>
-				<string>8AA3DDB8797222294E1288CB197A8347</string>
-				<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
-				<string>10351FD6D96469CA96B3E85E369D13ED</string>
-				<string>E3D8426C7D00FA14A4469AED01A2B7E5</string>
-			</array>
-		</dict>
-		<key>D518FFBEA35BDE226139B5CE2081F913</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>61B3E8B44D6F2EA17EDE942B24371232</string>
-				<string>CCEA26201F74E01FD9621E1CACAD85A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D6A93EFDDB3ECE25AB345519AC78F83C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>74C31B819CB453623373B15FA7245F6C</string>
-				<string>6FEB13D6F899B2CED5B0480006E781A7</string>
-				<string>185EBE0387925C6E0A1E430ED1912F7A</string>
-				<string>8FFEB50698C421907C0C82945C9F4B27</string>
-				<string>E90C65B36F6C38780224E88810DF34C9</string>
-				<string>21D01E03EBC5EB2EC5C59FD51220F5BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/ACEDrawingView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D76ACDAA7B5A9A7B65BC94BD26ABDC11</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImageCopyAttributes.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/UIImageCopyAttributes.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DA7E1B4744860AF51FFC97B43C1C72A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>10DD95CF597C469FDDB8DB0DB71A2C7C</string>
-				<string>960F07B82141C501150B3E1C7286A666</string>
-				<string>5967E5E33042686B60557DE3D2904B32</string>
-				<string>0495421A68FBE3ADC3FBAEDB2B53F5AF</string>
-				<string>72AB1520E074F0BCF61DEE82D024C7FA</string>
-				<string>B8A43530E7AAD9635F21DBFB598247A3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/VRMaskColoredButton</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0C313700540FABAD75F5A38D056E5F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ACEDrawingTools.m</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingTools.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E322340D2B8B147ED4C02857915CE890</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ACEDrawingView.m</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E35B3E289DB984DA75A774080D293670</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>23B3C2F7A60189AA38D256A0120B8730</string>
-				<string>95FA9D6C62076D7840475E09238EED1E</string>
-				<string>7F79ACD206D7284CF469DA6B24AFACE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3D8426C7D00FA14A4469AED01A2B7E5</key>
+		<key>8AA3DDB8797222294E1288CB197A8347</key>
 		<dict>
 			<key>buildConfigurationList</key>
-			<string>01C9BDAE6662F0781AC5554D2FBB2AC1</string>
+			<string>B63412E7E42A91BBEB478A10316F237E</string>
 			<key>buildPhases</key>
 			<array>
-				<string>1C081442A4D5BB246B318AE6FA1D4C3D</string>
-				<string>42038F619C9D17E77449F652C619338D</string>
-				<string>EFE7B95AE08438DCDF2611494A2D1346</string>
+				<string>D518FFBEA35BDE226139B5CE2081F913</string>
+				<string>26E2C710DCBB6BEB3C8CCF8EA1ED724F</string>
+				<string>CCE611FF59203C57951C5EA18DC90FC9</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -2290,128 +1974,28 @@
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>VRMaskColoredButton</string>
+			<string>BSGridCollectionViewLayout</string>
 			<key>productName</key>
-			<string>VRMaskColoredButton</string>
+			<string>BSGridCollectionViewLayout</string>
 			<key>productReference</key>
-			<string>A6C3538380DAADEA19AFFE6430FBE9FF</string>
+			<string>16E9EA8587EB45ECCC8F553215CA3E23</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>E8523C70CA8C29F952E40A5097FACA3E</key>
+		<key>8AF41B84789560703B02CE1B38798F42</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Pods-RocketPaint-resources.sh</string>
+			<string>RESideMenu-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E8C7A409A9D302234282A8819DCFCF34</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7F79ACD206D7284CF469DA6B24AFACE9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E90C65B36F6C38780224E88810DF34C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ACEDrawingView-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EB6205DC7D86BD0C3F616FDA0A2572C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF1ACF7D41AC79EC815E48EF948D4BEC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>93D64CBE3D5844A86EEF978D4FF7169A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/KRLCollectionViewGridLayout/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>KRLCollectionViewGridLayout</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EFE7B95AE08438DCDF2611494A2D1346</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9B2AE6BC54A4FF8A63BF841BE982914F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F05A0FE4E8982C528B0B375942AFC69B</key>
+		<key>8C36E5502C9819F500C0ED59F9D2A866</key>
 		<dict>
 			<key>baseConfigurationReference</key>
 			<string>AAA2AFC623A5483E19C489BCB54E7952</string>
@@ -2473,6 +2057,1435 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>8D19671B80D607DBE94E50122C7BF1A0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>683A05EA3B03D839FC0D157C9A74F1AD</string>
+				<string>38BD68EAF4E91166D1CA3CDAC1A3E71E</string>
+				<string>8E3E3E654A441FE44617004A01C7DBE9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>8D6C9022DE5D198772C86E30F2F6898B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>KRLCollectionViewGridLayout.h</string>
+			<key>path</key>
+			<string>Classes/KRLCollectionViewGridLayout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E3E3E654A441FE44617004A01C7DBE9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E85FCCFB95591B7033C9A079157C286</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8ECBB0F391910DEE83762B662F0ACE36</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C46DCE07FDC601800CEDC4A85F5CC64B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8F88F5096863ADEC6A5F48EC3BAD0548</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RFQuiltLayout.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FEA3EBCA41666F28CF389532BFC3C83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VRMaskColoredButton-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9059612FDB12187E7C117A383289C90C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EE083468AFDE224B69F50300B583A4BF</string>
+				<string>864DBF709AB62E2948326B74CCE10CBF</string>
+				<string>C84C5AA59179E6C5FFE000C36F47C5E1</string>
+				<string>45FD77F30AC7C24AE5CC18EA841E954F</string>
+				<string>002F93504C79F31FEBEED8D4053CD48F</string>
+				<string>45804A035FBCE27942CA549C025E7B94</string>
+				<string>F113331B92AAF52CE2D7E28052C2E0E5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RESideMenu</string>
+			<key>path</key>
+			<string>RESideMenu</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>93589C16B0D2B9C3BE7964E313D32249</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>24DEA8601CC4133C263B93977F525F7E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/RESideMenu/RESideMenu-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/RESideMenu/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/RESideMenu/RESideMenu.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>RESideMenu</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>93F3CAED52441B43441D0E800AE91E3C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>9505903522E71860E7DB47266839EA90</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>95391B29873D0D2B686D2BDD1F8CD3A8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>42F7E454F0A178A46AAE8750042BE74C</string>
+				<string>5C1A329DB1CA8E9E55B57DA242AD71FB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>96209ECB5AAC24063342E9D320A1FF5A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2CE04254BC8EB3A79E10AA47F658714B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/ACEDrawingView/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/ACEDrawingView/ACEDrawingView.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>ACEDrawingView</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>969C14C1D027E173E6749A06A710C2B1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9A7D1DE67D044C22280432ED4EF049B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>976ECDFD0AE84E1E11DB9DC2923975D3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6E81D2D3A7E61F3B970C1C5FF66FA111</string>
+				<string>7183445C11DA24F946BE44AEFA66F1AA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>977E72CB5DDDBF01CB4EF5794159DE47</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RFQuiltLayout.h</string>
+			<key>path</key>
+			<string>RFQuiltLayout/RFQuiltLayout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A34D445A85CC02CE4F57783004DC8DA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E1AF592FE721FB0B8BD477CE66558511</string>
+				<string>896DEFF39D5EA01BD434926341C77484</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9A7D1DE67D044C22280432ED4EF049B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D85010140D5D7C51D2CA58407E561CD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D86906751AA14D18F43CA20E6FD577E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>9E04BEF12694477A6DA0170D69F9D74E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ECDC92CF3AD090794C5C64A92EFF72A6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9E258F3AF3B4A6AF83CB22DF100AA695</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A0586A03503C111E9C7C5FA82E7DEE07</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2DF94799D4D4F241BDD567D4B3A21C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE437620300D81EED04DF8C0301AF9D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A361D41761CA7B095DF8B756FA91A56F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_RocketPaint.framework</string>
+			<key>path</key>
+			<string>Pods_RocketPaint.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A6956F251282C87AE37A354E72C94314</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>KRLCollectionViewGridLayout.m</string>
+			<key>path</key>
+			<string>Classes/KRLCollectionViewGridLayout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A74BCFC4E22B08E971F8C040310756DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1886FA0419FC6C9873D1924C240C9DE</string>
+				<string>E7A7CBF545625D1FA2D48BBDB60FDDBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BSGridCollectionViewLayout</string>
+			<key>path</key>
+			<string>BSGridCollectionViewLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9203A0FF197B8764CD853B6EE3A159E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4AE7FD0E16F3FACCFE19068F1E872D9F</string>
+				<string>CE437620300D81EED04DF8C0301AF9D9</string>
+				<string>0DD25CA4A497622D5ABF4C433D79E4DE</string>
+				<string>ED04AE2201316F6590E7AD9952706C7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AAA2AFC623A5483E19C489BCB54E7952</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-RocketPaint.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB374F239ECAC6401511027E0F61E1BB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>670FF62206E9D4ED85B7CB2E4288BBD4</string>
+				<string>96209ECB5AAC24063342E9D320A1FF5A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>ABE311B0B762B40BC4773CCF0B5F7F1D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9E258F3AF3B4A6AF83CB22DF100AA695</string>
+				<string>050FE17BC31C98DB5C2FFEE8DCF03C74</string>
+				<string>44903B3744ADB19FBDED188A0BEE31AF</string>
+				<string>6164C3678AA64E69F88F90A2D6E1CE0A</string>
+				<string>171F8CC9E696B0550236ADA80CF83C37</string>
+				<string>879BECC79464962D26658B8396DADEB5</string>
+				<string>E8523C70CA8C29F952E40A5097FACA3E</string>
+				<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
+				<string>FC7993050289585DC052209EAAB31925</string>
+				<string>AAA2AFC623A5483E19C489BCB54E7952</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-RocketPaint</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-RocketPaint</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ACA3751B7CAB1FC099AA5F86701D408D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3449CFA19E8F7E178535E427C214EC71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>AE178BB194B128D5B7B9D4B3575A2A42</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FC7993050289585DC052209EAAB31925</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-RocketPaint/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_RocketPaint</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B0B93F224C7D4DE7423FEB20B8E0E3DE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>07DBDEB8CE894A54CD73B3F7E1AE7354</string>
+				<string>DADA80CCFAE147E05D428D32C2F025FA</string>
+				<string>8ECBB0F391910DEE83762B662F0ACE36</string>
+				<string>32E7069575ABE119192C3BDABAD10F6E</string>
+				<string>EF47677425F969A0F2ADDF4484109EB2</string>
+				<string>34AD49961F165795F8B02D67A38186EA</string>
+				<string>81C99807A7D0DA5BB72E1F06E1365E41</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B0F5B90115455CB654E1EC5FEAABB40D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4C9BAD9B7EE9084DB82E2E486E161092</string>
+				<string>5AC8CF4579AC3AF7DB2323BE67DC0BE3</string>
+				<string>1351ED64C6F1AA968E2B85EA83831AC6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B138087391C12AA4BB2F312063267185</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>VRMaskColoredButton</string>
+			<key>target</key>
+			<string>D64FEEC8DDA6E4EC41292166473022D4</string>
+			<key>targetProxy</key>
+			<string>B16A0624D3CD0E35F419DEE11F3806E1</string>
+		</dict>
+		<key>B16A0624D3CD0E35F419DEE11F3806E1</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D64FEEC8DDA6E4EC41292166473022D4</string>
+			<key>remoteInfo</key>
+			<string>VRMaskColoredButton</string>
+		</dict>
+		<key>B21FB94BED17EBE977A8DB026474C5E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>VRMaskColoredButton.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/VRMaskColoredButton.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4C5EA9E587B806205CDC84B06BDC773</key>
+		<dict>
+			<key>fileRef</key>
+			<string>45804A035FBCE27942CA549C025E7B94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B63412E7E42A91BBEB478A10316F237E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>792EAC7B1A1A962922497CD239F36E36</string>
+				<string>64CC02DFCC7AF367F38B84792F8145D5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B741C9592838B5D34658F5A604547883</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8AF41B84789560703B02CE1B38798F42</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BDD6C6BE57841C2705667567DF71FC36</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>RFQuiltLayout.framework</string>
+			<key>path</key>
+			<string>RFQuiltLayout.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BE6B9A78AE049FA4B36A2A56E67AA411</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F6A6E60EADD1868CD03F0422B081D257</string>
+			<key>buildPhases</key>
+			<array>
+				<string>95391B29873D0D2B686D2BDD1F8CD3A8</string>
+				<string>969C14C1D027E173E6749A06A710C2B1</string>
+				<string>976ECDFD0AE84E1E11DB9DC2923975D3</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RFQuiltLayout</string>
+			<key>productName</key>
+			<string>RFQuiltLayout</string>
+			<key>productReference</key>
+			<string>BDD6C6BE57841C2705667567DF71FC36</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>C46DCE07FDC601800CEDC4A85F5CC64B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>UIImageMerge.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/UIImageMerge.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C55A539DB4CB6A2CB51345C34F664D60</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C6238533061C85D53684844785E7A80A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RESideMenu-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C6DE8D2F5E6A9CB38FD584B9C5B764A0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6322B23AF4AF3AB3F9EA6EF859151F2E</string>
+				<string>B741C9592838B5D34658F5A604547883</string>
+				<string>28C09C00F6BC881D178C889DF1CA9473</string>
+				<string>B4C5EA9E587B806205CDC84B06BDC773</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C6E9D3D49D5FE7D8839F435D8BCC339E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>695EE56F299DA82638717DC52A729E24</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/RFQuiltLayout/RFQuiltLayout-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/RFQuiltLayout/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/RFQuiltLayout/RFQuiltLayout.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>RFQuiltLayout</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C84C5AA59179E6C5FFE000C36F47C5E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RESideMenu.h</string>
+			<key>path</key>
+			<string>RESideMenu/RESideMenu.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CAAF0E82B6EA2AB17610B0250D282066</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>VRMaskColoredButtonBase.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/VRMaskColoredButtonBase.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CB9AD3959019EEE619B0AAC7518D4ABC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F05E8D352074BD4DD62E239AD44C4509</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CBBF334BA07D23DD6C8C1DDCF5FD62B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCE611FF59203C57951C5EA18DC90FC9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1C33FD78005932356FF3E937998CBCC5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CCEA26201F74E01FD9621E1CACAD85A8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1886FA0419FC6C9873D1924C240C9DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDF4B3BFE45542B1071EB1D9E529E8A9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE083468AFDE224B69F50300B583A4BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CE437620300D81EED04DF8C0301AF9D9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CE4C090C5C9186EF051CB3185497CFC6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VRMaskColoredButton-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D02483E2B1D27DACACF41FB7B2729F52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ACEDrawingView.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1886FA0419FC6C9873D1924C240C9DE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>GridCollectionViewLayout.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/GridCollectionViewLayout.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D37DA6A60E845ECDDDA7EA14A7432AAA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7D14283478EDF0EC21C3C8EA72C16722</string>
+				<string>EE98D0005709F03E811535ABC5DDABF7</string>
+				<string>5502283A7122634B8147D910733AA30F</string>
+				<string>ECDC92CF3AD090794C5C64A92EFF72A6</string>
+				<string>CBBF334BA07D23DD6C8C1DDCF5FD62B6</string>
+				<string>A0586A03503C111E9C7C5FA82E7DEE07</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/KRLCollectionViewGridLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0700</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>497BD502E3514FA4DCE1A0A413048529</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>F23EF643357DE4902A2E6096F77BF758</string>
+				<string>8AA3DDB8797222294E1288CB197A8347</string>
+				<string>6FACE30FFDD69CD562F6E8526FA562EB</string>
+				<string>211D9AD82658A857B1AC6165950C2A5A</string>
+				<string>877E87CAE5A8259113FC97CD0B9D8538</string>
+				<string>BE6B9A78AE049FA4B36A2A56E67AA411</string>
+				<string>D64FEEC8DDA6E4EC41292166473022D4</string>
+			</array>
+		</dict>
+		<key>D518FFBEA35BDE226139B5CE2081F913</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>61B3E8B44D6F2EA17EDE942B24371232</string>
+				<string>CCEA26201F74E01FD9621E1CACAD85A8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D64FEEC8DDA6E4EC41292166473022D4</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9A34D445A85CC02CE4F57783004DC8DA</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B0B93F224C7D4DE7423FEB20B8E0E3DE</string>
+				<string>B0F5B90115455CB654E1EC5FEAABB40D</string>
+				<string>CB9AD3959019EEE619B0AAC7518D4ABC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VRMaskColoredButton</string>
+			<key>productName</key>
+			<string>VRMaskColoredButton</string>
+			<key>productReference</key>
+			<string>63B78EED2DE9C0843C2C29B45DD506EC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>D86906751AA14D18F43CA20E6FD577E6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ACEDrawingView.h</string>
+			<key>path</key>
+			<string>ACEDrawingView/ACEDrawingView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D91F3DF7CEE00416ED0DE201E373C488</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VRMaskColoredButton.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DABDD25E341C86255761143470A4EFF8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>171F8CC9E696B0550236ADA80CF83C37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DADA80CCFAE147E05D428D32C2F025FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>826692B0BD1FDA1EB498DF45E384CEBC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DB5732123E9573FD81E072253EE4A0CF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AE178BB194B128D5B7B9D4B3575A2A42</string>
+				<string>8C36E5502C9819F500C0ED59F9D2A866</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E1AF592FE721FB0B8BD477CE66558511</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3942226C5CEC859940DC38D370F3A413</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/VRMaskColoredButton/VRMaskColoredButton-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/VRMaskColoredButton/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/VRMaskColoredButton/VRMaskColoredButton.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>VRMaskColoredButton</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E7A7CBF545625D1FA2D48BBDB60FDDBA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C8BB1B09BAAE74DE6BD1483EA78300C</string>
+				<string>897BCAA9CFAFBAC3EE22B2AD03D837FD</string>
+				<string>405E55827BB71AA49A923960D2C90D30</string>
+				<string>05D740092BB3480C003E7DFA98C3A941</string>
+				<string>572B9632E99DE66F169116286B555F0E</string>
+				<string>C55A539DB4CB6A2CB51345C34F664D60</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/BSGridCollectionViewLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8523C70CA8C29F952E40A5097FACA3E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-RocketPaint-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EBD45801448B63777D6D3ACA500F0DC6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RFQuiltLayout-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ECDC92CF3AD090794C5C64A92EFF72A6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ED04AE2201316F6590E7AD9952706C7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>ED0CDD27A8D0419D43860E2F886B0E15</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ACEDrawingView-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE083468AFDE224B69F50300B583A4BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RECommonFunctions.h</string>
+			<key>path</key>
+			<string>RESideMenu/RECommonFunctions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE98D0005709F03E811535ABC5DDABF7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>KRLCollectionViewGridLayout.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF1ACF7D41AC79EC815E48EF948D4BEC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>5502283A7122634B8147D910733AA30F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/KRLCollectionViewGridLayout/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>KRLCollectionViewGridLayout</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>EF47677425F969A0F2ADDF4484109EB2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8FEA3EBCA41666F28CF389532BFC3C83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EF947B89F70598D38997BF869FFD235B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>46D04235CE8E8C428A9F4EFDAD9EE1D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F05E8D352074BD4DD62E239AD44C4509</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE4C090C5C9186EF051CB3185497CFC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F113331B92AAF52CE2D7E28052C2E0E5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9505903522E71860E7DB47266839EA90</string>
+				<string>3CD66215B521CD5890FC98BB4DB91FBC</string>
+				<string>24DEA8601CC4133C263B93977F525F7E</string>
+				<string>8AF41B84789560703B02CE1B38798F42</string>
+				<string>C6238533061C85D53684844785E7A80A</string>
+				<string>46D04235CE8E8C428A9F4EFDAD9EE1D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/RESideMenu</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F1B83D7D3ED78227DE98ED8C31FFE308</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F1C8B0BF4F3FAA41AC7A7862B6BB056D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CDF4B3BFE45542B1071EB1D9E529E8A9</string>
+				<string>EF947B89F70598D38997BF869FFD235B</string>
+				<string>126C95A804FD5A2848F301F32A7DADB1</string>
+				<string>1E46DC00D66179EE088496773FAC4B34</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>F23EF643357DE4902A2E6096F77BF758</key>
 		<dict>
 			<key>buildConfigurationList</key>
@@ -2494,7 +3507,7 @@
 			<key>productName</key>
 			<string>ACEDrawingView</string>
 			<key>productReference</key>
-			<string>A4C1E367053685545A9D76A7C6C148D1</string>
+			<string>11B8972CFA3C96F0B8C11B7DC5271368</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
@@ -2512,25 +3525,12 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>F6FB3722C0ECD90A1E49D941321F1605</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>KRLCollectionViewGridLayout-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F9751B83A0ED3F11EFEC1D45F91FA248</key>
+		<key>F6A6E60EADD1868CD03F0422B081D257</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>01FC9F98444873FFD1C208D502BA8EAE</string>
-				<string>F05A0FE4E8982C528B0B375942AFC69B</string>
+				<string>C6E9D3D49D5FE7D8839F435D8BCC339E</string>
+				<string>3B680D0EFE88087180708BD76E0586F3</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -2539,18 +3539,20 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>FB9B7588C34CB936F1CD9076512AE518</key>
+		<key>F87C8D0F179202B232F21CEA4C1B8553</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RESideMenu.framework</string>
 			<key>path</key>
-			<string>BSGridCollectionViewLayout-prefix.pch</string>
+			<string>RESideMenu.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>FC7993050289585DC052209EAAB31925</key>
 		<dict>
@@ -2562,22 +3564,6 @@
 			<string>text.xcconfig</string>
 			<key>path</key>
 			<string>Pods-RocketPaint.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDED22A90883CC8F465B788B3576E689</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3B76A9BBB908E16EB84916CCDFD05725</string>
-				<string>039F606ED4EFB953DD16F31148B481FA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BSGridCollectionViewLayout</string>
-			<key>path</key>
-			<string>BSGridCollectionViewLayout</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

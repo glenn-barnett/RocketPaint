@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E00EBBFE8853EA382359A788'
-               BlueprintName = 'BSGridCollectionViewLayout'
+               BlueprintIdentifier = 'C1447807B14758B867852692'
+               BlueprintName = 'RFQuiltLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BSGridCollectionViewLayout.framework'>
+               BuildableName = 'RFQuiltLayout.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

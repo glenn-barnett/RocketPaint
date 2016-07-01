@@ -10,21 +10,30 @@ import UIKit
 
 class ColorCell: UICollectionViewCell {
     @IBOutlet var CloseButton : UIButton?
-    // backgroundcolor also stores state
+    var Color : UIColor {
+        didSet { self.setNeedsDisplay(); }
+    }
     
     required init?(coder aDecoder: NSCoder) {
+        self.Color = UIColor.redColor()
         super.init(coder:aDecoder)
         initializeStyle()
     }
     
     override required init(frame: CGRect) {
+        self.Color = UIColor.redColor()
         super.init(frame:frame)
         initializeStyle()
     }
     
     func initializeStyle() {
-        self.contentView.layer.borderWidth = 2
-        self.contentView.layer.borderColor = UIColor.blackColor().CGColor
+//        self.contentView.layer.borderWidth = 2
+//        self.contentView.layer.borderColor = UIColor.blackColor().CGColor
+        
+    }
+    
+    override func drawRect(rect: CGRect) {
+        RocketPaintStyleKit.drawPaletteColor(paletteItemColor: self.Color)
     }
     
 }

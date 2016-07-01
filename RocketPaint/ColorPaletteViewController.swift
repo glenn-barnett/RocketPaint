@@ -173,7 +173,7 @@ class ColorPaletteViewController: UICollectionViewController
         
         let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! ColorCell
 
-        let cellColor = cell.backgroundColor
+        let cellColor = cell.Color
         
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kColorSelected,
@@ -240,9 +240,10 @@ class ColorPaletteViewController: UICollectionViewController
         else if(indexPath.item < sessionColorArray.count + variantColorArray.count + staticColorArray.count + randomColorArray.count) {
             color = randomColorArray[indexPath.item - sessionColorArray.count - variantColorArray.count - staticColorArray.count]
             cell.CloseButton!.hidden = true
-       }
-        
-        cell.backgroundColor = color //randomColorArray[indexPath.item]
+        }
+    
+        cell.Color = color
+//        cell.backgroundColor = color //randomColorArray[indexPath.item]
 
 
         //GB useful example of cell layer manipulation
