@@ -15,9 +15,18 @@
 		2A19C47C1D247AF20099D1E8 /* UndoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19C47B1D247AF20099D1E8 /* UndoButton.swift */; };
 		2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4041D253D360066FAD0 /* RedoButton.swift */; };
 		2A43D4071D2542B60066FAD0 /* PaletteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4061D2542B60066FAD0 /* PaletteButton.swift */; };
-		2A43D4091D25CC3B0066FAD0 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */; };
+		2A43D40B1D2695520066FAD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40A1D2695520066FAD0 /* RootViewController.swift */; };
+		2A43D40D1D2696390066FAD0 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40C1D2696390066FAD0 /* LeftMenuViewController.swift */; };
+		2A43D40F1D28BD520066FAD0 /* CameraRollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40E1D28BD520066FAD0 /* CameraRollService.swift */; };
+		2A43D4111D28C0F40066FAD0 /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4101D28C0F40066FAD0 /* LoadButton.swift */; };
+		2A43D4131D28C3420066FAD0 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4121D28C3420066FAD0 /* HamburgerButton.swift */; };
+		2A43D4151D28C37C0066FAD0 /* LoadBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4141D28C37C0066FAD0 /* LoadBView.swift */; };
+		2A43D4171D28C38A0066FAD0 /* BView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4161D28C38A0066FAD0 /* BView.swift */; };
+		2A4B4DD81D2B5CC400ECBD0C /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DD71D2B5CC400ECBD0C /* DrawingService.swift */; };
+		2A4B4DDA1D2B5E7800ECBD0C /* SaveBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DD91D2B5E7800ECBD0C /* SaveBView.swift */; };
+		2A4B4DDC1D2B5EDC00ECBD0C /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DDB1D2B5EDC00ECBD0C /* SaveButton.swift */; };
 		2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */; };
-		2A9FA2B91CC2BC28000FF2A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */; };
+		2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */; };
 		2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */; };
 		2A9FA2BE1CC2BC28000FF2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */; };
 		2A9FA2C11CC2BC28000FF2A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BF1CC2BC28000FF2A4 /* LaunchScreen.storyboard */; };
@@ -36,10 +45,19 @@
 		2A19C47B1D247AF20099D1E8 /* UndoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndoButton.swift; sourceTree = "<group>"; };
 		2A43D4041D253D360066FAD0 /* RedoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedoButton.swift; sourceTree = "<group>"; };
 		2A43D4061D2542B60066FAD0 /* PaletteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteButton.swift; sourceTree = "<group>"; };
-		2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		2A43D40A1D2695520066FAD0 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2A43D40C1D2696390066FAD0 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		2A43D40E1D28BD520066FAD0 /* CameraRollService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollService.swift; sourceTree = "<group>"; };
+		2A43D4101D28C0F40066FAD0 /* LoadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadButton.swift; sourceTree = "<group>"; };
+		2A43D4121D28C3420066FAD0 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		2A43D4141D28C37C0066FAD0 /* LoadBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadBView.swift; sourceTree = "<group>"; };
+		2A43D4161D28C38A0066FAD0 /* BView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
+		2A4B4DD71D2B5CC400ECBD0C /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
+		2A4B4DD91D2B5E7800ECBD0C /* SaveBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveBView.swift; sourceTree = "<group>"; };
+		2A4B4DDB1D2B5EDC00ECBD0C /* SaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		2A9FA2B31CC2BC28000FF2A4 /* RocketPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		2A9FA2BB1CC2BC28000FF2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9FA2C01CC2BC28000FF2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,9 +91,14 @@
 			children = (
 				2A19C4791D24739A0099D1E8 /* IconColoredButton.swift */,
 				2A19C47B1D247AF20099D1E8 /* UndoButton.swift */,
+				2A43D4101D28C0F40066FAD0 /* LoadButton.swift */,
+				2A4B4DDB1D2B5EDC00ECBD0C /* SaveButton.swift */,
+				2A43D4141D28C37C0066FAD0 /* LoadBView.swift */,
+				2A4B4DD91D2B5E7800ECBD0C /* SaveBView.swift */,
 				2A43D4041D253D360066FAD0 /* RedoButton.swift */,
-				2A43D4081D25CC3B0066FAD0 /* HamburgerButton.swift */,
+				2A43D4121D28C3420066FAD0 /* HamburgerButton.swift */,
 				2A43D4061D2542B60066FAD0 /* PaletteButton.swift */,
+				2A43D4161D28C38A0066FAD0 /* BView.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -105,7 +128,9 @@
 				2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */,
 				2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */,
 				2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */,
-				2A9FA2B81CC2BC28000FF2A4 /* ViewController.swift */,
+				2A43D40A1D2695520066FAD0 /* RootViewController.swift */,
+				2A43D40C1D2696390066FAD0 /* LeftMenuViewController.swift */,
+				2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */,
 				2A9FA2C21CC2BC28000FF2A4 /* Info.plist */,
 				2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */,
 				2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */,
@@ -113,6 +138,8 @@
 				2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */,
 				2A9FA2BF1CC2BC28000FF2A4 /* LaunchScreen.storyboard */,
 				2A1582B61CD8CF500030BB45 /* Notifications.swift */,
+				2A43D40E1D28BD520066FAD0 /* CameraRollService.swift */,
+				2A4B4DD71D2B5CC400ECBD0C /* DrawingService.swift */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -249,16 +276,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */,
-				2A9FA2B91CC2BC28000FF2A4 /* ViewController.swift in Sources */,
+				2A43D4171D28C38A0066FAD0 /* BView.swift in Sources */,
+				2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */,
 				2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */,
 				2A19C47C1D247AF20099D1E8 /* UndoButton.swift in Sources */,
+				2A43D40B1D2695520066FAD0 /* RootViewController.swift in Sources */,
 				2A19C4771D24735D0099D1E8 /* RocketPaintStyleKit.swift in Sources */,
-				2A43D4091D25CC3B0066FAD0 /* HamburgerButton.swift in Sources */,
+				2A43D40F1D28BD520066FAD0 /* CameraRollService.swift in Sources */,
+				2A4B4DDC1D2B5EDC00ECBD0C /* SaveButton.swift in Sources */,
+				2A43D4151D28C37C0066FAD0 /* LoadBView.swift in Sources */,
+				2A43D4111D28C0F40066FAD0 /* LoadButton.swift in Sources */,
+				2A4B4DDA1D2B5E7800ECBD0C /* SaveBView.swift in Sources */,
 				2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */,
+				2A4B4DD81D2B5CC400ECBD0C /* DrawingService.swift in Sources */,
+				2A43D4131D28C3420066FAD0 /* HamburgerButton.swift in Sources */,
 				2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */,
 				2A19C47A1D24739A0099D1E8 /* IconColoredButton.swift in Sources */,
 				2A43D4071D2542B60066FAD0 /* PaletteButton.swift in Sources */,
 				2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */,
+				2A43D40D1D2696390066FAD0 /* LeftMenuViewController.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -388,7 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

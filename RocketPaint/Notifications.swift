@@ -13,5 +13,7 @@ struct Notifications {
     static let kColorSelected = "kColorSelected"
     static let kColorUsed = "kColorUsed"
     static let kColorPaletteClosed = "kColorPaletteClosed"
+//    static let kImageLoaded = "kImageLoaded"
+//    static let kImageSaved = "kImageSaved"
 }
 

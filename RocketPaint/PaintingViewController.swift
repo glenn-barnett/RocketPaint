@@ -8,6 +8,7 @@
 
 import UIKit
 import ACEDrawingView
+import RESideMenu
 
 
 // TODO need "cue" that photo was saved to camera roll
@@ -42,7 +43,8 @@ import ACEDrawingView
 // TODO eyedropper, fill
 //   ACE options: text/font, line/arrow, rect, ellipse,
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PaintingViewController: UIViewController,
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var DrawingView : RocketDrawingView!
     @IBOutlet var ColorPaletteView : UIView?
@@ -50,16 +52,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var UndoButton : UIButton?
     @IBOutlet var RedoButton : UIButton?
     
-    @IBOutlet var DismissButton : UIButton?
+    @IBOutlet var HamburgerButton : UIButton?
     @IBOutlet var ColorButton : UIButton?
     @IBOutlet var BrushButton : UIButton?
-    @IBOutlet var LoadPictureButton : UIButton?
-    @IBOutlet var SavePictureButton : UIButton?
 
     @IBOutlet var PenButton : UIButton?
     @IBOutlet var LineButton : UIButton?
     @IBOutlet var BoxButton : UIButton?
     @IBOutlet var TextButton : UIButton?
+
+    var rotatingButtonArray : [UIButton] = [];
 
     var leftButtonArray : [UIButton] = [];
     var rightButtonArray : [UIButton] = [];
@@ -79,15 +81,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(ViewController.colorSelected(_:)),
+            selector: #selector(PaintingViewController.colorSelected(_:)),
             name: Notifications.kColorSelected,
             object: nil)
-        
+
+
+        rotatingButtonArray.append(UndoButton!);
+        rotatingButtonArray.append(RedoButton!);
+        rotatingButtonArray.append(HamburgerButton!);
+
+        rotatingButtonArray.append(ColorButton!);
+        rotatingButtonArray.append(BrushButton!);
         
 //        rightButtonArray.append(ColorButton!)
-//        rightButtonArray.append(LoadPictureButton!)
-//        rightButtonArray.append(SavePictureButton!)
-//        
+//
 //        leftButtonArray.append(UndoButton!)
 //        leftButtonArray.append(RedoButton!)
 //        
@@ -100,6 +107,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // INIT HAPPENS HERE
         DrawingView.backgroundColor = UIColor.whiteColor()
  
+        DrawingService.SharedInstance.addDrawingView(DrawingView); // GB layer 0?
         
         
         self.showRightTools()
@@ -107,6 +115,66 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
+    // GB: from https://happyteamlabs.com/blog/ios-using-uideviceorientation-to-determine-orientation/
+    var currentDeviceOrientation: UIDeviceOrientation = .Unknown
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PaintingViewController.deviceDidRotate(_:)), name: UIDeviceOrientationDidChangeNotification, object: nil)
+        
+        // Initial device orientation
+        self.currentDeviceOrientation = UIDevice.currentDevice().orientation
+        // Do what you want here
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+        if UIDevice.currentDevice().generatesDeviceOrientationNotifications {
+            UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
+        }
+    }
+    
+    func deviceDidRotate(notification: NSNotification) {
+        self.currentDeviceOrientation = UIDevice.currentDevice().orientation
+
+        // 1. put all painting icons in an array
+        // 2. add func to iterate over array rotating all to corresponding direction
+        //      .Portrait 0
+        //      .LandscapeLeft 90
+        //      .LandscapeRight -90
+        //      .PortraitUpsideDown 180
+        
+        let xRotate0 = CGAffineTransformMakeRotation(0);
+        let xRotate90 = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
+        let xRotate180 = CGAffineTransformMakeRotation(CGFloat(M_PI));
+        let xRotate270 = CGAffineTransformMakeRotation(CGFloat(M_PI_2 + M_PI));
+        var x:CGAffineTransform;
+        
+        if(self.currentDeviceOrientation ==        .Portrait) {
+            x = xRotate0;
+        } else if(self.currentDeviceOrientation == .PortraitUpsideDown) {
+            x = xRotate180;
+        } else if(self.currentDeviceOrientation == .LandscapeLeft) {
+            x = xRotate90;
+        } else if(self.currentDeviceOrientation == .LandscapeRight) {
+            x = xRotate270;
+        } else if(self.currentDeviceOrientation == .FaceUp) {
+            x = xRotate0;
+        } else if(self.currentDeviceOrientation == .FaceDown) {
+            x = xRotate0;
+        } else {
+            x = xRotate0;
+        }
+        
+        for button in rotatingButtonArray {
+            button.transform = x;
+        }
+    }
+    
     func showRightTools() {
         rightToolsShown = true;
     }
@@ -116,7 +184,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func undoTapped(sender : AnyObject) {
-        print("undoTapped()");
+        print("PVC.undoTapped()");
         
         if(DrawingView.canUndo()) {
             DrawingView.undoLatestStep()
@@ -124,19 +192,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func redoTapped(sender : AnyObject) {
-        print("redoTapped()");
+        print("PVC.redoTapped()");
         
         if(DrawingView.canRedo()) {
             DrawingView.redoLatestStep()
         }
     }
 
-    @IBAction func dismissToolsTapped(sender : AnyObject) {
-        print("dismissToolsTapped()");
+    @IBAction func hamburgerTapped(sender : AnyObject) {
+        print("PVC.hamburgerTapped()");
+        
+        // rootvc.showside?
+        
+        
+        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
+        
+        rootViewController!.presentLeftMenuViewController();
+        
+        
+        
     }
 
     @IBAction func colorToolTapped(sender : AnyObject) {
-        print("colorToolTapped()")
+        print("PVC.colorToolTapped()")
 
         if(ColorPaletteView!.hidden) { // it's hidden
             self.showColorPalette()
@@ -157,7 +235,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func brushButtonTapped(sender : AnyObject) {
-        print("brushButtonTapped()")
+        print("PVC.brushButtonTapped()")
 
         var hiddenState = brushButtonArray[0].hidden;
         
@@ -167,59 +245,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func penButtonTapped(sender : AnyObject) {
-        print("penButtonTapped()")
+        print("PVC.penButtonTapped()")
         
         // pen mode
         DrawingView.drawTool = ACEDrawingToolTypePen;
         hideBrushes()
     }
     @IBAction func lineButtonTapped(sender : AnyObject) {
-        print("lineButtonTapped()")
+        print("PVC.lineButtonTapped()")
         
         // line mode
         DrawingView.drawTool = ACEDrawingToolTypeLine;
         hideBrushes()
     }
     @IBAction func boxButtonTapped(sender : AnyObject) {
-        print("boxButtonTapped()")
+        print("PVC.boxButtonTapped()")
         
         // box mode
         DrawingView.drawTool = ACEDrawingToolTypeRectagleFill;
         hideBrushes()
     }
     @IBAction func textButtonTapped(sender : AnyObject) {
-        print("textButtonTapped()")
+        print("PVC.textButtonTapped()")
         
         // MULTILINE text mode
         DrawingView.drawTool = ACEDrawingToolTypeMultilineText;
         hideBrushes()
-    }
-
-    @IBAction func loadPictureTapped(sender : AnyObject) {
-        print("loadPictureTapped()");
-        
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //DrawingView.backgroundImage.contentMode = .ScaleAspectFit
-//            DrawingView.backgroundImage = pickedImage
-            DrawingView.drawMode = .Scale
-            DrawingView.loadImage(pickedImage)
-        }
-        
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func savePictureTapped(sender : AnyObject) {
-        print("savePictureTapped()");
-        
-        UIImageWriteToSavedPhotosAlbum(DrawingView.image, nil, nil, nil)
-        
     }
 
     
@@ -245,7 +296,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var alpha: CGFloat = 0
         selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
         
-        print("parent VC got color: \(hue)h,\(saturation)s,\(brightness)v")
+        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v")
         
         if brightness > 0.6 {
             ColorButton!.titleLabel?.textColor = UIColor.blackColor()
