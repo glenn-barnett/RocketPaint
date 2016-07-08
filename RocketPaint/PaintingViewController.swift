@@ -15,62 +15,23 @@ import RESideMenu
 
 // TODO crop when saving to camera roll
 
-// TODO icons, button styling
-
-// TODO brush width
-
 // TODO clear > to what?  background?
 
 
-// mode >
-//   brush >
-//     width
-//   fill.
-//   pixels >
-//     shape
-//     size
-//   rect >
-//     hollow/full
-//   ellipse >
-//     hollow/full
-//   text >
-//     font
-//     size
-//   eraser >
-//     width
-//   eyedropper.
-
-// TODO eyedropper, fill
-//   ACE options: text/font, line/arrow, rect, ellipse,
 
 class PaintingViewController: UIViewController,
     UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var DrawingView : RocketDrawingView!
-    @IBOutlet var ColorPaletteView : UIView?
     
-    @IBOutlet var UndoButton : UIButton?
-    @IBOutlet var RedoButton : UIButton?
+    @IBOutlet var HamburgerBView : BView?
+    @IBOutlet var UndoBView : BView?
+    @IBOutlet var RedoBView : BView?
+    @IBOutlet var PaletteBView : BView?
+    @IBOutlet var BrushBView : BView?
     
-    @IBOutlet var HamburgerButton : UIButton?
-    @IBOutlet var ColorButton : UIButton?
-    @IBOutlet var BrushButton : UIButton?
+    var rotatingButtonArray : [UIView] = [];
 
-    @IBOutlet var PenButton : UIButton?
-    @IBOutlet var LineButton : UIButton?
-    @IBOutlet var BoxButton : UIButton?
-    @IBOutlet var TextButton : UIButton?
-
-    var rotatingButtonArray : [UIButton] = [];
-
-    var leftButtonArray : [UIButton] = [];
-    var rightButtonArray : [UIButton] = [];
-    
-    var brushButtonArray : [UIButton] = [];
-    
-    var rightToolsShown : Bool! = false;
-    var leftToolsShown : Bool! = false;
-    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -85,33 +46,32 @@ class PaintingViewController: UIViewController,
             name: Notifications.kColorSelected,
             object: nil)
 
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.brushChanged(_:)),
+            name: Notifications.kBrushChanged,
+            object: nil)
 
-        rotatingButtonArray.append(UndoButton!);
-        rotatingButtonArray.append(RedoButton!);
-        rotatingButtonArray.append(HamburgerButton!);
+        rotatingButtonArray.append(HamburgerBView!);
+        rotatingButtonArray.append(UndoBView!);
+        rotatingButtonArray.append(RedoBView!);
 
-        rotatingButtonArray.append(ColorButton!);
-        rotatingButtonArray.append(BrushButton!);
-        
-//        rightButtonArray.append(ColorButton!)
-//
-//        leftButtonArray.append(UndoButton!)
-//        leftButtonArray.append(RedoButton!)
-//        
-        brushButtonArray.append(PenButton!)
-        brushButtonArray.append(LineButton!)
-        brushButtonArray.append(BoxButton!)
-        brushButtonArray.append(TextButton!)
+        rotatingButtonArray.append(PaletteBView!);
+        rotatingButtonArray.append(BrushBView!);
         
         
         // INIT HAPPENS HERE
         DrawingView.backgroundColor = UIColor.whiteColor()
  
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kBrushChanged,
+            object: "Pen3")
+
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kColorSelected,
+            object: UIColor.blackColor())
+
         DrawingService.SharedInstance.addDrawingView(DrawingView); // GB layer 0?
-        
-        
-        self.showRightTools()
-        //self.hideLeftTools()
         
     }
 
@@ -141,48 +101,40 @@ class PaintingViewController: UIViewController,
     func deviceDidRotate(notification: NSNotification) {
         self.currentDeviceOrientation = UIDevice.currentDevice().orientation
 
-        // 1. put all painting icons in an array
-        // 2. add func to iterate over array rotating all to corresponding direction
-        //      .Portrait 0
-        //      .LandscapeLeft 90
-        //      .LandscapeRight -90
-        //      .PortraitUpsideDown 180
-        
-        let xRotate0 = CGAffineTransformMakeRotation(0);
-        let xRotate90 = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
-        let xRotate180 = CGAffineTransformMakeRotation(CGFloat(M_PI));
-        let xRotate270 = CGAffineTransformMakeRotation(CGFloat(M_PI_2 + M_PI));
-        var x:CGAffineTransform;
-        
-        if(self.currentDeviceOrientation ==        .Portrait) {
-            x = xRotate0;
-        } else if(self.currentDeviceOrientation == .PortraitUpsideDown) {
-            x = xRotate180;
-        } else if(self.currentDeviceOrientation == .LandscapeLeft) {
-            x = xRotate90;
-        } else if(self.currentDeviceOrientation == .LandscapeRight) {
-            x = xRotate270;
-        } else if(self.currentDeviceOrientation == .FaceUp) {
-            x = xRotate0;
-        } else if(self.currentDeviceOrientation == .FaceDown) {
-            x = xRotate0;
-        } else {
-            x = xRotate0;
-        }
-        
-        for button in rotatingButtonArray {
-            button.transform = x;
-        }
+//        // 1. put all painting icons in an array
+//        // 2. add func to iterate over array rotating all to corresponding direction
+//        //      .Portrait 0
+//        //      .LandscapeLeft 90
+//        //      .LandscapeRight -90
+//        //      .PortraitUpsideDown 180
+//        
+//        let xRotate0 = CGAffineTransformMakeRotation(0);
+//        let xRotate90 = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
+//        let xRotate180 = CGAffineTransformMakeRotation(CGFloat(M_PI));
+//        let xRotate270 = CGAffineTransformMakeRotation(CGFloat(M_PI_2 + M_PI));
+//        var x:CGAffineTransform;
+//        
+//        if(self.currentDeviceOrientation ==        .Portrait) {
+//            x = xRotate0;
+//        } else if(self.currentDeviceOrientation == .PortraitUpsideDown) {
+//            x = xRotate180;
+//        } else if(self.currentDeviceOrientation == .LandscapeLeft) {
+//            x = xRotate90;
+//        } else if(self.currentDeviceOrientation == .LandscapeRight) {
+//            x = xRotate270;
+//        } else if(self.currentDeviceOrientation == .FaceUp) {
+//            x = xRotate0;
+//        } else if(self.currentDeviceOrientation == .FaceDown) {
+//            x = xRotate0;
+//        } else {
+//            x = xRotate0;
+//        }
+//        
+//        for button in rotatingButtonArray {
+//            button.transform = x;
+//        }
     }
     
-    func showRightTools() {
-        rightToolsShown = true;
-    }
-    
-    func hideLeftTools() {
-        leftToolsShown = false;
-    }
-
     @IBAction func undoTapped(sender : AnyObject) {
         print("PVC.undoTapped()");
         
@@ -213,80 +165,21 @@ class PaintingViewController: UIViewController,
         
     }
 
-    @IBAction func colorToolTapped(sender : AnyObject) {
-        print("PVC.colorToolTapped()")
+    @IBAction func paletteTapped(sender : AnyObject) {
+        print("PVC.paletteTapped()")
 
-        if(ColorPaletteView!.hidden) { // it's hidden
-            self.showColorPalette()
-        } else { // it's visible
-            self.hideColorPalette()
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kColorPaletteClosed,
-                object: nil)
-            
-        }
+        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
+        rootViewController?.showRightPalette();
     }
 
-    func hideBrushes() {
-        for button in brushButtonArray {
-            button.hidden = true;
-        }
-        
-    }
-    
     @IBAction func brushButtonTapped(sender : AnyObject) {
         print("PVC.brushButtonTapped()")
-
-        var hiddenState = brushButtonArray[0].hidden;
         
-        for button in brushButtonArray {
-            button.hidden = !hiddenState;
-        }
+        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
+        rootViewController?.showRightBrushes();
+        
     }
 
-    @IBAction func penButtonTapped(sender : AnyObject) {
-        print("PVC.penButtonTapped()")
-        
-        // pen mode
-        DrawingView.drawTool = ACEDrawingToolTypePen;
-        hideBrushes()
-    }
-    @IBAction func lineButtonTapped(sender : AnyObject) {
-        print("PVC.lineButtonTapped()")
-        
-        // line mode
-        DrawingView.drawTool = ACEDrawingToolTypeLine;
-        hideBrushes()
-    }
-    @IBAction func boxButtonTapped(sender : AnyObject) {
-        print("PVC.boxButtonTapped()")
-        
-        // box mode
-        DrawingView.drawTool = ACEDrawingToolTypeRectagleFill;
-        hideBrushes()
-    }
-    @IBAction func textButtonTapped(sender : AnyObject) {
-        print("PVC.textButtonTapped()")
-        
-        // MULTILINE text mode
-        DrawingView.drawTool = ACEDrawingToolTypeMultilineText;
-        hideBrushes()
-    }
-
-    
-    func showColorPalette() {
-        ColorPaletteView!.hidden = false
-    }
-    func hideColorPalette() {
-        ColorPaletteView!.hidden = true
-    }
-
-// TODO example of setting refs on contained child vcs
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if(segue.identifier == "myEmbeddedSegue") {
-//            let childViewController = segue.destinationViewController as! ColorPaletteViewController
-//        }
-//    }
     func colorSelected(notification:NSNotification){
         let selectedColor : UIColor = notification.object as! UIColor
 
@@ -298,18 +191,92 @@ class PaintingViewController: UIViewController,
         
         print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v")
         
-        if brightness > 0.6 {
-            ColorButton!.titleLabel?.textColor = UIColor.blackColor()
-        } else {
-            ColorButton!.titleLabel?.textColor = UIColor.whiteColor()
-        }
-        
         DrawingView.lineColor = selectedColor
         
-        self.hideColorPalette()
+        if(DrawingView.drawTool == ACEDrawingToolTypeRectagleFill) {
+            // override the highlighter color?  or let the alpha happen?  TODO
+        }
 
+        
     }
 
+    let lineWidth1 : CGFloat = 1.0
+    let lineWidth2 : CGFloat = 3.0
+    let lineWidth3 : CGFloat = 8.0
+    let lineWidth4 : CGFloat = 16.0
+    let lineWidthTextSmall : CGFloat = 6.0
+    let lineWidthTextBig : CGFloat = 12.0
+    let highlightAlpha : CGFloat = 0.4
+    
+    func brushChanged(notification:NSNotification){
+        let brush = notification.object as! String;
+
+        DrawingView.alpha = 1.0
+        if(brush == "Pen1") {
+            DrawingView.drawTool = ACEDrawingToolTypePen
+            DrawingView.lineWidth = lineWidth1
+
+        } else if(brush == "Pen2") {
+            DrawingView.drawTool = ACEDrawingToolTypePen
+            DrawingView.lineWidth = lineWidth2
+
+        } else if(brush == "Pen3") {
+            DrawingView.drawTool = ACEDrawingToolTypePen
+            DrawingView.lineWidth = lineWidth3
+        
+        } else if(brush == "Pen4") {
+            DrawingView.drawTool = ACEDrawingToolTypePen
+            DrawingView.lineWidth = lineWidth4
+        
+        } else if(brush == "Line1") {
+            DrawingView.drawTool = ACEDrawingToolTypeLine
+            DrawingView.lineWidth = lineWidth1
+
+        } else if(brush == "Line2") {
+            DrawingView.drawTool = ACEDrawingToolTypeLine
+            DrawingView.lineWidth = lineWidth2
+
+        } else if(brush == "Line3") {
+            DrawingView.drawTool = ACEDrawingToolTypeLine
+            DrawingView.lineWidth = lineWidth3
+        
+        } else if(brush == "Line4") {
+            DrawingView.drawTool = ACEDrawingToolTypeLine
+            DrawingView.lineWidth = lineWidth4
+        
+        } else if(brush == "Box") {
+            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
+        
+        } else if(brush == "HighlightGreen") {
+            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
+            DrawingView.lineColor = UIColor.greenColor()
+            DrawingView.lineAlpha = highlightAlpha
+        
+        } else if(brush == "HighlightYellow") {
+            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
+            DrawingView.lineColor = UIColor.yellowColor()
+            DrawingView.lineAlpha = highlightAlpha
+        
+        } else if(brush == "HighlightRed") {
+            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
+            DrawingView.lineColor = UIColor.redColor()
+            DrawingView.lineAlpha = highlightAlpha
+        
+        } else if(brush == "TextSerifBig") {
+            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
+            DrawingView.lineWidth = lineWidthTextBig
+        } else if(brush == "TextSerifSmall") {
+            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
+            DrawingView.lineWidth = lineWidthTextSmall
+        } else if(brush == "TextSansBig") {
+            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
+            DrawingView.lineWidth = lineWidthTextBig
+        } else if(brush == "TextSansSmall") {
+            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
+            DrawingView.lineWidth = lineWidthTextSmall
+        }
+    
+    }
     
 
     override func didReceiveMemoryWarning() {

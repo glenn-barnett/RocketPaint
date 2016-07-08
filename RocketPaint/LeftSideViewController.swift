@@ -1,5 +1,5 @@
 //
-//  LeftMenuViewController.swift
+//  LeftSideViewController.swift
 //  RocketPaint
 //
 //  Created by Glenn Barnett on 7/1/16.
@@ -9,10 +9,10 @@
 import UIKit
 import RESideMenu
 
-class LeftMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let imagePicker = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -24,14 +24,13 @@ class LeftMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func savePictureTapped(sender : AnyObject) {
         print("LMVC.savePictureTapped()");
         
         CameraRollService.SharedInstance.WriteImage(DrawingService.SharedInstance.getImage())
         
     }
-
+    
     @IBAction func loadPictureTapped(sender : AnyObject) {
         print("LMVC().loadPictureTapped()");
         
@@ -40,12 +39,12 @@ class LeftMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            NSNotificationCenter.defaultCenter().postNotificationName(
-//                Notifications.kColorSelected,
-//                object: pickedImage)
+            //            NSNotificationCenter.defaultCenter().postNotificationName(
+            //                Notifications.kColorSelected,
+            //                object: pickedImage)
             
             DrawingService.SharedInstance.loadImage0(pickedImage);
         }
@@ -55,9 +54,9 @@ class LeftMenuViewController: UIViewController, UIImagePickerControllerDelegate,
         let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
         
         rootViewController!.hideMenuViewController();
-
+        
     }
-
+    
     
     /*
      // MARK: - Navigation
@@ -70,3 +69,4 @@ class LeftMenuViewController: UIViewController, UIImagePickerControllerDelegate,
      */
     
 }
+

@@ -10,11 +10,34 @@ import Foundation
 import RESideMenu
 
 class RootViewController: RESideMenu, RESideMenuDelegate {
+
+    var rightSideViewController : RightSideViewController?;
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RootViewController.brushChanged(_:)),
+            name: Notifications.kBrushChanged,
+            object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RootViewController.colorSelected(_:)),
+            name: Notifications.kColorSelected,
+            object: nil)
+
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func brushChanged(notification:NSNotification){
+        self.hideMenuViewController()
+    }
+    func colorSelected(notification:NSNotification){
+        self.hideMenuViewController()
     }
     
     override func awakeFromNib() {
@@ -27,14 +50,31 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         self.contentViewShadowEnabled = true;
         
         self.contentViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("PaintingViewController"))! as UIViewController
-        self.leftMenuViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("LeftMenuViewController"))! as UIViewController
+        self.leftMenuViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("LeftSideViewController"))! as UIViewController
+        
+        rightSideViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("RightSideViewController"))! as! RightSideViewController;
+        self.rightMenuViewController = rightSideViewController;
+
         
     }
-    
+
+    func showRightPalette() {
+        rightSideViewController?.BrushView.hidden = true;
+        rightSideViewController?.ColorPaletteView.hidden = false;
+        self.presentRightMenuViewController();
+    }
+
+    func showRightBrushes() {
+        rightSideViewController?.BrushView.hidden = false;
+        rightSideViewController?.ColorPaletteView.hidden = true;
+        self.presentRightMenuViewController();
+    }
+
     // MARK: RESide Delegate Methods
     
-    func sideMenu(sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
-        print("This will show the menu")
-    }
+//    func sideMenu(sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
+//        print("This will show the menu")
+//    }
+    
 
 }

@@ -21,7 +21,11 @@ class ColorPaletteViewController: UICollectionViewController
     var variantColorArray: [UIColor] = []
     var staticColorArray: [UIColor] = []
     var randomColorArray: [UIColor] = []
-    
+   
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        print("ColorPalette: touchesBegan()")
+    }
+
     //UNUSED
     @IBAction func EditAlbumPressed(sender : AnyObject) {
         
@@ -86,6 +90,7 @@ class ColorPaletteViewController: UICollectionViewController
         
         
         staticColorArray.append(UIColor.whiteColor())
+        staticColorArray.append(UIColor.grayColor())
         staticColorArray.append(UIColor.blackColor())
         staticColorArray.append(UIColor.blueColor())
         staticColorArray.append(UIColor.cyanColor())
@@ -93,7 +98,6 @@ class ColorPaletteViewController: UICollectionViewController
         staticColorArray.append(UIColor.yellowColor())
         staticColorArray.append(UIColor.orangeColor())
         staticColorArray.append(UIColor.redColor())
-        staticColorArray.append(UIColor.magentaColor())
         staticColorArray.append(UIColor.purpleColor())
         
         for(var i=0; i<1000; i++) {
@@ -110,7 +114,6 @@ class ColorPaletteViewController: UICollectionViewController
         // GB collection init could go here
         // GB collection init could go here
         // GB collection init could go here
-    
     
     }
     
@@ -137,10 +140,12 @@ class ColorPaletteViewController: UICollectionViewController
         
         // third, create saturation variants from 0% to 100% in 8 steps
 //        for(var i=0.0f; i<7.5f; i+=1.0f) {
-        for(var x=1; x<=4; x++) {
-            for(var y=1; y<=4; y++) {
-                let newSaturation: CGFloat = 0.25 * CGFloat(x)
-                let newBrightness: CGFloat = 0.25 * CGFloat(y)
+        for(var x=1; x<=5; x++) {
+            for(var y=1; y<=5; y++) {
+                // saturation will be 0-1.0, scaled by source saturation x1.5
+                let newSaturation: CGFloat = (0.25 * CGFloat(x) - 0.25) * min(1.0, srcSaturation * 1.5)
+                // brightness will be 0.2-1.0
+                let newBrightness: CGFloat = 0.20 * CGFloat(y)
                 variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
             }
         }
@@ -158,7 +163,7 @@ class ColorPaletteViewController: UICollectionViewController
         }
         
         // refresh table
-        self.collectionView!.reloadData()
+        self.collectionView!.reloadData()        
     }
 
     func colorPaletteClosed(notification:NSNotification){

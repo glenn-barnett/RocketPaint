@@ -13,13 +13,12 @@ import ACEDrawingView
 
 class RocketDrawingView: ACEDrawingView {
 
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorUsed,
-            object: nil)
+//        NSNotificationCenter.defaultCenter().postNotificationName(
+//            Notifications.kColorUsed,
+//            object: nil)
 
     }
     
