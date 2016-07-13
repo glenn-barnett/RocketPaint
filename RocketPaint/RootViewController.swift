@@ -25,8 +25,8 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(RootViewController.colorSelected(_:)),
-            name: Notifications.kColorSelected,
+            selector: #selector(RootViewController.colorChanged(_:)),
+            name: Notifications.kColorChanged,
             object: nil)
 
         
@@ -36,7 +36,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
     func brushChanged(notification:NSNotification){
         self.hideMenuViewController()
     }
-    func colorSelected(notification:NSNotification){
+    func colorChanged(notification:NSNotification){
         self.hideMenuViewController()
     }
     
@@ -49,10 +49,12 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         self.contentViewShadowRadius = 12;
         self.contentViewShadowEnabled = true;
         
+        self.panGestureEnabled = false;
+        
         self.contentViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("PaintingViewController"))! as UIViewController
         self.leftMenuViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("LeftSideViewController"))! as UIViewController
         
-        rightSideViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("RightSideViewController"))! as! RightSideViewController;
+        rightSideViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("RightSideViewController"))! as? RightSideViewController;
         self.rightMenuViewController = rightSideViewController;
 
         

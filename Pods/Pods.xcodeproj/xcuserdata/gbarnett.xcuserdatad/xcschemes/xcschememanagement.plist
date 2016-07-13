@@ -34,7 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>VRMaskColoredButton.xcscheme</key>
+		<key>TOCropViewController-TOCropViewControllerBundle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TOCropViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>211D9AD82658A857B1AC6165950C2A5A</key>
+		<key>1EC1433A328E47FF1D7AA0E809643527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F5316B7C027A52A56634061759160AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,22 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>877E87CAE5A8259113FC97CD0B9D8538</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8AA3DDB8797222294E1288CB197A8347</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE6B9A78AE049FA4B36A2A56E67AA411</key>
+		<key>8E1009E990B24C24F49DB647BF42D965</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D64FEEC8DDA6E4EC41292166473022D4</key>
+		<key>DB4E2834A10766910B9A061FED12FF53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E15AEB7DAE155DE2BE12AFC28F5B70B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

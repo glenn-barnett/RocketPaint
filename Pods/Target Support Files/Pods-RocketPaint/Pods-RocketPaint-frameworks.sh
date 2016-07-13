@@ -89,7 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RocketPaint/KRLCollectionViewGridLayout.framework"
   install_framework "Pods-RocketPaint/RESideMenu.framework"
   install_framework "Pods-RocketPaint/RFQuiltLayout.framework"
-  install_framework "Pods-RocketPaint/VRMaskColoredButton.framework"
+  install_framework "Pods-RocketPaint/TOCropViewController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RocketPaint/ACEDrawingView.framework"
@@ -97,5 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RocketPaint/KRLCollectionViewGridLayout.framework"
   install_framework "Pods-RocketPaint/RESideMenu.framework"
   install_framework "Pods-RocketPaint/RFQuiltLayout.framework"
-  install_framework "Pods-RocketPaint/VRMaskColoredButton.framework"
+  install_framework "Pods-RocketPaint/TOCropViewController.framework"
 fi

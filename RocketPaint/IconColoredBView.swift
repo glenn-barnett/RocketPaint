@@ -22,15 +22,28 @@ class IconColoredBView: BView {
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(IconColoredBView.colorSelected(_:)),
-            name: Notifications.kColorSelected,
+            selector: #selector(IconColoredBView.colorChanged(_:)),
+            name: Notifications.kColorChanged,
             object: nil)
-        
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
+            name: Notifications.kLineAlphaChanged,
+            object: nil)
+
     }
     
-    func colorSelected(notification:NSNotification){
-        iconColor = notification.object as! UIColor;
+    func colorChanged(notification:NSNotification){
+        iconColor = notification.userInfo!["color"] as! UIColor
+        self.setNeedsDisplay()
+    }
+
+    func lineAlphaChanged(notification:NSNotification){
+        let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
+        
+        iconColor = iconColor.colorWithAlphaComponent(CGFloat(lineAlpha))
         self.setNeedsDisplay();
     }
-    
+
 }

@@ -11,8 +11,10 @@ import Foundation
 
 struct Notifications {
     static let kBrushChanged = "kBrushChanged"
+    static let kLineWidthChanged = "kLineWidthChanged"
+    static let kLineAlphaChanged = "kLineAlphaChanged"
 
-    static let kColorSelected = "kColorSelected"
+    static let kColorChanged = "kColorChanged"
     static let kColorUsed = "kColorUsed"
     static let kColorPaletteClosed = "kColorPaletteClosed"
 //    static let kImageLoaded = "kImageLoaded"

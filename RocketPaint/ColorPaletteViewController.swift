@@ -16,6 +16,7 @@ let reuseIdentifier = "Cell"
 class ColorPaletteViewController: UICollectionViewController
 {
     
+    var lastAlpha: Float = 1.0
     var selectedColor: UIColor = UIColor.blackColor()
     var sessionColorArray: [UIColor] = []
     var variantColorArray: [UIColor] = []
@@ -72,8 +73,8 @@ class ColorPaletteViewController: UICollectionViewController
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(ColorPaletteViewController.colorSelected(_:)),
-            name: Notifications.kColorSelected,
+            selector: #selector(ColorPaletteViewController.colorChanged(_:)),
+            name: Notifications.kColorChanged,
             object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
@@ -87,7 +88,13 @@ class ColorPaletteViewController: UICollectionViewController
             selector: #selector(ColorPaletteViewController.colorPaletteClosed(_:)),
             name: Notifications.kColorPaletteClosed,
             object: nil)
-        
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(ColorPaletteViewController.lineAlphaChanged(_:)),
+            name: Notifications.kLineAlphaChanged,
+            object: nil)
+
         
         staticColorArray.append(UIColor.whiteColor())
         staticColorArray.append(UIColor.grayColor())
@@ -122,9 +129,9 @@ class ColorPaletteViewController: UICollectionViewController
         
     }
     
-    func colorSelected(notification:NSNotification){
-        print("Palette.colorSelected()")
-        selectedColor = notification.object as! UIColor
+    func colorChanged(notification:NSNotification){
+        print("Palette.colorChanged() BEGIN")
+        selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
         
@@ -150,7 +157,9 @@ class ColorPaletteViewController: UICollectionViewController
             }
         }
         
+        print("Palette.colorChanged() reloadData")
         collectionView?.reloadData()
+        print("Palette.colorChanged() END")
 
     }
 
@@ -170,7 +179,11 @@ class ColorPaletteViewController: UICollectionViewController
         print("Palette.colorPaletteClosed()")
         collectionView!.setContentOffset(CGPointZero, animated: true)
     }
-    
+
+    func lineAlphaChanged(notification:NSNotification){
+        lastAlpha = notification.userInfo!["lineAlpha"] as! Float
+    }
+
     // #pragma mark - UICollectionViewDelegate protocol
     
     // handle tap events
@@ -178,11 +191,12 @@ class ColorPaletteViewController: UICollectionViewController
         
         let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! ColorCell
 
-        let cellColor = cell.Color
+        let cellColor = cell.Color.colorWithAlphaComponent(CGFloat(lastAlpha))
         
         NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorSelected,
-            object: cellColor)
+            Notifications.kColorChanged,
+            object: nil,
+            userInfo: ["color": cellColor])
         
         collectionView.setContentOffset(CGPointZero, animated: true)
     }

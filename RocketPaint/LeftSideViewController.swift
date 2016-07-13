@@ -8,8 +8,9 @@
 
 import UIKit
 import RESideMenu
+import TOCropViewController
 
-class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     
     let imagePicker = UIImagePickerController()
     
@@ -43,20 +44,42 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             //            NSNotificationCenter.defaultCenter().postNotificationName(
-            //                Notifications.kColorSelected,
+            //                Notifications.kColorChanged,
             //                object: pickedImage)
             
-            DrawingService.SharedInstance.loadImage0(pickedImage);
+            //DrawingService.SharedInstance.loadImage0(pickedImage);
+            
+            let cvc = TOCropViewController(image:pickedImage)
+            cvc.delegate = self
+            
+            cvc.aspectRatioPreset = .PresetCustom
+            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
+            cvc.aspectRatioLockEnabled = true
+            cvc.rotateClockwiseButtonHidden = false
+            cvc.aspectRatioPickerButtonHidden = true
+            
+            dismissViewControllerAnimated(true, completion: {
+                self.presentViewController(cvc, animated: true, completion: nil)
+            })
+            
+        } else {
+            print("LeftSide.imagePicker(): GOT NO IMAGE")
+            dismissViewControllerAnimated(true, completion: nil)
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
         
-        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
-        
-        rootViewController!.hideMenuViewController();
         
     }
-    
+
+    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
+
+        DrawingService.SharedInstance.loadImage0(image);
+        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
+
+        dismissViewControllerAnimated(true, completion: {
+            rootViewController!.hideMenuViewController();
+        })
+    }
     
     /*
      // MARK: - Navigation

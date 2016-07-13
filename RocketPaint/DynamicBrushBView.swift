@@ -29,7 +29,7 @@ class DynamicBrushBView: IconColoredBView {
     }
     
     func brushChanged(notification:NSNotification){
-        brush = notification.object as! String;
+        brush = notification.userInfo!["brush"] as! String
         self.setNeedsDisplay();
     }
 

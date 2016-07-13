@@ -36,15 +36,15 @@ class IconColoredButton: UIButton {
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(IconColoredButton.colorSelected(_:)),
-            name: Notifications.kColorSelected,
+            selector: #selector(IconColoredButton.colorChanged(_:)),
+            name: Notifications.kColorChanged,
             object: nil)
         
     }
     
-    func colorSelected(notification:NSNotification){
-        iconColor = notification.object as! UIColor;
-        self.setNeedsDisplay();
+    func colorChanged(notification:NSNotification){
+        iconColor = notification.userInfo!["color"] as! UIColor
+        self.setNeedsDisplay()
     }
     
 }

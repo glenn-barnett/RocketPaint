@@ -4,7 +4,7 @@ PODS:
   - KRLCollectionViewGridLayout (0.4.1)
   - RESideMenu (4.0.7)
   - RFQuiltLayout (1.1.1)
-  - VRMaskColoredButton (1.0.0)
+  - TOCropViewController (2.0.7)
 
 DEPENDENCIES:
   - ACEDrawingView (~> 1.3)
@@ -12,7 +12,7 @@ DEPENDENCIES:
   - KRLCollectionViewGridLayout (~> 0.4.1)
   - RESideMenu (~> 4.0.7)
   - RFQuiltLayout (~> 1.1.1)
-  - VRMaskColoredButton
+  - TOCropViewController (~> 2.0)
 
 SPEC CHECKSUMS:
   ACEDrawingView: 325b5cd00125766c6df9b30aa3a7b68866d2ce16
@@ -20,6 +20,6 @@ SPEC CHECKSUMS:
   KRLCollectionViewGridLayout: 6363dc7e3d91cf1f97e19ed20846764566659596
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   RFQuiltLayout: aa28fc2d4a262fbca7caa43d9d8ef4b4726c8cd4
-  VRMaskColoredButton: 3341c7e15bc2f2ffbac5572c6d8337cceec3e23e
+  TOCropViewController: cec24e4385929683b217d08bfdc8791975cddc04
 
 COCOAPODS: 0.39.0

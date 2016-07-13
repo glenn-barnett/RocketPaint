@@ -14,9 +14,4 @@ class RightSideViewController: UIViewController {
     @IBOutlet var ColorPaletteView : UIView!
     @IBOutlet var BrushView : UIView!
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print("RightSide: touchesBegan()")
-    }
-
-    
 }

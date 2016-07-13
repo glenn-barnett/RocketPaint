@@ -32,6 +32,7 @@ class PaintingViewController: UIViewController,
     
     var rotatingButtonArray : [UIView] = [];
 
+    var lastColor = UIColor.blackColor()
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -42,14 +43,26 @@ class PaintingViewController: UIViewController,
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(PaintingViewController.colorSelected(_:)),
-            name: Notifications.kColorSelected,
+            selector: #selector(PaintingViewController.colorChanged(_:)),
+            name: Notifications.kColorChanged,
             object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(PaintingViewController.brushChanged(_:)),
             name: Notifications.kBrushChanged,
+            object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.lineWidthChanged(_:)),
+            name: Notifications.kLineWidthChanged,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.lineAlphaChanged(_:)),
+            name: Notifications.kLineAlphaChanged,
             object: nil)
 
         rotatingButtonArray.append(HamburgerBView!);
@@ -65,11 +78,13 @@ class PaintingViewController: UIViewController,
  
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
-            object: "Pen3")
+            object: nil,
+            userInfo: ["brush": "Pen3"])
 
         NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorSelected,
-            object: UIColor.blackColor())
+            Notifications.kColorChanged,
+            object: nil,
+            userInfo: ["color": UIColor.blackColor()])
 
         DrawingService.SharedInstance.addDrawingView(DrawingView); // GB layer 0?
         
@@ -180,23 +195,21 @@ class PaintingViewController: UIViewController,
         
     }
 
-    func colorSelected(notification:NSNotification){
-        let selectedColor : UIColor = notification.object as! UIColor
-
+    func colorChanged(notification:NSNotification){
+        let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
+        
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
         var brightness: CGFloat = 0
         var alpha: CGFloat = 0
         selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
         
-        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v")
+        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v,\(alpha)a")
         
-        DrawingView.lineColor = selectedColor
         
-        if(DrawingView.drawTool == ACEDrawingToolTypeRectagleFill) {
-            // override the highlighter color?  or let the alpha happen?  TODO
-        }
-
+        DrawingView.lineColor = selectedColor.colorWithAlphaComponent(1.0)
+        
+        lastColor = DrawingView.lineColor.colorWithAlphaComponent(1.0) // copy
         
     }
 
@@ -209,9 +222,10 @@ class PaintingViewController: UIViewController,
     let highlightAlpha : CGFloat = 0.4
     
     func brushChanged(notification:NSNotification){
-        let brush = notification.object as! String;
+        let brush = notification.userInfo!["brush"] as! String
 
-        DrawingView.alpha = 1.0
+        DrawingView.lineColor = lastColor
+        
         if(brush == "Pen1") {
             DrawingView.drawTool = ACEDrawingToolTypePen
             DrawingView.lineWidth = lineWidth1
@@ -276,8 +290,26 @@ class PaintingViewController: UIViewController,
             DrawingView.lineWidth = lineWidthTextSmall
         }
     
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineWidthChanged,
+            object: nil,
+            userInfo: ["lineWidth": Float(DrawingView.lineWidth)])
+
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineAlphaChanged,
+            object: nil,
+            userInfo: ["lineAlpha": Float(DrawingView.lineAlpha)])
+
     }
     
+    func lineWidthChanged(notification:NSNotification){
+        let lineWidth = notification.userInfo!["lineWidth"] as! Float
+        DrawingView.lineWidth = CGFloat(lineWidth)
+    }
+    func lineAlphaChanged(notification:NSNotification){
+        let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
+        DrawingView.lineAlpha = CGFloat(lineAlpha)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
