@@ -56,6 +56,7 @@
 		2A4B4DEB1D2E7B1300ECBD0C /* RightSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */; };
 		2A4B4DEF1D2EFAC300ECBD0C /* BrushBViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */; };
 		2A4B4DF11D2EFBB900ECBD0C /* BrushPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DF01D2EFBB900ECBD0C /* BrushPickerViewController.swift */; };
+		2A79ACE31D3ED9D4007C6996 /* BrushWireBViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */; };
 		2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */; };
 		2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */; };
 		2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 		2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideViewController.swift; sourceTree = "<group>"; };
 		2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushBViews.swift; sourceTree = "<group>"; };
 		2A4B4DF01D2EFBB900ECBD0C /* BrushPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushPickerViewController.swift; sourceTree = "<group>"; };
+		2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushWireBViews.swift; sourceTree = "<group>"; };
 		2A9FA2B31CC2BC28000FF2A4 /* RocketPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				2A4B4DE11D2BDB9600ECBD0C /* HamburgerBView.swift */,
 				2A4B4DE31D2BDBBC00ECBD0C /* PaletteBView.swift */,
 				2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */,
+				2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */,
 				2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */,
 				2A43D4141D28C37C0066FAD0 /* LoadBView.swift */,
 				2A4B4DD91D2B5E7800ECBD0C /* SaveBView.swift */,
@@ -420,6 +423,7 @@
 				2A43D4151D28C37C0066FAD0 /* LoadBView.swift in Sources */,
 				2A4B4DE91D2C556100ECBD0C /* DynamicBrushBView.swift in Sources */,
 				2A43D4111D28C0F40066FAD0 /* LoadButton.swift in Sources */,
+				2A79ACE31D3ED9D4007C6996 /* BrushWireBViews.swift in Sources */,
 				2A4B4DDA1D2B5E7800ECBD0C /* SaveBView.swift in Sources */,
 				2A4B4DEF1D2EFAC300ECBD0C /* BrushBViews.swift in Sources */,
 				2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */,

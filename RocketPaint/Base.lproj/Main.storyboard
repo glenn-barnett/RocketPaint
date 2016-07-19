@@ -200,16 +200,16 @@
                                 <exclude reference="maU-Mk-34H"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="fYC-Jm-Wrh"/>
-                                <exclude reference="xcF-Hb-n6e"/>
                                 <exclude reference="p8z-f7-D9O"/>
                                 <exclude reference="zgq-jp-DLx"/>
-                                <exclude reference="5cj-VN-3Hr"/>
-                                <exclude reference="YiH-lV-U9t"/>
                                 <exclude reference="IdX-5b-HYT"/>
                                 <exclude reference="ouo-Or-Uam"/>
+                                <exclude reference="5cj-VN-3Hr"/>
+                                <exclude reference="YiH-lV-U9t"/>
                                 <exclude reference="9eO-Tu-sts"/>
                                 <exclude reference="EFJ-S8-c5m"/>
+                                <exclude reference="fYC-Jm-Wrh"/>
+                                <exclude reference="xcF-Hb-n6e"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -221,16 +221,16 @@
                                 <include reference="maU-Mk-34H"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="fYC-Jm-Wrh"/>
-                                <include reference="xcF-Hb-n6e"/>
                                 <include reference="p8z-f7-D9O"/>
                                 <include reference="zgq-jp-DLx"/>
-                                <include reference="5cj-VN-3Hr"/>
-                                <include reference="YiH-lV-U9t"/>
                                 <include reference="IdX-5b-HYT"/>
                                 <include reference="ouo-Or-Uam"/>
+                                <include reference="5cj-VN-3Hr"/>
+                                <include reference="YiH-lV-U9t"/>
                                 <include reference="9eO-Tu-sts"/>
                                 <include reference="EFJ-S8-c5m"/>
+                                <include reference="fYC-Jm-Wrh"/>
+                                <include reference="xcF-Hb-n6e"/>
                             </mask>
                         </variation>
                     </view>
@@ -573,7 +573,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owa-Ru-MSj" customClass="BrushPen4BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owa-Ru-MSj" customClass="BrushWirePen4BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -601,7 +601,7 @@
                                     <outletCollection property="gestureRecognizers" destination="obw-ly-PNo" appends="YES" id="8MI-F9-efO"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-hL-eDs" customClass="BrushPen3BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-hL-eDs" customClass="BrushWirePen3BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -629,7 +629,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Gwe-Sn-HI3" appends="YES" id="JWS-EX-eha"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY7-dU-wlj" customClass="BrushPen2BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY7-dU-wlj" customClass="BrushWirePen2BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -657,7 +657,7 @@
                                     <outletCollection property="gestureRecognizers" destination="QgN-FS-Ei4" appends="YES" id="yAb-XR-Mco"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeS-Ze-TBi" customClass="BrushPen1BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeS-Ze-TBi" customClass="BrushWirePen1BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -685,7 +685,7 @@
                                     <outletCollection property="gestureRecognizers" destination="5sc-sN-84Q" appends="YES" id="Wmh-6P-u9Q"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVL-bH-A0Q" customClass="BrushLine4BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVL-bH-A0Q" customClass="BrushWireLine4BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -713,7 +713,7 @@
                                     <outletCollection property="gestureRecognizers" destination="6Ap-34-onA" appends="YES" id="G2j-D8-JGd"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nch-NO-l3z" customClass="BrushLine3BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nch-NO-l3z" customClass="BrushWireLine3BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -741,7 +741,7 @@
                                     <outletCollection property="gestureRecognizers" destination="9ZG-kz-H5H" appends="YES" id="kTN-3Q-FL1"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bv-kR-egO" customClass="BrushLine2BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bv-kR-egO" customClass="BrushWireLine2BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -769,7 +769,7 @@
                                     <outletCollection property="gestureRecognizers" destination="hIF-e4-kxR" appends="YES" id="2OY-69-f8c"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-Mh-laU" customClass="BrushLine1BView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-Mh-laU" customClass="BrushWireLine1BView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -797,7 +797,7 @@
                                     <outletCollection property="gestureRecognizers" destination="1Wh-Tj-zfx" appends="YES" id="oE0-F6-yXm"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDy-zR-9Mq" customClass="BrushBoxBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDy-zR-9Mq" customClass="BrushWireBoxBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -825,7 +825,7 @@
                                     <outletCollection property="gestureRecognizers" destination="cS7-lq-Pes" appends="YES" id="31w-gs-WXt"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ly-No-QRV" customClass="BrushHighlightGreenBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ly-No-QRV" customClass="BrushWireHighlightGreenBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -853,7 +853,7 @@
                                     <outletCollection property="gestureRecognizers" destination="4Y3-Tg-nQp" appends="YES" id="HDi-7T-5PY"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTq-hh-tEA" customClass="BrushHighlightYellowBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTq-hh-tEA" customClass="BrushWireHighlightYellowBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -881,7 +881,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Qz5-p0-Kxr" appends="YES" id="5vv-gs-t0o"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00P-pv-85V" customClass="BrushHighlightRedBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00P-pv-85V" customClass="BrushWireHighlightRedBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -909,7 +909,7 @@
                                     <outletCollection property="gestureRecognizers" destination="bwg-nO-F4j" appends="YES" id="h6A-p6-myX"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVc-uq-n2B" customClass="BrushTextSerifBigBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVc-uq-n2B" customClass="BrushWireTextSerifBigBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -937,7 +937,7 @@
                                     <outletCollection property="gestureRecognizers" destination="xyR-4T-duJ" appends="YES" id="vNb-0p-ceD"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-cj-Lje" customClass="BrushTextSerifSmallBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-cj-Lje" customClass="BrushWireTextSerifSmallBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -965,7 +965,7 @@
                                     <outletCollection property="gestureRecognizers" destination="PMB-Ee-GQZ" appends="YES" id="an0-Wa-kvR"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-ap-e7G" customClass="BrushTextSansBigBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-ap-e7G" customClass="BrushWireTextSansBigBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -993,7 +993,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Tfm-ll-pPW" appends="YES" id="IXc-1z-5NN"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-Ga-nO4" customClass="BrushTextSansSmallBView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-Ga-nO4" customClass="BrushWireTextSansSmallBView" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -1391,7 +1391,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="748.5" y="-324.75"/>
+            <point key="canvasLocation" x="860" y="-320"/>
         </scene>
         <!--Right Side-->
         <scene sceneID="qOY-S7-um8">
@@ -1449,7 +1449,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.21670258620689656" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k4p-tg-T3A" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="4PT-Z3-E9Z"/>
                             <constraint firstItem="Kpb-BZ-8to" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="241" id="iG6-ye-qOk"/>
@@ -1617,7 +1617,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="0C0-4G-hZv" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="30" y="30" width="240" height="240"/>
+                                <rect key="frame" x="30" y="15" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1648,7 +1648,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell2" id="6ng-d0-fDt" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="30" y="275" width="240" height="240"/>
+                                <rect key="frame" x="30" y="260" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1658,7 +1658,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell3" id="WV2-TD-DJG" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="30" y="520" width="240" height="240"/>
+                                <rect key="frame" x="30" y="505" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1668,7 +1668,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell4" id="Rw4-Em-Ohu" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="30" y="765" width="240" height="240"/>
+                                <rect key="frame" x="30" y="750" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1678,7 +1678,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell5" id="I48-8V-3DN" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="30" y="1010" width="240" height="240"/>
+                                <rect key="frame" x="30" y="995" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1689,11 +1689,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="04m-e7-kGb">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fih-Jk-OXa">
-                            <rect key="frame" x="0.0" y="1250" width="300" height="20"/>
+                            <rect key="frame" x="0.0" y="1235" width="300" height="20"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
@@ -1724,7 +1724,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlankCanvasCell" id="HmU-ZN-y69" userLabel="BlankCanvasCell">
-                                <rect key="frame" x="30" y="30" width="240" height="240"/>
+                                <rect key="frame" x="30" y="15" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -1735,11 +1735,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OWB-E3-7Vg">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f2b-A1-hI6">
-                            <rect key="frame" x="0.0" y="1250" width="300" height="20"/>
+                            <rect key="frame" x="0.0" y="255" width="300" height="20"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
@@ -1753,18 +1753,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDX-nb-GA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-340.5" y="1135.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VBi-9g-z1l">
-            <objects>
-                <viewController id="EQU-GI-GVK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="H6V-zs-slB">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3J8-JT-uAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

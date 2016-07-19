@@ -14,24 +14,10 @@ let canvasReuseIdentifier = "BlankCanvasCell"
 
 class BlankCanvasesViewController: UICollectionViewController
 {
-    
-    var canvasColorArray: [UIColor] = []
-    
+    let colorService : ColorService = ColorService.SharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // seed the list
-        canvasColorArray.append(UIColor.whiteColor())
-        canvasColorArray.append(UIColor.grayColor())
-        canvasColorArray.append(UIColor.blackColor())
-        canvasColorArray.append(UIColor.blueColor())
-        canvasColorArray.append(UIColor.cyanColor())
-        canvasColorArray.append(UIColor.greenColor())
-        canvasColorArray.append(UIColor.yellowColor())
-        canvasColorArray.append(UIColor.orangeColor())
-        canvasColorArray.append(UIColor.redColor())
-        canvasColorArray.append(UIColor.purpleColor())
-        
     }
     
     // handle tap events
@@ -74,7 +60,7 @@ class BlankCanvasesViewController: UICollectionViewController
     }
     
     override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
-        return canvasColorArray.count
+        return colorService.staticColorArray.count + colorService.randomColorArray.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -87,7 +73,11 @@ class BlankCanvasesViewController: UICollectionViewController
         
          let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BlankCanvasCell", forIndexPath: indexPath) as UICollectionViewCell
 
-        cell.backgroundColor = canvasColorArray[indexPath.item];
+        if(indexPath.item < colorService.staticColorArray.count) {
+            cell.backgroundColor = colorService.staticColorArray[indexPath.item];
+        } else {
+            cell.backgroundColor = colorService.randomColorArray[indexPath.item - colorService.staticColorArray.count]
+        }
         
         //2.
         //You can create a Class file for UICollectionViewCell and Set the appropriate component and assign the value to that class

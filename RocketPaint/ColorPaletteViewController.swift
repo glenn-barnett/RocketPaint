@@ -19,13 +19,7 @@ class ColorPaletteViewController: UICollectionViewController
     let colorService : ColorService = ColorService.SharedInstance
     
     var lastAlpha: Float = 1.0
-    var selectedColor: UIColor = UIColor.blackColor()
-    var sessionColorArray: [UIColor] = []
-    var variantColorArray: [UIColor] = []
-    var staticColorArray: [UIColor] = []
-    var randomColorArray: [UIColor] = []
     
-
     //UNUSED
     @IBAction func EditAlbumPressed(sender : AnyObject) {
         
@@ -55,17 +49,6 @@ class ColorPaletteViewController: UICollectionViewController
         }
     }
     
-    func generateRandomColor() -> UIColor {
-        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
-        //        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
-        //        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
-        
-        // GB: wider range
-        let saturation : CGFloat = CGFloat(arc4random() % 192) / 256 + 0.25 //
-        let brightness : CGFloat = CGFloat(arc4random() % 192) / 256 + 0.25 //
-        
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,32 +78,22 @@ class ColorPaletteViewController: UICollectionViewController
             object: nil)
         
         
-        staticColorArray.append(UIColor.whiteColor())
-        staticColorArray.append(UIColor.grayColor())
-        staticColorArray.append(UIColor.blackColor())
-        staticColorArray.append(UIColor.blueColor())
-        staticColorArray.append(UIColor.cyanColor())
-        staticColorArray.append(UIColor.greenColor())
-        staticColorArray.append(UIColor.yellowColor())
-        staticColorArray.append(UIColor.orangeColor())
-        staticColorArray.append(UIColor.redColor())
-        staticColorArray.append(UIColor.purpleColor())
+        colorService.staticColorArray.append(UIColor.whiteColor())
+        colorService.staticColorArray.append(UIColor.grayColor())
+        colorService.staticColorArray.append(UIColor.blackColor())
+        colorService.staticColorArray.append(UIColor.blueColor())
+        colorService.staticColorArray.append(UIColor.cyanColor())
+        colorService.staticColorArray.append(UIColor.greenColor())
+        colorService.staticColorArray.append(UIColor.yellowColor())
+        colorService.staticColorArray.append(UIColor.orangeColor())
+        colorService.staticColorArray.append(UIColor.redColor())
+        colorService.staticColorArray.append(UIColor.purpleColor())
         
         for(var i=0; i<1000; i++) {
-            randomColorArray.append(generateRandomColor())
+            colorService.randomColorArray.append(colorService.generateRandomColor())
         }
         
-        
-        
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        // GB collection init could go here
-        
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -130,22 +103,29 @@ class ColorPaletteViewController: UICollectionViewController
     
     func colorChanged(notification:NSNotification){
         print("Palette.colorChanged() BEGIN")
-        selectedColor = notification.userInfo!["color"] as! UIColor
+        colorService.selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
         
         // first, clear the old variants
-        variantColorArray.removeAll()
+        colorService.variantColorArray.removeAll()
         
         // second, extract the selected color into components
         var srcHue: CGFloat = 0
         var srcSaturation: CGFloat = 0
         var srcBrightness: CGFloat = 0
         var srcAlpha: CGFloat = 0
-        selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
+        colorService.selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
         
-        if(srcSaturation != 0) {
-            
+        if(srcSaturation == 0) {
+            for(var y=1; y<=5; y++) {
+                // saturation will be 0-1.0, scaled by source saturation x1.5
+                // brightness will be 0.2-1.0
+                let newBrightness: CGFloat = 0.20 * CGFloat(y)
+                colorService.variantColorArray.append(UIColor(hue:srcHue, saturation:0, brightness:newBrightness, alpha:1))
+            }
+        } else {
+        
             // third, create saturation variants from 0% to 100% in 8 steps
             //        for(var i=0.0f; i<7.5f; i+=1.0f) {
             for(var x=1; x<=5; x++) {
@@ -154,7 +134,7 @@ class ColorPaletteViewController: UICollectionViewController
                     let newSaturation: CGFloat = (0.25 * CGFloat(x) - 0.25) * min(1.0, srcSaturation * 1.5)
                     // brightness will be 0.2-1.0
                     let newBrightness: CGFloat = 0.20 * CGFloat(y)
-                    variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
+                    colorService.variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
                 }
             }
         }
@@ -169,8 +149,8 @@ class ColorPaletteViewController: UICollectionViewController
         print("Palette.colorUsed()")
         
         // don't add dupes of favorites (sessions), nor statics
-        if(!sessionColorArray.contains(self.selectedColor) && !staticColorArray.contains(self.selectedColor)) {
-            sessionColorArray.append(self.selectedColor)
+        if(!colorService.sessionColorArray.contains(colorService.selectedColor) && !colorService.staticColorArray.contains(colorService.selectedColor)) {
+            colorService.sessionColorArray.append(colorService.selectedColor)
         }
         
         // refresh table
@@ -221,7 +201,7 @@ class ColorPaletteViewController: UICollectionViewController
     }
     
     override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
-        return sessionColorArray.count + variantColorArray.count + staticColorArray.count + randomColorArray.count
+        return colorService.sessionColorArray.count + colorService.variantColorArray.count + colorService.staticColorArray.count + colorService.randomColorArray.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -246,20 +226,20 @@ class ColorPaletteViewController: UICollectionViewController
         
         var color : UIColor = UIColor.whiteColor() // default
         
-        if(indexPath.item < variantColorArray.count) {
-            color = variantColorArray[indexPath.item]
+        if(indexPath.item < colorService.variantColorArray.count) {
+            color = colorService.variantColorArray[indexPath.item]
             cell.CloseButton!.hidden = true
         }
-        else if(indexPath.item < variantColorArray.count + sessionColorArray.count) {
-            color = sessionColorArray[indexPath.item - variantColorArray.count]
+        else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count) {
+            color = colorService.sessionColorArray[indexPath.item - colorService.variantColorArray.count]
             cell.CloseButton!.hidden = false
         }
-        else if(indexPath.item < variantColorArray.count + sessionColorArray.count + staticColorArray.count) {
-            color = staticColorArray[indexPath.item - sessionColorArray.count - variantColorArray.count]
+        else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count + colorService.staticColorArray.count) {
+            color = colorService.staticColorArray[indexPath.item - colorService.sessionColorArray.count - colorService.variantColorArray.count]
             cell.CloseButton!.hidden = true
         }
-        else if(indexPath.item < variantColorArray.count + sessionColorArray.count + staticColorArray.count + randomColorArray.count) {
-            color = randomColorArray[indexPath.item - sessionColorArray.count - variantColorArray.count - staticColorArray.count]
+        else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count + colorService.staticColorArray.count + colorService.randomColorArray.count) {
+            color = colorService.randomColorArray[indexPath.item - colorService.sessionColorArray.count - colorService.variantColorArray.count - colorService.staticColorArray.count]
             cell.CloseButton!.hidden = true
         }
         
@@ -279,7 +259,7 @@ class ColorPaletteViewController: UICollectionViewController
     
     func removeSessionColor(sender:UIButton) {
         let i : Int = (sender.layer.valueForKey("index")) as! Int
-        sessionColorArray.removeAtIndex(i)
+        colorService.sessionColorArray.removeAtIndex(i)
         self.collectionView!.reloadData()
     }
 }
