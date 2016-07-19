@@ -32,8 +32,10 @@ class PaintingViewController: UIViewController,
     
     var rotatingButtonArray : [UIView] = [];
 
-    var lastColor = UIColor.blackColor()
+    var lastColor = ColorService.SharedInstance.defaultPaintColor()
     let imagePicker = UIImagePickerController()
+    var undoClearImage : UIImage? // saved just before we clear as special undo step
+    var undoClearBackgroundColor : UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,29 +43,6 @@ class PaintingViewController: UIViewController,
         imagePicker.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(PaintingViewController.colorChanged(_:)),
-            name: Notifications.kColorChanged,
-            object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(PaintingViewController.brushChanged(_:)),
-            name: Notifications.kBrushChanged,
-            object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(PaintingViewController.lineWidthChanged(_:)),
-            name: Notifications.kLineWidthChanged,
-            object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(PaintingViewController.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
-            object: nil)
 
         rotatingButtonArray.append(HamburgerBView!);
         rotatingButtonArray.append(UndoBView!);
@@ -72,19 +51,34 @@ class PaintingViewController: UIViewController,
         rotatingButtonArray.append(PaletteBView!);
         rotatingButtonArray.append(BrushBView!);
         
-        
         // INIT HAPPENS HERE
         DrawingView.backgroundColor = UIColor.whiteColor()
+        
  
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "Pen3"])
 
+        DrawingView.lineColor = lastColor
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kColorChanged,
             object: nil,
-            userInfo: ["color": UIColor.blackColor()])
+            userInfo: ["color": DrawingView.lineColor])
+
+        DrawingView.lineWidth = 10.0
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineWidthChanged,
+            object: nil,
+            userInfo: ["lineWidth": DrawingView.lineWidth])
+
+        DrawingView.lineAlpha = 1.0
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineAlphaChanged,
+            object: nil,
+            userInfo: ["lineAlpha": DrawingView.lineAlpha])
+
+        DrawingView.edgeSnapThreshold = 15
 
         DrawingService.SharedInstance.addDrawingView(DrawingView); // GB layer 0?
         
@@ -102,6 +96,37 @@ class PaintingViewController: UIViewController,
         // Initial device orientation
         self.currentDeviceOrientation = UIDevice.currentDevice().orientation
         // Do what you want here
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.colorChanged(_:)),
+            name: Notifications.kColorChanged,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.brushChanged(_:)),
+            name: Notifications.kBrushChanged,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.lineWidthChanged(_:)),
+            name: Notifications.kLineWidthChanged,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.lineAlphaChanged(_:)),
+            name: Notifications.kLineAlphaChanged,
+            object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.canvasCleared(_:)),
+            name: Notifications.kCanvasCleared,
+            object: nil)
+
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -155,6 +180,16 @@ class PaintingViewController: UIViewController,
         
         if(DrawingView.canUndo()) {
             DrawingView.undoLatestStep()
+        } else {
+            print("PVC.undoTapped(): nothing to undo!");
+            if(undoClearBackgroundColor != nil) {
+                DrawingView.backgroundColor = undoClearBackgroundColor
+                undoClearBackgroundColor = nil
+            }
+            if(undoClearImage != nil) {
+                DrawingView.loadImage(undoClearImage)
+                undoClearImage = nil
+            }
         }
     }
 
@@ -277,15 +312,19 @@ class PaintingViewController: UIViewController,
             DrawingView.lineAlpha = highlightAlpha
         
         } else if(brush == "TextSerifBig") {
+            DrawingView.fontName = "Georgia"
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
             DrawingView.lineWidth = lineWidthTextBig
         } else if(brush == "TextSerifSmall") {
+            DrawingView.fontName = "Georgia"
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
             DrawingView.lineWidth = lineWidthTextSmall
         } else if(brush == "TextSansBig") {
+            DrawingView.fontName = nil
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
             DrawingView.lineWidth = lineWidthTextBig
         } else if(brush == "TextSansSmall") {
+            DrawingView.fontName = nil
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
             DrawingView.lineWidth = lineWidthTextSmall
         }
@@ -305,10 +344,22 @@ class PaintingViewController: UIViewController,
     func lineWidthChanged(notification:NSNotification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         DrawingView.lineWidth = CGFloat(lineWidth)
+        print("PaintingVC.lineWidthChanged(\(lineWidth))")
     }
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         DrawingView.lineAlpha = CGFloat(lineAlpha)
+        print("PaintingVC.lineAlphaChanged(\(lineAlpha))")
+    }
+    func canvasCleared(notification:NSNotification){
+        let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
+        
+        // save these just in case
+        undoClearImage = DrawingView.image
+        undoClearBackgroundColor = DrawingView.backgroundColor
+        
+        DrawingView.backgroundColor = canvasColor
+        DrawingView.clear()        
     }
 
     override func didReceiveMemoryWarning() {

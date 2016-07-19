@@ -15,6 +15,8 @@ let reuseIdentifier = "Cell"
 
 class ColorPaletteViewController: UICollectionViewController
 {
+
+    let colorService : ColorService = ColorService.SharedInstance
     
     var lastAlpha: Float = 1.0
     var selectedColor: UIColor = UIColor.blackColor()
@@ -22,10 +24,7 @@ class ColorPaletteViewController: UICollectionViewController
     var variantColorArray: [UIColor] = []
     var staticColorArray: [UIColor] = []
     var randomColorArray: [UIColor] = []
-   
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print("ColorPalette: touchesBegan()")
-    }
+    
 
     //UNUSED
     @IBAction func EditAlbumPressed(sender : AnyObject) {
@@ -58,9 +57,9 @@ class ColorPaletteViewController: UICollectionViewController
     
     func generateRandomColor() -> UIColor {
         let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
-//        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
-//        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
-
+        //        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
+        //        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
+        
         // GB: wider range
         let saturation : CGFloat = CGFloat(arc4random() % 192) / 256 + 0.25 //
         let brightness : CGFloat = CGFloat(arc4random() % 192) / 256 + 0.25 //
@@ -76,7 +75,7 @@ class ColorPaletteViewController: UICollectionViewController
             selector: #selector(ColorPaletteViewController.colorChanged(_:)),
             name: Notifications.kColorChanged,
             object: nil)
-
+        
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(ColorPaletteViewController.colorUsed(_:)),
@@ -88,13 +87,13 @@ class ColorPaletteViewController: UICollectionViewController
             selector: #selector(ColorPaletteViewController.colorPaletteClosed(_:)),
             name: Notifications.kColorPaletteClosed,
             object: nil)
-
+        
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(ColorPaletteViewController.lineAlphaChanged(_:)),
             name: Notifications.kLineAlphaChanged,
             object: nil)
-
+        
         
         staticColorArray.append(UIColor.whiteColor())
         staticColorArray.append(UIColor.grayColor())
@@ -111,8 +110,8 @@ class ColorPaletteViewController: UICollectionViewController
             randomColorArray.append(generateRandomColor())
         }
         
-
-    
+        
+        
         // GB collection init could go here
         // GB collection init could go here
         // GB collection init could go here
@@ -121,7 +120,7 @@ class ColorPaletteViewController: UICollectionViewController
         // GB collection init could go here
         // GB collection init could go here
         // GB collection init could go here
-    
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -145,52 +144,55 @@ class ColorPaletteViewController: UICollectionViewController
         var srcAlpha: CGFloat = 0
         selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
         
-        // third, create saturation variants from 0% to 100% in 8 steps
-//        for(var i=0.0f; i<7.5f; i+=1.0f) {
-        for(var x=1; x<=5; x++) {
-            for(var y=1; y<=5; y++) {
-                // saturation will be 0-1.0, scaled by source saturation x1.5
-                let newSaturation: CGFloat = (0.25 * CGFloat(x) - 0.25) * min(1.0, srcSaturation * 1.5)
-                // brightness will be 0.2-1.0
-                let newBrightness: CGFloat = 0.20 * CGFloat(y)
-                variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
+        if(srcSaturation != 0) {
+            
+            // third, create saturation variants from 0% to 100% in 8 steps
+            //        for(var i=0.0f; i<7.5f; i+=1.0f) {
+            for(var x=1; x<=5; x++) {
+                for(var y=1; y<=5; y++) {
+                    // saturation will be 0-1.0, scaled by source saturation x1.5
+                    let newSaturation: CGFloat = (0.25 * CGFloat(x) - 0.25) * min(1.0, srcSaturation * 1.5)
+                    // brightness will be 0.2-1.0
+                    let newBrightness: CGFloat = 0.20 * CGFloat(y)
+                    variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
+                }
             }
         }
         
         print("Palette.colorChanged() reloadData")
         collectionView?.reloadData()
         print("Palette.colorChanged() END")
-
+        
     }
-
+    
     func colorUsed(notification:NSNotification){
         print("Palette.colorUsed()")
         
-        // don't add dupes of favorites (sessions) 
-        if(!sessionColorArray.contains(self.selectedColor)) {
+        // don't add dupes of favorites (sessions), nor statics
+        if(!sessionColorArray.contains(self.selectedColor) && !staticColorArray.contains(self.selectedColor)) {
             sessionColorArray.append(self.selectedColor)
         }
         
         // refresh table
-        self.collectionView!.reloadData()        
+        self.collectionView!.reloadData()
     }
-
+    
     func colorPaletteClosed(notification:NSNotification){
         print("Palette.colorPaletteClosed()")
         collectionView!.setContentOffset(CGPointZero, animated: true)
     }
-
+    
     func lineAlphaChanged(notification:NSNotification){
         lastAlpha = notification.userInfo!["lineAlpha"] as! Float
     }
-
+    
     // #pragma mark - UICollectionViewDelegate protocol
     
     // handle tap events
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! ColorCell
-
+        
         let cellColor = cell.Color.colorWithAlphaComponent(CGFloat(lastAlpha))
         
         NSNotificationCenter.defaultCenter().postNotificationName(
@@ -244,27 +246,27 @@ class ColorPaletteViewController: UICollectionViewController
         
         var color : UIColor = UIColor.whiteColor() // default
         
-        if(indexPath.item < sessionColorArray.count) {
-            color = sessionColorArray[indexPath.item]
-            cell.CloseButton!.hidden = false
-        }
-        else if(indexPath.item < sessionColorArray.count + variantColorArray.count) {
-            color = variantColorArray[indexPath.item - sessionColorArray.count]
+        if(indexPath.item < variantColorArray.count) {
+            color = variantColorArray[indexPath.item]
             cell.CloseButton!.hidden = true
         }
-        else if(indexPath.item < sessionColorArray.count + variantColorArray.count + staticColorArray.count) {
+        else if(indexPath.item < variantColorArray.count + sessionColorArray.count) {
+            color = sessionColorArray[indexPath.item - variantColorArray.count]
+            cell.CloseButton!.hidden = false
+        }
+        else if(indexPath.item < variantColorArray.count + sessionColorArray.count + staticColorArray.count) {
             color = staticColorArray[indexPath.item - sessionColorArray.count - variantColorArray.count]
             cell.CloseButton!.hidden = true
         }
-        else if(indexPath.item < sessionColorArray.count + variantColorArray.count + staticColorArray.count + randomColorArray.count) {
+        else if(indexPath.item < variantColorArray.count + sessionColorArray.count + staticColorArray.count + randomColorArray.count) {
             color = randomColorArray[indexPath.item - sessionColorArray.count - variantColorArray.count - staticColorArray.count]
             cell.CloseButton!.hidden = true
         }
-    
+        
         cell.Color = color
-//        cell.backgroundColor = color //randomColorArray[indexPath.item]
-
-
+        //        cell.backgroundColor = color //randomColorArray[indexPath.item]
+        
+        
         //GB useful example of cell layer manipulation
         //Layer property in Objective C => "http://iostutorialstack.blogspot.in/2014/04/how-to-assign-custom-tag-or-value-to.html"
         // GB we set this so we can remove from the datasource later
@@ -274,7 +276,7 @@ class ColorPaletteViewController: UICollectionViewController
         cell.CloseButton?.addTarget(self, action: "removeSessionColor:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
-
+    
     func removeSessionColor(sender:UIButton) {
         let i : Int = (sender.layer.valueForKey("index")) as! Int
         sessionColorArray.removeAtIndex(i)

@@ -57,6 +57,8 @@ typedef NS_ENUM(NSUInteger, ACEDrawingMode) {
 @property (nonatomic, strong) UIColor *lineColor;
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, assign) CGFloat lineAlpha;
+@property (nonatomic, strong) NSString *fontName;
+@property (nonatomic, assign) CGFloat edgeSnapThreshold;
 @property (nonatomic, assign) ACEDrawingMode drawMode;
 
 // get the current drawing

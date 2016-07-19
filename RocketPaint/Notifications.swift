@@ -16,8 +16,10 @@ struct Notifications {
 
     static let kColorChanged = "kColorChanged"
     static let kColorUsed = "kColorUsed"
-    static let kColorPaletteClosed = "kColorPaletteClosed"
-//    static let kImageLoaded = "kImageLoaded"
+    static let kColorPaletteClosed = "kColorPaletteClosed" // to reset scroll pos to top
+    
+    static let kImageLoaded = "kImageLoaded"
+    static let kCanvasCleared = "kCanvasCleared"
 //    static let kImageSaved = "kImageSaved"
 }
 

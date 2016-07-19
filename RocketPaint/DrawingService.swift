@@ -1,5 +1,5 @@
 //
-//  DraingService
+//  DrawingService
 //  RocketPaint
 //
 //  Created by Glenn Barnett on 7/2/16.

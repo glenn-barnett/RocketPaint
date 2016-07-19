@@ -37,6 +37,7 @@ class IconColoredBView: BView {
     func colorChanged(notification:NSNotification){
         iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
+        print("IconColoredBView.colorChanged() END")
     }
 
     func lineAlphaChanged(notification:NSNotification){
@@ -44,6 +45,7 @@ class IconColoredBView: BView {
         
         iconColor = iconColor.colorWithAlphaComponent(CGFloat(lineAlpha))
         self.setNeedsDisplay();
+        print("IconColoredBView.lineAlphaChanged() END")
     }
 
 }

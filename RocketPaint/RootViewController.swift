@@ -8,39 +8,85 @@
 
 import Foundation
 import RESideMenu
+import Photos
+import TOCropViewController
 
-class RootViewController: RESideMenu, RESideMenuDelegate {
+class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDelegate {
 
     var rightSideViewController : RightSideViewController?;
     
 
     override func viewDidLoad() {
+        print("RVC.viewDidLoad()")
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(RootViewController.brushChanged(_:)),
+            selector: #selector(RootViewController.hideSideMenus(_:)),
             name: Notifications.kBrushChanged,
             object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(RootViewController.colorChanged(_:)),
+            selector: #selector(RootViewController.hideSideMenus(_:)),
             name: Notifications.kColorChanged,
+            object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RootViewController.imageLoaded(_:)),
+            name: Notifications.kImageLoaded,
+            object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RootViewController.hideSideMenus(_:)),
+            name: Notifications.kCanvasCleared,
             object: nil)
 
         
         // Do any additional setup after loading the view.
     }
     
-    func brushChanged(notification:NSNotification){
+    func hideSideMenus(notification:NSNotification){
         self.hideMenuViewController()
     }
-    func colorChanged(notification:NSNotification){
+    func imageLoaded(notification:NSNotification){
         self.hideMenuViewController()
+        let asset = notification.userInfo!["phAsset"] as! PHAsset
+
+        let options = PHImageRequestOptions()
+        options.networkAccessAllowed = true
+        options.deliveryMode = PHImageRequestOptionsDeliveryMode.HighQualityFormat
+        options.synchronous = true
+
+        PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSize(width: 768, height: 1024), contentMode:.AspectFit, options:options, resultHandler:{(image, info)in
+
+            let cvc = TOCropViewController(image:image)
+            cvc.delegate = self
+            
+            cvc.aspectRatioPreset = .PresetCustom
+            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
+            cvc.aspectRatioLockEnabled = true
+            cvc.rotateClockwiseButtonHidden = false
+            cvc.aspectRatioPickerButtonHidden = true
+            
+            self.presentViewController(cvc, animated: true, completion: nil)
+
+        })
+        
+        
     }
-    
+
+    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
+        
+        DrawingService.SharedInstance.loadImage0(image);
+        
+        dismissViewControllerAnimated(true, completion:nil)
+    }
+
     override func awakeFromNib() {
+        print("RVC.awakeFromNib()")
         
         self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
         self.contentViewShadowColor = UIColor.blackColor();
