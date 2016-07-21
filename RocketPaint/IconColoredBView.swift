@@ -13,8 +13,27 @@ class IconColoredBView: BView {
 
     var iconColor:UIColor = UIColor.redColor();
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        print("IconColoredBView.touchesBegan()")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.backgroundColor = UIColor.clearColor()
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(IconColoredBView.colorChanged(_:)),
+            name: Notifications.kColorChanged,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
+            name: Notifications.kLineAlphaChanged,
+            object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,9 +54,15 @@ class IconColoredBView: BView {
     }
     
     func colorChanged(notification:NSNotification){
-        iconColor = notification.userInfo!["color"] as! UIColor
-        self.setNeedsDisplay()
+        setColor(notification.userInfo!["color"] as! UIColor)
         print("IconColoredBView.colorChanged() END")
+    }
+    
+    func setColor(color:UIColor) {
+        iconColor = color
+        self.setNeedsDisplay()
+        print("IconColoredBView.setColor() END")
+        
     }
 
     func lineAlphaChanged(notification:NSNotification){

@@ -27,7 +27,6 @@ class PaintingViewController: UIViewController,
     @IBOutlet var HamburgerBView : BView?
     @IBOutlet var UndoBView : BView?
     @IBOutlet var RedoBView : BView?
-    @IBOutlet var PaletteBView : BView?
     @IBOutlet var BrushBView : BView?
     
     var rotatingButtonArray : [UIView] = [];
@@ -48,7 +47,6 @@ class PaintingViewController: UIViewController,
         rotatingButtonArray.append(UndoBView!);
         rotatingButtonArray.append(RedoBView!);
 
-        rotatingButtonArray.append(PaletteBView!);
         rotatingButtonArray.append(BrushBView!);
         
         // INIT HAPPENS HERE

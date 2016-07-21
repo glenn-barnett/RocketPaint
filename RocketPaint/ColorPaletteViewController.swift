@@ -76,23 +76,6 @@ class ColorPaletteViewController: UICollectionViewController
             selector: #selector(ColorPaletteViewController.lineAlphaChanged(_:)),
             name: Notifications.kLineAlphaChanged,
             object: nil)
-        
-        
-        colorService.staticColorArray.append(UIColor.whiteColor())
-        colorService.staticColorArray.append(UIColor.grayColor())
-        colorService.staticColorArray.append(UIColor.blackColor())
-        colorService.staticColorArray.append(UIColor.blueColor())
-        colorService.staticColorArray.append(UIColor.cyanColor())
-        colorService.staticColorArray.append(UIColor.greenColor())
-        colorService.staticColorArray.append(UIColor.yellowColor())
-        colorService.staticColorArray.append(UIColor.orangeColor())
-        colorService.staticColorArray.append(UIColor.redColor())
-        colorService.staticColorArray.append(UIColor.purpleColor())
-        
-        for(var i=0; i<1000; i++) {
-            colorService.randomColorArray.append(colorService.generateRandomColor())
-        }
-        
 
     }
     
@@ -106,43 +89,10 @@ class ColorPaletteViewController: UICollectionViewController
         colorService.selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
+        colorService.updateVariants()
         
-        // first, clear the old variants
-        colorService.variantColorArray.removeAll()
         
-        // second, extract the selected color into components
-        var srcHue: CGFloat = 0
-        var srcSaturation: CGFloat = 0
-        var srcBrightness: CGFloat = 0
-        var srcAlpha: CGFloat = 0
-        colorService.selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
-        
-        if(srcSaturation == 0) {
-            for(var y=1; y<=5; y++) {
-                // saturation will be 0-1.0, scaled by source saturation x1.5
-                // brightness will be 0.2-1.0
-                let newBrightness: CGFloat = 0.20 * CGFloat(y)
-                colorService.variantColorArray.append(UIColor(hue:srcHue, saturation:0, brightness:newBrightness, alpha:1))
-            }
-        } else {
-        
-            // third, create saturation variants from 0% to 100% in 8 steps
-            //        for(var i=0.0f; i<7.5f; i+=1.0f) {
-            for(var x=1; x<=5; x++) {
-                for(var y=1; y<=5; y++) {
-                    // saturation will be 0-1.0, scaled by source saturation x1.5
-                    let newSaturation: CGFloat = (0.25 * CGFloat(x) - 0.25) * min(1.0, srcSaturation * 1.5)
-                    // brightness will be 0.2-1.0
-                    let newBrightness: CGFloat = 0.20 * CGFloat(y)
-                    colorService.variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
-                }
-            }
-        }
-        
-        print("Palette.colorChanged() reloadData")
         collectionView?.reloadData()
-        print("Palette.colorChanged() END")
-        
     }
     
     func colorUsed(notification:NSNotification){

@@ -9,35 +9,10 @@
 import Foundation
 import UIKit
 
-class BrushWirePen1BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen1W(iconColor:iconColor);
-    }
-}
-class BrushWirePen2BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen2W(iconColor:iconColor);
-    }
-}
+
 class BrushWirePen3BView: IconColoredBView {
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawPen3W(iconColor:iconColor);
-    }
-}
-class BrushWirePen4BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen4W(iconColor:iconColor);
-    }
-}
-
-class BrushWireLine1BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine1W(iconColor:iconColor);
-    }
-}
-class BrushWireLine2BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine2W(iconColor:iconColor);
     }
 }
 class BrushWireLine3BView: IconColoredBView {
@@ -45,50 +20,39 @@ class BrushWireLine3BView: IconColoredBView {
         RocketPaintStyleKit.drawLine3W(iconColor:iconColor);
     }
 }
-class BrushWireLine4BView: IconColoredBView {
+
+
+class BrushWireRectSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine4W(iconColor:iconColor);
+        RocketPaintStyleKit.drawRectSolidW(iconColor:iconColor);
+    }
+}
+class BrushWireRectOutlineBView: IconColoredBView {
+    override func drawRect(rect: CGRect) {
+        RocketPaintStyleKit.drawRectOutlineW(iconColor:iconColor);
     }
 }
 
-class BrushWireBoxBView: IconColoredBView {
+
+class BrushWireEllipseSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawBoxW(iconColor:iconColor);
+        RocketPaintStyleKit.drawEllipseSolidW(iconColor:iconColor);
     }
 }
-class BrushWireHighlightGreenBView: BView {
+class BrushWireEllipseOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightGreenW();
+        RocketPaintStyleKit.drawEllipseOutlineW(iconColor:iconColor);
     }
 }
-class BrushWireHighlightYellowBView: BView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightYellowW();
-    }
-}
-class BrushWireHighlightRedBView: BView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightRedW();
-    }
-}
+
 
 class BrushWireTextSerifBigBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawTextSerifBigW(iconColor:iconColor);
     }
 }
-class BrushWireTextSerifSmallBView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSerifSmallW(iconColor:iconColor);
-    }
-}
 class BrushWireTextSansBigBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawTextSansBigW(iconColor:iconColor);
-    }
-}
-class BrushWireTextSansSmallBView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSansSmallW(iconColor:iconColor);
     }
 }

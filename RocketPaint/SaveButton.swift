@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable class SaveButton: IconColoredButton {
+class SaveButton: IconColoredButton {
 
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)

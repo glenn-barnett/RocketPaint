@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-@IBDesignable class BView : UIView {
+@IBDesignable 
+class BView : UIView {
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.alpha = 0.4;

@@ -28,6 +28,24 @@ public class ColorService {
     internal var staticColorArray: [UIColor] = []
     internal var randomColorArray: [UIColor] = []
 
+    init() {
+        staticColorArray.append(UIColor.whiteColor())
+        staticColorArray.append(UIColor.grayColor())
+        staticColorArray.append(UIColor.blackColor())
+        staticColorArray.append(UIColor.blueColor())
+        staticColorArray.append(UIColor.cyanColor())
+        staticColorArray.append(UIColor.greenColor())
+        staticColorArray.append(UIColor.yellowColor())
+        staticColorArray.append(UIColor.orangeColor())
+        staticColorArray.append(UIColor.redColor())
+        staticColorArray.append(UIColor.purpleColor())
+        
+        for(var i=0; i<1000; i++) {
+            randomColorArray.append(generateRandomColor())
+        }
+   
+    }
+    
     internal func defaultPaintColor() -> UIColor {
         return UIColor(red: 250.0/255.0, green: 187.0/255.0, blue: 35.0/255.0, alpha: 1.0)
     }
@@ -42,6 +60,42 @@ public class ColorService {
         let brightness : CGFloat = CGFloat(arc4random() % 192) / 256 + 0.25 //
         
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
+    }
+    
+    internal func updateVariants() {
+        // first, clear the old variants
+        variantColorArray.removeAll()
+        
+        // second, extract the selected color into components
+        var srcHue: CGFloat = 0
+        var srcSaturation: CGFloat = 0
+        var srcBrightness: CGFloat = 0
+        var srcAlpha: CGFloat = 0
+        selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
+        
+        if(srcSaturation == 0) {
+            for(var b=1; b<=5; b++) {
+                for(var s=0-1; s<=1; s++) {
+                    // brightness will be 0.2-1.0
+                    let newBrightness: CGFloat = 0.20 * CGFloat(b) + 0.05 * CGFloat(s)
+                    variantColorArray.append(UIColor(hue:CGFloat(Float(arc4random()) / Float(UINT32_MAX)), saturation:0, brightness:newBrightness, alpha:1))
+                }
+            }
+        } else {
+            
+            // third, create saturation variants from 0% to 100% in 8 steps
+            //        for(var i=0.0f; i<7.5f; i+=1.0f) {
+            for(var b=1; b<=5; b++) {
+                for(var s=2; s<=4; s++) {
+                    // saturation will be 0-1.0, scaled by source saturation x1.5
+                    let newSaturation: CGFloat = (0.25 * CGFloat(s) - 0.25) * min(1.0, srcSaturation * 1.5)
+                    // brightness will be 0.2-1.0
+                    let newBrightness: CGFloat = 0.20 * CGFloat(b) - 0.10
+                    variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
+                }
+            }
+        }
+        
     }
 
 }

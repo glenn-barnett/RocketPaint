@@ -28,12 +28,6 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(RootViewController.hideSideMenus(_:)),
-            name: Notifications.kColorChanged,
-            object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
             selector: #selector(RootViewController.imageLoaded(_:)),
             name: Notifications.kImageLoaded,
             object: nil)
@@ -107,14 +101,10 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     }
 
     func showRightPalette() {
-        rightSideViewController?.BrushView.hidden = true;
-        rightSideViewController?.ColorPaletteView.hidden = false;
         self.presentRightMenuViewController();
     }
 
     func showRightBrushes() {
-        rightSideViewController?.BrushView.hidden = false;
-        rightSideViewController?.ColorPaletteView.hidden = true;
         self.presentRightMenuViewController();
     }
 
