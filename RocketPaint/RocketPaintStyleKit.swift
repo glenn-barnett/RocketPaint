@@ -969,6 +969,8 @@ public class RocketPaintStyleKit : NSObject {
         bezierPath.addCurveToPoint(CGPoint(x: 46.7, y: 37.91), controlPoint1: CGPoint(x: 20.71, y: 60.04), controlPoint2: CGPoint(x: 46.7, y: 37.91))
         bezierPath.addCurveToPoint(CGPoint(x: 64.09, y: 48.79), controlPoint1: CGPoint(x: 46.7, y: 37.91), controlPoint2: CGPoint(x: 65.86, y: 17.96))
         bezierPath.addCurveToPoint(CGPoint(x: 80.4, y: 57.86), controlPoint1: CGPoint(x: 62.32, y: 79.63), controlPoint2: CGPoint(x: 80.4, y: 57.86))
+        bezierPath.lineCapStyle = .Round;
+
         iconColor.setStroke()
         bezierPath.lineWidth = lineWidth
         bezierPath.stroke()
@@ -1021,6 +1023,8 @@ public class RocketPaintStyleKit : NSObject {
         let bezierPath = UIBezierPath()
         bezierPath.moveToPoint(CGPoint(x: 33.83, y: 19.96))
         bezierPath.addCurveToPoint(CGPoint(x: 81.58, y: 58.04), controlPoint1: CGPoint(x: 81.58, y: 58.04), controlPoint2: CGPoint(x: 81.58, y: 58.04))
+        bezierPath.lineCapStyle = .Round;
+
         iconColor.setStroke()
         bezierPath.lineWidth = lineWidth
         bezierPath.stroke()
@@ -1529,6 +1533,8 @@ public class RocketPaintStyleKit : NSObject {
         bezierPath.addCurveToPoint(CGPoint(x: 46.7, y: 37.91), controlPoint1: CGPoint(x: 20.71, y: 60.04), controlPoint2: CGPoint(x: 46.7, y: 37.91))
         bezierPath.addCurveToPoint(CGPoint(x: 64.09, y: 48.79), controlPoint1: CGPoint(x: 46.7, y: 37.91), controlPoint2: CGPoint(x: 65.86, y: 17.96))
         bezierPath.addCurveToPoint(CGPoint(x: 80.4, y: 57.86), controlPoint1: CGPoint(x: 62.32, y: 79.63), controlPoint2: CGPoint(x: 80.4, y: 57.86))
+        bezierPath.lineCapStyle = .Round;
+
         iconColor.setStroke()
         bezierPath.lineWidth = lineWidth
         bezierPath.stroke()
@@ -1698,6 +1704,8 @@ public class RocketPaintStyleKit : NSObject {
         let bezierPath = UIBezierPath()
         bezierPath.moveToPoint(CGPoint(x: 33.83, y: 19.96))
         bezierPath.addCurveToPoint(CGPoint(x: 81.58, y: 58.04), controlPoint1: CGPoint(x: 81.58, y: 58.04), controlPoint2: CGPoint(x: 81.58, y: 58.04))
+        bezierPath.lineCapStyle = .Round;
+
         iconColor.setStroke()
         bezierPath.lineWidth = lineWidth
         bezierPath.stroke()

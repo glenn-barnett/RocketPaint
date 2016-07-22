@@ -12,10 +12,10 @@ import UIKit
 class IconColoredBView: BView {
 
     var iconColor:UIColor = UIColor.redColor();
+    var lineWidth:CGFloat = 6.0;
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
-        print("IconColoredBView.touchesBegan()")
     }
     
     override init(frame: CGRect) {
@@ -34,6 +34,12 @@ class IconColoredBView: BView {
             selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
             name: Notifications.kLineAlphaChanged,
             object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(IconColoredBView.lineWidthChanged(_:)),
+            name: Notifications.kLineWidthChanged,
+            object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,27 +56,32 @@ class IconColoredBView: BView {
             selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
             name: Notifications.kLineAlphaChanged,
             object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(IconColoredBView.lineWidthChanged(_:)),
+            name: Notifications.kLineWidthChanged,
+            object: nil)
+        
 
     }
     
     func colorChanged(notification:NSNotification){
-        setColor(notification.userInfo!["color"] as! UIColor)
-        print("IconColoredBView.colorChanged() END")
-    }
-    
-    func setColor(color:UIColor) {
-        iconColor = color
+        iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
-        print("IconColoredBView.setColor() END")
-        
     }
 
+    
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         
         iconColor = iconColor.colorWithAlphaComponent(CGFloat(lineAlpha))
         self.setNeedsDisplay();
-        print("IconColoredBView.lineAlphaChanged() END")
+    }
+
+    func lineWidthChanged(notification:NSNotification){
+        lineWidth = min(26.0, CGFloat(notification.userInfo!["lineWidth"] as! Float))
+        self.setNeedsDisplay();
     }
 
 }

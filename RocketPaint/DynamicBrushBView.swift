@@ -37,21 +37,21 @@ class DynamicBrushBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
         
         if(brush == "Pen") {
-            RocketPaintStyleKit.drawGPen(iconColor:iconColor);
+            RocketPaintStyleKit.drawGPen(iconColor:iconColor, lineWidth: lineWidth);
         } else if(brush == "Line") {
-            RocketPaintStyleKit.drawGLine(iconColor:iconColor);
+            RocketPaintStyleKit.drawGLine(iconColor:iconColor, lineWidth: lineWidth);
         } else if(brush == "EllipseSolid") {
             RocketPaintStyleKit.drawGEllipseSolid(iconColor:iconColor);
         } else if(brush == "EllipseOutline") {
-            RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor);
+            RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor, lineWidth: lineWidth);
         } else if(brush == "RectSolid") {
             RocketPaintStyleKit.drawGRectSolid(iconColor:iconColor);
         } else if(brush == "RectOutline") {
-            RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor);
+            RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor, lineWidth: lineWidth);
         } else if(brush == "TextSerif") {
-            RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor);
+            RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor, lineWidth: lineWidth);
         } else if(brush == "TextSans") {
-            RocketPaintStyleKit.drawGTextSans(iconColor:iconColor);
+            RocketPaintStyleKit.drawGTextSans(iconColor:iconColor, lineWidth: lineWidth);
         } else {
             RocketPaintStyleKit.drawPalette(iconColor:iconColor);
         }

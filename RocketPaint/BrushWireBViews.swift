@@ -12,12 +12,12 @@ import UIKit
 
 class BrushWirePenBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWPen(iconColor:iconColor);
+        RocketPaintStyleKit.drawWPen(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 class BrushWireLineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWLine(iconColor:iconColor);
+        RocketPaintStyleKit.drawWLine(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 
@@ -29,7 +29,7 @@ class BrushWireRectSolidBView: IconColoredBView {
 }
 class BrushWireRectOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWRectOutline(iconColor:iconColor);
+        RocketPaintStyleKit.drawWRectOutline(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 
@@ -41,18 +41,18 @@ class BrushWireEllipseSolidBView: IconColoredBView {
 }
 class BrushWireEllipseOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWEllipseOutline(iconColor:iconColor);
+        RocketPaintStyleKit.drawWEllipseOutline(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 
 
 class BrushWireTextSerifBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWTextSerif(iconColor:iconColor);
+        RocketPaintStyleKit.drawWTextSerif(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 class BrushWireTextSansBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawWTextSans(iconColor:iconColor);
+        RocketPaintStyleKit.drawWTextSans(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
