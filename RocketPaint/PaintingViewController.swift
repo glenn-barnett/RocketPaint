@@ -11,6 +11,8 @@ import ACEDrawingView
 import RESideMenu
 
 
+
+
 // TODO need "cue" that photo was saved to camera roll
 
 // TODO crop when saving to camera roll
@@ -29,9 +31,13 @@ class PaintingViewController: UIViewController,
     @IBOutlet var RedoBView : BView?
     @IBOutlet var BrushBView : BView?
     
+//    let xray = DynamicXray()
+    
     var rotatingButtonArray : [UIView] = [];
 
-    var lastColor = ColorService.SharedInstance.defaultPaintColor()
+    let colorService = ColorService.SharedInstance
+    var lastColor = UIColor.blackColor()
+    
     let imagePicker = UIImagePickerController()
     var undoClearImage : UIImage? // saved just before we clear as special undo step
     var undoClearBackgroundColor : UIColor?
@@ -42,7 +48,12 @@ class PaintingViewController: UIViewController,
         imagePicker.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         
-
+//        #import <DynamicXray/DynamicXray.h>
+//        ...
+//        DynamicXray *xray = [[DynamicXray alloc] init];
+//        [self.dynamicAnimator addBehavior:xray];
+        
+        
         rotatingButtonArray.append(HamburgerBView!);
         rotatingButtonArray.append(UndoBView!);
         rotatingButtonArray.append(RedoBView!);
@@ -50,15 +61,16 @@ class PaintingViewController: UIViewController,
         rotatingButtonArray.append(BrushBView!);
         
         // INIT HAPPENS HERE
-        DrawingView.backgroundColor = UIColor.whiteColor()
         
+        DrawingView.backgroundColor = colorService.canvasColor
+        DrawingView.lineColor = colorService.defaultPaintColor()
+        lastColor = colorService.defaultPaintColor()
  
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "Pen"])
 
-        DrawingView.lineColor = lastColor
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kColorChanged,
             object: nil,
@@ -303,7 +315,9 @@ class PaintingViewController: UIViewController,
         undoClearImage = DrawingView.image
         undoClearBackgroundColor = DrawingView.backgroundColor
         
-        DrawingView.backgroundColor = canvasColor
+        colorService.canvasColor = canvasColor
+        
+        DrawingView.backgroundColor = colorService.canvasColor
         DrawingView.clear()        
     }
 

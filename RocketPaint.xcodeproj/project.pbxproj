@@ -126,6 +126,7 @@
 		2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9FA2C01CC2BC28000FF2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A9FA2C21CC2BC28000FF2A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketPaint-Bridging-Header.h"; sourceTree = "<group>"; };
 		2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDrawingView.swift; sourceTree = "<group>"; };
 		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -252,6 +253,7 @@
 				2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */,
 				2A1582B61CD8CF500030BB45 /* Notifications.swift */,
 				2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */,
+				2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -488,6 +490,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -554,10 +557,29 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0885FB120941F280FAC85FDA /* Pods-RocketPaint.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ACEDrawingView\"",
+					"-framework",
+					"\"BSGridCollectionViewLayout\"",
+					"-framework",
+					"\"KRLCollectionViewGridLayout\"",
+					"-framework",
+					"\"RESideMenu\"",
+					"-framework",
+					"\"RFQuiltLayout\"",
+					"-framework",
+					"\"TOCropViewController\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -565,10 +587,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 177831622EF3A73515FFA14F /* Pods-RocketPaint.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ACEDrawingView\"",
+					"-framework",
+					"\"BSGridCollectionViewLayout\"",
+					"-framework",
+					"\"KRLCollectionViewGridLayout\"",
+					"-framework",
+					"\"RESideMenu\"",
+					"-framework",
+					"\"RFQuiltLayout\"",
+					"-framework",
+					"\"TOCropViewController\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 			};
 			name = Release;
 		};

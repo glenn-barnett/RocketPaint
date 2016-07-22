@@ -23,6 +23,7 @@ public class ColorService {
 
     internal var lastAlpha: Float = 1.0
     internal var selectedColor: UIColor = UIColor.blackColor()
+    internal var canvasColor: UIColor = UIColor.whiteColor()
     internal var sessionColorArray: [UIColor] = []
     internal var variantColorArray: [UIColor] = []
     internal var staticColorArray: [UIColor] = []
