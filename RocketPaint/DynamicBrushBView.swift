@@ -36,38 +36,24 @@ class DynamicBrushBView: IconColoredBView {
     
     override func drawRect(rect: CGRect) {
         
-        if(brush == "Pen1") {
-            RocketPaintStyleKit.drawPen1(iconColor:iconColor);
-        } else if(brush == "Pen2") {
-            RocketPaintStyleKit.drawPen2(iconColor:iconColor);
-        } else if(brush == "Pen3") {
-            RocketPaintStyleKit.drawPen3(iconColor:iconColor);
-        } else if(brush == "Pen4") {
-            RocketPaintStyleKit.drawPen4(iconColor:iconColor);
-        } else if(brush == "Line1") {
-            RocketPaintStyleKit.drawLine1(iconColor:iconColor);
-        } else if(brush == "Line2") {
-            RocketPaintStyleKit.drawLine2(iconColor:iconColor);
-        } else if(brush == "Line3") {
-            RocketPaintStyleKit.drawLine3(iconColor:iconColor);
-        } else if(brush == "Line4") {
-            RocketPaintStyleKit.drawLine4(iconColor:iconColor);
-        } else if(brush == "Box") {
-            RocketPaintStyleKit.drawBox(iconColor:iconColor);
-        } else if(brush == "HighlightGreen") {
-            RocketPaintStyleKit.drawHighlightGreen();
-        } else if(brush == "HighlightYellow") {
-            RocketPaintStyleKit.drawHighlightYellow();
-        } else if(brush == "HighlightRed") {
-            RocketPaintStyleKit.drawHighlightRed();
-        } else if(brush == "TextSerifBig") {
-            RocketPaintStyleKit.drawTextSerifBig(iconColor:iconColor);
-        } else if(brush == "TextSerifSmall") {
-            RocketPaintStyleKit.drawTextSerifSmall(iconColor:iconColor);
-        } else if(brush == "TextSansBig") {
-            RocketPaintStyleKit.drawTextSansBig(iconColor:iconColor);
-        } else if(brush == "TextSansSmall") {
-            RocketPaintStyleKit.drawTextSansSmall(iconColor:iconColor);
+        if(brush == "Pen") {
+            RocketPaintStyleKit.drawGPen(iconColor:iconColor);
+        } else if(brush == "Line") {
+            RocketPaintStyleKit.drawGLine(iconColor:iconColor);
+        } else if(brush == "EllipseSolid") {
+            RocketPaintStyleKit.drawGEllipseSolid(iconColor:iconColor);
+        } else if(brush == "EllipseOutline") {
+            RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor);
+        } else if(brush == "RectSolid") {
+            RocketPaintStyleKit.drawGRectSolid(iconColor:iconColor);
+        } else if(brush == "RectOutline") {
+            RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor);
+        } else if(brush == "TextSerif") {
+            RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor);
+        } else if(brush == "TextSans") {
+            RocketPaintStyleKit.drawGTextSans(iconColor:iconColor);
+        } else {
+            RocketPaintStyleKit.drawPalette(iconColor:iconColor);
         }
         
     }

@@ -45,794 +45,6 @@ public class RocketPaintStyleKit : NSObject {
 
     //// Drawing Methods
 
-    public class func drawLine4(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 34.83, y: 19.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.58, y: 58.04), controlPoint1: CGPoint(x: 82.58, y: 58.04), controlPoint2: CGPoint(x: 82.58, y: 58.04))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 12
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawLine3(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 34.83, y: 19.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.58, y: 58.04), controlPoint1: CGPoint(x: 82.58, y: 58.04), controlPoint2: CGPoint(x: 82.58, y: 58.04))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 6
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawLine2(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 34.83, y: 19.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.58, y: 58.04), controlPoint1: CGPoint(x: 82.58, y: 58.04), controlPoint2: CGPoint(x: 82.58, y: 58.04))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 3
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawLine1(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 34.83, y: 19.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.58, y: 58.04), controlPoint1: CGPoint(x: 82.58, y: 58.04), controlPoint2: CGPoint(x: 82.58, y: 58.04))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 1
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawTextSansSmall(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Group
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 82.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        textSelColor.setStroke()
-        rectangle2Path.lineWidth = 2
-        rectangle2Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Text Drawing
-        let textRect = CGRect(x: 36, y: 19, width: 43, height: 37)
-        let textStyle = NSMutableParagraphStyle()
-        textStyle.alignment = .Left
-
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(UIFont.buttonFontSize()), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
-
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
-    }
-
-    public class func drawTextSansBig(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 82.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        textSelColor.setStroke()
-        rectangle2Path.lineWidth = 2
-        rectangle2Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Text Drawing
-        let textRect = CGRect(x: 36, y: 14, width: 43, height: 37)
-        let textStyle = NSMutableParagraphStyle()
-        textStyle.alignment = .Left
-
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(36), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
-
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
-    }
-
-    public class func drawTextSerifSmall(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Group
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 82.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        textSelColor.setStroke()
-        rectangle2Path.lineWidth = 2
-        rectangle2Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Text Drawing
-        let textRect = CGRect(x: 36, y: 19, width: 43, height: 37)
-        let textStyle = NSMutableParagraphStyle()
-        textStyle.alignment = .Left
-
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: UIFont.buttonFontSize())!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
-
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
-    }
-
-    public class func drawTextSerifBig(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 82.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        textSelColor.setStroke()
-        rectangle2Path.lineWidth = 2
-        rectangle2Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 78, y: 56.5, width: 9, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 1.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Text Drawing
-        let textRect = CGRect(x: 36, y: 16, width: 42, height: 36)
-        let textStyle = NSMutableParagraphStyle()
-        textStyle.alignment = .Left
-
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: 35)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
-
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
-    }
-
-    public class func drawBox(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Group
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 84.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        iconColor.setFill()
-        rectangle2Path.fill()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 81, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 83.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.95, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawPen1(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 36.52, y: 20.32))
-        bezierPath.addCurveToPoint(CGPoint(x: 48.7, y: 37.91), controlPoint1: CGPoint(x: 22.71, y: 60.04), controlPoint2: CGPoint(x: 48.7, y: 37.91))
-        bezierPath.addCurveToPoint(CGPoint(x: 66.09, y: 48.79), controlPoint1: CGPoint(x: 48.7, y: 37.91), controlPoint2: CGPoint(x: 67.86, y: 17.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.4, y: 57.86), controlPoint1: CGPoint(x: 64.32, y: 79.63), controlPoint2: CGPoint(x: 82.4, y: 57.86))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 1
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        ovalPath.fill()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross 2
-        //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectangle2Path.fill()
-
-
-        //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle4Path.fill()
-
-
-
-
-        //// Oval 3 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval3Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval3Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawPen2(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 36.52, y: 20.32))
-        bezierPath.addCurveToPoint(CGPoint(x: 48.7, y: 37.91), controlPoint1: CGPoint(x: 22.71, y: 60.04), controlPoint2: CGPoint(x: 48.7, y: 37.91))
-        bezierPath.addCurveToPoint(CGPoint(x: 66.09, y: 48.79), controlPoint1: CGPoint(x: 48.7, y: 37.91), controlPoint2: CGPoint(x: 67.86, y: 17.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.4, y: 57.86), controlPoint1: CGPoint(x: 64.32, y: 79.63), controlPoint2: CGPoint(x: 82.4, y: 57.86))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 3
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        ovalPath.fill()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross 2
-        //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectangle2Path.fill()
-
-
-        //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle4Path.fill()
-
-
-
-
-        //// Oval 3 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval3Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval3Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawPen3(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 36.52, y: 20.32))
-        bezierPath.addCurveToPoint(CGPoint(x: 48.7, y: 37.91), controlPoint1: CGPoint(x: 22.71, y: 60.04), controlPoint2: CGPoint(x: 48.7, y: 37.91))
-        bezierPath.addCurveToPoint(CGPoint(x: 66.09, y: 48.79), controlPoint1: CGPoint(x: 48.7, y: 37.91), controlPoint2: CGPoint(x: 67.86, y: 17.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.4, y: 57.86), controlPoint1: CGPoint(x: 64.32, y: 79.63), controlPoint2: CGPoint(x: 82.4, y: 57.86))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 6
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 36.41, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        ovalPath.fill()
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross 2
-        //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectangle2Path.fill()
-
-
-        //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle4Path.fill()
-    }
-
-    public class func drawPen4(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Bezier Drawing
-        let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPoint(x: 36.52, y: 20.32))
-        bezierPath.addCurveToPoint(CGPoint(x: 48.7, y: 37.91), controlPoint1: CGPoint(x: 22.71, y: 60.04), controlPoint2: CGPoint(x: 48.7, y: 37.91))
-        bezierPath.addCurveToPoint(CGPoint(x: 66.09, y: 48.79), controlPoint1: CGPoint(x: 48.7, y: 37.91), controlPoint2: CGPoint(x: 67.86, y: 17.96))
-        bezierPath.addCurveToPoint(CGPoint(x: 82.4, y: 57.86), controlPoint1: CGPoint(x: 64.32, y: 79.63), controlPoint2: CGPoint(x: 82.4, y: 57.86))
-        iconColor.setStroke()
-        bezierPath.lineWidth = 12
-        bezierPath.stroke()
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 2.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 54, width: 2.5, height: 8))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.71, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        ovalPath.fill()
-
-        CGContextRestoreGState(context)
-    }
-
     public class func drawPalette(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
@@ -1018,60 +230,17 @@ public class RocketPaintStyleKit : NSObject {
         bezier4Path.fill()
     }
 
-    public class func drawSaveToPhotos(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawSaveToPhotos() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let utilityIconColor = UIColor(red: 0.927, green: 0.927, blue: 0.927, alpha: 1.000)
-        let ovalOutlineColor = UIColor(red: 0.668, green: 0.668, blue: 0.668, alpha: 0.605)
-
-        //// Shadow Declarations
-        let ovalInner = NSShadow()
-        ovalInner.shadowColor = UIColor.whiteColor().colorWithAlphaComponent(0.88)
-        ovalInner.shadowOffset = CGSize(width: 10.1, height: 3.1)
-        ovalInner.shadowBlurRadius = 70
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.blackColor()
-        shadow.shadowOffset = CGSize(width: 3.1, height: 3.1)
-        shadow.shadowBlurRadius = 5
 
         //// Group 2
-        //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 2, y: 2, width: 136, height: 84))
-        CGContextSaveGState(context)
-        CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, (shadow.shadowColor as! UIColor).CGColor)
-        iconColor.setFill()
-        ovalPath.fill()
-
-        ////// Oval Inner Shadow
-        CGContextSaveGState(context)
-        CGContextClipToRect(context, ovalPath.bounds)
-        CGContextSetShadow(context, CGSize.zero, 0)
-        CGContextSetAlpha(context, CGColorGetAlpha((ovalInner.shadowColor as! UIColor).CGColor))
-        CGContextBeginTransparencyLayer(context, nil)
-        let ovalOpaqueShadow = (ovalInner.shadowColor as! UIColor).colorWithAlphaComponent(1)
-        CGContextSetShadowWithColor(context, ovalInner.shadowOffset, ovalInner.shadowBlurRadius, ovalOpaqueShadow.CGColor)
-        CGContextSetBlendMode(context, .SourceOut)
-        CGContextBeginTransparencyLayer(context, nil)
-
-        ovalOpaqueShadow.setFill()
-        ovalPath.fill()
-
-        CGContextEndTransparencyLayer(context)
-        CGContextEndTransparencyLayer(context)
-        CGContextRestoreGState(context)
-
-        CGContextRestoreGState(context)
-
-        ovalOutlineColor.setStroke()
-        ovalPath.lineWidth = 2
-        ovalPath.stroke()
-
-
         //// Polygon Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 65.21, 68.51)
+        CGContextTranslateCTM(context, 55.21, 61.51)
         CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
 
         let polygonPath = UIBezierPath()
@@ -1086,77 +255,44 @@ public class RocketPaintStyleKit : NSObject {
 
 
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 65, y: 18, width: 11, height: 23))
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 55, y: 11, width: 11, height: 23))
         utilityIconColor.setFill()
         rectanglePath.fill()
 
 
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: 47, y: 66, width: 46, height: 6), cornerRadius: 3)
+        let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: 37, y: 59, width: 46, height: 6), cornerRadius: 3)
         utilityIconColor.setFill()
         rectangle2Path.fill()
 
 
         //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(roundedRect: CGRect(x: 47, y: 59, width: 46, height: 6), cornerRadius: 3)
+        let rectangle3Path = UIBezierPath(roundedRect: CGRect(x: 37, y: 52, width: 46, height: 6), cornerRadius: 3)
         utilityIconColor.setFill()
         rectangle3Path.fill()
+
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalWire()
+        CGContextRestoreGState(context)
     }
 
-    public class func drawLoadFromPhotos(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawLoadFromPhotos() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let utilityIconColor = UIColor(red: 0.927, green: 0.927, blue: 0.927, alpha: 1.000)
-        let ovalOutlineColor = UIColor(red: 0.668, green: 0.668, blue: 0.668, alpha: 0.605)
-
-        //// Shadow Declarations
-        let ovalInner = NSShadow()
-        ovalInner.shadowColor = UIColor.whiteColor().colorWithAlphaComponent(0.88)
-        ovalInner.shadowOffset = CGSize(width: 10.1, height: 3.1)
-        ovalInner.shadowBlurRadius = 70
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.blackColor()
-        shadow.shadowOffset = CGSize(width: 3.1, height: 3.1)
-        shadow.shadowBlurRadius = 5
 
         //// Group
-        //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 2, y: 2, width: 136, height: 84))
-        CGContextSaveGState(context)
-        CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, (shadow.shadowColor as! UIColor).CGColor)
-        iconColor.setFill()
-        ovalPath.fill()
-
-        ////// Oval Inner Shadow
-        CGContextSaveGState(context)
-        CGContextClipToRect(context, ovalPath.bounds)
-        CGContextSetShadow(context, CGSize.zero, 0)
-        CGContextSetAlpha(context, CGColorGetAlpha((ovalInner.shadowColor as! UIColor).CGColor))
-        CGContextBeginTransparencyLayer(context, nil)
-        let ovalOpaqueShadow = (ovalInner.shadowColor as! UIColor).colorWithAlphaComponent(1)
-        CGContextSetShadowWithColor(context, ovalInner.shadowOffset, ovalInner.shadowBlurRadius, ovalOpaqueShadow.CGColor)
-        CGContextSetBlendMode(context, .SourceOut)
-        CGContextBeginTransparencyLayer(context, nil)
-
-        ovalOpaqueShadow.setFill()
-        ovalPath.fill()
-
-        CGContextEndTransparencyLayer(context)
-        CGContextEndTransparencyLayer(context)
-        CGContextRestoreGState(context)
-
-        CGContextRestoreGState(context)
-
-        ovalOutlineColor.setStroke()
-        ovalPath.lineWidth = 2
-        ovalPath.stroke()
-
-
         //// Polygon Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 65.21, 54.92)
+        CGContextTranslateCTM(context, 54.21, 47.92)
         CGContextRotateCTM(context, 180 * CGFloat(M_PI) / 180)
 
         let polygonPath = UIBezierPath()
@@ -1171,29 +307,22 @@ public class RocketPaintStyleKit : NSObject {
 
 
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 65, y: 35, width: 11, height: 22))
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 54, y: 28, width: 11, height: 22))
         utilityIconColor.setFill()
         rectanglePath.fill()
 
 
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: 47, y: 66, width: 46, height: 6), cornerRadius: 3)
+        let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: 36, y: 59, width: 46, height: 6), cornerRadius: 3)
         utilityIconColor.setFill()
         rectangle2Path.fill()
 
 
         //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(roundedRect: CGRect(x: 47, y: 59, width: 46, height: 6), cornerRadius: 3)
+        let rectangle3Path = UIBezierPath(roundedRect: CGRect(x: 36, y: 52, width: 46, height: 6), cornerRadius: 3)
         utilityIconColor.setFill()
         rectangle3Path.fill()
-    }
 
-    public class func drawHighlightGreen() {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
 
         //// Symbol Drawing
         let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
@@ -1201,167 +330,7 @@ public class RocketPaintStyleKit : NSObject {
         UIRectClip(symbolRect)
         CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
 
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Group
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 84.75, 57.5)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        CGContextSaveGState(context)
-        rectangle2Path.addClip()
-        CGContextDrawLinearGradient(context, RocketPaintStyleKit.green, CGPoint(x: 24.58, y: -0), CGPoint(x: 24.58, y: 37.36), CGGradientDrawingOptions())
-        CGContextRestoreGState(context)
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 80, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 83.5, y: 53, width: 1, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.95, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawHighlightYellow() {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 84.87, 56.96)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        CGContextSaveGState(context)
-        rectangle2Path.addClip()
-        CGContextDrawLinearGradient(context, RocketPaintStyleKit.yellow, CGPoint(x: 24.58, y: -0), CGPoint(x: 24.58, y: 37.36), CGGradientDrawingOptions())
-        CGContextRestoreGState(context)
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 82, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 84.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.95, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
-        CGContextRestoreGState(context)
-    }
-
-    public class func drawHighlightRed() {
-        //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        //// Color Declarations
-        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
-
-        //// Group
-        //// Symbol Drawing
-        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
-        CGContextSaveGState(context)
-        UIRectClip(symbolRect)
-        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
-
-        RocketPaintStyleKit.drawBGOvalGrid()
-        CGContextRestoreGState(context)
-
-
-        //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 84.58, 57.68)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
-
-        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
-        CGContextSaveGState(context)
-        rectangle2Path.addClip()
-        CGContextDrawLinearGradient(context, RocketPaintStyleKit.red, CGPoint(x: 24.58, y: -0), CGPoint(x: 24.58, y: 37.36), CGGradientDrawingOptions())
-        CGContextRestoreGState(context)
-
-        CGContextRestoreGState(context)
-
-
-        //// Cross
-        //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRect(x: 81, y: 56.5, width: 8, height: 1.5))
-        UIColor.whiteColor().setFill()
-        rectanglePath.fill()
-
-
-        //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(rect: CGRect(x: 83.5, y: 53, width: 2.5, height: 9))
-        UIColor.whiteColor().setFill()
-        rectangle3Path.fill()
-
-
-
-
-        //// Oval 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35.95, 18.04)
-        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
-
-        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
-        textSelColor.setFill()
-        oval2Path.fill()
-
+        RocketPaintStyleKit.drawBGOvalWire()
         CGContextRestoreGState(context)
     }
 
@@ -1976,7 +945,7 @@ public class RocketPaintStyleKit : NSObject {
         ovalPath.stroke()
     }
 
-    public class func drawPen3W(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWPen(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2001,7 +970,7 @@ public class RocketPaintStyleKit : NSObject {
         bezierPath.addCurveToPoint(CGPoint(x: 64.09, y: 48.79), controlPoint1: CGPoint(x: 46.7, y: 37.91), controlPoint2: CGPoint(x: 65.86, y: 17.96))
         bezierPath.addCurveToPoint(CGPoint(x: 80.4, y: 57.86), controlPoint1: CGPoint(x: 62.32, y: 79.63), controlPoint2: CGPoint(x: 80.4, y: 57.86))
         iconColor.setStroke()
-        bezierPath.lineWidth = 6
+        bezierPath.lineWidth = lineWidth
         bezierPath.stroke()
 
 
@@ -2030,7 +999,7 @@ public class RocketPaintStyleKit : NSObject {
         rectangle3Path.fill()
     }
 
-    public class func drawLine3W(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWLine(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2053,7 +1022,7 @@ public class RocketPaintStyleKit : NSObject {
         bezierPath.moveToPoint(CGPoint(x: 33.83, y: 19.96))
         bezierPath.addCurveToPoint(CGPoint(x: 81.58, y: 58.04), controlPoint1: CGPoint(x: 81.58, y: 58.04), controlPoint2: CGPoint(x: 81.58, y: 58.04))
         iconColor.setStroke()
-        bezierPath.lineWidth = 6
+        bezierPath.lineWidth = lineWidth
         bezierPath.stroke()
 
 
@@ -2084,12 +1053,15 @@ public class RocketPaintStyleKit : NSObject {
         CGContextRestoreGState(context)
     }
 
-    public class func drawTextSansBigW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWTextSans(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Variable Declarations
+        let lineWidthTextSize: CGFloat = 5 + lineWidth * 2
 
         //// Group
         //// Symbol Drawing
@@ -2131,21 +1103,24 @@ public class RocketPaintStyleKit : NSObject {
 
 
         //// Text Drawing
-        let textRect = CGRect(x: 36, y: 14, width: 43, height: 37)
+        let textRect = CGRect(x: 36, y: 19, width: 84, height: 63)
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .Left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(36), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(lineWidthTextSize), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
 
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
+        "Aa".drawInRect(CGRectInset(textRect, 0, 2), withAttributes: textFontAttributes)
     }
 
-    public class func drawTextSerifBigW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWTextSerif(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Variable Declarations
+        let lineWidthTextSize: CGFloat = 5 + lineWidth * 2
 
         //// Group
         //// Symbol Drawing
@@ -2187,16 +1162,16 @@ public class RocketPaintStyleKit : NSObject {
 
 
         //// Text Drawing
-        let textRect = CGRect(x: 36, y: 16, width: 42, height: 36)
+        let textRect = CGRect(x: 36, y: 20, width: 84, height: 62)
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .Left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: 35)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: lineWidthTextSize)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
 
-        "Aa".drawInRect(textRect, withAttributes: textFontAttributes)
+        "Aa".drawInRect(CGRectInset(textRect, 0, 1), withAttributes: textFontAttributes)
     }
 
-    public class func drawRectSolidW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWRectSolid(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2253,7 +1228,7 @@ public class RocketPaintStyleKit : NSObject {
         CGContextRestoreGState(context)
     }
 
-    public class func drawRectOutlineW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWRectOutline(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2278,7 +1253,7 @@ public class RocketPaintStyleKit : NSObject {
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 44.15, height: 31.36))
         iconColor.setStroke()
-        rectangle2Path.lineWidth = 5
+        rectangle2Path.lineWidth = lineWidth
         rectangle2Path.stroke()
 
         CGContextRestoreGState(context)
@@ -2311,7 +1286,7 @@ public class RocketPaintStyleKit : NSObject {
         CGContextRestoreGState(context)
     }
 
-    public class func drawEllipseSolidW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWEllipseSolid(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2364,7 +1339,7 @@ public class RocketPaintStyleKit : NSObject {
         ovalPath.fill()
     }
 
-    public class func drawEllipseOutlineW(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+    public class func drawWEllipseOutline(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
@@ -2414,7 +1389,455 @@ public class RocketPaintStyleKit : NSObject {
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 36, y: 20, width: 47, height: 37))
         iconColor.setStroke()
-        ovalPath.lineWidth = 5
+        ovalPath.lineWidth = lineWidth
+        ovalPath.stroke()
+    }
+
+    public class func drawGTextSans(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Variable Declarations
+        let lineWidthTextSize: CGFloat = 5 + lineWidth * 2
+
+        //// Group
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Rectangle 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 82.58, 57.68)
+        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
+        textSelColor.setStroke()
+        rectangle2Path.lineWidth = 2
+        rectangle2Path.stroke()
+
+        CGContextRestoreGState(context)
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 79, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: 36, y: 19, width: 84, height: 63)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .Left
+
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(lineWidthTextSize), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+
+        "Aa".drawInRect(CGRectInset(textRect, 0, 2), withAttributes: textFontAttributes)
+    }
+
+    public class func drawGEllipseSolid(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Group
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 80, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 82.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Oval 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.95, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        oval2Path.fill()
+
+        CGContextRestoreGState(context)
+
+
+
+
+        //// Oval Drawing
+        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 35, y: 21, width: 49, height: 37))
+        iconColor.setFill()
+        ovalPath.fill()
+    }
+
+    public class func drawGPen(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Group
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Bezier Drawing
+        let bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPoint(x: 34.52, y: 20.32))
+        bezierPath.addCurveToPoint(CGPoint(x: 46.7, y: 37.91), controlPoint1: CGPoint(x: 20.71, y: 60.04), controlPoint2: CGPoint(x: 46.7, y: 37.91))
+        bezierPath.addCurveToPoint(CGPoint(x: 64.09, y: 48.79), controlPoint1: CGPoint(x: 46.7, y: 37.91), controlPoint2: CGPoint(x: 65.86, y: 17.96))
+        bezierPath.addCurveToPoint(CGPoint(x: 80.4, y: 57.86), controlPoint1: CGPoint(x: 62.32, y: 79.63), controlPoint2: CGPoint(x: 80.4, y: 57.86))
+        iconColor.setStroke()
+        bezierPath.lineWidth = lineWidth
+        bezierPath.stroke()
+
+
+        //// Oval Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.41, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        ovalPath.fill()
+
+        CGContextRestoreGState(context)
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 78, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 80.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+    }
+
+    public class func drawGTextSerif(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Variable Declarations
+        let lineWidthTextSize: CGFloat = 5 + lineWidth * 2
+
+        //// Group
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Rectangle 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 82.58, 57.68)
+        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
+        textSelColor.setStroke()
+        rectangle2Path.lineWidth = 2
+        rectangle2Path.stroke()
+
+        CGContextRestoreGState(context)
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 78, y: 56.5, width: 9, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 81.5, y: 53, width: 1.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: 36, y: 20, width: 84, height: 62)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .Left
+
+        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: lineWidthTextSize)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+
+        "Aa".drawInRect(CGRectInset(textRect, 0, 1), withAttributes: textFontAttributes)
+    }
+
+    public class func drawGRectOutline(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Group
+        //// Rectangle 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 81.58, 54.68)
+        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 44.15, height: 31.36))
+        iconColor.setStroke()
+        rectangle2Path.lineWidth = lineWidth
+        rectangle2Path.stroke()
+
+        CGContextRestoreGState(context)
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 80, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 82.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Oval 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.95, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        oval2Path.fill()
+
+        CGContextRestoreGState(context)
+    }
+
+    public class func drawGLine(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Group
+        //// Bezier Drawing
+        let bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPoint(x: 33.83, y: 19.96))
+        bezierPath.addCurveToPoint(CGPoint(x: 81.58, y: 58.04), controlPoint1: CGPoint(x: 81.58, y: 58.04), controlPoint2: CGPoint(x: 81.58, y: 58.04))
+        iconColor.setStroke()
+        bezierPath.lineWidth = lineWidth
+        bezierPath.stroke()
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 78, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 80.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Oval 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.71, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        oval2Path.fill()
+
+        CGContextRestoreGState(context)
+    }
+
+    public class func drawGRectSolid(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Group
+        //// Rectangle 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 83.58, 57.68)
+        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
+        iconColor.setFill()
+        rectangle2Path.fill()
+
+        CGContextRestoreGState(context)
+
+
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 80, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 82.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Oval 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.95, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        oval2Path.fill()
+
+        CGContextRestoreGState(context)
+    }
+
+    public class func drawGEllipseOutline(iconColor iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let textSelColor = UIColor(red: 1.000, green: 0.996, blue: 0.977, alpha: 0.850)
+
+        //// Symbol Drawing
+        let symbolRect = CGRect(x: 0, y: 0, width: 120, height: 82)
+        CGContextSaveGState(context)
+        UIRectClip(symbolRect)
+        CGContextTranslateCTM(context, symbolRect.origin.x, symbolRect.origin.y)
+
+        RocketPaintStyleKit.drawBGOvalGrid()
+        CGContextRestoreGState(context)
+
+
+        //// Group
+        //// Cross
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRect(x: 80, y: 56.5, width: 8, height: 1.5))
+        UIColor.whiteColor().setFill()
+        rectanglePath.fill()
+
+
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRect(x: 82.5, y: 53, width: 2.5, height: 9))
+        UIColor.whiteColor().setFill()
+        rectangle3Path.fill()
+
+
+
+
+        //// Oval 2 Drawing
+        CGContextSaveGState(context)
+        CGContextTranslateCTM(context, 34.95, 18.04)
+        CGContextRotateCTM(context, 45 * CGFloat(M_PI) / 180)
+
+        let oval2Path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
+        textSelColor.setFill()
+        oval2Path.fill()
+
+        CGContextRestoreGState(context)
+
+
+
+
+        //// Oval Drawing
+        let ovalPath = UIBezierPath(ovalInRect: CGRect(x: 36, y: 20, width: 47, height: 37))
+        iconColor.setStroke()
+        ovalPath.lineWidth = lineWidth
         ovalPath.stroke()
     }
 

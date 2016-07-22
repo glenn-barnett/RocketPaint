@@ -56,7 +56,7 @@ class PaintingViewController: UIViewController,
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
-            userInfo: ["brush": "Pen3"])
+            userInfo: ["brush": "Pen"])
 
         DrawingView.lineColor = lastColor
         NSNotificationCenter.defaultCenter().postNotificationName(
@@ -239,7 +239,6 @@ class PaintingViewController: UIViewController,
         
         print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v,\(alpha)a")
         
-        
         DrawingView.lineColor = selectedColor.colorWithAlphaComponent(1.0)
         
         lastColor = DrawingView.lineColor.colorWithAlphaComponent(1.0) // copy
@@ -259,84 +258,32 @@ class PaintingViewController: UIViewController,
 
         DrawingView.lineColor = lastColor
         
-        if(brush == "Pen1") {
+        if(brush == "Pen") {
             DrawingView.drawTool = ACEDrawingToolTypePen
-            DrawingView.lineWidth = lineWidth1
 
-        } else if(brush == "Pen2") {
-            DrawingView.drawTool = ACEDrawingToolTypePen
-            DrawingView.lineWidth = lineWidth2
-
-        } else if(brush == "Pen3") {
-            DrawingView.drawTool = ACEDrawingToolTypePen
-            DrawingView.lineWidth = lineWidth3
-        
-        } else if(brush == "Pen4") {
-            DrawingView.drawTool = ACEDrawingToolTypePen
-            DrawingView.lineWidth = lineWidth4
-        
-        } else if(brush == "Line1") {
+        } else if(brush == "Line") {
             DrawingView.drawTool = ACEDrawingToolTypeLine
-            DrawingView.lineWidth = lineWidth1
-
-        } else if(brush == "Line2") {
-            DrawingView.drawTool = ACEDrawingToolTypeLine
-            DrawingView.lineWidth = lineWidth2
-
-        } else if(brush == "Line3") {
-            DrawingView.drawTool = ACEDrawingToolTypeLine
-            DrawingView.lineWidth = lineWidth3
         
-        } else if(brush == "Line4") {
-            DrawingView.drawTool = ACEDrawingToolTypeLine
-            DrawingView.lineWidth = lineWidth4
-        
-        } else if(brush == "Box") {
+        } else if(brush == "EllipseSolid") {
+            DrawingView.drawTool = ACEDrawingToolTypeEllipseFill
+            
+        } else if(brush == "EllipseOutline") {
+            DrawingView.drawTool = ACEDrawingToolTypeEllipseStroke
+            
+        } else if(brush == "RectSolid") {
             DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
         
-        } else if(brush == "HighlightGreen") {
-            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
-            DrawingView.lineColor = UIColor.greenColor()
-            DrawingView.lineAlpha = highlightAlpha
+        } else if(brush == "RectOutline") {
+            DrawingView.drawTool = ACEDrawingToolTypeRectagleStroke
         
-        } else if(brush == "HighlightYellow") {
-            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
-            DrawingView.lineColor = UIColor.yellowColor()
-            DrawingView.lineAlpha = highlightAlpha
-        
-        } else if(brush == "HighlightRed") {
-            DrawingView.drawTool = ACEDrawingToolTypeRectagleFill
-            DrawingView.lineColor = UIColor.redColor()
-            DrawingView.lineAlpha = highlightAlpha
-        
-        } else if(brush == "TextSerifBig") {
+        } else if(brush == "TextSerif") {
             DrawingView.fontName = "Georgia"
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
-            DrawingView.lineWidth = lineWidthTextBig
-        } else if(brush == "TextSerifSmall") {
-            DrawingView.fontName = "Georgia"
-            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
-            DrawingView.lineWidth = lineWidthTextSmall
-        } else if(brush == "TextSansBig") {
+
+        } else if(brush == "TextSans") {
             DrawingView.fontName = nil
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
-            DrawingView.lineWidth = lineWidthTextBig
-        } else if(brush == "TextSansSmall") {
-            DrawingView.fontName = nil
-            DrawingView.drawTool = ACEDrawingToolTypeMultilineText
-            DrawingView.lineWidth = lineWidthTextSmall
         }
-    
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineWidthChanged,
-            object: nil,
-            userInfo: ["lineWidth": Float(DrawingView.lineWidth)])
-
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineAlphaChanged,
-            object: nil,
-            userInfo: ["lineAlpha": Float(DrawingView.lineAlpha)])
-
     }
     
     func lineWidthChanged(notification:NSNotification){

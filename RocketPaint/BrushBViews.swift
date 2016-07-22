@@ -9,86 +9,49 @@
 import Foundation
 import UIKit
 
-class BrushPen1BView: IconColoredBView {
+class BrushPenBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen1(iconColor:iconColor);
-    }
-}
-class BrushPen2BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen2(iconColor:iconColor);
-    }
-}
-class BrushPen3BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen3(iconColor:iconColor);
-    }
-}
-class BrushPen4BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen4(iconColor:iconColor);
+        RocketPaintStyleKit.drawGPen(iconColor:iconColor);
     }
 }
 
-class BrushLine1BView: IconColoredBView {
+class BrushLineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine1(iconColor:iconColor);
-    }
-}
-class BrushLine2BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine2(iconColor:iconColor);
-    }
-}
-class BrushLine3BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine3(iconColor:iconColor);
-    }
-}
-class BrushLine4BView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine4(iconColor:iconColor);
+        RocketPaintStyleKit.drawGLine(iconColor:iconColor);
     }
 }
 
-class BrushBoxBView: IconColoredBView {
+class BrushEllipseSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawBox(iconColor:iconColor);
+        RocketPaintStyleKit.drawGEllipseSolid(iconColor:iconColor);
     }
 }
-class BrushHighlightGreenBView: BView {
+class BrushEllipseOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightGreen();
-    }
-}
-class BrushHighlightYellowBView: BView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightYellow();
-    }
-}
-class BrushHighlightRedBView: BView {
-    override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawHighlightRed();
+        RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor);
     }
 }
 
-class BrushTextSerifBigBView: IconColoredBView {
+class BrushRectSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSerifBig(iconColor:iconColor);
+        RocketPaintStyleKit.drawGRectSolid(iconColor:iconColor);
     }
 }
-class BrushTextSerifSmallBView: IconColoredBView {
+class BrushRectOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSerifSmall(iconColor:iconColor);
+        RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor);
     }
 }
-class BrushTextSansBigBView: IconColoredBView {
+
+
+class BrushTextSerifBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSansBig(iconColor:iconColor);
+        RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor);
     }
 }
-class BrushTextSansSmallBView: IconColoredBView {
+class BrushTextSansBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSansSmall(iconColor:iconColor);
+        RocketPaintStyleKit.drawGTextSans(iconColor:iconColor);
     }
 }
+

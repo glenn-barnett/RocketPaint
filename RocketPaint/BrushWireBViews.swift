@@ -10,49 +10,49 @@ import Foundation
 import UIKit
 
 
-class BrushWirePen3BView: IconColoredBView {
+class BrushWirePenBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawPen3W(iconColor:iconColor);
+        RocketPaintStyleKit.drawWPen(iconColor:iconColor);
     }
 }
-class BrushWireLine3BView: IconColoredBView {
+class BrushWireLineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawLine3W(iconColor:iconColor);
+        RocketPaintStyleKit.drawWLine(iconColor:iconColor);
     }
 }
 
 
 class BrushWireRectSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawRectSolidW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWRectSolid(iconColor:iconColor);
     }
 }
 class BrushWireRectOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawRectOutlineW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWRectOutline(iconColor:iconColor);
     }
 }
 
 
 class BrushWireEllipseSolidBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawEllipseSolidW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWEllipseSolid(iconColor:iconColor);
     }
 }
 class BrushWireEllipseOutlineBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawEllipseOutlineW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWEllipseOutline(iconColor:iconColor);
     }
 }
 
 
-class BrushWireTextSerifBigBView: IconColoredBView {
+class BrushWireTextSerifBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSerifBigW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWTextSerif(iconColor:iconColor);
     }
 }
-class BrushWireTextSansBigBView: IconColoredBView {
+class BrushWireTextSansBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawTextSansBigW(iconColor:iconColor);
+        RocketPaintStyleKit.drawWTextSans(iconColor:iconColor);
     }
 }
