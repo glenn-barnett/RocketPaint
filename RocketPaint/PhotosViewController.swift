@@ -28,6 +28,25 @@ class PhotosViewController: UICollectionViewController
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
         images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PhotosViewController.photoSaved(_:)),
+            name: Notifications.kPhotoSaved,
+            object: nil)
+
+    }
+    
+    func photoSaved(notification:NSNotification) {
+        
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 250 * Int64(NSEC_PER_MSEC))
+        
+        dispatch_after(time, dispatch_get_main_queue()) {
+            let fetchOptions = PHFetchOptions()
+            fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+            self.images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+            self.collectionView?.reloadData()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,7 +64,7 @@ class PhotosViewController: UICollectionViewController
         // do stuff on selection
         
         NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kImageLoaded,
+            Notifications.kPhotoLoaded,
             object: nil,
             userInfo: ["phAsset": images.objectAtIndex(indexPath.item) as! PHAsset])
 

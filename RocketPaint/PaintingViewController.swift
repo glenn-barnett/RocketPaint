@@ -94,6 +94,19 @@ class PaintingViewController: UIViewController,
         
     }
 
+    var initialLoad = true
+    override func viewDidLayoutSubviews() {
+        // on first load, load last image
+        if(initialLoad) {
+            print("PaintingVC: viewDidLayoutSubviews(): restoring state")
+            DrawingService.SharedInstance.restoreState()
+            DrawingService.SharedInstance.initNotifications()
+        }
+        
+        initialLoad = false
+    }
+    
+
     // GB: from https://happyteamlabs.com/blog/ios-using-uideviceorientation-to-determine-orientation/
     var currentDeviceOrientation: UIDeviceOrientation = .Unknown
     

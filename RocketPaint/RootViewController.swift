@@ -28,8 +28,8 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: #selector(RootViewController.imageLoaded(_:)),
-            name: Notifications.kImageLoaded,
+            selector: #selector(RootViewController.photoLoaded(_:)),
+            name: Notifications.kPhotoLoaded,
             object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
@@ -38,6 +38,9 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
             name: Notifications.kCanvasCleared,
             object: nil)
 
+        self.parallaxEnabled = false
+        self.contentViewShadowColor = UIColor.whiteColor()
+        self.contentViewShadowRadius = 30.0
         
         // Do any additional setup after loading the view.
     }
@@ -45,7 +48,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     func hideSideMenus(notification:NSNotification){
         self.hideMenuViewController()
     }
-    func imageLoaded(notification:NSNotification){
+    func photoLoaded(notification:NSNotification){
         self.hideMenuViewController()
         let asset = notification.userInfo!["phAsset"] as! PHAsset
 

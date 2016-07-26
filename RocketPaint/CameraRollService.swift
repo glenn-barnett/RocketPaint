@@ -15,6 +15,7 @@ class CameraRollService {
     //CameraRollService.SharedInstance.WriteImage(image)
     
     func WriteImage(image : UIImage) {
+        
         // GB TODO what are these 3 nils?
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }

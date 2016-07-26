@@ -48,7 +48,7 @@ public class ColorService {
     }
     
     internal func defaultPaintColor() -> UIColor {
-        return UIColor(red: 250.0/255.0, green: 187.0/255.0, blue: 35.0/255.0, alpha: 1.0)
+        return UIColor(red: 6.0/255.0, green: 6.0/255.0, blue: 138.0/255.0, alpha: 1.0)
     }
 
     internal func generateRandomColor() -> UIColor {

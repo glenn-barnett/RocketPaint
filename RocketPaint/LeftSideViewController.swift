@@ -29,23 +29,14 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func savePictureTapped(sender : AnyObject) {
         print("LMVC.savePictureTapped()");
         
-        
         // compose the image against the canvas color
-        let drawingImage = DrawingService.SharedInstance.getImage()
-        let canvasColor = ColorService.SharedInstance.canvasColor
-        
-        let rect = CGRect(x:0, y:0, width:768, height:1024)
-        let size = CGSize(width: 768, height: 1024)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        
-        canvasColor.setFill()
-        UIRectFill(rect)
-        drawingImage.drawInRect(rect)
-
-        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
         
         CameraRollService.SharedInstance.WriteImage(composedImage)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kPhotoSaved,
+            object: nil)
         
     }
     
