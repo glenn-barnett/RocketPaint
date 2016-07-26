@@ -77,7 +77,6 @@ public class ColorService {
         if(srcSaturation == 0) {
             for(var b=1; b<=5; b++) {
                 for(var s=0-1; s<=1; s++) {
-                    // brightness will be 0.2-1.0
                     let newBrightness: CGFloat = 0.20 * CGFloat(b) + 0.05 * CGFloat(s)
                     variantColorArray.append(UIColor(hue:CGFloat(Float(arc4random()) / Float(UINT32_MAX)), saturation:0, brightness:newBrightness, alpha:1))
                 }
@@ -90,8 +89,8 @@ public class ColorService {
                 for(var s=2; s<=4; s++) {
                     // saturation will be 0-1.0, scaled by source saturation x1.5
                     let newSaturation: CGFloat = (0.25 * CGFloat(s) - 0.25) * min(1.0, srcSaturation * 1.5)
-                    // brightness will be 0.2-1.0
-                    let newBrightness: CGFloat = 0.20 * CGFloat(b) - 0.10
+                    // brightness WANT 0.2 0.3 0.5 0.7 0.9
+                    let newBrightness: CGFloat = max(0.20, 0.20 * CGFloat(b) - 0.10)
                     variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
                 }
             }
