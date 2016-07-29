@@ -66,6 +66,10 @@
 		2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */; };
 		2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */; };
 		2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */; };
+		2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */; };
+		2AEA13091D4A398300A857BE /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13081D4A398300A857BE /* SliderView.m */; };
+		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
+		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
 		A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4252553278451327ABC0244 /* Pods_RocketPaint.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +138,11 @@
 		2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIColor.swift"; sourceTree = "<group>"; };
 		2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIImage.swift"; sourceTree = "<group>"; };
 		2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDrawingView.swift; sourceTree = "<group>"; };
+		2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSliderView.swift; sourceTree = "<group>"; };
+		2AEA13071D4A398300A857BE /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		2AEA13081D4A398300A857BE /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
+		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
+		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
 		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +219,11 @@
 				2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */,
 				2A43D4141D28C37C0066FAD0 /* LoadBView.swift */,
 				2A4B4DD91D2B5E7800ECBD0C /* SaveBView.swift */,
+				2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */,
+				2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */,
+				2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */,
+				2AEA13071D4A398300A857BE /* SliderView.h */,
+				2AEA13081D4A398300A857BE /* SliderView.m */,
 			);
 			name = BViews;
 			sourceTree = "<group>";
@@ -426,12 +440,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */,
+				2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */,
 				2A43D4171D28C38A0066FAD0 /* BView.swift in Sources */,
 				2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */,
 				2A4B4DDE1D2BDB5900ECBD0C /* UndoBView.swift in Sources */,
 				2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */,
 				2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */,
 				2A19C47C1D247AF20099D1E8 /* UndoButton.swift in Sources */,
+				2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */,
 				2A3AFCB21D36E21300131761 /* PhotosViewController.swift in Sources */,
 				2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */,
 				2A4B4DEB1D2E7B1300ECBD0C /* RightSideViewController.swift in Sources */,
@@ -462,6 +478,8 @@
 				2A43D40D1D2696390066FAD0 /* LeftSideViewController.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 				2A4B4DE61D2BDC0700ECBD0C /* IconColoredBView.swift in Sources */,
+				2AEA13091D4A398300A857BE /* SliderView.m in Sources */,
+				2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

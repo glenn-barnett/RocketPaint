@@ -13,9 +13,9 @@ class RightSideViewController: UIViewController {
     
     @IBOutlet var ColorPaletteView : UIView!
 
-    @IBOutlet weak var sliderLineWidth: UISlider!
+    @IBOutlet weak var sliderLineWidth: LineWidthSliderView!
     
-    @IBOutlet weak var sliderLineAlpha: UISlider!
+    @IBOutlet weak var sliderLineAlpha: LineAlphaSliderView!
 
 //    let bLine = BrushWirePen3BView(frame: CGRect(x: 250, y: 110, width: 120, height: 82))
 //    let colorService = ColorService.SharedInstance
@@ -46,24 +46,24 @@ class RightSideViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kLineWidthChanged,
             object: nil,
-            userInfo: ["lineWidth": sliderLineWidth.value])
+            userInfo: ["lineWidth": (sender as! LineWidthSliderView).value])
     }
     
     @IBAction func lineAlphaAdjusted(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kLineAlphaChanged,
             object: nil,
-            userInfo: ["lineAlpha": sliderLineAlpha.value])
+            userInfo: ["lineAlpha": (sender as! LineAlphaSliderView).value])
     }
 
     func lineWidthChanged(notification:NSNotification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
-        sliderLineWidth.value = lineWidth
+        sliderLineWidth.value = CGFloat(lineWidth)
     }
     
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
-        sliderLineAlpha.value = lineAlpha
+        sliderLineAlpha.value = CGFloat(lineAlpha)
     }
 
     
