@@ -11,8 +11,12 @@ import UIKit
 
 class IconColoredBView: BView {
 
-    var iconColor:UIColor = UIColor.redColor();
-    var lineWidth:CGFloat = 6.0;
+    var iconColor:UIColor = UIColor.redColor()
+    var lineWidth:CGFloat = 6.0
+    
+    func getLineWidthMax() -> Float {
+        return 40.0
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
@@ -80,7 +84,8 @@ class IconColoredBView: BView {
     }
 
     func lineWidthChanged(notification:NSNotification){
-        lineWidth = min(26.0, CGFloat(notification.userInfo!["lineWidth"] as! Float))
+        
+        lineWidth = CGFloat((notification.userInfo!["lineWidth"] as! Float / 40.0) * getLineWidthMax())
         self.setNeedsDisplay();
     }
 

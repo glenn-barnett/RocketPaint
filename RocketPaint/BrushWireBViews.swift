@@ -47,11 +47,19 @@ class BrushWireEllipseOutlineBView: IconColoredBView {
 
 
 class BrushWireTextSerifBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 29.0
+    }
+
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWTextSerif(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 class BrushWireTextSansBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 28.0
+    }
+
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWTextSans(iconColor:iconColor, lineWidth: lineWidth);
     }

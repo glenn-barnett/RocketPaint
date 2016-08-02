@@ -66,10 +66,14 @@
 		2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */; };
 		2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */; };
 		2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */; };
+		2AE65D851D4F9691001559AA /* checker-20px-lightgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE65D841D4F9691001559AA /* checker-20px-lightgray.png */; };
+		2AE65D871D4FF14D001559AA /* checker-20px-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE65D861D4FF14D001559AA /* checker-20px-gray.png */; };
+		2AE65D891D4FF245001559AA /* checker-20px-darkgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE65D881D4FF245001559AA /* checker-20px-darkgray.png */; };
 		2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */; };
 		2AEA13091D4A398300A857BE /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13081D4A398300A857BE /* SliderView.m */; };
 		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
 		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
+		2AEA13111D4F914600A857BE /* TiledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13101D4F914600A857BE /* TiledImageView.swift */; };
 		A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4252553278451327ABC0244 /* Pods_RocketPaint.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,11 +142,15 @@
 		2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIColor.swift"; sourceTree = "<group>"; };
 		2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIImage.swift"; sourceTree = "<group>"; };
 		2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDrawingView.swift; sourceTree = "<group>"; };
+		2AE65D841D4F9691001559AA /* checker-20px-lightgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checker-20px-lightgray.png"; sourceTree = "<group>"; };
+		2AE65D861D4FF14D001559AA /* checker-20px-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checker-20px-gray.png"; sourceTree = "<group>"; };
+		2AE65D881D4FF245001559AA /* checker-20px-darkgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checker-20px-darkgray.png"; sourceTree = "<group>"; };
 		2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSliderView.swift; sourceTree = "<group>"; };
 		2AEA13071D4A398300A857BE /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
 		2AEA13081D4A398300A857BE /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
 		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
+		2AEA13101D4F914600A857BE /* TiledImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledImageView.swift; sourceTree = "<group>"; };
 		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -277,6 +285,7 @@
 				2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */,
 				2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */,
 				2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */,
+				2AEA13101D4F914600A857BE /* TiledImageView.swift */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -284,6 +293,9 @@
 		2AD6270E1D427E6F00C4F792 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2AE65D841D4F9691001559AA /* checker-20px-lightgray.png */,
+				2AE65D861D4FF14D001559AA /* checker-20px-gray.png */,
+				2AE65D881D4FF245001559AA /* checker-20px-darkgray.png */,
 				2AD6270F1D427E8300C4F792 /* rocket-startup.png */,
 			);
 			name = Assets;
@@ -371,13 +383,16 @@
 				2A0D65E61D3E59FC0057CB40 /* Icon-60@2x.png in Resources */,
 				2A0D65F51D3E59FC0057CB40 /* Icon@2x.png in Resources */,
 				2A9FA2BE1CC2BC28000FF2A4 /* Assets.xcassets in Resources */,
+				2AE65D851D4F9691001559AA /* checker-20px-lightgray.png in Resources */,
 				2A0D65F41D3E59FC0057CB40 /* Icon.png in Resources */,
 				2A0D65E51D3E59FC0057CB40 /* Icon-60.png in Resources */,
+				2AE65D891D4FF245001559AA /* checker-20px-darkgray.png in Resources */,
 				2A0D65EE1D3E59FC0057CB40 /* Icon-Small-40@3x.png in Resources */,
 				2A0D65F31D3E59FC0057CB40 /* Icon-Small@3x.png in Resources */,
 				2A0D65E81D3E59FC0057CB40 /* Icon-72.png in Resources */,
 				2A0D65F61D3E59FC0057CB40 /* iTunesArtwork@2x.png in Resources */,
 				2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */,
+				2AE65D871D4FF14D001559AA /* checker-20px-gray.png in Resources */,
 				2A0D65F01D3E59FC0057CB40 /* Icon-Small-50@2x.png in Resources */,
 				2A0D65EB1D3E59FC0057CB40 /* Icon-76@2x.png in Resources */,
 				2A0D65EA1D3E59FC0057CB40 /* Icon-76.png in Resources */,
@@ -462,6 +477,7 @@
 				2A4B4DE91D2C556100ECBD0C /* DynamicBrushBView.swift in Sources */,
 				2A43D4111D28C0F40066FAD0 /* LoadButton.swift in Sources */,
 				2A79ACE31D3ED9D4007C6996 /* BrushWireBViews.swift in Sources */,
+				2AEA13111D4F914600A857BE /* TiledImageView.swift in Sources */,
 				2A4B4DDA1D2B5E7800ECBD0C /* SaveBView.swift in Sources */,
 				2A4B4DEF1D2EFAC300ECBD0C /* BrushBViews.swift in Sources */,
 				2A43D4051D253D360066FAD0 /* RedoButton.swift in Sources */,

@@ -123,6 +123,16 @@ class ColorPaletteViewController: UICollectionViewController
         
         let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! ColorCell
         
+        // GB bump alpha up to min of 10% in case they get confused
+        if(lastAlpha < 0.10) {
+            lastAlpha = 0.10
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                Notifications.kLineAlphaChanged,
+                object: nil,
+                userInfo: ["lineAlpha": lastAlpha])
+            
+        }
+        
         let cellColor = cell.Color.colorWithAlphaComponent(CGFloat(lastAlpha))
         
         NSNotificationCenter.defaultCenter().postNotificationName(

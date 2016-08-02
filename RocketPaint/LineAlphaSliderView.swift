@@ -24,7 +24,7 @@ class LineAlphaSliderView: UIControl {
         didSet { self.setNeedsDisplay(); }
     }
     
-    var iconColor : UIColor = UIColor.orangeColor()
+    var iconColor : UIColor = UIColor.redColor()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -121,15 +121,15 @@ class LineAlphaSliderView: UIControl {
 
         
         //// AlphaGradient Drawing
-        let alphaGradientRect = CGRect(x: trackFrame.minX, y: trackFrame.minY - 18, width: trackFrame.width, height: trackFrame.height + 36)
-        let alphaGradientPath = UIBezierPath(rect: alphaGradientRect)
-        CGContextSaveGState(context)
-        alphaGradientPath.addClip()
-        CGContextDrawLinearGradient(context, gradient,
-                                    CGPoint(x: alphaGradientRect.minX, y: alphaGradientRect.midY),
-                                    CGPoint(x: alphaGradientRect.maxX, y: alphaGradientRect.midY),
-                                    CGGradientDrawingOptions())
-        CGContextRestoreGState(context)
+//        let alphaGradientRect = CGRect(x: trackFrame.minX, y: trackFrame.minY - 18, width: trackFrame.width, height: trackFrame.height + 36)
+//        let alphaGradientPath = UIBezierPath(rect: alphaGradientRect)
+//        CGContextSaveGState(context)
+//        alphaGradientPath.addClip()
+//        CGContextDrawLinearGradient(context, gradient,
+//                                    CGPoint(x: alphaGradientRect.minX, y: alphaGradientRect.midY),
+//                                    CGPoint(x: alphaGradientRect.maxX, y: alphaGradientRect.midY),
+//                                    CGGradientDrawingOptions())
+//        CGContextRestoreGState(context)
         
         // GB ADDED BEGIN
         let percentage : CGFloat = self.percentageValue()
@@ -170,14 +170,29 @@ class LineAlphaSliderView: UIControl {
                 ),
             radius: 20,
             startAngle: 0,
-            endAngle: CGFloat(M_PI*2),
+            endAngle: CGFloat(M_PI),
             clockwise: true)
         
-//        iconColor.colorWithAlphaComponent(1.0).setFill()
-//        thumbPath.fill()
-        UIColor.grayColor().setStroke() //TODO gray stroke ok?
-        thumbPath.stroke()
+        iconColor.colorWithAlphaComponent(1.0).setFill()
+        thumbPath.fill()
+//        UIColor.grayColor().setStroke() //TODO gray stroke ok?
+//        CGContextSetLineWidth(context, 20)
+//        thumbPath.stroke()
+
+        let thumbPath2 = UIBezierPath(
+            arcCenter: CGPoint(
+                x: CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage),
+                //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
+                y: CGRectGetHeight(sliderFrame) / 2
+            ),
+            radius: 20,
+            startAngle: CGFloat(M_PI),
+            endAngle: CGFloat(M_PI*2),
+            clockwise: true)
+        iconColor.colorWithAlphaComponent(percentage).setFill()
+        thumbPath2.fill()
         
+
         CGContextRestoreGState(context)
         
     }

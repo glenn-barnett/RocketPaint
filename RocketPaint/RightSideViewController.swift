@@ -16,6 +16,9 @@ class RightSideViewController: UIViewController {
     @IBOutlet weak var sliderLineWidth: LineWidthSliderView!
     
     @IBOutlet weak var sliderLineAlpha: LineAlphaSliderView!
+    
+    var darkBackground = UIColor(patternImage: UIImage(named: "checker-20px-darkgray.png")!)
+    var lightBackground = UIColor(patternImage: UIImage(named: "checker-20px-lightgray.png")!)
 
 //    let bLine = BrushWirePen3BView(frame: CGRect(x: 250, y: 110, width: 120, height: 82))
 //    let colorService = ColorService.SharedInstance
@@ -26,6 +29,8 @@ class RightSideViewController: UIViewController {
 //        bLine.userInteractionEnabled = true
 //
 //        self.view.addSubview(bLine)
+        
+        self.view.backgroundColor = lightBackground
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -38,7 +43,13 @@ class RightSideViewController: UIViewController {
             selector: #selector(RightSideViewController.lineAlphaChanged(_:)),
             name: Notifications.kLineAlphaChanged,
             object: nil)
-        
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RightSideViewController.colorChanged(_:)),
+            name: Notifications.kColorChanged,
+            object: nil)
+
     }
 
     
@@ -64,6 +75,28 @@ class RightSideViewController: UIViewController {
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         sliderLineAlpha.value = CGFloat(lineAlpha)
+    }
+
+    func colorChanged(notification:NSNotification){
+        let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
+        
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+        selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+        // should use light:
+        // 0.66h 0.375s 0.5v (dark faded blue purp)
+        // 0.66h 0.25s  0.5v
+
+        if(saturation < 0.51 && brightness > 0.51) {
+            self.view.backgroundColor = darkBackground
+        } else if(saturation < 0.71 && brightness > 0.51) {
+            self.view.backgroundColor = darkBackground
+        } else {
+            self.view.backgroundColor = lightBackground
+        }
     }
 
     

@@ -24,7 +24,7 @@ class LineWidthSliderView: UIControl {
         didSet { self.setNeedsDisplay(); }
     }
     
-    var iconColor : UIColor = UIColor.orangeColor()
+    var iconColor : UIColor = UIColor.redColor()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -108,9 +108,6 @@ class LineWidthSliderView: UIControl {
         //// Color Declarations
         let maximumTrackColor = UIColor(red: 0.522, green: 0.522, blue: 0.522, alpha: 1.000)
         
-        //// Variable Declarations
-        let lineWidthSliderScale: CGFloat = (6 + lineWidth * 3) / 20.0
-        
         
         //// Subframes
         let track: CGRect = CGRect(x: sliderFrame.minX, y: sliderFrame.minY + floor((sliderFrame.height - 4) * 0.50000 + 0.5), width: sliderFrame.width, height: 4)
@@ -155,8 +152,8 @@ class LineWidthSliderView: UIControl {
 //        CGContextTranslateCTM(context, sliderFrame.maxX - 104.7, sliderFrame.maxY - 10)
 //        CGContextScaleCTM(context, lineWidthSliderScale, lineWidthSliderScale)
         
-        //let thumbPath = UIBezierPath(ovalInRect: thumbRect)
-        let thumbPath = UIBezierPath(
+        // scaled thumb half
+        let thumbPath1 = UIBezierPath(
             arcCenter: CGPoint(
                 x: CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage),
 //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
@@ -164,13 +161,23 @@ class LineWidthSliderView: UIControl {
                 ),
             radius: minRadius + percentageValue() * (maxRadius - minRadius),
             startAngle: 0,
-            endAngle: CGFloat(M_PI*2),
+            endAngle: CGFloat(M_PI * 2),
             clockwise: true)
         
         iconColor.colorWithAlphaComponent(1.0).setFill()
-        thumbPath.fill()
-        UIColor.grayColor().setStroke() //TODO gray stroke ok?
-        thumbPath.stroke()
+        thumbPath1.fill()
+
+        let thumbRect = UIBezierPath(rect: CGRectMake(
+            CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage) - 1,
+            CGRectGetHeight(sliderFrame) / 2 - 15,
+            2,
+            30
+            ))
+        
+        thumbRect.fill()
+
+//        UIColor.grayColor().setStroke() //TODO gray stroke ok?
+//        thumbPath1.stroke()
         
         CGContextRestoreGState(context)
         

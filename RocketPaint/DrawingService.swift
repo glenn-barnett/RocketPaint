@@ -113,7 +113,7 @@ public class DrawingService {
             NSNotificationCenter.defaultCenter().postNotificationName(
                 Notifications.kLineAlphaChanged,
                 object: nil,
-                userInfo: ["lineAlpha": max(0.05, lineAlpha)]) // bump up to min of 5% in case they get confused
+                userInfo: ["lineAlpha": max(0.05, lineAlpha)]) // GB bump up to min of 5% in case they get confused
         }
 
         if let image = NSUserDefaults.standardUserDefaults().imageForKey("image") {

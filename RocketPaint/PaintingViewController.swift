@@ -314,12 +314,10 @@ class PaintingViewController: UIViewController,
     func lineWidthChanged(notification:NSNotification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         DrawingView.lineWidth = CGFloat(lineWidth)
-        print("PaintingVC.lineWidthChanged(\(lineWidth))")
     }
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         DrawingView.lineAlpha = CGFloat(lineAlpha)
-        print("PaintingVC.lineAlphaChanged(\(lineAlpha))")
     }
     func canvasCleared(notification:NSNotification){
         let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
