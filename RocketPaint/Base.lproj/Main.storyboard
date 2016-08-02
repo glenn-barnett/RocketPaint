@@ -472,6 +472,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-b4-mgf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-BZ-8to" userLabel="Palette Container">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -836,12 +840,16 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="Kpb-BZ-8to" secondAttribute="bottom" id="OEH-l3-RKj"/>
+                            <constraint firstItem="gYA-b4-mgf" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-20" id="PyR-DI-D3R"/>
+                            <constraint firstItem="gYA-b4-mgf" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="RA0-9f-yR6"/>
                             <constraint firstItem="Kpb-BZ-8to" firstAttribute="leading" secondItem="Xeh-0B-nLz" secondAttribute="trailing" constant="17" id="YGA-JQ-AGI">
                                 <variation key="heightClass=regular-widthClass=regular" constant="8"/>
                             </constraint>
+                            <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="gYA-b4-mgf" secondAttribute="bottom" id="bey-eZ-wna"/>
                             <constraint firstItem="Dg8-98-u7G" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-11" id="h1T-rp-ike"/>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="Kpb-BZ-8to" secondAttribute="bottom" id="qcj-ek-L45"/>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="Xeh-0B-nLz" secondAttribute="bottom" constant="20" id="sL9-f6-B78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gYA-b4-mgf" secondAttribute="trailing" constant="-20" id="uOZ-9R-I6m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kpb-BZ-8to" secondAttribute="trailing" constant="-20" id="uvu-Iv-BL1"/>
                             <constraint firstItem="CEO-uj-vOh" firstAttribute="top" secondItem="Dg8-98-u7G" secondAttribute="bottom" constant="42" id="y1U-bl-ciJ">
                                 <variation key="heightClass=regular-widthClass=regular" constant="15"/>
@@ -850,43 +858,53 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="gYA-b4-mgf"/>
                                 <exclude reference="Kpb-BZ-8to"/>
                                 <exclude reference="CEO-uj-vOh"/>
                                 <exclude reference="Dg8-98-u7G"/>
                                 <exclude reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OEH-l3-RKj"/>
-                                <exclude reference="sL9-f6-B78"/>
-                                <exclude reference="y1U-bl-ciJ"/>
-                                <exclude reference="za6-16-sFi"/>
+                                <exclude reference="PyR-DI-D3R"/>
+                                <exclude reference="RA0-9f-yR6"/>
+                                <exclude reference="uOZ-9R-I6m"/>
                                 <exclude reference="MCr-HU-yVx"/>
                                 <exclude reference="h1T-rp-ike"/>
+                                <exclude reference="y1U-bl-ciJ"/>
+                                <exclude reference="za6-16-sFi"/>
                                 <exclude reference="KeQ-Sr-u85"/>
                                 <exclude reference="YGA-JQ-AGI"/>
                                 <exclude reference="uvu-Iv-BL1"/>
                                 <exclude reference="1Ru-yF-D09"/>
+                                <exclude reference="OEH-l3-RKj"/>
+                                <exclude reference="bey-eZ-wna"/>
+                                <exclude reference="sL9-f6-B78"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
+                                <include reference="gYA-b4-mgf"/>
                                 <include reference="Kpb-BZ-8to"/>
                                 <include reference="CEO-uj-vOh"/>
                                 <include reference="Dg8-98-u7G"/>
                                 <include reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OEH-l3-RKj"/>
-                                <exclude reference="qcj-ek-L45"/>
-                                <include reference="sL9-f6-B78"/>
-                                <include reference="y1U-bl-ciJ"/>
-                                <include reference="za6-16-sFi"/>
+                                <include reference="PyR-DI-D3R"/>
+                                <include reference="RA0-9f-yR6"/>
+                                <include reference="uOZ-9R-I6m"/>
                                 <include reference="MCr-HU-yVx"/>
                                 <include reference="h1T-rp-ike"/>
+                                <include reference="y1U-bl-ciJ"/>
+                                <include reference="za6-16-sFi"/>
                                 <include reference="KeQ-Sr-u85"/>
                                 <include reference="YGA-JQ-AGI"/>
                                 <include reference="uvu-Iv-BL1"/>
                                 <include reference="1Ru-yF-D09"/>
+                                <include reference="OEH-l3-RKj"/>
+                                <include reference="bey-eZ-wna"/>
+                                <exclude reference="qcj-ek-L45"/>
+                                <include reference="sL9-f6-B78"/>
                             </mask>
                         </variation>
                     </view>
@@ -894,6 +912,7 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="ColorPaletteView" destination="Kpb-BZ-8to" id="ymi-nM-yNV"/>
+                        <outlet property="DarkBackgroundView" destination="gYA-b4-mgf" id="tb8-Dg-5Qy"/>
                         <outlet property="sliderLineAlpha" destination="Xeh-0B-nLz" id="7q3-0S-D7X"/>
                         <outlet property="sliderLineWidth" destination="Dg8-98-u7G" id="N7y-vM-jMY"/>
                     </connections>
@@ -1061,6 +1080,46 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SaveNewCell" id="6ng-d0-fDt" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="260" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31d-Kc-cYd">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="-280" width="240" height="800"/>
+                                            </variation>
+                                        </imageView>
+                                        <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-eE-7lw" customClass="SavePlusOverlay" customModule="RocketPaint" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="31d-Kc-cYd"/>
+                                        <exclude reference="tN4-eE-7lw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="31d-Kc-cYd"/>
+                                        <include reference="tN4-eE-7lw"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="ImageView" destination="31d-Kc-cYd" id="1G3-fh-J5n"/>
+                                </connections>
+                            </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="0C0-4G-hZv" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="15" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1091,16 +1150,6 @@
                                 <connections>
                                     <outlet property="ImageView" destination="hoB-R1-j70" id="wyA-nd-YQv"/>
                                 </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell2" id="6ng-d0-fDt" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="260" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell3" id="WV2-TD-DJG" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="505" width="240" height="240"/>

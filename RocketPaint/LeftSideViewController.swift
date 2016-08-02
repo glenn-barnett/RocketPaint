@@ -16,7 +16,7 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-lightgray.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkgray.png")!)
 
         imagePicker.delegate = self // GB REMOVE
         // Do any additional setup after loading the view.

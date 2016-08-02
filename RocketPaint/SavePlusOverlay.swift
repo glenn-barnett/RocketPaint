@@ -1,5 +1,5 @@
 //
-//  UndoButton.swift
+//  SaveBView.swift
 //  RocketPaint
 //
 //  Created by Glenn Barnett on 6/29/16.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class UndoButton: IconColoredButton {
-    
+@IBDesignable
+class SavePlusOverlay: UIView {
     override func drawRect(rect: CGRect) {
-        RocketPaintStyleKit.drawUndo();
+        RocketPaintStyleKit.drawSavePlus();
     }
 }

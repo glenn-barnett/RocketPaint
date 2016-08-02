@@ -11,6 +11,8 @@ import UIKit
 
 class RightSideViewController: UIViewController {
     
+    @IBOutlet var DarkBackgroundView: UIView!
+    
     @IBOutlet var ColorPaletteView : UIView!
 
     @IBOutlet weak var sliderLineWidth: LineWidthSliderView!
@@ -31,6 +33,9 @@ class RightSideViewController: UIViewController {
 //        self.view.addSubview(bLine)
         
         self.view.backgroundColor = lightBackground
+        
+        self.DarkBackgroundView.backgroundColor = darkBackground
+        self.DarkBackgroundView.alpha = 0
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -90,12 +95,14 @@ class RightSideViewController: UIViewController {
         // 0.66h 0.375s 0.5v (dark faded blue purp)
         // 0.66h 0.25s  0.5v
 
-        if(saturation < 0.51 && brightness > 0.51) {
-            self.view.backgroundColor = darkBackground
-        } else if(saturation < 0.71 && brightness > 0.51) {
-            self.view.backgroundColor = darkBackground
+        if((saturation < 0.51 && brightness > 0.51) || (saturation < 0.71 && brightness > 0.51)) {
+            UIView.animateWithDuration(0.5, delay: 0.0, options:[], animations: {
+                self.DarkBackgroundView.alpha = 1.0
+            }, completion: nil)
         } else {
-            self.view.backgroundColor = lightBackground
+            UIView.animateWithDuration(0.5, delay: 0.0, options:[], animations: {
+                self.DarkBackgroundView.alpha = 0.0
+            }, completion: nil)
         }
     }
 

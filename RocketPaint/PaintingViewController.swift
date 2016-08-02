@@ -230,19 +230,12 @@ class PaintingViewController: UIViewController,
         // rootvc.showside?
         
         
-        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
-        
-        rootViewController!.presentLeftMenuViewController();
-        
-        
-        
-    }
-
-    @IBAction func paletteTapped(sender : AnyObject) {
-        print("PVC.paletteTapped()")
-
         let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
-        rootViewController?.showRightPalette();
+        
+        rootViewController!.showLeftMenu();
+        
+        
+        
     }
 
     @IBAction func brushButtonTapped(sender : AnyObject) {

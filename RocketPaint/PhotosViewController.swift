@@ -15,7 +15,6 @@ let imageReuseIdentifier = "PhotoCell"
 
 class PhotosViewController: UICollectionViewController
 {
-    
     var imageManager : PHCachingImageManager!
     var images : PHFetchResult!
     
@@ -35,6 +34,17 @@ class PhotosViewController: UICollectionViewController
             name: Notifications.kPhotoSaved,
             object: nil)
 
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PhotosViewController.photosMenuOpened(_:)),
+            name: Notifications.kPhotosMenuOpened,
+            object: nil)
+
+    }
+    
+    func photosMenuOpened(notification:NSNotification) {
+        self.collectionView?.reloadData()
+        
     }
     
     func photoSaved(notification:NSNotification) {
@@ -51,6 +61,7 @@ class PhotosViewController: UICollectionViewController
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+//        hasAppeared = true
     }
     
     // handle tap events
@@ -59,17 +70,29 @@ class PhotosViewController: UICollectionViewController
         // signal to parents:
         //   leftside: close self
         //   root: bring up cropper (unless its a perfect fit already?)
-        
-        print("PhotosVC.didSelect(\(indexPath.item))")
-        // do stuff on selection
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kPhotoLoaded,
-            object: nil,
-            userInfo: ["phAsset": images.objectAtIndex(indexPath.item) as! PHAsset])
+                
+        if(indexPath.item == 0) {
+            print("PhotosVC.didSelect(\(indexPath.item)): Saving current canvas to camera roll")
+            // compose the image against the canvas color
+            let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
+            
+            CameraRollService.SharedInstance.WriteImage(composedImage)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                Notifications.kPhotoSaved,
+                object: nil)
 
-        collectionView.setContentOffset(CGPointZero, animated: true)
+            return
+            
+        } else {
+        
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                Notifications.kPhotoLoaded,
+                object: nil,
+                userInfo: ["phAsset": images.objectAtIndex(indexPath.item-1) as! PHAsset])
 
+            collectionView.setContentOffset(CGPointZero, animated: true)
+        }
     }
     
     /*
@@ -90,45 +113,41 @@ class PhotosViewController: UICollectionViewController
     }
     
     override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return images.count + 1
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        /*
-         We can use multiple way to create a UICollectionViewCell.
-         */
         
-        //1.
-        //We can use Reusablecell identifier with custom UICollectionViewCell
-        
-        /*
-         let cell = collectionView!.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
-         
-         */
-        
-        
-        
-        //2.
-        //You can create a Class file for UICollectionViewCell and Set the appropriate component and assign the value to that class
-        
-        let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
-        
-        let asset = images.objectAtIndex(indexPath.item) as! PHAsset
+        if(indexPath.item == 0) {
+            // special case for [+] row
+            // overlay current canvas image with a +
 
-        
-        let options = PHImageRequestOptions()
-        options.networkAccessAllowed = true
-        options.synchronous = false
-
-        PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSize(width: 480, height: 640), contentMode:.AspectFit, options:options, resultHandler:{(image, info)in
-
-//            print("PhotosVC RECEIVED image size \(image!.size.width) x \(image!.size.height)")
-
+            let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("SaveNewCell", forIndexPath: indexPath) as! PhotoCell
+            
             cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-            cell.ImageView?.image = image
-        })
+            cell.ImageView?.image = DrawingService.SharedInstance.getImage()
+            
+            return cell
+        } else {
+            
         
-        return cell
+            let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
+            
+            let asset = images.objectAtIndex(indexPath.item-1) as! PHAsset
+
+            
+            let options = PHImageRequestOptions()
+            options.networkAccessAllowed = true
+            options.synchronous = false
+
+            PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSize(width: 480, height: 640), contentMode:.AspectFit, options:options, resultHandler:{(image, info) in
+                cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+                cell.ImageView?.image = image
+            })
+            
+            return cell
+        }
+        
     }
     
 }

@@ -20,11 +20,11 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
         print("RVC.viewDidLoad()")
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(RootViewController.hideSideMenus(_:)),
-            name: Notifications.kBrushChanged,
-            object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(
+//            self,
+//            selector: #selector(RootViewController.hideSideMenus(_:)),
+//            name: Notifications.kBrushChanged,
+//            object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -39,7 +39,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
             object: nil)
 
         self.parallaxEnabled = false
-        self.contentViewShadowColor = UIColor.whiteColor()
+        self.contentViewShadowColor = UIColor.blackColor()
         self.contentViewShadowRadius = 30.0
         
         // Do any additional setup after loading the view.
@@ -103,12 +103,15 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
         
     }
 
-    func showRightPalette() {
+    func showRightBrushes() {
         self.presentRightMenuViewController();
     }
 
-    func showRightBrushes() {
-        self.presentRightMenuViewController();
+    func showLeftMenu() {
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kPhotosMenuOpened,
+            object: nil)
+        self.presentLeftMenuViewController();
     }
 
     // MARK: RESide Delegate Methods
