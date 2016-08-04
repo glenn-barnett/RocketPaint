@@ -37,6 +37,8 @@ class BlankCanvasesViewController: UICollectionViewController
             object: nil,
             userInfo: ["color": cell.backgroundColor!])
 
+        DrawingService.SharedInstance.resetBrush()
+        
         // reset to top of list
         collectionView.setContentOffset(CGPointZero, animated: true)
 

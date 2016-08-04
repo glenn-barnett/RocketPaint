@@ -16,6 +16,8 @@ class RocketDrawingView: ACEDrawingView {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
+        DrawingService.SharedInstance.isModified = true
+        
 //        NSNotificationCenter.defaultCenter().postNotificationName(
 //            Notifications.kColorUsed,
 //            object: nil)

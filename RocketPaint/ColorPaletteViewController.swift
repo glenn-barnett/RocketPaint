@@ -188,19 +188,15 @@ class ColorPaletteViewController: UICollectionViewController
         
         if(indexPath.item < colorService.variantColorArray.count) {
             color = colorService.variantColorArray[indexPath.item]
-            cell.CloseButton!.hidden = true
         }
         else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count) {
             color = colorService.sessionColorArray[indexPath.item - colorService.variantColorArray.count]
-            cell.CloseButton!.hidden = false
         }
         else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count + colorService.staticColorArray.count) {
             color = colorService.staticColorArray[indexPath.item - colorService.sessionColorArray.count - colorService.variantColorArray.count]
-            cell.CloseButton!.hidden = true
         }
         else if(indexPath.item < colorService.variantColorArray.count + colorService.sessionColorArray.count + colorService.staticColorArray.count + colorService.randomColorArray.count) {
             color = colorService.randomColorArray[indexPath.item - colorService.sessionColorArray.count - colorService.variantColorArray.count - colorService.staticColorArray.count]
-            cell.CloseButton!.hidden = true
         }
         
         cell.Color = color
@@ -210,10 +206,10 @@ class ColorPaletteViewController: UICollectionViewController
         //GB useful example of cell layer manipulation
         //Layer property in Objective C => "http://iostutorialstack.blogspot.in/2014/04/how-to-assign-custom-tag-or-value-to.html"
         // GB we set this so we can remove from the datasource later
-        cell.CloseButton?.layer.setValue(indexPath.row, forKey: "index")
+//        cell.CloseButton?.layer.setValue(indexPath.row, forKey: "index")
         
         //GB useful example of cell interaction
-        cell.CloseButton?.addTarget(self, action: "removeSessionColor:", forControlEvents: UIControlEvents.TouchUpInside)
+//        cell.CloseButton?.addTarget(self, action: "removeSessionColor:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
     

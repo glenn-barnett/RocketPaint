@@ -13,6 +13,10 @@ public class DrawingService {
     static let SharedInstance = DrawingService()
     private let _userDefaults = NSUserDefaults.standardUserDefaults()
     
+    static let kDefaultLineWidth = 6.0;
+    
+    var isModified = false
+    
     var drawingViews : [RocketDrawingView] = [];
     
     var lastBrushName : String? = nil;
@@ -24,6 +28,15 @@ public class DrawingService {
             name: Notifications.kBrushChanged,
             object: nil)
 
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(DrawingService.photoSaved(_:)),
+            name: Notifications.kPhotoSaved,
+            object: nil)
+
+    }
+    @objc func photoSaved(notification:NSNotification){
+        isModified = false
     }
     @objc func brushChanged(notification:NSNotification){
         lastBrushName = notification.userInfo!["brush"] as? String
@@ -123,6 +136,30 @@ public class DrawingService {
         
 //        _userDefaults.removePersistentDomainForName(NSBundle.mainBundle().bundleIdentifier!)
 
+    }
+    
+    func resetBrush() {
+
+        lastBrushName = "pen" // TODO redundant?
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kBrushChanged,
+            object: nil,
+            userInfo: ["brush": "Pen"])
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kColorChanged,
+            object: nil,
+            userInfo: ["color": ColorService.SharedInstance.defaultPaintColor()])
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineWidthChanged,
+            object: nil,
+            userInfo: ["lineWidth": DrawingService.kDefaultLineWidth])
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kLineAlphaChanged,
+            object: nil,
+            userInfo: ["lineAlpha":1.0])
     }
     
 }

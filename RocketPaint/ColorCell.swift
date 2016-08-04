@@ -9,7 +9,7 @@
 import UIKit
 
 class ColorCell: UICollectionViewCell {
-    @IBOutlet var CloseButton : UIButton?
+
     var Color : UIColor {
         didSet { self.setNeedsDisplay(); }
     }

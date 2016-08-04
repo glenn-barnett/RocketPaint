@@ -11,7 +11,7 @@ import UIKit
 
 class RightSideViewController: UIViewController {
     
-    @IBOutlet var DarkBackgroundView: UIView!
+    @IBOutlet var CheckerOverlayView: UIView!
     
     @IBOutlet var ColorPaletteView : UIView!
 
@@ -19,23 +19,12 @@ class RightSideViewController: UIViewController {
     
     @IBOutlet weak var sliderLineAlpha: LineAlphaSliderView!
     
-    var darkBackground = UIColor(patternImage: UIImage(named: "checker-20px-darkgray.png")!)
-    var lightBackground = UIColor(patternImage: UIImage(named: "checker-20px-lightgray.png")!)
-
-//    let bLine = BrushWirePen3BView(frame: CGRect(x: 250, y: 110, width: 120, height: 82))
-//    let colorService = ColorService.SharedInstance
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        bLine.userInteractionEnabled = true
-//
-//        self.view.addSubview(bLine)
-        
-        self.view.backgroundColor = lightBackground
-        
-        self.DarkBackgroundView.backgroundColor = darkBackground
-        self.DarkBackgroundView.alpha = 0
+        self.view.backgroundColor = ColorService.SharedInstance.canvasColor
+        self.CheckerOverlayView.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkalpha.png")!)
+        self.CheckerOverlayView.alpha = 1.0
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -54,6 +43,13 @@ class RightSideViewController: UIViewController {
             selector: #selector(RightSideViewController.colorChanged(_:)),
             name: Notifications.kColorChanged,
             object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RightSideViewController.canvasCleared(_:)),
+            name: Notifications.kCanvasCleared,
+            object: nil)
+
 
     }
 
@@ -91,18 +87,23 @@ class RightSideViewController: UIViewController {
         var alpha: CGFloat = 0
         selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
 
-        // should use light:
-        // 0.66h 0.375s 0.5v (dark faded blue purp)
-        // 0.66h 0.25s  0.5v
+    }
 
-        if((saturation < 0.51 && brightness > 0.51) || (saturation < 0.71 && brightness > 0.51)) {
-            UIView.animateWithDuration(0.5, delay: 0.0, options:[], animations: {
-                self.DarkBackgroundView.alpha = 1.0
-            }, completion: nil)
-        } else {
-            UIView.animateWithDuration(0.5, delay: 0.0, options:[], animations: {
-                self.DarkBackgroundView.alpha = 0.0
-            }, completion: nil)
+    
+    func canvasCleared(notification:NSNotification){
+        let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
+
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+        canvasColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+        if(brightness > 0.1) {
+            self.view.backgroundColor = canvasColor
+        }
+        else {
+            self.view.backgroundColor = UIColor(hue:hue, saturation:saturation, brightness:0.1, alpha:1)
         }
     }
 

@@ -125,7 +125,7 @@ class PhotosViewController: UICollectionViewController
             let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("SaveNewCell", forIndexPath: indexPath) as! PhotoCell
             
             cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-            cell.ImageView?.image = DrawingService.SharedInstance.getImage()
+// breaking            cell.ImageView?.image = DrawingService.SharedInstance.getImage()
             
             return cell
         } else {

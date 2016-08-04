@@ -33,13 +33,22 @@ public class ColorService {
         staticColorArray.append(UIColor.whiteColor())
         staticColorArray.append(UIColor.grayColor())
         staticColorArray.append(UIColor.blackColor())
-        staticColorArray.append(UIColor.blueColor())
-        staticColorArray.append(UIColor.cyanColor())
-        staticColorArray.append(UIColor.greenColor())
-        staticColorArray.append(UIColor.yellowColor())
-        staticColorArray.append(UIColor.orangeColor())
-        staticColorArray.append(UIColor.redColor())
-        staticColorArray.append(UIColor.purpleColor())
+
+        staticColorArray.append(UIColor(red: 141.0/255.0, green:94.0/255.0, blue:48.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 70.0/255.0, green:141.0/255.0, blue:38.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 38.0/255.0, green:62.0/255.0, blue:141.0/255.0, alpha:1))
+
+        staticColorArray.append(UIColor(red: 255.0/255.0, green:99.0/255.0, blue:54.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 105.0/255.0, green:175.0/255.0, blue:32.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 59.0/255.0, green:100.0/255.0, blue:255.0/255.0, alpha:1))
+
+        staticColorArray.append(UIColor(red: 255.0/255.0, green:196.0/255.0, blue:77.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 44.0/255.0, green:204.0/255.0, blue:128.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 200.0/255.0, green:81.0/255.0, blue:255.0/255.0, alpha:1))
+
+        staticColorArray.append(UIColor(red: 255.0/255.0, green:234.0/255.0, blue:77.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 44.0/255.0, green:186.0/255.0, blue:204.0/255.0, alpha:1))
+        staticColorArray.append(UIColor(red: 255.0/255.0, green:81.0/255.0, blue:172.0/255.0, alpha:1))
         
         for(var i=0; i<1000; i++) {
             randomColorArray.append(generateRandomColor())
@@ -48,7 +57,7 @@ public class ColorService {
     }
     
     internal func defaultPaintColor() -> UIColor {
-        return UIColor(red: 6.0/255.0, green: 6.0/255.0, blue: 138.0/255.0, alpha: 1.0)
+        return UIColor(red: 59.0/255.0, green:100.0/255.0, blue:255.0/255.0, alpha:1)
     }
 
     internal func generateRandomColor() -> UIColor {
@@ -75,9 +84,9 @@ public class ColorService {
         selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
         
         if(srcSaturation == 0) {
-            for(var b=1; b<=5; b++) {
+            for(var b=1; b<=6; b++) {
                 for(var s=0-1; s<=1; s++) {
-                    let newBrightness: CGFloat = 0.20 * CGFloat(b) + 0.05 * CGFloat(s)
+                    let newBrightness: CGFloat = 0.17 * CGFloat(b) + 0.05 * CGFloat(s)
                     variantColorArray.append(UIColor(hue:CGFloat(Float(arc4random()) / Float(UINT32_MAX)), saturation:0, brightness:newBrightness, alpha:1))
                 }
             }
@@ -85,12 +94,12 @@ public class ColorService {
             
             // third, create saturation variants from 0% to 100% in 8 steps
             //        for(var i=0.0f; i<7.5f; i+=1.0f) {
-            for(var b=1; b<=5; b++) {
-                for(var s=2; s<=4; s++) {
+            for(var b=1; b<=6; b++) {
+                for(var s=0-1; s<=1; s++) {
                     // saturation will be 0-1.0, scaled by source saturation x1.5
-                    let newSaturation: CGFloat = (0.25 * CGFloat(s) - 0.25) * min(1.0, srcSaturation * 1.5)
+                    let newSaturation: CGFloat = max(0.0, min(1.0, srcSaturation + 0.25 * CGFloat(s)))
                     // brightness WANT 0.2 0.3 0.5 0.7 0.9
-                    let newBrightness: CGFloat = max(0.20, 0.20 * CGFloat(b) - 0.10)
+                    let newBrightness: CGFloat = max(0.17, 0.17 * CGFloat(b) - 0.10)
                     variantColorArray.append(UIColor(hue:srcHue, saturation:newSaturation, brightness:newBrightness, alpha:1))
                 }
             }

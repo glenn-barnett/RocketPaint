@@ -106,7 +106,7 @@ class LineWidthSliderView: UIControl {
         let context = UIGraphicsGetCurrentContext()
         
         //// Color Declarations
-        let maximumTrackColor = UIColor(red: 0.522, green: 0.522, blue: 0.522, alpha: 1.000)
+        let maximumTrackColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.000)
         
         
         //// Subframes
