@@ -98,10 +98,10 @@ class ColorPaletteViewController: UICollectionViewController
     func colorUsed(notification:NSNotification){
         print("Palette.colorUsed()")
         
-        // don't add dupes of favorites (sessions), nor statics
-        if(!colorService.sessionColorArray.contains(colorService.selectedColor) && !colorService.staticColorArray.contains(colorService.selectedColor)) {
-            colorService.sessionColorArray.append(colorService.selectedColor)
-        }
+//        // don't add dupes of favorites (sessions), nor statics
+//        if(!colorService.sessionColorArray.contains(colorService.selectedColor) && !colorService.staticColorArray.contains(colorService.selectedColor)) {
+//            colorService.sessionColorArray.append(colorService.selectedColor)
+//        }
         
         // refresh table
         self.collectionView!.reloadData()

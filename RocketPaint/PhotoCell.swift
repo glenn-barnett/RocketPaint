@@ -19,8 +19,4 @@ class PhotoCell: UICollectionViewCell {
         super.init(frame:frame)
     }
     
-//    override func drawRect(rect: CGRect) {
-//        RocketPaintStyleKit.drawPaletteColor(paletteItemColor: self.Color)
-//    }
-    
 }

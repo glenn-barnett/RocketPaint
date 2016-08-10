@@ -14,6 +14,10 @@ class IconColoredBView: BView {
     var iconColor:UIColor = UIColor.redColor()
     var lineWidth:CGFloat = 6.0
     
+    func getLineWidthMin() -> Float {
+        return 1.0
+    }
+
     func getLineWidthMax() -> Float {
         return 40.0
     }
@@ -84,9 +88,11 @@ class IconColoredBView: BView {
     }
 
     func lineWidthChanged(notification:NSNotification){
+        let inputLineWidth = notification.userInfo!["lineWidth"] as! Float
+        let adjustedLineWidth = getLineWidthMin() + (inputLineWidth / 40.0) * (getLineWidthMax() - getLineWidthMin());
         
-        lineWidth = CGFloat((notification.userInfo!["lineWidth"] as! Float / 40.0) * getLineWidthMax())
-        self.setNeedsDisplay();
+        lineWidth = CGFloat(adjustedLineWidth)
+        self.setNeedsDisplay()
     }
 
 }

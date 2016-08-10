@@ -49,7 +49,7 @@ class PhotosViewController: UICollectionViewController
     
     func photoSaved(notification:NSNotification) {
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 250 * Int64(NSEC_PER_MSEC))
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 500 * Int64(NSEC_PER_MSEC))
         
         dispatch_after(time, dispatch_get_main_queue()) {
             let fetchOptions = PHFetchOptions()
@@ -125,7 +125,9 @@ class PhotosViewController: UICollectionViewController
             let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("SaveNewCell", forIndexPath: indexPath) as! PhotoCell
             
             cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-// breaking            cell.ImageView?.image = DrawingService.SharedInstance.getImage()
+            if(DrawingService.SharedInstance.isModified) {
+                cell.ImageView?.image = DrawingService.SharedInstance.getImageOnCanvasColor()
+            }
             
             return cell
         } else {

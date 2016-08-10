@@ -41,6 +41,7 @@ class PaintingViewController: UIViewController,
     let imagePicker = UIImagePickerController()
     var undoClearImage : UIImage? // saved just before we clear as special undo step
     var undoClearBackgroundColor : UIColor?
+    var requestedLineWidth : CGFloat = 4.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -263,14 +264,6 @@ class PaintingViewController: UIViewController,
         
     }
 
-    let lineWidth1 : CGFloat = 1.0
-    let lineWidth2 : CGFloat = 3.0
-    let lineWidth3 : CGFloat = 8.0
-    let lineWidth4 : CGFloat = 16.0
-    let lineWidthTextSmall : CGFloat = 6.0
-    let lineWidthTextBig : CGFloat = 12.0
-    let highlightAlpha : CGFloat = 0.4
-    
     func brushChanged(notification:NSNotification){
         let brush = notification.userInfo!["brush"] as! String
 
@@ -297,16 +290,21 @@ class PaintingViewController: UIViewController,
         } else if(brush == "TextSerif") {
             DrawingView.fontName = "Georgia"
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
+            
 
         } else if(brush == "TextSans") {
             DrawingView.fontName = nil
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
         }
+        enforceMinimumTextSize()
     }
     
     func lineWidthChanged(notification:NSNotification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
-        DrawingView.lineWidth = CGFloat(lineWidth)
+        requestedLineWidth = CGFloat(lineWidth)
+        DrawingView.lineWidth = requestedLineWidth
+        enforceMinimumTextSize()
+        print("PVC.lineWidthChanged(\(lineWidth))")
     }
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
@@ -323,6 +321,16 @@ class PaintingViewController: UIViewController,
         
         DrawingView.backgroundColor = colorService.canvasColor
         DrawingView.clear()        
+    }
+
+    let kTextMinLineWidth : CGFloat = 4.0
+    
+    func enforceMinimumTextSize() {
+        if(DrawingView.drawTool == ACEDrawingToolTypeMultilineText) {
+            DrawingView.lineWidth = max(kTextMinLineWidth, DrawingView.lineWidth)
+        } else if(requestedLineWidth != DrawingView.lineWidth) {
+            DrawingView.lineWidth = requestedLineWidth // reset it to what was requested
+        }
     }
 
     override func didReceiveMemoryWarning() {

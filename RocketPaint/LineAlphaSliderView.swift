@@ -100,20 +100,7 @@ class LineAlphaSliderView: UIControl {
             width:rect.size.width - buffer * 2,
             height:rect.size.height)
         
-        let minRadius = CGFloat(2)
-        let maxRadius = CGFloat(30)
-        
         let context = UIGraphicsGetCurrentContext()
-        
-        //// Color Declarations
-        let maximumTrackColor = UIColor(red: 0.522, green: 0.522, blue: 0.522, alpha: 1.000)
-        
-        //// Gradient Declarations
-        let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [UIColor.clearColor().CGColor, iconColor.colorWithAlphaComponent(1.0).CGColor], [0, 1])!
-        
-        //// Variable Declarations
-        let lineWidthSliderScale: CGFloat = (6 + lineWidth * 3) / 20.0
-        
         
         //// Subframes
         let track: CGRect = CGRect(x: sliderFrame.minX, y: sliderFrame.minY + floor((sliderFrame.height - 4) * 0.50000 + 0.5), width: sliderFrame.width, height: 4)
@@ -138,6 +125,20 @@ class LineAlphaSliderView: UIControl {
         let maximumTrackRect : CGRect = CGRectMake(CGRectGetMinX(trackFrame) + floor((CGRectGetWidth(trackFrame)) * percentage), CGRectGetMinY(trackFrame), CGRectGetWidth(trackFrame) - floor((CGRectGetWidth(trackFrame)) * percentage), 4)
         // GB ADDED endTrackingWithTouch
         
+        let checkColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+        checkColor.setFill()
+        
+        let checkSize = CGFloat(8)
+        var x = CGFloat(20)
+        while(x < CGRectGetMaxX(trackFrame) - checkSize) {
+
+            UIRectFill(CGRectMake(CGFloat(x), CGRectGetMinY(trackFrame) - checkSize, checkSize, checkSize))
+            x += checkSize
+            UIRectFill(CGRectMake(CGFloat(x), CGRectGetMinY(trackFrame) - checkSize*2, checkSize, checkSize))
+            x += checkSize
+        }
+        
+
         
         //// Track
         //// Minimum Track Drawing
@@ -145,6 +146,7 @@ class LineAlphaSliderView: UIControl {
         minimumTrackPath.closePath()
         UIColor.blackColor().setFill()
         minimumTrackPath.fill()
+
         
         
         //// Maximum Track Drawing

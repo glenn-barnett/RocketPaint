@@ -121,14 +121,15 @@ class LineWidthSliderView: UIControl {
         // GB ADDED endTrackingWithTouch
         
 
-        let crescendoPath = UIBezierPath()
-        crescendoPath.moveToPoint(CGPoint(x: CGRectGetMinX(trackFrame), y: CGRectGetMinY(trackFrame) - (minRadius - 2)))
-        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMaxX(trackFrame), y: CGRectGetMinY(trackFrame) - maxRadius))
-        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMaxX(trackFrame), y: CGRectGetMaxY(trackFrame) + maxRadius))
-        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMinX(trackFrame), y: CGRectGetMaxY(trackFrame) + (minRadius - 2)))
-        crescendoPath.closePath()
-        iconColor.colorWithAlphaComponent(0.2).setFill()
-        crescendoPath.fill()
+//        let crescendoPath = UIBezierPath()
+//        crescendoPath.moveToPoint(CGPoint(x: CGRectGetMinX(trackFrame), y: CGRectGetMinY(trackFrame) - (minRadius - 2)))
+//        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMaxX(trackFrame), y: CGRectGetMinY(trackFrame) - maxRadius))
+//        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMaxX(trackFrame), y: CGRectGetMaxY(trackFrame) + maxRadius))
+//        crescendoPath.addLineToPoint(CGPoint(x: CGRectGetMinX(trackFrame), y: CGRectGetMaxY(trackFrame) + (minRadius - 2)))
+//        crescendoPath.closePath()
+//        iconColor.colorWithAlphaComponent(0.3).setStroke()
+//        crescendoPath.lineWidth = 1
+//        crescendoPath.stroke()
         
         //// Track
         //// Minimum Track Drawing

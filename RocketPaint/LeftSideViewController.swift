@@ -18,10 +18,7 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkgray.png")!)
         self.view.backgroundColor = ColorService.SharedInstance.canvasColor
-        self.CheckerOverlayView.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkalpha.png")!)
-        self.CheckerOverlayView.alpha = 1.0
 
         imagePicker.delegate = self // GB REMOVE
         // Do any additional setup after loading the view.
@@ -58,7 +55,7 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func savePictureTapped(sender : AnyObject) {
-        print("LMVC.savePictureTapped()");
+        print("Left.savePictureTapped()");
         
         // compose the image against the canvas color
         let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
@@ -72,14 +69,34 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func loadPictureTapped(sender : AnyObject) {
-        print("LMVC().loadPictureTapped()");
+        print("Left.loadPictureTapped()");
         
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-    
+
+    @IBAction func clearTapped(sender : AnyObject) {
+        print("Left.clearTapped()");
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kCanvasCleared,
+            object: nil,
+            userInfo: ["color": UIColor.whiteColor()])
+        
+        DrawingService.SharedInstance.resetBrush()
+    }
+
+    @IBAction func clearColorTapped(sender : AnyObject) {
+        print("Left.clearColorTapped()");
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kCanvasCleared,
+            object: nil,
+            userInfo: ["color": ColorService.SharedInstance.selectedColor])
+        
+        DrawingService.SharedInstance.resetBrush()
+    }
+
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             //            NSNotificationCenter.defaultCenter().postNotificationName(

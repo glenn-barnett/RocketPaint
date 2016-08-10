@@ -23,7 +23,7 @@ class RightSideViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = ColorService.SharedInstance.canvasColor
-        self.CheckerOverlayView.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkalpha.png")!)
+//        self.CheckerOverlayView.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkalpha.png")!)
         self.CheckerOverlayView.alpha = 1.0
 
         NSNotificationCenter.defaultCenter().addObserver(

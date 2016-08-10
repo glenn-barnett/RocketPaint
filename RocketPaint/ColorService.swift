@@ -84,8 +84,8 @@ public class ColorService {
         selectedColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
         
         if(srcSaturation == 0) {
-            for(var b=1; b<=6; b++) {
-                for(var s=0-1; s<=1; s++) {
+            for b in (1..<7) {
+                for s in (-1..<2) {
                     let newBrightness: CGFloat = 0.17 * CGFloat(b) + 0.05 * CGFloat(s)
                     variantColorArray.append(UIColor(hue:CGFloat(Float(arc4random()) / Float(UINT32_MAX)), saturation:0, brightness:newBrightness, alpha:1))
                 }
@@ -94,8 +94,8 @@ public class ColorService {
             
             // third, create saturation variants from 0% to 100% in 8 steps
             //        for(var i=0.0f; i<7.5f; i+=1.0f) {
-            for(var b=1; b<=6; b++) {
-                for(var s=0-1; s<=1; s++) {
+            for b in (1..<7) {
+                for s in (-1..<2) {
                     // saturation will be 0-1.0, scaled by source saturation x1.5
                     let newSaturation: CGFloat = max(0.0, min(1.0, srcSaturation + 0.25 * CGFloat(s)))
                     // brightness WANT 0.2 0.3 0.5 0.7 0.9

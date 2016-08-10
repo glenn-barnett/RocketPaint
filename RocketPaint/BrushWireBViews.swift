@@ -11,11 +11,17 @@ import UIKit
 
 
 class BrushWirePenBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 25.0
+    }
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWPen(iconColor:iconColor, lineWidth: lineWidth);
     }
 }
 class BrushWireLineBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 25.0
+    }
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWLine(iconColor:iconColor, lineWidth: lineWidth);
     }
@@ -28,6 +34,9 @@ class BrushWireRectSolidBView: IconColoredBView {
     }
 }
 class BrushWireRectOutlineBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 24.0
+    }
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWRectOutline(iconColor:iconColor, lineWidth: lineWidth);
     }
@@ -40,6 +49,9 @@ class BrushWireEllipseSolidBView: IconColoredBView {
     }
 }
 class BrushWireEllipseOutlineBView: IconColoredBView {
+    override func getLineWidthMax() -> Float {
+        return 24.0
+    }
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawWEllipseOutline(iconColor:iconColor, lineWidth: lineWidth);
     }
@@ -47,8 +59,11 @@ class BrushWireEllipseOutlineBView: IconColoredBView {
 
 
 class BrushWireTextSerifBView: IconColoredBView {
+    override func getLineWidthMin() -> Float {
+        return 5.0
+    }
     override func getLineWidthMax() -> Float {
-        return 29.0
+        return 20.0
     }
 
     override func drawRect(rect: CGRect) {
@@ -56,8 +71,11 @@ class BrushWireTextSerifBView: IconColoredBView {
     }
 }
 class BrushWireTextSansBView: IconColoredBView {
+    override func getLineWidthMin() -> Float {
+        return 5.0
+    }
     override func getLineWidthMax() -> Float {
-        return 28.0
+        return 20.0
     }
 
     override func drawRect(rect: CGRect) {

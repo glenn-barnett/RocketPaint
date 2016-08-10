@@ -92,9 +92,10 @@ public class DrawingService {
         _userDefaults.removeObjectForKey("lineAlpha")
         _userDefaults.setObject(drawingViews[0].lineAlpha, forKey: "lineAlpha")
 
-        _userDefaults.removeObjectForKey("image")
-        _userDefaults.setImage(getImageOnCanvasColor(), forKey: "image")
-        
+        if(isModified) {
+            _userDefaults.removeObjectForKey("image")
+            _userDefaults.setImage(getImageOnCanvasColor(), forKey: "image")
+        }
         _userDefaults.synchronize()
         
     }

@@ -20,11 +20,11 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
         print("RVC.viewDidLoad()")
         super.viewDidLoad()
         
-//        NSNotificationCenter.defaultCenter().addObserver(
-//            self,
-//            selector: #selector(RootViewController.hideSideMenus(_:)),
-//            name: Notifications.kBrushChanged,
-//            object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(RootViewController.hideSideMenus(_:)),
+            name: Notifications.kBrushChanged,
+            object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,

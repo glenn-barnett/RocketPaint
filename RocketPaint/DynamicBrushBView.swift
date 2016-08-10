@@ -37,21 +37,40 @@ class DynamicBrushBView: IconColoredBView {
     override func drawRect(rect: CGRect) {
         
         if(brush == "Pen") {
-            RocketPaintStyleKit.drawGPen(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 1.0
+            let maxLineWidth : CGFloat = 25.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+
+            RocketPaintStyleKit.drawGPen(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else if(brush == "Line") {
-            RocketPaintStyleKit.drawGLine(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 1.0
+            let maxLineWidth : CGFloat = 25.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+            RocketPaintStyleKit.drawGLine(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else if(brush == "EllipseSolid") {
             RocketPaintStyleKit.drawGEllipseSolid(iconColor:iconColor);
         } else if(brush == "EllipseOutline") {
-            RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 1.0
+            let maxLineWidth : CGFloat = 24.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+            RocketPaintStyleKit.drawGEllipseOutline(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else if(brush == "RectSolid") {
             RocketPaintStyleKit.drawGRectSolid(iconColor:iconColor);
         } else if(brush == "RectOutline") {
-            RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 1.0
+            let maxLineWidth : CGFloat = 24.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+            RocketPaintStyleKit.drawGRectOutline(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else if(brush == "TextSerif") {
-            RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 5.0
+            let maxLineWidth : CGFloat = 20.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+            RocketPaintStyleKit.drawGTextSerif(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else if(brush == "TextSans") {
-            RocketPaintStyleKit.drawGTextSans(iconColor:iconColor, lineWidth: lineWidth);
+            let minLineWidth : CGFloat = 5.0
+            let maxLineWidth : CGFloat = 20.0
+            let adjustedLineWidth = minLineWidth + (lineWidth / 40.0) * (maxLineWidth - minLineWidth);
+            RocketPaintStyleKit.drawGTextSans(iconColor:iconColor, lineWidth: adjustedLineWidth);
         } else {
             RocketPaintStyleKit.drawPalette(iconColor:iconColor);
         }

@@ -25,21 +25,93 @@
                                     <constraint firstAttribute="width" secondItem="GZA-4K-OVX" secondAttribute="height" multiplier="3:4" id="IgS-qb-N87"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket Paint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-7H-ABX">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="SjF-Xe-bm9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="84"/>
+                                <color key="textColor" red="1" green="0.88627450980392153" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SjF-Xe-bm9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="SjF-Xe-bm9"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="built for Needham Public Schools" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-wF-s5J">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="L3y-oA-Us3"/>
+                                    <constraint firstAttribute="height" constant="57" id="agH-MH-pBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <color key="textColor" red="1" green="0.8862745098" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="L3y-oA-Us3"/>
+                                        <exclude reference="agH-MH-pBW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="L3y-oA-Us3"/>
+                                        <include reference="agH-MH-pBW"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.023529411764705882" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GZA-4K-OVX" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="1Y5-0S-QNL"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="OA0-wF-s5J" secondAttribute="bottom" constant="43" id="3cM-gI-2NR"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GZA-4K-OVX" secondAttribute="bottom" id="HtH-JK-3WS"/>
                             <constraint firstItem="GZA-4K-OVX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="MuR-Ty-IlH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wCf-7H-ABX" secondAttribute="trailing" constant="-20" id="NbU-dX-pPN"/>
+                            <constraint firstItem="OA0-wF-s5J" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="33" id="UpE-32-7W5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GZA-4K-OVX" secondAttribute="trailing" constant="-20" id="cN7-Ck-cLv"/>
+                            <constraint firstItem="wCf-7H-ABX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="117" id="xwK-7t-ZdS"/>
+                            <constraint firstItem="wCf-7H-ABX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="ymD-ip-p3Q"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wCf-7H-ABX"/>
+                                <exclude reference="OA0-wF-s5J"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NbU-dX-pPN"/>
+                                <exclude reference="xwK-7t-ZdS"/>
+                                <exclude reference="ymD-ip-p3Q"/>
+                                <exclude reference="UpE-32-7W5"/>
+                                <exclude reference="3cM-gI-2NR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="wCf-7H-ABX"/>
+                                <include reference="OA0-wF-s5J"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NbU-dX-pPN"/>
+                                <include reference="xwK-7t-ZdS"/>
+                                <include reference="ymD-ip-p3Q"/>
+                                <include reference="UpE-32-7W5"/>
+                                <include reference="3cM-gI-2NR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
     <resources>
