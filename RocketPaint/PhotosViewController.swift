@@ -50,6 +50,7 @@ class PhotosViewController: UICollectionViewController
     func photoSaved(notification:NSNotification) {
         
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 500 * Int64(NSEC_PER_MSEC))
+        let time2 = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1000 * Int64(NSEC_PER_MSEC))
         
         dispatch_after(time, dispatch_get_main_queue()) {
             let fetchOptions = PHFetchOptions()
@@ -57,6 +58,14 @@ class PhotosViewController: UICollectionViewController
             self.images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
             self.collectionView?.reloadData()
         }
+
+        dispatch_after(time2, dispatch_get_main_queue()) {
+            let fetchOptions = PHFetchOptions()
+            fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+            self.images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+            self.collectionView?.reloadData()
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -71,28 +80,30 @@ class PhotosViewController: UICollectionViewController
         //   leftside: close self
         //   root: bring up cropper (unless its a perfect fit already?)
                 
-        if(indexPath.item == 0) {
-            print("PhotosVC.didSelect(\(indexPath.item)): Saving current canvas to camera roll")
-            // compose the image against the canvas color
-            let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
-            
-            CameraRollService.SharedInstance.WriteImage(composedImage)
-            
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kPhotoSaved,
-                object: nil)
-
-            return
-            
-        } else {
-        
+//        if(indexPath.item == 0) {
+//            if(DrawingService.SharedInstance.isModified) { // don't write if there's no image
+//                print("PhotosVC.didSelect(\(indexPath.item)): Saving current canvas to camera roll")
+//                // compose the image against the canvas color
+//                let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
+//                
+//                CameraRollService.SharedInstance.WriteImage(composedImage)
+//                
+//                NSNotificationCenter.defaultCenter().postNotificationName(
+//                    Notifications.kPhotoSaved,
+//                    object: nil)
+//            }
+//            return
+//            
+//        } else {
+//        
             NSNotificationCenter.defaultCenter().postNotificationName(
                 Notifications.kPhotoLoaded,
                 object: nil,
-                userInfo: ["phAsset": images.objectAtIndex(indexPath.item-1) as! PHAsset])
+//                userInfo: ["phAsset": images.objectAtIndex(indexPath.item-1) as! PHAsset])
+                userInfo: ["phAsset": images.objectAtIndex(indexPath.item) as! PHAsset])
 
             collectionView.setContentOffset(CGPointZero, animated: true)
-        }
+//        }
     }
     
     /*
@@ -113,31 +124,32 @@ class PhotosViewController: UICollectionViewController
     }
     
     override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
-        return images.count + 1
+        return images.count // + 1
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if(indexPath.item == 0) {
-            // special case for [+] row
-            // overlay current canvas image with a +
-
-            let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("SaveNewCell", forIndexPath: indexPath) as! PhotoCell
-            
-            cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-            if(DrawingService.SharedInstance.isModified) {
-                cell.ImageView?.image = DrawingService.SharedInstance.getImageOnCanvasColor()
-            }
-            
-            return cell
-        } else {
-            
+//        if(indexPath.item == 0) {
+//            // special case for [+] row
+//            // overlay current canvas image with a +
+//
+//            let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("SaveNewCell", forIndexPath: indexPath) as! PhotoCell
+//            
+//            cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+//            if(DrawingService.SharedInstance.isModified) {
+//                cell.ImageView?.image = DrawingService.SharedInstance.getImageOnCanvasColor()
+//            }
+//            
+//            return cell
+//        } else {
+        
         
             let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
             
-            let asset = images.objectAtIndex(indexPath.item-1) as! PHAsset
+            //let asset = images.objectAtIndex(indexPath.item-1) as! PHAsset
+            let asset = images.objectAtIndex(indexPath.item) as! PHAsset
 
-            
+        
             let options = PHImageRequestOptions()
             options.networkAccessAllowed = true
             options.synchronous = false
@@ -148,7 +160,7 @@ class PhotosViewController: UICollectionViewController
             })
             
             return cell
-        }
+//        }
         
     }
     

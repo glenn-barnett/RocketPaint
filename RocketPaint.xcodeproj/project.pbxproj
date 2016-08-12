@@ -322,6 +322,7 @@
 				TargetAttributes = {
 					2A9FA2B21CC2BC28000FF2A4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3L6DL6862T;
 					};
 				};
 			};
@@ -584,6 +585,8 @@
 			baseConfigurationReference = 0885FB120941F280FAC85FDA /* Pods-RocketPaint.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
@@ -604,6 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -614,6 +618,8 @@
 			baseConfigurationReference = 177831622EF3A73515FFA14F /* Pods-RocketPaint.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
@@ -634,6 +640,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 			};
 			name = Release;

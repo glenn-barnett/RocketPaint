@@ -11,8 +11,6 @@ import UIKit
 
 class RightSideViewController: UIViewController {
     
-    @IBOutlet var CheckerOverlayView: UIView!
-    
     @IBOutlet var ColorPaletteView : UIView!
 
     @IBOutlet weak var sliderLineWidth: LineWidthSliderView!
@@ -22,9 +20,6 @@ class RightSideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = ColorService.SharedInstance.canvasColor
-//        self.CheckerOverlayView.backgroundColor = UIColor(patternImage: UIImage(named: "checker-20px-darkalpha.png")!)
-        self.CheckerOverlayView.alpha = 1.0
 
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -44,13 +39,6 @@ class RightSideViewController: UIViewController {
             name: Notifications.kColorChanged,
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(RightSideViewController.canvasCleared(_:)),
-            name: Notifications.kCanvasCleared,
-            object: nil)
-
-
     }
 
     
@@ -87,24 +75,6 @@ class RightSideViewController: UIViewController {
         var alpha: CGFloat = 0
         selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
 
-    }
-
-    
-    func canvasCleared(notification:NSNotification){
-        let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
-
-        var hue: CGFloat = 0
-        var saturation: CGFloat = 0
-        var brightness: CGFloat = 0
-        var alpha: CGFloat = 0
-        canvasColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-
-        if(brightness > 0.1) {
-            self.view.backgroundColor = canvasColor
-        }
-        else {
-            self.view.backgroundColor = UIColor(hue:hue, saturation:saturation, brightness:0.1, alpha:1)
-        }
     }
 
     

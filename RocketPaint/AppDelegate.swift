@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let timerService = TimerService.SharedInstance
 
+    
+    static func promptPhotoLibraryPermission(vc: UIViewController) {
+        
+        
+        let mustEnableController = UIAlertController(title: "Rocket Paint needs to access Photos", message: "To save and load, you must enable photos access.", preferredStyle: .Alert)
+        
+        let dontAskAction = UIAlertAction(title: "Don't Ask Again", style: .Destructive) { (action) in
+            // ...
+        }
+        mustEnableController.addAction(dontAskAction)
+        
+        let cancelAction = UIAlertAction(title: "No Thanks", style: .Cancel) { (action) in
+            // ...
+        }
+        mustEnableController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "Enable", style: .Default) { (action) in
+            print("Appdel: enable")
+            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        }
+        mustEnableController.addAction(OKAction)
+        
+        
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .Authorized:
+            break;
+        //handle authorized status
+        case .Denied, .Restricted :
+            //  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            vc.presentViewController(mustEnableController, animated: true) { }
+            break;
+        case .NotDetermined:
+            // ask for permissions
+            PHPhotoLibrary.requestAuthorization() { (status) -> Void in
+                switch status {
+                case .Authorized:
+                    break;
+                // as above
+                case .Denied, .Restricted:
+                    vc.presentViewController(mustEnableController, animated: true) { }
+                    break;
+                // as above
+                case .NotDetermined:
+                    // won't happen but still
+                    break;
+                }
+            }
+        }
+    }
+    
+
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         application.statusBarHidden = true

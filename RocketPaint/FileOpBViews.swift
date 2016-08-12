@@ -15,6 +15,12 @@ class LoadBView: BView {
     }
 }
 
+class SaveBView: BView {
+    override func drawRect(rect: CGRect) {
+        RocketPaintStyleKit.drawSaveToPhotos();
+    }
+}
+
 class ClearBView: BView {
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawClearWhite();

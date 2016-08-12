@@ -18,37 +18,12 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ColorService.SharedInstance.canvasColor
 
         imagePicker.delegate = self // GB REMOVE
         // Do any additional setup after loading the view.
-
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(LeftSideViewController.canvasCleared(_:)),
-            name: Notifications.kCanvasCleared,
-            object: nil)
-
         
     }
     
-    //copypasta from rightside
-    func canvasCleared(notification:NSNotification){
-        let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
-        
-        var hue: CGFloat = 0
-        var saturation: CGFloat = 0
-        var brightness: CGFloat = 0
-        var alpha: CGFloat = 0
-        canvasColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-        
-        if(brightness > 0.1) {
-            self.view.backgroundColor = canvasColor
-        }
-        else {
-            self.view.backgroundColor = UIColor(hue:hue, saturation:saturation, brightness:0.1, alpha:1)
-        }
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

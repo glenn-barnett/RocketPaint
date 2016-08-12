@@ -15,11 +15,16 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
 
     var rightSideViewController : RightSideViewController?;
     
+        override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+     
+    }
 
     override func viewDidLoad() {
         print("RVC.viewDidLoad()")
         super.viewDidLoad()
         
+
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(RootViewController.hideSideMenus(_:)),
@@ -108,6 +113,10 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     }
 
     func showLeftMenu() {
+        AppDelegate.promptPhotoLibraryPermission(self)
+        
+
+        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kPhotosMenuOpened,
             object: nil)
