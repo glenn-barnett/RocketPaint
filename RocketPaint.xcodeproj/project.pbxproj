@@ -54,6 +54,7 @@
 		2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */; };
 		2A9FA2BE1CC2BC28000FF2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */; };
 		2A9FA2C11CC2BC28000FF2A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BF1CC2BC28000FF2A4 /* LaunchScreen.storyboard */; };
+		2AD4716C1D5FA34C0034DD73 /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4716B1D5FA34C0034DD73 /* Icon-167.png */; };
 		2AD627101D427E8300C4F792 /* rocket-startup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD6270F1D427E8300C4F792 /* rocket-startup.png */; };
 		2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */; };
 		2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */; };
@@ -124,6 +125,7 @@
 		2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9FA2C01CC2BC28000FF2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A9FA2C21CC2BC28000FF2A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD4716B1D5FA34C0034DD73 /* Icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-167.png"; sourceTree = "<group>"; };
 		2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketPaint-Bridging-Header.h"; sourceTree = "<group>"; };
 		2AD6270F1D427E8300C4F792 /* rocket-startup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket-startup.png"; sourceTree = "<group>"; };
 		2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+UIColor.swift"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				2A0D65D71D3E59FC0057CB40 /* Icon-72@2x.png */,
 				2A0D65D81D3E59FC0057CB40 /* Icon-76.png */,
 				2A0D65D91D3E59FC0057CB40 /* Icon-76@2x.png */,
+				2AD4716B1D5FA34C0034DD73 /* Icon-167.png */,
 				2A0D65DA1D3E59FC0057CB40 /* Icon-Small-40.png */,
 				2A0D65DB1D3E59FC0057CB40 /* Icon-Small-40@2x.png */,
 				2A0D65DC1D3E59FC0057CB40 /* Icon-Small-40@3x.png */,
@@ -374,6 +377,7 @@
 				2AE65D871D4FF14D001559AA /* checker-20px-gray.png in Resources */,
 				2A0D65F01D3E59FC0057CB40 /* Icon-Small-50@2x.png in Resources */,
 				2A0D65EB1D3E59FC0057CB40 /* Icon-76@2x.png in Resources */,
+				2AD4716C1D5FA34C0034DD73 /* Icon-167.png in Resources */,
 				2A0D65EA1D3E59FC0057CB40 /* Icon-76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +539,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "17426e4b-bd7c-438b-9370-b91a57ef5188";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -574,6 +579,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "17426e4b-bd7c-438b-9370-b91a57ef5188";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -605,7 +611,7 @@
 					"\"TOCropViewController\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.rocketpaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
@@ -638,9 +644,9 @@
 					"\"TOCropViewController\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.RocketPaint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.rocketpaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "17426e4b-bd7c-438b-9370-b91a57ef5188";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 			};
 			name = Release;

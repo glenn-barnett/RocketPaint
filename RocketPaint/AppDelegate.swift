@@ -14,37 +14,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let timerService = TimerService.SharedInstance
-
     
     static func promptPhotoLibraryPermission(vc: UIViewController) {
+
+        let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        
+        if NSUserDefaults.standardUserDefaults().boolForKey("never_ask_photo_permissions") {
+            return;
+        }
+
         let mustEnableController = UIAlertController(title: "Rocket Paint needs to access Photos", message: "To save and load, you must enable photos access.", preferredStyle: .Alert)
         
-        let dontAskAction = UIAlertAction(title: "Don't Ask Again", style: .Destructive) { (action) in
-            // ...
-        }
-        mustEnableController.addAction(dontAskAction)
-        
-        let cancelAction = UIAlertAction(title: "No Thanks", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Not right now", style: .Cancel) { (action) in
             // ...
         }
         mustEnableController.addAction(cancelAction)
         
-        let OKAction = UIAlertAction(title: "Enable", style: .Default) { (action) in
+        let OKAction = UIAlertAction(title: "OK, show me where to enable it", style: .Default) { (action) in
             print("Appdel: enable")
-            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+                UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+            }
         }
         mustEnableController.addAction(OKAction)
+        
+        let dontAskAction = UIAlertAction(title: "Don't ask again", style: .Destructive) { (action) in
+            // ...
+            // write something to settings that aborts us out.  check it at top
+            userDefaults.setBool(true, forKey: "never_ask_photo_permissions")
+            userDefaults.synchronize()
+        }
+        mustEnableController.addAction(dontAskAction)
         
         
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
         case .Authorized:
             break;
-        //handle authorized status
         case .Denied, .Restricted :
-            //  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
             vc.presentViewController(mustEnableController, animated: true) { }
             break;
         case .NotDetermined:
