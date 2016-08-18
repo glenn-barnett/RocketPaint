@@ -14,14 +14,14 @@ public class TimerService {
     var backupTimer : NSTimer?
 
     init() {
-        backupTimer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: #selector(TimerService.update), userInfo: nil, repeats: true)
-        
+        backupTimer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: #selector(TimerService.backupState), userInfo: nil, repeats: true)
         
     }
     
     // must be internal or public.
-    @objc func update() {
-        print("TimerService.update(): persisting state")
+    @objc func backupState() {
+//        print("TimerService.backupState(): persisting state")
         DrawingService.SharedInstance.persistState()
     }
+
 }

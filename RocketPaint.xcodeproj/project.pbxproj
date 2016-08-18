@@ -47,7 +47,6 @@
 		2A4B4DE91D2C556100ECBD0C /* DynamicBrushBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */; };
 		2A4B4DEB1D2E7B1300ECBD0C /* RightSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */; };
 		2A4B4DEF1D2EFAC300ECBD0C /* BrushBViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */; };
-		2A4B4DF11D2EFBB900ECBD0C /* BrushPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DF01D2EFBB900ECBD0C /* BrushPickerViewController.swift */; };
 		2A79ACE31D3ED9D4007C6996 /* BrushWireBViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */; };
 		2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */; };
 		2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */; };
@@ -69,7 +68,6 @@
 		2AEA13091D4A398300A857BE /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13081D4A398300A857BE /* SliderView.m */; };
 		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
 		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
-		2AEA13111D4F914600A857BE /* TiledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13101D4F914600A857BE /* TiledImageView.swift */; };
 		A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4252553278451327ABC0244 /* Pods_RocketPaint.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +114,6 @@
 		2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBrushBView.swift; sourceTree = "<group>"; };
 		2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideViewController.swift; sourceTree = "<group>"; };
 		2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushBViews.swift; sourceTree = "<group>"; };
-		2A4B4DF01D2EFBB900ECBD0C /* BrushPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushPickerViewController.swift; sourceTree = "<group>"; };
 		2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushWireBViews.swift; sourceTree = "<group>"; };
 		2A9FA2B31CC2BC28000FF2A4 /* RocketPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +139,6 @@
 		2AEA13081D4A398300A857BE /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
 		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
-		2AEA13101D4F914600A857BE /* TiledImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledImageView.swift; sourceTree = "<group>"; };
 		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -248,7 +244,6 @@
 				2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */,
 				2A3AFCB11D36E21300131761 /* PhotosViewController.swift */,
 				2A0D65CE1D3CFF050057CB40 /* BlankCanvasesViewController.swift */,
-				2A4B4DF01D2EFBB900ECBD0C /* BrushPickerViewController.swift */,
 				2A9FA2C21CC2BC28000FF2A4 /* Info.plist */,
 				2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */,
 				2A1582871CCF19D80030BB45 /* ColorCell.swift */,
@@ -264,7 +259,6 @@
 				2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */,
 				2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */,
 				2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */,
-				2AEA13101D4F914600A857BE /* TiledImageView.swift */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -450,7 +444,6 @@
 				2A3AFCB21D36E21300131761 /* PhotosViewController.swift in Sources */,
 				2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */,
 				2A4B4DEB1D2E7B1300ECBD0C /* RightSideViewController.swift in Sources */,
-				2A4B4DF11D2EFBB900ECBD0C /* BrushPickerViewController.swift in Sources */,
 				2A4B4DE01D2BDB6C00ECBD0C /* RedoBView.swift in Sources */,
 				2A43D40B1D2695520066FAD0 /* RootViewController.swift in Sources */,
 				2A0D65CF1D3CFF050057CB40 /* BlankCanvasesViewController.swift in Sources */,
@@ -459,7 +452,6 @@
 				2A43D4151D28C37C0066FAD0 /* FileOpBViews.swift in Sources */,
 				2A4B4DE91D2C556100ECBD0C /* DynamicBrushBView.swift in Sources */,
 				2A79ACE31D3ED9D4007C6996 /* BrushWireBViews.swift in Sources */,
-				2AEA13111D4F914600A857BE /* TiledImageView.swift in Sources */,
 				2A4B4DEF1D2EFAC300ECBD0C /* BrushBViews.swift in Sources */,
 				2A0D65D11D3D8D7B0057CB40 /* ColorService.swift in Sources */,
 				2A3AFCB41D36E36E00131761 /* PhotoCell.swift in Sources */,

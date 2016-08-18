@@ -19,7 +19,6 @@ extension NSUserDefaults {
     func setImage(image: UIImage?, forKey key: String) {
         var imageData: NSData?
         if let image = image {
-            print("NSUD.setImage() w:\(image.size.width), h:\(image.size.height)")
             imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
         }
         setObject(imageData, forKey: key)

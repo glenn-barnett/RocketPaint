@@ -85,7 +85,6 @@ class ColorPaletteViewController: UICollectionViewController
     }
     
     func colorChanged(notification:NSNotification){
-        print("Palette.colorChanged() BEGIN")
         colorService.selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
@@ -96,19 +95,11 @@ class ColorPaletteViewController: UICollectionViewController
     }
     
     func colorUsed(notification:NSNotification){
-        print("Palette.colorUsed()")
-        
-//        // don't add dupes of favorites (sessions), nor statics
-//        if(!colorService.sessionColorArray.contains(colorService.selectedColor) && !colorService.staticColorArray.contains(colorService.selectedColor)) {
-//            colorService.sessionColorArray.append(colorService.selectedColor)
-//        }
-        
         // refresh table
         self.collectionView!.reloadData()
     }
     
     func colorPaletteClosed(notification:NSNotification){
-        print("Palette.colorPaletteClosed()")
         collectionView!.setContentOffset(CGPointZero, animated: true)
     }
     

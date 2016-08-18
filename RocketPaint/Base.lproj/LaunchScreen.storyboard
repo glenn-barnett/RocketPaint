@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,12 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket-startup.png" translatesAutoresizingMaskIntoConstraints="NO" id="GZA-4K-OVX">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GZA-4K-OVX" secondAttribute="height" multiplier="3:4" id="IgS-qb-N87"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket Paint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-7H-ABX">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -66,6 +61,12 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket-startup.png" translatesAutoresizingMaskIntoConstraints="NO" id="GZA-4K-OVX">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GZA-4K-OVX" secondAttribute="height" multiplier="3:4" id="IgS-qb-N87"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.023529411764705882" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -85,11 +86,11 @@
                                 <exclude reference="OA0-wF-s5J"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3cM-gI-2NR"/>
+                                <exclude reference="UpE-32-7W5"/>
                                 <exclude reference="NbU-dX-pPN"/>
                                 <exclude reference="xwK-7t-ZdS"/>
                                 <exclude reference="ymD-ip-p3Q"/>
-                                <exclude reference="UpE-32-7W5"/>
-                                <exclude reference="3cM-gI-2NR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -98,11 +99,11 @@
                                 <include reference="OA0-wF-s5J"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3cM-gI-2NR"/>
+                                <include reference="UpE-32-7W5"/>
                                 <include reference="NbU-dX-pPN"/>
                                 <include reference="xwK-7t-ZdS"/>
                                 <include reference="ymD-ip-p3Q"/>
-                                <include reference="UpE-32-7W5"/>
-                                <include reference="3cM-gI-2NR"/>
                             </mask>
                         </variation>
                     </view>

@@ -33,15 +33,17 @@ public class DrawingService {
             selector: #selector(DrawingService.photoSaved(_:)),
             name: Notifications.kPhotoSaved,
             object: nil)
-
     }
+
     @objc func photoSaved(notification:NSNotification){
         isModified = false
+        drawingViews[0].commitAndDiscardToolStack()
     }
     @objc func brushChanged(notification:NSNotification){
         lastBrushName = notification.userInfo!["brush"] as? String
+        drawingViews[0].commitAndDiscardToolStack()
     }
-   
+
     func addDrawingView(drawingView : RocketDrawingView) {
         drawingViews.append(drawingView)
     }

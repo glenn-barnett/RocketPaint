@@ -21,10 +21,8 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     }
 
     override func viewDidLoad() {
-        print("RVC.viewDidLoad()")
         super.viewDidLoad()
         
-
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(RootViewController.hideSideMenus(_:)),
@@ -88,7 +86,6 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     }
 
     override func awakeFromNib() {
-        print("RVC.awakeFromNib()")
         
         self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
         self.contentViewShadowColor = UIColor.blackColor();
@@ -115,19 +112,11 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     func showLeftMenu() {
         AppDelegate.promptPhotoLibraryPermission(self)
         
-
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kPhotosMenuOpened,
             object: nil)
         self.presentLeftMenuViewController();
     }
 
-    // MARK: RESide Delegate Methods
-    
-//    func sideMenu(sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
-//        print("This will show the menu")
-//    }
-    
 
 }

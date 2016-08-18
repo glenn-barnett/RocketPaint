@@ -79,64 +79,48 @@ class RightSideViewController: UIViewController {
 
     
     @IBAction func pickedPen(sender : AnyObject) {
-        print("BrushPicker: pickedPen()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "Pen"])
     }
     @IBAction func pickedLine(sender : AnyObject) {
-        print("BrushPicker: pickedLine()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "Line"])
     }
     @IBAction func pickedRectSolid(sender : AnyObject) {
-        print("BrushPicker: pickedRectSolid()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "RectSolid"])
     }
     @IBAction func pickedRectOutline(sender : AnyObject) {
-        print("BrushPicker: pickedRectOutline()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "RectOutline"])
     }
     @IBAction func pickedEllipseSolid(sender : AnyObject) {
-        print("BrushPicker: pickedEllipseSolid()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "EllipseSolid"])
     }
     @IBAction func pickedEllipseOutline(sender : AnyObject) {
-        print("BrushPicker: pickedEllipseOutline()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "EllipseOutline"])
     }
     @IBAction func pickedTextSerif(sender : AnyObject) {
-        print("BrushPicker: pickedTextSerif()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,
             userInfo: ["brush": "TextSerif"])
     }
     @IBAction func pickedTextSans(sender : AnyObject) {
-        print("BrushPicker: pickedTextSans()");
-        
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kBrushChanged,
             object: nil,

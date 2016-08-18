@@ -27,8 +27,6 @@ class BlankCanvasesViewController: UICollectionViewController
         // blow away the canvas
         // make sure undo works!
 
-        print("BlankCanvasesVC.didSelect(\(indexPath.item))")
-
         // do stuff on selection
         let cell : UICollectionViewCell = self.collectionView!.cellForItemAtIndexPath(indexPath)!
         

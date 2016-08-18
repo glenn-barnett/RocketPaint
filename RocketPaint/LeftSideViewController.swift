@@ -30,8 +30,6 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func savePictureTapped(sender : AnyObject) {
-        print("Left.savePictureTapped()");
-        
         // compose the image against the canvas color
         let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
         
@@ -44,8 +42,6 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func loadPictureTapped(sender : AnyObject) {
-        print("Left.loadPictureTapped()");
-        
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
@@ -53,7 +49,6 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func clearTapped(sender : AnyObject) {
-        print("Left.clearTapped()");
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kCanvasCleared,
             object: nil,
@@ -63,7 +58,6 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func clearColorTapped(sender : AnyObject) {
-        print("Left.clearColorTapped()");
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kCanvasCleared,
             object: nil,
@@ -94,7 +88,6 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
             })
             
         } else {
-            print("LeftSide.imagePicker(): GOT NO IMAGE")
             dismissViewControllerAnimated(true, completion: nil)
         }
         

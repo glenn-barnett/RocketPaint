@@ -22,7 +22,9 @@ import RESideMenu
 
 
 class PaintingViewController: UIViewController,
-    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate,
+    ACEDrawingViewDelegate {
 
     @IBOutlet var DrawingView : RocketDrawingView!
     
@@ -43,17 +45,19 @@ class PaintingViewController: UIViewController,
     var undoClearBackgroundColor : UIColor?
     var requestedLineWidth : CGFloat = 4.0
     
+    func updateUndoRedo(forceHide: Bool = false) {
+        UndoBView?.hidden = !DrawingView.canUndo() || forceHide
+        RedoBView?.hidden = !DrawingView.canRedo() || forceHide
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
         
-//        #import <DynamicXray/DynamicXray.h>
-//        ...
-//        DynamicXray *xray = [[DynamicXray alloc] init];
-//        [self.dynamicAnimator addBehavior:xray];
-        
+        DrawingView.delegate = self
+
+        updateUndoRedo()
         
         rotatingButtonArray.append(HamburgerBView!);
         rotatingButtonArray.append(UndoBView!);
@@ -99,7 +103,6 @@ class PaintingViewController: UIViewController,
     override func viewDidLayoutSubviews() {
         // on first load, load last image
         if(initialLoad) {
-            print("PaintingVC: viewDidLayoutSubviews(): restoring state")
             DrawingService.SharedInstance.restoreState()
             DrawingService.SharedInstance.initNotifications()
         }
@@ -199,13 +202,15 @@ class PaintingViewController: UIViewController,
 //        }
     }
     
+    func drawingView(view: ACEDrawingView!, didEndDrawUsingTool tool: ACEDrawingTool!) {
+        updateUndoRedo()
+    }
+    
     @IBAction func undoTapped(sender : AnyObject) {
-        print("PVC.undoTapped()");
         
         if(DrawingView.canUndo()) {
             DrawingView.undoLatestStep()
         } else {
-            print("PVC.undoTapped(): nothing to undo!");
             if(undoClearBackgroundColor != nil) {
                 DrawingView.backgroundColor = undoClearBackgroundColor
                 undoClearBackgroundColor = nil
@@ -215,32 +220,26 @@ class PaintingViewController: UIViewController,
                 undoClearImage = nil
             }
         }
+        updateUndoRedo()
     }
 
     @IBAction func redoTapped(sender : AnyObject) {
-        print("PVC.redoTapped()");
         
         if(DrawingView.canRedo()) {
             DrawingView.redoLatestStep()
         }
+        updateUndoRedo()
     }
 
     @IBAction func hamburgerTapped(sender : AnyObject) {
-        print("PVC.hamburgerTapped()");
-        
-        // rootvc.showside?
-        
         
         let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
         
         rootViewController!.showLeftMenu();
         
-        
-        
     }
 
     @IBAction func brushButtonTapped(sender : AnyObject) {
-        print("PVC.brushButtonTapped()")
         
         let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
         rootViewController?.showRightBrushes();
@@ -256,7 +255,7 @@ class PaintingViewController: UIViewController,
         var alpha: CGFloat = 0
         selectedColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
         
-        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v,\(alpha)a")
+//        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v,\(alpha)a")
         
         DrawingView.lineColor = selectedColor.colorWithAlphaComponent(1.0)
         
@@ -297,6 +296,9 @@ class PaintingViewController: UIViewController,
             DrawingView.drawTool = ACEDrawingToolTypeMultilineText
         }
         enforceMinimumTextSize()
+        
+        updateUndoRedo(true)
+        
     }
     
     func lineWidthChanged(notification:NSNotification){
@@ -304,7 +306,6 @@ class PaintingViewController: UIViewController,
         requestedLineWidth = CGFloat(lineWidth)
         DrawingView.lineWidth = requestedLineWidth
         enforceMinimumTextSize()
-        print("PVC.lineWidthChanged(\(lineWidth))")
     }
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
