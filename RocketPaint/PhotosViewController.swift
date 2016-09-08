@@ -37,7 +37,7 @@ class PhotosViewController: UICollectionViewController
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: #selector(PhotosViewController.photosMenuOpened(_:)),
-            name: Notifications.kPhotosMenuOpened,
+            name: Notifications.kLeftMenuOpened,
             object: nil)
 
     }

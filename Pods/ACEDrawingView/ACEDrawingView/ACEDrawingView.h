@@ -30,6 +30,7 @@
 typedef enum {
     ACEDrawingToolTypePen,
     ACEDrawingToolTypeLine,
+    ACEDrawingToolTypeArrow,
     ACEDrawingToolTypeRectagleStroke,
     ACEDrawingToolTypeRectagleFill,
     ACEDrawingToolTypeEllipseStroke,
@@ -88,7 +89,7 @@ typedef NS_ENUM(NSUInteger, ACEDrawingMode) {
 
 @end
 
-#pragma mark - 
+#pragma mark -
 
 @interface ACEDrawingView (Deprecated)
 @property (nonatomic, strong) UIImage *prev_image DEPRECATED_MSG_ATTRIBUTE("Use 'backgroundImage' instead.");

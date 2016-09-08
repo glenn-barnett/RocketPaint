@@ -41,13 +41,16 @@ class PaintingViewController: UIViewController,
     var lastColor = UIColor.blackColor()
     
     let imagePicker = UIImagePickerController()
-    var undoClearImage : UIImage? // saved just before we clear as special undo step
-    var undoClearBackgroundColor : UIColor?
     var requestedLineWidth : CGFloat = 4.0
     
     func updateUndoRedo(forceHide: Bool = false) {
-        UndoBView?.hidden = !DrawingView.canUndo() || forceHide
-        RedoBView?.hidden = !DrawingView.canRedo() || forceHide
+//        let disableUndo = (!DrawingView.canUndo() || forceHide)
+//        
+        UndoBView?.disabled = (!DrawingView.canUndo() || forceHide)
+        UndoBView?.alpha = (!DrawingView.canUndo() || forceHide) ? 0.2 : 1.0
+        
+        RedoBView?.disabled = (!DrawingView.canRedo() || forceHide)
+        RedoBView?.alpha = (!DrawingView.canRedo() || forceHide) ? 0.2 : 1.0
     }
     
     override func viewDidLoad() {
@@ -154,6 +157,12 @@ class PaintingViewController: UIViewController,
             name: Notifications.kCanvasCleared,
             object: nil)
 
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(PaintingViewController.photoLoaded(_:)),
+            name: Notifications.kPhotoLoaded,
+            object: nil)
+
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -210,15 +219,6 @@ class PaintingViewController: UIViewController,
         
         if(DrawingView.canUndo()) {
             DrawingView.undoLatestStep()
-        } else {
-            if(undoClearBackgroundColor != nil) {
-                DrawingView.backgroundColor = undoClearBackgroundColor
-                undoClearBackgroundColor = nil
-            }
-            if(undoClearImage != nil) {
-                DrawingView.loadImage(undoClearImage)
-                undoClearImage = nil
-            }
         }
         updateUndoRedo()
     }
@@ -307,22 +307,27 @@ class PaintingViewController: UIViewController,
         DrawingView.lineWidth = requestedLineWidth
         enforceMinimumTextSize()
     }
+    
     func lineAlphaChanged(notification:NSNotification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         DrawingView.lineAlpha = CGFloat(lineAlpha)
     }
+    
     func canvasCleared(notification:NSNotification){
         let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
-        
-        // save these just in case
-        undoClearImage = DrawingView.image
-        undoClearBackgroundColor = DrawingView.backgroundColor
         
         colorService.canvasColor = canvasColor
         
         DrawingView.backgroundColor = colorService.canvasColor
-        DrawingView.clear()        
+        DrawingView.clear()
+
+        updateUndoRedo()
     }
+    
+    func photoLoaded(notification:NSNotification) {
+        updateUndoRedo()
+    }
+    
 
     let kTextMinLineWidth : CGFloat = 4.0
     

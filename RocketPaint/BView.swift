@@ -12,15 +12,17 @@ import UIKit
 @IBDesignable 
 class BView : UIView {
 
+    var disabled = false;
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.alpha = 0.4;
     }
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {}
     override func touchesCancelled(touches: Set<UITouch>!, withEvent event: UIEvent!) {
-        self.alpha = 1.0;
+        self.alpha = self.disabled ? 0.2 : 1.0;
     }
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.alpha = 1.0;
+        self.alpha = self.disabled ? 0.2 : 1.0;
     }
 
     override init(frame: CGRect) {

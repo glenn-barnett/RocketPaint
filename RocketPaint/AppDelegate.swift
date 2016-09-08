@@ -15,6 +15,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let timerService = TimerService.SharedInstance
     
+    
+    //TODO move these out, and use the natural way of passing functions
+    static func promptOverwriteWithPhoto(vc: UIViewController) {
+        
+        let alertTitle = "Load a photo?"
+        
+        let alertMessage = "Selecting a photo to load will overwrite your work"
+        
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let destructiveAction = UIAlertAction(title: "Overwrite", style: .Destructive) { (action) in
+            // ...
+        }
+        alertController.addAction(destructiveAction)
+        
+        vc.presentViewController(alertController, animated: true) { }
+        // post notif - CONFIRM_OVERWRITE
+    }
+    
+    static func promptClearCanvas(vc: UIViewController) {
+        
+        let alertTitle = "Clear your canvas?"
+        
+        let alertMessage = "To erase your work, choose \"Erase\".\nTo keep your work, choose \"Cancel\""
+        
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let destructiveAction = UIAlertAction(title: "Erase", style: .Destructive) { (action) in
+            // ...
+        }
+        alertController.addAction(destructiveAction)
+        
+        vc.presentViewController(alertController, animated: true) { }
+        // post notif - CONFIRM_OVERWRITE
+    }
+    
     static func promptPhotoLibraryPermission(vc: UIViewController) {
 
         let userDefaults = NSUserDefaults.standardUserDefaults()

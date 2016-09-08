@@ -35,11 +35,11 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
             name: Notifications.kPhotoLoaded,
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: #selector(RootViewController.hideSideMenus(_:)),
-            name: Notifications.kCanvasCleared,
-            object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(
+//            self,
+//            selector: #selector(RootViewController.hideSideMenus(_:)),
+//            name: Notifications.kCanvasCleared,
+//            object: nil)
 
         self.parallaxEnabled = false
         self.contentViewShadowColor = UIColor.blackColor()
@@ -52,7 +52,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
         self.hideMenuViewController()
     }
     func photoLoaded(notification:NSNotification){
-        self.hideMenuViewController()
+//        self.hideMenuViewController()
         let asset = notification.userInfo!["phAsset"] as! PHAsset
 
         let options = PHImageRequestOptions()
@@ -102,19 +102,31 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
         rightSideViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("RightSideViewController"))! as? RightSideViewController;
         self.rightMenuViewController = rightSideViewController;
 
+        AppDelegate.promptPhotoLibraryPermission(self)
+        
+
         
     }
 
     func showRightBrushes() {
+//        self.contentViewInPortraitOffsetCenterX = 40.0
+
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kRightMenuOpened,
+            object: nil)
+
         self.presentRightMenuViewController();
     }
 
     func showLeftMenu() {
-        AppDelegate.promptPhotoLibraryPermission(self)
-        
+//        self.contentViewInPortraitOffsetCenterX = -300.0
+
+//        AppDelegate.promptPhotoLibraryPermission(self)
+
         NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kPhotosMenuOpened,
+            Notifications.kLeftMenuOpened,
             object: nil)
+        
         self.presentLeftMenuViewController();
     }
 

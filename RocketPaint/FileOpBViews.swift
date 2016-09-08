@@ -21,6 +21,14 @@ class SaveBView: BView {
     }
 }
 
+class ClearCanvasBView: BView {
+    var iconColor:UIColor = UIColor.whiteColor()
+
+    override func drawRect(rect: CGRect) {
+        RocketPaintStyleKit.drawClearCanvas(iconColor: iconColor);
+    }
+}
+
 class ClearBView: BView {
     override func drawRect(rect: CGRect) {
         RocketPaintStyleKit.drawClearWhite();

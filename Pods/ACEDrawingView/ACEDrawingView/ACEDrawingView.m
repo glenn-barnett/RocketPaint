@@ -82,7 +82,7 @@
     self.lineColor = kDefaultLineColor;
     self.lineWidth = kDefaultLineWidth;
     self.lineAlpha = kDefaultLineAlpha;
-
+    
     self.drawMode = ACEDrawingModeOriginalSize;
     
     // set the transparent background
@@ -205,16 +205,21 @@
             return ACE_AUTORELEASE([ACEDrawingLineTool new]);
         }
             
+        case ACEDrawingToolTypeArrow:
+        {
+            return ACE_AUTORELEASE([ACEDrawingArrowTool new]);
+        }
+            
         case ACEDrawingToolTypeText:
         {
             return ACE_AUTORELEASE([ACEDrawingTextTool new]);
         }
-
+            
         case ACEDrawingToolTypeMultilineText:
         {
             return ACE_AUTORELEASE([ACEDrawingMultilineTextTool new]);
         }
-
+            
         case ACEDrawingToolTypeRectagleStroke:
         {
             ACEDrawingRectangleTool *tool = ACE_AUTORELEASE([ACEDrawingRectangleTool new]);
@@ -277,15 +282,9 @@
     self.currentTool.lineAlpha = self.lineAlpha;
     
     if (self.edgeSnapThreshold > 0 && [self.currentTool isKindOfClass:[ACEDrawingRectangleTool class]]) {
-        int deviceMaxX = self.frame.size.width;
-        int deviceMaxY = self.frame.size.height;
-        
-        if(currentPoint.x < self.edgeSnapThreshold) currentPoint.x = 0;
-        if(currentPoint.x > deviceMaxX - self.edgeSnapThreshold) currentPoint.x = deviceMaxX;
-        if(currentPoint.y < self.edgeSnapThreshold) currentPoint.y = 0;
-        if(currentPoint.y > deviceMaxY - self.edgeSnapThreshold) currentPoint.y = deviceMaxY;
+        [self snapCurrentPointToEdges];
     }
-
+    
     if ([self.currentTool class] == [ACEDrawingTextTool class]) {
         [self initializeTextBox:currentPoint WithMultiline:NO];
     } else if([self.currentTool class] == [ACEDrawingMultilineTextTool class]) {
@@ -312,13 +311,7 @@
     currentPoint = [touch locationInView:self];
     
     if (self.edgeSnapThreshold > 0 && [self.currentTool isKindOfClass:[ACEDrawingRectangleTool class]]) {
-        int deviceMaxX = self.frame.size.width;
-        int deviceMaxY = self.frame.size.height;
-        
-        if(currentPoint.x < self.edgeSnapThreshold) currentPoint.x = 0;
-        if(currentPoint.x > deviceMaxX - self.edgeSnapThreshold) currentPoint.x = deviceMaxX;
-        if(currentPoint.y < self.edgeSnapThreshold) currentPoint.y = 0;
-        if(currentPoint.y > deviceMaxY - self.edgeSnapThreshold) currentPoint.y = deviceMaxY;
+        [self snapCurrentPointToEdges];
     }
     
     if ([self.currentTool isKindOfClass:[ACEDrawingPenTool class]]) {
@@ -359,6 +352,17 @@
 {
     // make sure a point is recorded
     [self touchesEnded:touches withEvent:event];
+}
+
+- (void) snapCurrentPointToEdges
+{
+    int xMax = self.frame.size.width;
+    int yMax = self.frame.size.height;
+    
+    if(currentPoint.x < self.edgeSnapThreshold) currentPoint.x = 0;
+    else if(currentPoint.x > xMax - self.edgeSnapThreshold) currentPoint.x = xMax;
+    if(currentPoint.y < self.edgeSnapThreshold) currentPoint.y = 0;
+    else if(currentPoint.y > yMax - self.edgeSnapThreshold) currentPoint.y = yMax;
 }
 
 #pragma mark - Text Entry
@@ -497,7 +501,7 @@
 - (void)keyboardDidShow:(NSNotification *)notification
 {
     self.originalFrameYPos = self.frame.origin.y;
-
+    
     if (IOS8_OR_ABOVE) {
         [self adjustFramePosition:notification];
     }
@@ -514,31 +518,31 @@
     CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:self];
     CGFloat textViewOriginY = textViewBottomPoint.y;
     CGFloat textViewBottomY = textViewOriginY + self.textView.frame.size.height;
-
+    
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-
+    
     CGFloat offset = (self.frame.size.height - keyboardSize.width) - textViewBottomY;
-
+    
     if (offset < 0) {
         CGFloat newYPos = self.frame.origin.y + offset;
         self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-
+        
     }
 }
 - (void)adjustFramePosition:(NSNotification *)notification {
     CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:nil];
     textViewBottomPoint.y += self.textView.frame.size.height;
-
+    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-
+    
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-
+    
     CGFloat offset = (screenRect.size.height - keyboardSize.height) - textViewBottomPoint.y;
-
+    
     if (offset < 0) {
         CGFloat newYPos = self.frame.origin.y + offset;
         self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-
+        
     }
 }
 

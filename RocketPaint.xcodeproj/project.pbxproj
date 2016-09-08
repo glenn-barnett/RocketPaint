@@ -68,6 +68,7 @@
 		2AEA13091D4A398300A857BE /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13081D4A398300A857BE /* SliderView.m */; };
 		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
 		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
+		2AFB1E721D74E005009DBB28 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */; };
 		A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4252553278451327ABC0244 /* Pods_RocketPaint.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,7 @@
 		2AEA13081D4A398300A857BE /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
 		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
+		2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
 		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,7 @@
 				2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */,
 				2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */,
 				2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */,
+				2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFB1E721D74E005009DBB28 /* UIImage+Rotate.swift in Sources */,
 				2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */,
 				2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */,
 				2AE65D8B1D50E6D3001559AA /* PaintcodeViews.swift in Sources */,

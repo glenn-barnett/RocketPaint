@@ -33,14 +33,26 @@ public class DrawingService {
             selector: #selector(DrawingService.photoSaved(_:)),
             name: Notifications.kPhotoSaved,
             object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(DrawingService.canvasCleared(_:)),
+            name: Notifications.kCanvasCleared,
+            object: nil)
+        
+        
     }
 
+    @objc func brushChanged(notification:NSNotification){
+        lastBrushName = notification.userInfo!["brush"] as? String
+        drawingViews[0].commitAndDiscardToolStack()
+    }
     @objc func photoSaved(notification:NSNotification){
         isModified = false
         drawingViews[0].commitAndDiscardToolStack()
     }
-    @objc func brushChanged(notification:NSNotification){
-        lastBrushName = notification.userInfo!["brush"] as? String
+    @objc func canvasCleared(notification:NSNotification){
+        isModified = false
         drawingViews[0].commitAndDiscardToolStack()
     }
 
@@ -56,11 +68,38 @@ public class DrawingService {
     func getImage() -> UIImage {
         return drawingViews[0].image;
     }
-    
+
+    func getLayerZeroImage() -> UIImage {
+        return drawingViews[0].image;
+    }
+
     func getImageOnCanvasColor() -> UIImage {
+        // TODO - trap this image and check if null or ...?
+        
+        if(drawingViews[0].image == nil) {
+            return composeCanvasColorOnly()
+        }
+        
         return composeImageOnCanvasColor(getImage())
     }
 
+    func composeCanvasColorOnly() -> UIImage {
+        let canvasColor = ColorService.SharedInstance.canvasColor
+        
+        let rect = CGRect(x:0, y:0, width:768, height:1024)
+        let size = CGSize(width: 768, height: 1024)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        
+        canvasColor.setFill()
+        UIRectFill(rect)
+        
+        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return composedImage
+        
+    }
+    
     func composeImageOnCanvasColor(image : UIImage) -> UIImage {
         
         let canvasColor = ColorService.SharedInstance.canvasColor
@@ -94,10 +133,10 @@ public class DrawingService {
         _userDefaults.removeObjectForKey("lineAlpha")
         _userDefaults.setObject(drawingViews[0].lineAlpha, forKey: "lineAlpha")
 
-        if(isModified) {
+//        if(isModified) {
             _userDefaults.removeObjectForKey("image")
             _userDefaults.setImage(getImageOnCanvasColor(), forKey: "image")
-        }
+//        }
         _userDefaults.synchronize()
         
     }

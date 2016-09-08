@@ -12,14 +12,12 @@ import TOCropViewController
 
 class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     
-    @IBOutlet var CheckerOverlayView: UIView!
-
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imagePicker.delegate = self // GB REMOVE
+        imagePicker.delegate = self
         // Do any additional setup after loading the view.
         
     }
@@ -42,6 +40,7 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func loadPictureTapped(sender : AnyObject) {
+        // TODO DEAD CODE
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
@@ -49,6 +48,7 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func clearTapped(sender : AnyObject) {
+        // TODO DEAD CODE
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kCanvasCleared,
             object: nil,
@@ -58,11 +58,13 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func clearColorTapped(sender : AnyObject) {
+        // TODO DEAD CODE
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kCanvasCleared,
             object: nil,
             userInfo: ["color": ColorService.SharedInstance.selectedColor])
         
+        // TODO DEAD CODE
         DrawingService.SharedInstance.resetBrush()
     }
 
@@ -72,20 +74,27 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
             //                Notifications.kColorChanged,
             //                object: pickedImage)
             
-            //DrawingService.SharedInstance.loadImage0(pickedImage);
-            
-            let cvc = TOCropViewController(image:pickedImage)
-            cvc.delegate = self
-            
-            cvc.aspectRatioPreset = .PresetCustom
-            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
-            cvc.aspectRatioLockEnabled = true
-            cvc.rotateClockwiseButtonHidden = false
-            cvc.aspectRatioPickerButtonHidden = true
+            DrawingService.SharedInstance.loadImage0(pickedImage);
+            let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
             
             dismissViewControllerAnimated(true, completion: {
-                self.presentViewController(cvc, animated: true, completion: nil)
+                rootViewController!.hideMenuViewController();
             })
+            
+
+// DISABLED crop controller
+//            let cvc = TOCropViewController(image:pickedImage)
+//            cvc.delegate = self
+//            
+//            cvc.aspectRatioPreset = .PresetCustom
+//            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
+//            cvc.aspectRatioLockEnabled = true
+//            cvc.rotateClockwiseButtonHidden = false
+//            cvc.aspectRatioPickerButtonHidden = true
+//            
+//            dismissViewControllerAnimated(true, completion: {
+//                self.presentViewController(cvc, animated: true, completion: nil)
+//            })
             
         } else {
             dismissViewControllerAnimated(true, completion: nil)
