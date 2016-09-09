@@ -61,6 +61,8 @@ public class DrawingService {
     }
     
     func loadImage0(image : UIImage) {
+        isModified = false
+        drawingViews[0].commitAndDiscardToolStack()
         drawingViews[0].drawMode = .Scale;
         drawingViews[0].loadImage(image);
     }

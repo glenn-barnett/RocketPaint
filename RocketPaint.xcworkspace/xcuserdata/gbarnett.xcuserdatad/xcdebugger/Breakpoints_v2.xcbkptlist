@@ -47,11 +47,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RocketPaint/DrawingService.swift"
-            timestampString = "494226470.068295"
+            timestampString = "495135091.252513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "resetBrush()"
             landmarkType = "5">
          </BreakpointContent>

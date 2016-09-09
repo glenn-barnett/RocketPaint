@@ -148,72 +148,90 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
 
     @IBAction func clearTapped(sender : AnyObject) {
         
+        if(DrawingService.SharedInstance.isModified) {
         
-        let alertTitle = "Clear your canvas?"
-        
-        let alertMessage = "To erase your work, choose \"Erase\".\nTo keep your work, choose \"Cancel\""
-        
-        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            // ...
-        }
-        alertController.addAction(cancelAction)
-        
-        let destructiveAction = UIAlertAction(title: "Erase", style: .Destructive) { (action) in
+            let alertTitle = "Clear your canvas?"
             
-            let clearColor = self.clearCanvasBView.iconColor.colorWithAlphaComponent(1.0)
+            let alertMessage = "To erase your work, choose \"Erase\".\nTo keep your work, choose \"Cancel\""
             
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kCanvasCleared,
-                object: nil,
-                userInfo: ["color": clearColor])
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
             
-            // second, extract the selected color into components
-            var srcHue: CGFloat = 0
-            var srcSaturation: CGFloat = 0
-            var srcBrightness: CGFloat = 0
-            var srcAlpha: CGFloat = 0
-            clearColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
-
-            if(!(srcBrightness > 0.98 && srcSaturation < 0.02)) {
-                NSNotificationCenter.defaultCenter().postNotificationName(
-                    Notifications.kColorChanged,
-                    object: nil,
-                    userInfo: ["color": UIColor.whiteColor()])
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                // ...
             }
+            alertController.addAction(cancelAction)
+            
+            let destructiveAction = UIAlertAction(title: "Erase", style: .Destructive) { (action) in
+                self.executeClear()
+            }
+            alertController.addAction(destructiveAction)
+            
+            self.presentViewController(alertController, animated: true) { }
+            // post notif - CONFIRM_OVERWRITE
         }
-        alertController.addAction(destructiveAction)
+        else {
+            // not modified; just do it
+            self.executeClear()
+        }
+    }
+    
+    func executeClear() {
+        let clearColor = self.clearCanvasBView.iconColor.colorWithAlphaComponent(1.0)
         
-        self.presentViewController(alertController, animated: true) { }
-        // post notif - CONFIRM_OVERWRITE
-
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.kCanvasCleared,
+            object: nil,
+            userInfo: ["color": clearColor])
+        
+        // second, extract the selected color into components
+        var srcHue: CGFloat = 0
+        var srcSaturation: CGFloat = 0
+        var srcBrightness: CGFloat = 0
+        var srcAlpha: CGFloat = 0
+        clearColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
+        
+        if(!(srcBrightness > 0.98 && srcSaturation < 0.02)) {
+            NSNotificationCenter.defaultCenter().postNotificationName(
+                Notifications.kColorChanged,
+                object: nil,
+                userInfo: ["color": UIColor.whiteColor()])
+        }
+ 
     }
     
     @IBAction func loadTapped(sender : AnyObject) {
 
-        let alertTitle = "Load a Photo?"
-        
-        let alertMessage = "Selecting a photo to load will overwrite your work"
-        
-        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            // ...
-        }
-        alertController.addAction(cancelAction)
-        
-        let destructiveAction = UIAlertAction(title: "Load a Photo", style: .Destructive) { (action) in
-            // ...
-            self.imagePicker.allowsEditing = false
-            self.imagePicker.sourceType = .PhotoLibrary
+        if(DrawingService.SharedInstance.isModified) {
+            let alertTitle = "Load a Photo?"
             
-            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            let alertMessage = "Selecting a photo to load will overwrite your work"
+            
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                // ...
+            }
+            alertController.addAction(cancelAction)
+            
+            let destructiveAction = UIAlertAction(title: "Load a Photo", style: .Destructive) { (action) in
+                // ...
+                self.executeLoad()
+            }
+            alertController.addAction(destructiveAction)
+            
+            self.presentViewController(alertController, animated: true) { }
+        } else {
+            // not modified, just do it
+            executeLoad()
         }
-        alertController.addAction(destructiveAction)
+    }
+    
+    func executeLoad() {
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.sourceType = .PhotoLibrary
         
-        self.presentViewController(alertController, animated: true) { }
-        
+        self.presentViewController(self.imagePicker, animated: true, completion: nil)
+    
     }
     
     @IBAction func saveTapped(sender : AnyObject) {
