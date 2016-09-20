@@ -1,4 +1,4 @@
-ACEDrawingView
+ACEDrawingView [![Build Status](https://travis-ci.org/acerbetti/ACEDrawingView.svg?branch=master)](https://travis-ci.org/acerbetti/ACEDrawingView)
 ==============
 
 ![](https://github.com/acerbetti/ACEDrawingView/blob/master/Example.png?raw=true)
@@ -15,7 +15,7 @@ How-To
 - From IB create a view and set the class to "ACEDrawingView"
 - Programmatically use the initWithFrame: and add it as subview
 
-### Cocoapods(Recommended)
+### CocoaPods(Recommended)
 
 1. Add `pod 'ACEDrawingView'` to your Podfile.
 2. Run `pod install`

@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>BSGridCollectionViewLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>KRLCollectionViewGridLayout.xcscheme</key>
+		<key>BCGenieEffect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,55 +24,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RFQuiltLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TOCropViewController-TOCropViewControllerBundle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TOCropViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1EC1433A328E47FF1D7AA0E809643527</key>
+		<key>053E8C2729DAE3D55795BFF36D717934</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F5316B7C027A52A56634061759160AD</key>
+		<key>9EEA5C93A137D3FC764C9DC54E57BBF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FACE30FFDD69CD562F6E8526FA562EB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8AA3DDB8797222294E1288CB197A8347</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E1009E990B24C24F49DB647BF42D965</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DB4E2834A10766910B9A061FED12FF53</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E15AEB7DAE155DE2BE12AFC28F5B70B6</key>
+		<key>C2A279643BB386795C8B9795ADE00D95</key>
 		<dict>
 			<key>primary</key>
 			<true/>

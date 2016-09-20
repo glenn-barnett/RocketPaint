@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E1D51699E79DEBA2EDAA9B0B'
-               BlueprintName = 'ACEDrawingView'
+               BlueprintIdentifier = '15EC1D636B67183C45B044C4'
+               BlueprintName = 'BCGenieEffect'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ACEDrawingView.framework'>
+               BuildableName = 'BCGenieEffect.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

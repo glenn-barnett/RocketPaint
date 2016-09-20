@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RESideMenu
+import BCGenieEffect
 
 class RightSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -238,6 +239,17 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
         // compose the image against the canvas color
         let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
         
+        let imageView = UIImageView(image: composedImage)
+        imageView.frame = CGRect(x: -200, y: 154, width: 465, height: 620)
+        view.insertSubview(imageView, atIndex: 3)
+        
+        // animate it
+        imageView.genieInTransitionWithDuration(0.7, destinationRect: CGRect(x:435, y:855, width: 55, height:1), destinationEdge: BCRectEdge.Top, completion: {
+            
+            imageView.removeFromSuperview()
+        })
+        
+        // if we've already written the same image and it isn't modified, skip
         CameraRollService.SharedInstance.WriteImage(composedImage)
         
         NSNotificationCenter.defaultCenter().postNotificationName(

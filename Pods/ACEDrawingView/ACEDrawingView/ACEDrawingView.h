@@ -25,7 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define ACEDrawingViewVersion   1.3.7
+#define ACEDrawingViewVersion   1.3.8
 
 typedef enum {
     ACEDrawingToolTypePen,
@@ -89,7 +89,7 @@ typedef NS_ENUM(NSUInteger, ACEDrawingMode) {
 
 @end
 
-#pragma mark -
+#pragma mark - 
 
 @interface ACEDrawingView (Deprecated)
 @property (nonatomic, strong) UIImage *prev_image DEPRECATED_MSG_ATTRIBUTE("Use 'backgroundImage' instead.");

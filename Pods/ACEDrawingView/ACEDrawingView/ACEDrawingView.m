@@ -82,7 +82,7 @@
     self.lineColor = kDefaultLineColor;
     self.lineWidth = kDefaultLineWidth;
     self.lineAlpha = kDefaultLineAlpha;
-    
+
     self.drawMode = ACEDrawingModeOriginalSize;
     
     // set the transparent background
@@ -209,17 +209,17 @@
         {
             return ACE_AUTORELEASE([ACEDrawingArrowTool new]);
         }
-            
+
         case ACEDrawingToolTypeText:
         {
             return ACE_AUTORELEASE([ACEDrawingTextTool new]);
         }
-            
+
         case ACEDrawingToolTypeMultilineText:
         {
             return ACE_AUTORELEASE([ACEDrawingMultilineTextTool new]);
         }
-            
+
         case ACEDrawingToolTypeRectagleStroke:
         {
             ACEDrawingRectangleTool *tool = ACE_AUTORELEASE([ACEDrawingRectangleTool new]);
@@ -392,7 +392,6 @@
     } else {
         [self.textView setFont:[UIFont systemFontOfSize:calculatedFontSize]];
     }
-    
     self.textView.textColor = self.lineColor;
     self.textView.alpha = self.lineAlpha;
     
@@ -501,7 +500,7 @@
 - (void)keyboardDidShow:(NSNotification *)notification
 {
     self.originalFrameYPos = self.frame.origin.y;
-    
+
     if (IOS8_OR_ABOVE) {
         [self adjustFramePosition:notification];
     }
@@ -518,31 +517,31 @@
     CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:self];
     CGFloat textViewOriginY = textViewBottomPoint.y;
     CGFloat textViewBottomY = textViewOriginY + self.textView.frame.size.height;
-    
+
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
+
     CGFloat offset = (self.frame.size.height - keyboardSize.width) - textViewBottomY;
-    
+
     if (offset < 0) {
         CGFloat newYPos = self.frame.origin.y + offset;
         self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-        
+
     }
 }
 - (void)adjustFramePosition:(NSNotification *)notification {
     CGPoint textViewBottomPoint = [self convertPoint:self.textView.frame.origin toView:nil];
     textViewBottomPoint.y += self.textView.frame.size.height;
-    
+
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    
+
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
+
     CGFloat offset = (screenRect.size.height - keyboardSize.height) - textViewBottomPoint.y;
-    
+
     if (offset < 0) {
         CGFloat newYPos = self.frame.origin.y + offset;
         self.frame = CGRectMake(self.frame.origin.x,newYPos, self.frame.size.width, self.frame.size.height);
-        
+
     }
 }
 

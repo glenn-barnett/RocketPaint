@@ -16,6 +16,7 @@ public class DrawingService {
     static let kDefaultLineWidth = 6.0;
     
     var isModified = false
+    var isSaved = false
     
     var drawingViews : [RocketDrawingView] = [];
     
@@ -49,10 +50,12 @@ public class DrawingService {
     }
     @objc func photoSaved(notification:NSNotification){
         isModified = false
+        isSaved = true
         drawingViews[0].commitAndDiscardToolStack()
     }
     @objc func canvasCleared(notification:NSNotification){
         isModified = false
+        isSaved = false
         drawingViews[0].commitAndDiscardToolStack()
     }
 
@@ -62,6 +65,7 @@ public class DrawingService {
     
     func loadImage0(image : UIImage) {
         isModified = false
+        isSaved = false
         drawingViews[0].commitAndDiscardToolStack()
         drawingViews[0].drawMode = .Scale;
         drawingViews[0].loadImage(image);
