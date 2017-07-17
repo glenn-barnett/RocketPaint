@@ -14,7 +14,7 @@ class CameraRollService {
     
     //CameraRollService.SharedInstance.WriteImage(image)
     
-    func WriteImage(image : UIImage) {
+    func WriteImage(_ image : UIImage) {
         
         if(DrawingService.SharedInstance.isModified || !DrawingService.SharedInstance.isSaved) {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)

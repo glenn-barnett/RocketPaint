@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class HamburgerBView: BView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawHamburger();
     }
 }

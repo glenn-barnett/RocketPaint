@@ -21,7 +21,7 @@ class ColorPaletteViewController: UICollectionViewController
     var lastAlpha: Float = 1.0
     
     //UNUSED
-    @IBAction func EditAlbumPressed(sender : AnyObject) {
+    @IBAction func EditAlbumPressed(_ sender : AnyObject) {
         
         if(self.navigationItem.rightBarButtonItem?.title == "Edit"){
             
@@ -30,10 +30,10 @@ class ColorPaletteViewController: UICollectionViewController
             //Looping through CollectionView Cells in Swift
             //http://stackoverflow.com/questions/25490380/looping-through-collectionview-cells-in-swift
             
-            for item in self.collectionView!.visibleCells() as! [ColorCell] {
+            for item in self.collectionView!.visibleCells as! [ColorCell] {
                 
-                let indexpath : NSIndexPath = self.collectionView!.indexPathForCell(item as ColorCell)!
-                let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexpath) as! ColorCell
+                let indexpath : IndexPath = self.collectionView!.indexPath(for: item as ColorCell)!
+                let cell : ColorCell = self.collectionView!.cellForItem(at: indexpath) as! ColorCell
                 
                 //Profile Picture
                 //var img : UIImageView = cell.viewWithTag(100) as UIImageView
@@ -41,7 +41,7 @@ class ColorPaletteViewController: UICollectionViewController
                 
                 //Close Button
                 let close : UIButton = cell.viewWithTag(102) as! UIButton
-                close.hidden = false
+                close.isHidden = false
             }
         } else {
             self.navigationItem.rightBarButtonItem?.title = "Edit"
@@ -53,38 +53,38 @@ class ColorPaletteViewController: UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(ColorPaletteViewController.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(ColorPaletteViewController.colorUsed(_:)),
-            name: Notifications.kColorUsed,
+            name: NSNotification.Name(rawValue: Notifications.kColorUsed),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(ColorPaletteViewController.colorPaletteClosed(_:)),
-            name: Notifications.kColorPaletteClosed,
+            name: NSNotification.Name(rawValue: Notifications.kColorPaletteClosed),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(ColorPaletteViewController.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil)
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
     
-    func colorChanged(notification:NSNotification){
+    func colorChanged(_ notification:Notification){
         colorService.selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
@@ -94,44 +94,44 @@ class ColorPaletteViewController: UICollectionViewController
         collectionView?.reloadData()
     }
     
-    func colorUsed(notification:NSNotification){
+    func colorUsed(_ notification:Notification){
         // refresh table
         self.collectionView!.reloadData()
     }
     
-    func colorPaletteClosed(notification:NSNotification){
-        collectionView!.setContentOffset(CGPointZero, animated: true)
+    func colorPaletteClosed(_ notification:Notification){
+        collectionView!.setContentOffset(CGPoint.zero, animated: true)
     }
     
-    func lineAlphaChanged(notification:NSNotification){
+    func lineAlphaChanged(_ notification:Notification){
         lastAlpha = notification.userInfo!["lineAlpha"] as! Float
     }
     
     // #pragma mark - UICollectionViewDelegate protocol
     
     // handle tap events
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell : ColorCell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! ColorCell
+        let cell : ColorCell = self.collectionView!.cellForItem(at: indexPath) as! ColorCell
         
         // GB bump alpha up to min of 10% in case they get confused
         if(lastAlpha < 0.10) {
             lastAlpha = 0.10
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kLineAlphaChanged,
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kLineAlphaChanged),
                 object: nil,
                 userInfo: ["lineAlpha": lastAlpha])
             
         }
         
-        let cellColor = cell.Color.colorWithAlphaComponent(CGFloat(lastAlpha))
+        let cellColor = cell.Color.withAlphaComponent(CGFloat(lastAlpha))
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kColorChanged),
             object: nil,
             userInfo: ["color": cellColor])
         
-        collectionView.setContentOffset(CGPointZero, animated: true)
+        collectionView.setContentOffset(CGPoint.zero, animated: true)
     }
     
     /*
@@ -147,15 +147,15 @@ class ColorPaletteViewController: UICollectionViewController
     
     // #pragma mark UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView?) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
         return colorService.sessionColorArray.count + colorService.variantColorArray.count + colorService.staticColorArray.count + colorService.randomColorArray.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         /*
          We can use multiple way to create a UICollectionViewCell.
          */
@@ -173,9 +173,9 @@ class ColorPaletteViewController: UICollectionViewController
         //2.
         //You can create a Class file for UICollectionViewCell and Set the appropriate component and assign the value to that class
         
-        let cell : ColorCell = collectionView.dequeueReusableCellWithReuseIdentifier("PaletteCell", forIndexPath: indexPath) as! ColorCell
+        let cell : ColorCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PaletteCell", for: indexPath) as! ColorCell
         
-        var color : UIColor = UIColor.whiteColor() // default
+        var color : UIColor = UIColor.white // default
         
         if(indexPath.item < colorService.variantColorArray.count) {
             color = colorService.variantColorArray[indexPath.item]
@@ -204,9 +204,9 @@ class ColorPaletteViewController: UICollectionViewController
         return cell
     }
     
-    func removeSessionColor(sender:UIButton) {
-        let i : Int = (sender.layer.valueForKey("index")) as! Int
-        colorService.sessionColorArray.removeAtIndex(i)
+    func removeSessionColor(_ sender:UIButton) {
+        let i : Int = (sender.layer.value(forKey: "index")) as! Int
+        colorService.sessionColorArray.remove(at: i)
         self.collectionView!.reloadData()
     }
 }

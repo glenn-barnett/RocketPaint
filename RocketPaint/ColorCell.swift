@@ -15,13 +15,13 @@ class ColorCell: UICollectionViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.Color = UIColor.redColor()
+        self.Color = UIColor.red
         super.init(coder:aDecoder)
         initializeStyle()
     }
     
     override required init(frame: CGRect) {
-        self.Color = UIColor.redColor()
+        self.Color = UIColor.red
         super.init(frame:frame)
         initializeStyle()
     }
@@ -32,7 +32,7 @@ class ColorCell: UICollectionViewCell {
         
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawPaletteColor(paletteItemColor: self.Color)
     }
     

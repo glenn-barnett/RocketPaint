@@ -11,7 +11,7 @@ import UIKit
 
 class IconColoredBView: BView {
 
-    var iconColor:UIColor = UIColor.redColor()
+    var iconColor:UIColor = UIColor.red
     var lineWidth:CGFloat = 6.0
     
     func getLineWidthMin() -> Float {
@@ -22,72 +22,72 @@ class IconColoredBView: BView {
         return 40.0
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.lineWidthChanged(_:)),
-            name: Notifications.kLineWidthChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(IconColoredBView.lineWidthChanged(_:)),
-            name: Notifications.kLineWidthChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil)
         
 
     }
     
-    func colorChanged(notification:NSNotification){
+    func colorChanged(_ notification:Notification){
         iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
     }
 
     
-    func lineAlphaChanged(notification:NSNotification){
+    func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         
-        iconColor = iconColor.colorWithAlphaComponent(CGFloat(lineAlpha))
+        iconColor = iconColor.withAlphaComponent(CGFloat(lineAlpha))
         self.setNeedsDisplay();
     }
 
-    func lineWidthChanged(notification:NSNotification){
+    func lineWidthChanged(_ notification:Notification){
         let inputLineWidth = notification.userInfo!["lineWidth"] as! Float
         let adjustedLineWidth = getLineWidthMin() + (inputLineWidth / 40.0) * (getLineWidthMax() - getLineWidthMin());
         

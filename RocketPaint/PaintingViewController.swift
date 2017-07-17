@@ -27,6 +27,7 @@ class PaintingViewController: UIViewController,
     ACEDrawingViewDelegate {
 
     @IBOutlet var DrawingView : RocketDrawingView!
+    @IBOutlet var EasterEggView : EasterEggDrawingView!
     
     @IBOutlet var HamburgerBView : BView?
     @IBOutlet var UndoBView : BView?
@@ -38,12 +39,12 @@ class PaintingViewController: UIViewController,
     var rotatingButtonArray : [UIView] = [];
 
     let colorService = ColorService.SharedInstance
-    var lastColor = UIColor.blackColor()
+    var lastColor = UIColor.black
     
     let imagePicker = UIImagePickerController()
     var requestedLineWidth : CGFloat = 4.0
     
-    func updateUndoRedo(forceHide: Bool = false) {
+    func updateUndoRedo(_ forceHide: Bool = false) {
 //        let disableUndo = (!DrawingView.canUndo() || forceHide)
 //        
         UndoBView?.disabled = (!DrawingView.canUndo() || forceHide)
@@ -74,31 +75,33 @@ class PaintingViewController: UIViewController,
         DrawingView.lineColor = colorService.defaultPaintColor()
         lastColor = colorService.defaultPaintColor()
  
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "Pen"])
 
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorChanged,
+        
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue:Notifications.kColorChanged),
             object: nil,
             userInfo: ["color": DrawingView.lineColor])
 
         DrawingView.lineWidth = 10.0
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineWidthChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue:Notifications.kLineWidthChanged),
             object: nil,
-            userInfo: ["lineWidth": DrawingView.lineWidth])
+            userInfo: ["lineWidth": Float(DrawingView.lineWidth)])
 
-        DrawingView.lineAlpha = 1.0
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineAlphaChanged,
-            object: nil,
-            userInfo: ["lineAlpha": DrawingView.lineAlpha])
+//        DrawingView.lineAlpha = 1.0
+//        NSNotificationCenter.defaultCenter().postNotificationName(
+//            Notifications.kLineAlphaChanged,
+//            object: nil,
+//            userInfo: ["lineAlpha": DrawingView.lineAlpha])
 
         DrawingView.edgeSnapThreshold = 15
 
         DrawingService.SharedInstance.addDrawingView(DrawingView); // GB layer 0?
+        
         
     }
 
@@ -111,72 +114,100 @@ class PaintingViewController: UIViewController,
         }
         
         initialLoad = false
+        
     }
     
 
     // GB: from https://happyteamlabs.com/blog/ios-using-uideviceorientation-to-determine-orientation/
-    var currentDeviceOrientation: UIDeviceOrientation = .Unknown
+    var currentDeviceOrientation: UIDeviceOrientation = .unknown
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PaintingViewController.deviceDidRotate(_:)), name: UIDeviceOrientationDidChangeNotification, object: nil)
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        NotificationCenter.default.addObserver(self, selector: #selector(PaintingViewController.deviceDidRotate(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
         // Initial device orientation
-        self.currentDeviceOrientation = UIDevice.currentDevice().orientation
+        self.currentDeviceOrientation = UIDevice.current.orientation
         // Do what you want here
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.brushChanged(_:)),
-            name: Notifications.kBrushChanged,
+            name: NSNotification.Name(rawValue: Notifications.kBrushChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.lineWidthChanged(_:)),
-            name: Notifications.kLineWidthChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.canvasCleared(_:)),
-            name: Notifications.kCanvasCleared,
+            name: NSNotification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PaintingViewController.photoLoaded(_:)),
-            name: Notifications.kPhotoLoaded,
+            name: NSNotification.Name(rawValue: Notifications.kPhotoLoaded),
             object: nil)
 
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-        if UIDevice.currentDevice().generatesDeviceOrientationNotifications {
-            UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
+        NotificationCenter.default.removeObserver(self)
+        if UIDevice.current.isGeneratingDeviceOrientationNotifications {
+            UIDevice.current.endGeneratingDeviceOrientationNotifications()
         }
     }
     
-    func deviceDidRotate(notification: NSNotification) {
-        self.currentDeviceOrientation = UIDevice.currentDevice().orientation
+    func deviceDidRotate(_ notification: Notification) {
+        self.currentDeviceOrientation = UIDevice.current.orientation
 
+        if(self.currentDeviceOrientation == .faceDown
+            //|| self.currentDeviceOrientation == .LandscapeLeft || self.currentDeviceOrientation == .LandscapeRight
+            ) {
+            self.EasterEggView.start()
+            
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.beginFromCurrentState,
+                                       animations: {
+                self.EasterEggView.alpha = 1.0
+                }, completion: {
+                    (value: Bool) in
+                    
+            })
+            
+        } else {
+
+            UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.beginFromCurrentState,
+                                       animations: {
+                self.EasterEggView.alpha = 0.0
+                }, completion: {
+                    (value: Bool) in
+
+                    if(self.EasterEggView.alpha == 0.0) {
+                        self.EasterEggView.stop()
+                    }
+            })
+        }
+        
 //        // 1. put all painting icons in an array
 //        // 2. add func to iterate over array rotating all to corresponding direction
 //        //      .Portrait 0
@@ -211,11 +242,11 @@ class PaintingViewController: UIViewController,
 //        }
     }
     
-    func drawingView(view: ACEDrawingView!, didEndDrawUsingTool tool: ACEDrawingTool!) {
+    func drawingView(_ view: ACEDrawingView!, didEndDrawUsing tool: ACEDrawingTool!) {
         updateUndoRedo()
     }
     
-    @IBAction func undoTapped(sender : AnyObject) {
+    @IBAction func undoTapped(_ sender : AnyObject) {
         
         if(DrawingView.canUndo()) {
             DrawingView.undoLatestStep()
@@ -223,7 +254,7 @@ class PaintingViewController: UIViewController,
         updateUndoRedo()
     }
 
-    @IBAction func redoTapped(sender : AnyObject) {
+    @IBAction func redoTapped(_ sender : AnyObject) {
         
         if(DrawingView.canRedo()) {
             DrawingView.redoLatestStep()
@@ -231,22 +262,22 @@ class PaintingViewController: UIViewController,
         updateUndoRedo()
     }
 
-    @IBAction func hamburgerTapped(sender : AnyObject) {
+    @IBAction func hamburgerTapped(_ sender : AnyObject) {
         
-        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? RootViewController;
         
         rootViewController!.showLeftMenu();
         
     }
 
-    @IBAction func brushButtonTapped(sender : AnyObject) {
+    @IBAction func brushButtonTapped(_ sender : AnyObject) {
         
-        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RootViewController;
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? RootViewController;
         rootViewController?.showRightBrushes();
         
     }
 
-    func colorChanged(notification:NSNotification){
+    func colorChanged(_ notification:Notification){
         let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
         
         var hue: CGFloat = 0
@@ -257,13 +288,13 @@ class PaintingViewController: UIViewController,
         
 //        print("PVC got color: \(hue)h,\(saturation)s,\(brightness)v,\(alpha)a")
         
-        DrawingView.lineColor = selectedColor.colorWithAlphaComponent(1.0)
+        DrawingView.lineColor = selectedColor.withAlphaComponent(1.0)
         
-        lastColor = DrawingView.lineColor.colorWithAlphaComponent(1.0) // copy
+        lastColor = DrawingView.lineColor.withAlphaComponent(1.0) // copy
         
     }
 
-    func brushChanged(notification:NSNotification){
+    func brushChanged(_ notification:Notification){
         let brush = notification.userInfo!["brush"] as! String
 
         DrawingView.lineColor = lastColor
@@ -301,19 +332,19 @@ class PaintingViewController: UIViewController,
         
     }
     
-    func lineWidthChanged(notification:NSNotification){
+    func lineWidthChanged(_ notification:Notification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         requestedLineWidth = CGFloat(lineWidth)
         DrawingView.lineWidth = requestedLineWidth
         enforceMinimumTextSize()
     }
     
-    func lineAlphaChanged(notification:NSNotification){
+    func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         DrawingView.lineAlpha = CGFloat(lineAlpha)
     }
     
-    func canvasCleared(notification:NSNotification){
+    func canvasCleared(_ notification:Notification){
         let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
         
         colorService.canvasColor = canvasColor
@@ -324,7 +355,7 @@ class PaintingViewController: UIViewController,
         updateUndoRedo()
     }
     
-    func photoLoaded(notification:NSNotification) {
+    func photoLoaded(_ notification:Notification) {
         updateUndoRedo()
     }
     

@@ -24,7 +24,7 @@ class LineAlphaSliderView: UIControl {
         didSet { self.setNeedsDisplay(); }
     }
     
-    var iconColor : UIColor = UIColor.redColor()
+    var iconColor : UIColor = UIColor.red
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,14 +36,14 @@ class LineAlphaSliderView: UIControl {
     }
     
     func configure() {
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(LineAlphaSliderView.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
     }
     
-    func colorChanged(notification:NSNotification){
+    func colorChanged(_ notification:Notification){
         iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
     }
@@ -56,40 +56,40 @@ class LineAlphaSliderView: UIControl {
         return (self.value - self.minimumValue) / (self.maximumValue - self.minimumValue)
     }
     
-    func valueFromPercentage(percentage: CGFloat) -> CGFloat {
+    func valueFromPercentage(_ percentage: CGFloat) -> CGFloat {
         return percentage * (self.maximumValue - self.minimumValue) + self.minimumValue
     }
     
-    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        super.beginTrackingWithTouch(touch, withEvent: event)
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        super.beginTracking(touch, with: event)
         return true
     }
     
-    override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        super.continueTrackingWithTouch(touch, withEvent: event)
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        super.continueTracking(touch, with: event)
         
-        let lastPoint : CGPoint = touch.locationInView(self)
+        let lastPoint : CGPoint = touch.location(in: self)
         moveThumbToPoint(lastPoint)
-        sendActionsForControlEvents(.ValueChanged)
+        sendActions(for: .valueChanged)
         return true
     }
     
-    override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        super.endTrackingWithTouch(touch, withEvent: event)
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with: event)
     }
     
-    func moveThumbToPoint(point: CGPoint) {
-        let percentage : CGFloat = min(1, max(0, (point.x - 10) / (CGRectGetWidth(self.bounds) - 20)));
+    func moveThumbToPoint(_ point: CGPoint) {
+        let percentage : CGFloat = min(1, max(0, (point.x - 10) / (self.bounds.width - 20)));
         
         self.value = valueFromPercentage(percentage)
         setNeedsDisplay()
     }
     
-    override func intrinsicContentSize() -> CGSize {
-        return CGSizeMake(UIViewNoIntrinsicMetric, 20)
+    override var intrinsicContentSize : CGSize {
+        return CGSize(width: UIViewNoIntrinsicMetric, height: 20)
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         let lineWidth = CGFloat(2.0)
         
@@ -121,20 +121,20 @@ class LineAlphaSliderView: UIControl {
         // GB ADDED BEGIN
         let percentage : CGFloat = self.percentageValue()
         
-        let minimumTrackRect : CGRect = CGRectMake(CGRectGetMinX(trackFrame), CGRectGetMinY(trackFrame), floor((CGRectGetWidth(trackFrame)) * percentage), 4)
-        let maximumTrackRect : CGRect = CGRectMake(CGRectGetMinX(trackFrame) + floor((CGRectGetWidth(trackFrame)) * percentage), CGRectGetMinY(trackFrame), CGRectGetWidth(trackFrame) - floor((CGRectGetWidth(trackFrame)) * percentage), 4)
+        let minimumTrackRect : CGRect = CGRect(x: trackFrame.minX, y: trackFrame.minY, width: floor((trackFrame.width) * percentage), height: 4)
+        let maximumTrackRect : CGRect = CGRect(x: trackFrame.minX + floor((trackFrame.width) * percentage), y: trackFrame.minY, width: trackFrame.width - floor((trackFrame.width) * percentage), height: 4)
         // GB ADDED endTrackingWithTouch
         
-        let checkColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+        let checkColor = UIColor.black.withAlphaComponent(0.2)
         checkColor.setFill()
         
         let checkSize = CGFloat(8)
         var x = CGFloat(20)
-        while(x < CGRectGetMaxX(trackFrame) - checkSize) {
+        while(x < trackFrame.maxX - checkSize) {
 
-            UIRectFill(CGRectMake(CGFloat(x), CGRectGetMinY(trackFrame) - checkSize, checkSize, checkSize))
+            UIRectFill(CGRect(x: CGFloat(x), y: trackFrame.minY - checkSize, width: checkSize, height: checkSize))
             x += checkSize
-            UIRectFill(CGRectMake(CGFloat(x), CGRectGetMinY(trackFrame) - checkSize*2, checkSize, checkSize))
+            UIRectFill(CGRect(x: CGFloat(x), y: trackFrame.minY - checkSize*2, width: checkSize, height: checkSize))
             x += checkSize
         }
         
@@ -142,40 +142,40 @@ class LineAlphaSliderView: UIControl {
         
         //// Track
         //// Minimum Track Drawing
-        let minimumTrackPath = UIBezierPath(roundedRect: minimumTrackRect, byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.BottomLeft], cornerRadii: CGSize(width: 2, height: 2))
-        minimumTrackPath.closePath()
-        UIColor.blackColor().setFill()
+        let minimumTrackPath = UIBezierPath(roundedRect: minimumTrackRect, byRoundingCorners: [UIRectCorner.topLeft, UIRectCorner.bottomLeft], cornerRadii: CGSize(width: 2, height: 2))
+        minimumTrackPath.close()
+        UIColor.black.setFill()
         minimumTrackPath.fill()
 
         
         
         //// Maximum Track Drawing
-        let maximumTrackPath = UIBezierPath(roundedRect: maximumTrackRect, byRoundingCorners: [UIRectCorner.TopRight, UIRectCorner.BottomRight], cornerRadii: CGSize(width: 2, height: 2))
-        maximumTrackPath.closePath()
-        UIColor.blackColor().setFill()
+        let maximumTrackPath = UIBezierPath(roundedRect: maximumTrackRect, byRoundingCorners: [UIRectCorner.topRight, UIRectCorner.bottomRight], cornerRadii: CGSize(width: 2, height: 2))
+        maximumTrackPath.close()
+        UIColor.black.setFill()
         maximumTrackPath.fill()
         
         
         
         
         //// Thumb Drawing
-        CGContextSaveGState(context)
+        context!.saveGState()
 //        CGContextTranslateCTM(context, sliderFrame.maxX - 104.7, sliderFrame.maxY - 10)
 //        CGContextScaleCTM(context, lineWidthSliderScale, lineWidthSliderScale)
         
         //let thumbPath = UIBezierPath(ovalInRect: thumbRect)
         let thumbPath = UIBezierPath(
             arcCenter: CGPoint(
-                x: CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage),
+                x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage),
 //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
-                y: CGRectGetHeight(sliderFrame) / 2
+                y: sliderFrame.height / 2
                 ),
             radius: 20,
             startAngle: 0,
             endAngle: CGFloat(M_PI),
             clockwise: true)
         
-        iconColor.colorWithAlphaComponent(1.0).setFill()
+        iconColor.withAlphaComponent(1.0).setFill()
         thumbPath.fill()
 //        UIColor.grayColor().setStroke() //TODO gray stroke ok?
 //        CGContextSetLineWidth(context, 20)
@@ -183,19 +183,19 @@ class LineAlphaSliderView: UIControl {
 
         let thumbPath2 = UIBezierPath(
             arcCenter: CGPoint(
-                x: CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage),
+                x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage),
                 //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
-                y: CGRectGetHeight(sliderFrame) / 2
+                y: sliderFrame.height / 2
             ),
             radius: 20,
             startAngle: CGFloat(M_PI),
             endAngle: CGFloat(M_PI*2),
             clockwise: true)
-        iconColor.colorWithAlphaComponent(percentage).setFill()
+        iconColor.withAlphaComponent(percentage).setFill()
         thumbPath2.fill()
         
 
-        CGContextRestoreGState(context)
+        context!.restoreGState()
         
     }
 }

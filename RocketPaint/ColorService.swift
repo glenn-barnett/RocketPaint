@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class ColorService {
+open class ColorService {
     static let SharedInstance = ColorService()
 
 //    public var itemSize: CGSize {
@@ -22,17 +22,17 @@ public class ColorService {
 //    }
 
     internal var lastAlpha: Float = 1.0
-    internal var selectedColor: UIColor = UIColor.blackColor()
-    internal var canvasColor: UIColor = UIColor.whiteColor()
+    internal var selectedColor: UIColor = UIColor.black
+    internal var canvasColor: UIColor = UIColor.white
     internal var sessionColorArray: [UIColor] = []
     internal var variantColorArray: [UIColor] = []
     internal var staticColorArray: [UIColor] = []
     internal var randomColorArray: [UIColor] = []
 
     init() {
-        staticColorArray.append(UIColor.whiteColor())
-        staticColorArray.append(UIColor.grayColor())
-        staticColorArray.append(UIColor.blackColor())
+        staticColorArray.append(UIColor.white)
+        staticColorArray.append(UIColor.gray)
+        staticColorArray.append(UIColor.black)
 
         staticColorArray.append(UIColor(red: 141.0/255.0, green:94.0/255.0, blue:48.0/255.0, alpha:1))
         staticColorArray.append(UIColor(red: 70.0/255.0, green:141.0/255.0, blue:38.0/255.0, alpha:1))
@@ -50,14 +50,14 @@ public class ColorService {
         staticColorArray.append(UIColor(red: 44.0/255.0, green:186.0/255.0, blue:204.0/255.0, alpha:1))
         staticColorArray.append(UIColor(red: 255.0/255.0, green:81.0/255.0, blue:172.0/255.0, alpha:1))
         
-        for(var i=0; i<1000; i++) {
+        for i in 0 ..< 1000 {
             randomColorArray.append(generateRandomColor())
         }
    
     }
     
     internal func defaultPaintColor() -> UIColor {
-        return UIColor(red: 59.0/255.0, green:100.0/255.0, blue:255.0/255.0, alpha:1)
+        return UIColor(red: 59.0/255.0, green:100.0/255.0, blue:255.0/255.0, alpha:1.0)
     }
 
     internal func generateRandomColor() -> UIColor {

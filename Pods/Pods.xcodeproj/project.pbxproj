@@ -1,2186 +1,924 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01910FDED27C82D346C9B2F36FED23D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIViewController+RESideMenu.m</string>
-			<key>path</key>
-			<string>RESideMenu/UIViewController+RESideMenu.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>03C93C0853AB901D2957F0A98BFD4E5E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>ABE311B0B762B40BC4773CCF0B5F7F1D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>050FE17BC31C98DB5C2FFEE8DCF03C74</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-RocketPaint.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>053E8C2729DAE3D55795BFF36D717934</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8E5C260EC544C6F0834C6862EB144121</string>
-			<key>buildPhases</key>
-			<array>
-				<string>23238F45318A52DF2AC2AC3FEA2F0DD0</string>
-				<string>A1DD3399DDC2EC567E2010D570044697</string>
-				<string>492172D4EE7B3C29E738E7F13F76FE56</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BCGenieEffect</string>
-			<key>productName</key>
-			<string>BCGenieEffect</string>
-			<key>productReference</key>
-			<string>6FFD2032E87CC288BF0AB3EFDD955226</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>05776CA8A4857EB587D5392988666F5B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>258B0C8029B3982F03A30ED9FB271283</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>05DA77EFDB49514D05A64C08AD1BEE26</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CA1D7397AEE47D31B140FDF762CAC4A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>09DD17C191AADDD12A9DA967F3EC62E6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D52953FEE5D336BDEEFEDA7BCB8DAAFB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>0E19CDD5D4871EE1E34FA5B2CD4141BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIViewController+RESideMenu.h</string>
-			<key>path</key>
-			<string>RESideMenu/UIViewController+RESideMenu.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0E6B88439E6B88F979638B377962A614</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ACEDrawingView.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0ECC37811FC570D695B43FF4B62AED6B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AAA2AFC623A5483E19C489BCB54E7952</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_RocketPaint</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>158A0532BB9499299D0E1DB553647C81</key>
-		<dict>
-			<key>fileRef</key>
-			<string>93B47656167F31E2A105D651EC91CDBE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>161EC0601FF59B44BEA095877F649543</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RECommonFunctions.h</string>
-			<key>path</key>
-			<string>RESideMenu/RECommonFunctions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>171F8CC9E696B0550236ADA80CF83C37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1D3E98F8AABB24203537003396A1797A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2076184BD26ED1F3419EEFF8CD052EB8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>RESideMenu</string>
-			<key>target</key>
-			<string>9EEA5C93A137D3FC764C9DC54E57BBF2</string>
-			<key>targetProxy</key>
-			<string>C770A4663877891B3E804F6DAC40E8D1</string>
-		</dict>
-		<key>20F17B8CAC7A4920F20D5C7F90E5BFD7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>BCGenieEffect.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2273A4F42269813AD4859317B08E687D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>ACEDrawingView</string>
-			<key>target</key>
-			<string>F23EF643357DE4902A2E6096F77BF758</string>
-			<key>targetProxy</key>
-			<string>B1CFABE577ED570DB0A4DB4C7F0EF2E0</string>
-		</dict>
-		<key>2308B055B9D7B19942B14B4FB6E37FBE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>23238F45318A52DF2AC2AC3FEA2F0DD0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B77E3694A7C4F99F520B47A6F8FDEE0C</string>
-				<string>83E27A9281CE0436AEF0C4BE3F31878B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>258B0C8029B3982F03A30ED9FB271283</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>29536734EDC2131BCD95A15DED2520FD</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EAD625CEAD92E23FAD4910A832A37251</string>
-				<string>0ECC37811FC570D695B43FF4B62AED6B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2D69CDEF67C24AA3714D035D56476790</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4AB97EDDA556E8F6F036BFD699F759F6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2B389FAB51F6EEA43F72CA7BDC8E8E28</string>
-				<string>5A0C6FE968931D888F00C9EC18DDF5BC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2DD6E5BC8A12C8D812F4BCDF91E0974C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BCGenieEffect.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>304FB2A1EED4355B263D6CC41B8C085A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>RESideMenu.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31685B13C590B1B826DBAC4718F9D3E2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7ABA4760B060A70CDF219BDADD4DFA13</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>31F7CA19FE18C042D0F690AC1E5B6B05</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E64DB57933E0BBF2A59A3A01847BC374</string>
-				<string>D62DFD60DF6FC9DA3FF74D704E244C91</string>
-				<string>68CC6F9515FD5614E3B232B2DB614452</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>34744B66BE7FB19D738717390E79241E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ACEDrawingView.m</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3794D8A86388F918E0337DBA951B1DFE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DC4E8826D4509FD509C4A078169AF860</string>
-				<string>6FFD2032E87CC288BF0AB3EFDD955226</string>
-				<string>B18FA974A75193C8A3A8B042890BE2C1</string>
-				<string>744F3F48944F96A7E433FE3F07B8086E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38BD68EAF4E91166D1CA3CDAC1A3E71E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A213A364F44F7A8CE970182D0DDA3E3E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3926C638AD0708942C88C2BC89261735</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>258B0C8029B3982F03A30ED9FB271283</string>
-				<string>B18F24645AA4D651DFC7B69A3A0833DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E2F6CE763B0AA1872B947C832E3ED32</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>UIView+Genie.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40652881E559516D8139E98F82C5D3D9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2DD6E5BC8A12C8D812F4BCDF91E0974C</string>
-				<string>20F17B8CAC7A4920F20D5C7F90E5BFD7</string>
-				<string>9649436E966455EFEEB5FD45496922B0</string>
-				<string>9F1AD3D8DD5E1B41D9B74EF385D1877D</string>
-				<string>D52953FEE5D336BDEEFEDA7BCB8DAAFB</string>
-				<string>1D3E98F8AABB24203537003396A1797A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/BCGenieEffect</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4068B7CA55B8AD587BD1C0A9D2CC9A7C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0E19CDD5D4871EE1E34FA5B2CD4141BB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>40A407F6BAB865C3ACF8A0FAA9E8D878</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>RESideMenu-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>433CD3331B6C3787F473C941B61FC68F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3926C638AD0708942C88C2BC89261735</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44903B3744ADB19FBDED188A0BEE31AF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44FDDD85C924780DEB879D7CD2DDF6B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RECommonFunctions.m</string>
-			<key>path</key>
-			<string>RESideMenu/RECommonFunctions.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>48DBD435A7644314EF06789A10FC7DDB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A2DF94799D4D4F241BDD567D4B3A21C8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>492172D4EE7B3C29E738E7F13F76FE56</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>09DD17C191AADDD12A9DA967F3EC62E6</string>
-				<string>05DA77EFDB49514D05A64C08AD1BEE26</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4AB97EDDA556E8F6F036BFD699F759F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>RESideMenu-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>57F379442DAAF74D10121FA078C524DF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C83DBDFFCB966BB7198B95249F127621</string>
-				<string>F1F457639FABBC65F0FBD9E7CA55B402</string>
-				<string>31685B13C590B1B826DBAC4718F9D3E2</string>
-				<string>860ACF3ED7AAF02A2DE5CAE66880A7FC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>583500302E921AFBBB35C17D1C597CC5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>171F8CC9E696B0550236ADA80CF83C37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5A0C6FE968931D888F00C9EC18DDF5BC</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5D043911E02325A0A5FC1EB1F1CBEBAE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CAC69D13B002FD6CB4A41EE103DDA6FC</string>
-				<string>C5D79D431A575C9CB10FEEACAAC57F89</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>60B0C8FF44391029154F61ABE3C30C62</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0E6B88439E6B88F979638B377962A614</string>
-				<string>8B41B613BD8C082B75EC90D9A38F9C65</string>
-				<string>A213A364F44F7A8CE970182D0DDA3E3E</string>
-				<string>A40D49FD40638F401398007023AD45C3</string>
-				<string>C173525BA59B7A033162A08F25BB29A3</string>
-				<string>D676A8E6F4DE04DE961ADAA3566D25B0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/ACEDrawingView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6164C3678AA64E69F88F90A2D6E1CE0A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>61F114E18402A15C34996DD6AD8AB3D0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>73BA68C60CB5242394F07F1A0206270B</string>
-				<string>ACA3751B7CAB1FC099AA5F86701D408D</string>
-				<string>9D85010140D5D7C51D2CA58407E561CD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>670FF62206E9D4ED85B7CB2E4288BBD4</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8B41B613BD8C082B75EC90D9A38F9C65</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ACEDrawingView/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>ACEDrawingView</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>683A05EA3B03D839FC0D157C9A74F1AD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F19F0D8509E47BFDA57A7E8962587F9F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>68CC6F9515FD5614E3B232B2DB614452</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>161EC0601FF59B44BEA095877F649543</string>
-				<string>44FDDD85C924780DEB879D7CD2DDF6B7</string>
-				<string>93B47656167F31E2A105D651EC91CDBE</string>
-				<string>7ABA4760B060A70CDF219BDADD4DFA13</string>
-				<string>0E19CDD5D4871EE1E34FA5B2CD4141BB</string>
-				<string>01910FDED27C82D346C9B2F36FED23D2</string>
-				<string>C7539D95B689E36E1D4061B16665BD76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>RESideMenu</string>
-			<key>path</key>
-			<string>RESideMenu</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D89D927BDDB3403DE9F1DD9C1F6B08A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>20F17B8CAC7A4920F20D5C7F90E5BFD7</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BCGenieEffect/BCGenieEffect-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/BCGenieEffect/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/BCGenieEffect/BCGenieEffect.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>BCGenieEffect</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>6FFD2032E87CC288BF0AB3EFDD955226</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>BCGenieEffect.framework</string>
-			<key>path</key>
-			<string>BCGenieEffect.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7113E7DBB53F20AC423FDDD34E8C2B46</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73B08E809C90B7ECC82A930BAC3A6A7E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>20F17B8CAC7A4920F20D5C7F90E5BFD7</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BCGenieEffect/BCGenieEffect-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/BCGenieEffect/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/BCGenieEffect/BCGenieEffect.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>BCGenieEffect</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>73BA68C60CB5242394F07F1A0206270B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>79C70BC05C49C3B7FD57374637EE2B44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>744F3F48944F96A7E433FE3F07B8086E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>RESideMenu.framework</string>
-			<key>path</key>
-			<string>RESideMenu.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>79C70BC05C49C3B7FD57374637EE2B44</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ACEDrawingTools.h</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingTools.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>79CA62F77F727421FDA38A30469CDBF8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>RESideMenu.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7ABA4760B060A70CDF219BDADD4DFA13</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RESideMenu.m</string>
-			<key>path</key>
-			<string>RESideMenu/RESideMenu.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>31F7CA19FE18C042D0F690AC1E5B6B05</string>
-				<string>3794D8A86388F918E0337DBA951B1DFE</string>
-				<string>03C93C0853AB901D2957F0A98BFD4E5E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E411D418CA21AAD9A4C3DA93D9E5D01</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>583500302E921AFBBB35C17D1C597CC5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7EF37DD398578C458DD3CF326D512A10</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>RESideMenu-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>83E27A9281CE0436AEF0C4BE3F31878B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E2F6CE763B0AA1872B947C832E3ED32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>860ACF3ED7AAF02A2DE5CAE66880A7FC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>01910FDED27C82D346C9B2F36FED23D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>879BECC79464962D26658B8396DADEB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B41B613BD8C082B75EC90D9A38F9C65</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ACEDrawingView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D19671B80D607DBE94E50122C7BF1A0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>683A05EA3B03D839FC0D157C9A74F1AD</string>
-				<string>38BD68EAF4E91166D1CA3CDAC1A3E71E</string>
-				<string>8E3E3E654A441FE44617004A01C7DBE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8DC5F40C060C2ACE9D9C1AD2FEE9A56B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>79CA62F77F727421FDA38A30469CDBF8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/RESideMenu/RESideMenu-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/RESideMenu/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/RESideMenu/RESideMenu.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>RESideMenu</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8E3E3E654A441FE44617004A01C7DBE9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>34744B66BE7FB19D738717390E79241E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8E5C260EC544C6F0834C6862EB144121</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>6D89D927BDDB3403DE9F1DD9C1F6B08A</string>
-				<string>73B08E809C90B7ECC82A930BAC3A6A7E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>93B47656167F31E2A105D651EC91CDBE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RESideMenu.h</string>
-			<key>path</key>
-			<string>RESideMenu/RESideMenu.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96209ECB5AAC24063342E9D320A1FF5A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8B41B613BD8C082B75EC90D9A38F9C65</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ACEDrawingView/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ACEDrawingView/ACEDrawingView.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>ACEDrawingView</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>9649436E966455EFEEB5FD45496922B0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BCGenieEffect-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9D85010140D5D7C51D2CA58407E561CD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AFE3952DDC34CF85DD4491B143F4B76E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9E258F3AF3B4A6AF83CB22DF100AA695</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E77150752D70237C30D8342831480EF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E9B28AE0CA5E532A45E265ADBBFC73BE</string>
-				<string>2D69CDEF67C24AA3714D035D56476790</string>
-				<string>158A0532BB9499299D0E1DB553647C81</string>
-				<string>4068B7CA55B8AD587BD1C0A9D2CC9A7C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9EEA5C93A137D3FC764C9DC54E57BBF2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EBD934BEEB5B7033AFF479F46E09DBD2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>57F379442DAAF74D10121FA078C524DF</string>
-				<string>5D043911E02325A0A5FC1EB1F1CBEBAE</string>
-				<string>9E77150752D70237C30D8342831480EF</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>RESideMenu</string>
-			<key>productName</key>
-			<string>RESideMenu</string>
-			<key>productReference</key>
-			<string>744F3F48944F96A7E433FE3F07B8086E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>9F1AD3D8DD5E1B41D9B74EF385D1877D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BCGenieEffect-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1DD3399DDC2EC567E2010D570044697</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CABFDDFCC527EDE76DCBC8BCFAF5179A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A213A364F44F7A8CE970182D0DDA3E3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ACEDrawingView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2DF94799D4D4F241BDD567D4B3A21C8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>258B0C8029B3982F03A30ED9FB271283</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A40D49FD40638F401398007023AD45C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ACEDrawingView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AAA2AFC623A5483E19C489BCB54E7952</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-RocketPaint.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AAB58732D923B6245257FF1376988FE2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>79CA62F77F727421FDA38A30469CDBF8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/RESideMenu/RESideMenu-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/RESideMenu/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/RESideMenu/RESideMenu.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>RESideMenu</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>AB374F239ECAC6401511027E0F61E1BB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>670FF62206E9D4ED85B7CB2E4288BBD4</string>
-				<string>96209ECB5AAC24063342E9D320A1FF5A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>ABE311B0B762B40BC4773CCF0B5F7F1D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9E258F3AF3B4A6AF83CB22DF100AA695</string>
-				<string>050FE17BC31C98DB5C2FFEE8DCF03C74</string>
-				<string>44903B3744ADB19FBDED188A0BEE31AF</string>
-				<string>6164C3678AA64E69F88F90A2D6E1CE0A</string>
-				<string>171F8CC9E696B0550236ADA80CF83C37</string>
-				<string>879BECC79464962D26658B8396DADEB5</string>
-				<string>E8523C70CA8C29F952E40A5097FACA3E</string>
-				<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
-				<string>FC7993050289585DC052209EAAB31925</string>
-				<string>AAA2AFC623A5483E19C489BCB54E7952</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-RocketPaint</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-RocketPaint</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ACA3751B7CAB1FC099AA5F86701D408D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C173525BA59B7A033162A08F25BB29A3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>AFE3952DDC34CF85DD4491B143F4B76E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ACEDrawingView.h</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B18F24645AA4D651DFC7B69A3A0833DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>B18FA974A75193C8A3A8B042890BE2C1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_RocketPaint.framework</string>
-			<key>path</key>
-			<string>Pods_RocketPaint.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B1CFABE577ED570DB0A4DB4C7F0EF2E0</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>F23EF643357DE4902A2E6096F77BF758</string>
-			<key>remoteInfo</key>
-			<string>ACEDrawingView</string>
-		</dict>
-		<key>B42812EC475B8C86599CE330E86143E2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D7AFB874802AC4E772B7D1CC56C1D29A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B77E3694A7C4F99F520B47A6F8FDEE0C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9649436E966455EFEEB5FD45496922B0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B9393F8492A3AB9B1B7162F9958F7263</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>053E8C2729DAE3D55795BFF36D717934</string>
-			<key>remoteInfo</key>
-			<string>BCGenieEffect</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BE68A29DEE25B9B6796CFF89CB4FA647</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>BCGenieEffect</string>
-			<key>target</key>
-			<string>053E8C2729DAE3D55795BFF36D717934</string>
-			<key>targetProxy</key>
-			<string>B9393F8492A3AB9B1B7162F9958F7263</string>
-		</dict>
-		<key>C173525BA59B7A033162A08F25BB29A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ACEDrawingView-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2A279643BB386795C8B9795ADE00D95</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>29536734EDC2131BCD95A15DED2520FD</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7E411D418CA21AAD9A4C3DA93D9E5D01</string>
-				<string>E04CC3A8E10D7A0AEDFEA663D6C871F4</string>
-				<string>B42812EC475B8C86599CE330E86143E2</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>2273A4F42269813AD4859317B08E687D</string>
-				<string>BE68A29DEE25B9B6796CFF89CB4FA647</string>
-				<string>2076184BD26ED1F3419EEFF8CD052EB8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-RocketPaint</string>
-			<key>productName</key>
-			<string>Pods-RocketPaint</string>
-			<key>productReference</key>
-			<string>B18FA974A75193C8A3A8B042890BE2C1</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>C5D79D431A575C9CB10FEEACAAC57F89</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B18F24645AA4D651DFC7B69A3A0833DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7539D95B689E36E1D4061B16665BD76</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2308B055B9D7B19942B14B4FB6E37FBE</string>
-				<string>304FB2A1EED4355B263D6CC41B8C085A</string>
-				<string>79CA62F77F727421FDA38A30469CDBF8</string>
-				<string>40A407F6BAB865C3ACF8A0FAA9E8D878</string>
-				<string>7EF37DD398578C458DD3CF326D512A10</string>
-				<string>4AB97EDDA556E8F6F036BFD699F759F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/RESideMenu</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C770A4663877891B3E804F6DAC40E8D1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>9EEA5C93A137D3FC764C9DC54E57BBF2</string>
-			<key>remoteInfo</key>
-			<string>RESideMenu</string>
-		</dict>
-		<key>C83DBDFFCB966BB7198B95249F127621</key>
-		<dict>
-			<key>fileRef</key>
-			<string>44FDDD85C924780DEB879D7CD2DDF6B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CA1D7397AEE47D31B140FDF762CAC4A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>UIView+Genie.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CABFDDFCC527EDE76DCBC8BCFAF5179A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>258B0C8029B3982F03A30ED9FB271283</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAC69D13B002FD6CB4A41EE103DDA6FC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>258B0C8029B3982F03A30ED9FB271283</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>3794D8A86388F918E0337DBA951B1DFE</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>F23EF643357DE4902A2E6096F77BF758</string>
-				<string>053E8C2729DAE3D55795BFF36D717934</string>
-				<string>C2A279643BB386795C8B9795ADE00D95</string>
-				<string>9EEA5C93A137D3FC764C9DC54E57BBF2</string>
-			</array>
-		</dict>
-		<key>D52953FEE5D336BDEEFEDA7BCB8DAAFB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BCGenieEffect-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D62DFD60DF6FC9DA3FF74D704E244C91</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CA1D7397AEE47D31B140FDF762CAC4A5</string>
-				<string>3E2F6CE763B0AA1872B947C832E3ED32</string>
-				<string>40652881E559516D8139E98F82C5D3D9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BCGenieEffect</string>
-			<key>path</key>
-			<string>BCGenieEffect</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D676A8E6F4DE04DE961ADAA3566D25B0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7AFB874802AC4E772B7D1CC56C1D29A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7113E7DBB53F20AC423FDDD34E8C2B46</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DC4E8826D4509FD509C4A078169AF860</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ACEDrawingView.framework</string>
-			<key>path</key>
-			<string>ACEDrawingView.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E04CC3A8E10D7A0AEDFEA663D6C871F4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>05776CA8A4857EB587D5392988666F5B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E64DB57933E0BBF2A59A3A01847BC374</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>79C70BC05C49C3B7FD57374637EE2B44</string>
-				<string>F19F0D8509E47BFDA57A7E8962587F9F</string>
-				<string>AFE3952DDC34CF85DD4491B143F4B76E</string>
-				<string>34744B66BE7FB19D738717390E79241E</string>
-				<string>60B0C8FF44391029154F61ABE3C30C62</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ACEDrawingView</string>
-			<key>path</key>
-			<string>ACEDrawingView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E8523C70CA8C29F952E40A5097FACA3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-RocketPaint-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E9B28AE0CA5E532A45E265ADBBFC73BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>161EC0601FF59B44BEA095877F649543</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>EAD625CEAD92E23FAD4910A832A37251</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FC7993050289585DC052209EAAB31925</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_RocketPaint</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EBD934BEEB5B7033AFF479F46E09DBD2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8DC5F40C060C2ACE9D9C1AD2FEE9A56B</string>
-				<string>AAB58732D923B6245257FF1376988FE2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F19F0D8509E47BFDA57A7E8962587F9F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>ACEDrawingTools.m</string>
-			<key>path</key>
-			<string>ACEDrawingView/ACEDrawingTools.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F457639FABBC65F0FBD9E7CA55B402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>40A407F6BAB865C3ACF8A0FAA9E8D878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F23EF643357DE4902A2E6096F77BF758</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>AB374F239ECAC6401511027E0F61E1BB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8D19671B80D607DBE94E50122C7BF1A0</string>
-				<string>48DBD435A7644314EF06789A10FC7DDB</string>
-				<string>61F114E18402A15C34996DD6AD8AB3D0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ACEDrawingView</string>
-			<key>productName</key>
-			<string>ACEDrawingView</string>
-			<key>productReference</key>
-			<string>DC4E8826D4509FD509C4A078169AF860</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>FC7993050289585DC052209EAAB31925</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-RocketPaint.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1060B4051B44E527EEBCA5F2E9C87D42 /* RESideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB97EDDA556E8F6F036BFD699F759F6 /* RESideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17D461BEA9CFC36DDFC2070445147884 /* BCGenieEffect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9649436E966455EFEEB5FD45496922B0 /* BCGenieEffect-dummy.m */; };
+		1C78051CE5F517F364F3993FFB3AEAF6 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 01910FDED27C82D346C9B2F36FED23D2 /* UIViewController+RESideMenu.m */; };
+		1DC5CB243A5343E0B92FDE92130B6010 /* Pods-RocketPaint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 171F8CC9E696B0550236ADA80CF83C37 /* Pods-RocketPaint-dummy.m */; };
+		22F2D14757A0FABACDA942F0C91077D2 /* BCGenieEffect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D52953FEE5D336BDEEFEDA7BCB8DAAFB /* BCGenieEffect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C55185EBD02C69AED807AA81A67D55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		2DB6877B6DFF25F360EE90E14E3FB87D /* RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B47656167F31E2A105D651EC91CDBE /* RESideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		333B58473D205BD25B37656CEB8BBF1C /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FDDD85C924780DEB879D7CD2DDF6B7 /* RECommonFunctions.m */; };
+		4221E5691B6181348DC947329F89F672 /* ACEDrawingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A213A364F44F7A8CE970182D0DDA3E3E /* ACEDrawingView-dummy.m */; };
+		444641EAFA192F0B80B06857F484552C /* ACEDrawingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C173525BA59B7A033162A08F25BB29A3 /* ACEDrawingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C458EDEDD8AC8DF88C84F3BBFEAB8F4 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA4760B060A70CDF219BDADD4DFA13 /* RESideMenu.m */; };
+		4DC47EBC026F369343C5E3998A1B5FC2 /* ACEDrawingView.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE3952DDC34CF85DD4491B143F4B76E /* ACEDrawingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		680D33BA28662B152CF0A526135DDD9E /* UIViewController+RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E19CDD5D4871EE1E34FA5B2CD4141BB /* UIViewController+RESideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7445543A9E325247BD94C61937C72C1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		76EC155CCC985AFC4079A2C81256CC64 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F6CE763B0AA1872B947C832E3ED32 /* UIView+Genie.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8169271278418BD8D3BD4F2605146F85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		84544BEB395446EBC189CA1EC3597416 /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F19F0D8509E47BFDA57A7E8962587F9F /* ACEDrawingTools.m */; };
+		ABFE4AEBEF08F1112BE7CF5E9E365047 /* UIView+Genie.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1D7397AEE47D31B140FDF762CAC4A5 /* UIView+Genie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B705CC457786DC1C4F01161118822E72 /* Pods-RocketPaint-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7113E7DBB53F20AC423FDDD34E8C2B46 /* Pods-RocketPaint-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC350B244CDF38959CDD201D1B1CBFB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		D4873AE74F30EBBB46EA263FCFAF7593 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		D8DB1DE43C84A065423029602DF4DF90 /* RESideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A407F6BAB865C3ACF8A0FAA9E8D878 /* RESideMenu-dummy.m */; };
+		E2DC973D3EC12BE1B01683FE02A6CCC3 /* ACEDrawingTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C70BC05C49C3B7FD57374637EE2B44 /* ACEDrawingTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E40913D1FFD4D94905AF7410FB0B15B0 /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34744B66BE7FB19D738717390E79241E /* ACEDrawingView.m */; };
+		FC3F7576A3511B2E8A7506CB797D5F0E /* RECommonFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 161EC0601FF59B44BEA095877F649543 /* RECommonFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73A444060D6119DAE15C5EE0EA74826A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F401D88F72F64985AA40539BD5D4F4A;
+			remoteInfo = BCGenieEffect;
+		};
+		B4C1F788B6990FA1E8BA714076F661D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E50ED8803B05816357E7578CE6824768;
+			remoteInfo = ACEDrawingView;
+		};
+		F60A84E961E595EC121A23DE3504ABD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52C35DF898AD1329BB8170AEA5F2BC97;
+			remoteInfo = RESideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01910FDED27C82D346C9B2F36FED23D2 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RESideMenu.m"; path = "RESideMenu/UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		050FE17BC31C98DB5C2FFEE8DCF03C74 /* Pods-RocketPaint.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RocketPaint.modulemap"; sourceTree = "<group>"; };
+		0E19CDD5D4871EE1E34FA5B2CD4141BB /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RESideMenu.h"; path = "RESideMenu/UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		0E6B88439E6B88F979638B377962A614 /* ACEDrawingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ACEDrawingView.modulemap; sourceTree = "<group>"; };
+		161EC0601FF59B44BEA095877F649543 /* RECommonFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RECommonFunctions.h; path = RESideMenu/RECommonFunctions.h; sourceTree = "<group>"; };
+		171F8CC9E696B0550236ADA80CF83C37 /* Pods-RocketPaint-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RocketPaint-dummy.m"; sourceTree = "<group>"; };
+		18E539D3707C7BA7445357E47B431949 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RocketPaint.framework; path = "Pods-RocketPaint.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3E98F8AABB24203537003396A1797A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F1E07C69C0C43DB25B178200ECF9B45 /* ACEDrawingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ACEDrawingView.framework; path = ACEDrawingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F17B8CAC7A4920F20D5C7F90E5BFD7 /* BCGenieEffect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCGenieEffect.xcconfig; sourceTree = "<group>"; };
+		2308B055B9D7B19942B14B4FB6E37FBE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD6E5BC8A12C8D812F4BCDF91E0974C /* BCGenieEffect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BCGenieEffect.modulemap; sourceTree = "<group>"; };
+		304FB2A1EED4355B263D6CC41B8C085A /* RESideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RESideMenu.modulemap; sourceTree = "<group>"; };
+		34744B66BE7FB19D738717390E79241E /* ACEDrawingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACEDrawingView.m; path = ACEDrawingView/ACEDrawingView.m; sourceTree = "<group>"; };
+		3E2F6CE763B0AA1872B947C832E3ED32 /* UIView+Genie.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
+		40A407F6BAB865C3ACF8A0FAA9E8D878 /* RESideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RESideMenu-dummy.m"; sourceTree = "<group>"; };
+		44903B3744ADB19FBDED188A0BEE31AF /* Pods-RocketPaint-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RocketPaint-acknowledgements.markdown"; sourceTree = "<group>"; };
+		44FDDD85C924780DEB879D7CD2DDF6B7 /* RECommonFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RECommonFunctions.m; path = RESideMenu/RECommonFunctions.m; sourceTree = "<group>"; };
+		4AB97EDDA556E8F6F036BFD699F759F6 /* RESideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RESideMenu-umbrella.h"; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5937DB908D642E578EBBA22F61624E31 /* BCGenieEffect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BCGenieEffect.framework; path = BCGenieEffect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6164C3678AA64E69F88F90A2D6E1CE0A /* Pods-RocketPaint-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RocketPaint-acknowledgements.plist"; sourceTree = "<group>"; };
+		7113E7DBB53F20AC423FDDD34E8C2B46 /* Pods-RocketPaint-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RocketPaint-umbrella.h"; sourceTree = "<group>"; };
+		79C70BC05C49C3B7FD57374637EE2B44 /* ACEDrawingTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACEDrawingTools.h; path = ACEDrawingView/ACEDrawingTools.h; sourceTree = "<group>"; };
+		79CA62F77F727421FDA38A30469CDBF8 /* RESideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RESideMenu.xcconfig; sourceTree = "<group>"; };
+		7ABA4760B060A70CDF219BDADD4DFA13 /* RESideMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RESideMenu.m; path = RESideMenu/RESideMenu.m; sourceTree = "<group>"; };
+		7EF37DD398578C458DD3CF326D512A10 /* RESideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RESideMenu-prefix.pch"; sourceTree = "<group>"; };
+		879BECC79464962D26658B8396DADEB5 /* Pods-RocketPaint-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RocketPaint-frameworks.sh"; sourceTree = "<group>"; };
+		8B41B613BD8C082B75EC90D9A38F9C65 /* ACEDrawingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACEDrawingView.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93B47656167F31E2A105D651EC91CDBE /* RESideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RESideMenu.h; path = RESideMenu/RESideMenu.h; sourceTree = "<group>"; };
+		9649436E966455EFEEB5FD45496922B0 /* BCGenieEffect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BCGenieEffect-dummy.m"; sourceTree = "<group>"; };
+		9E258F3AF3B4A6AF83CB22DF100AA695 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F1AD3D8DD5E1B41D9B74EF385D1877D /* BCGenieEffect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCGenieEffect-prefix.pch"; sourceTree = "<group>"; };
+		A213A364F44F7A8CE970182D0DDA3E3E /* ACEDrawingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ACEDrawingView-dummy.m"; sourceTree = "<group>"; };
+		A40D49FD40638F401398007023AD45C3 /* ACEDrawingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACEDrawingView-prefix.pch"; sourceTree = "<group>"; };
+		AAA2AFC623A5483E19C489BCB54E7952 /* Pods-RocketPaint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RocketPaint.release.xcconfig"; sourceTree = "<group>"; };
+		AFE3952DDC34CF85DD4491B143F4B76E /* ACEDrawingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACEDrawingView.h; path = ACEDrawingView/ACEDrawingView.h; sourceTree = "<group>"; };
+		C173525BA59B7A033162A08F25BB29A3 /* ACEDrawingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACEDrawingView-umbrella.h"; sourceTree = "<group>"; };
+		CA1D7397AEE47D31B140FDF762CAC4A5 /* UIView+Genie.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
+		D52953FEE5D336BDEEFEDA7BCB8DAAFB /* BCGenieEffect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCGenieEffect-umbrella.h"; sourceTree = "<group>"; };
+		D676A8E6F4DE04DE961ADAA3566D25B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8523C70CA8C29F952E40A5097FACA3E /* Pods-RocketPaint-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RocketPaint-resources.sh"; sourceTree = "<group>"; };
+		EA330EAD6D70980EBD775360AC42580F /* RESideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RESideMenu.framework; path = RESideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19F0D8509E47BFDA57A7E8962587F9F /* ACEDrawingTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACEDrawingTools.m; path = ACEDrawingView/ACEDrawingTools.m; sourceTree = "<group>"; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FC7993050289585DC052209EAAB31925 /* Pods-RocketPaint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RocketPaint.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06A142DB7E76D47FA5E2DB711ADCE0B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7445543A9E325247BD94C61937C72C1A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FBA98C2EF206AE5E8192C79BC3807F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC350B244CDF38959CDD201D1B1CBFB6 /* Foundation.framework in Frameworks */,
+				D4873AE74F30EBBB46EA263FCFAF7593 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2BF0387B41299706D5738322B65359B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C55185EBD02C69AED807AA81A67D55 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56CF811A866BF5020BEF10E8C07F2A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8169271278418BD8D3BD4F2605146F85 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C93C0853AB901D2957F0A98BFD4E5E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABE311B0B762B40BC4773CCF0B5F7F1D /* Pods-RocketPaint */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		31F7CA19FE18C042D0F690AC1E5B6B05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E64DB57933E0BBF2A59A3A01847BC374 /* ACEDrawingView */,
+				D62DFD60DF6FC9DA3FF74D704E244C91 /* BCGenieEffect */,
+				68CC6F9515FD5614E3B232B2DB614452 /* RESideMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		40652881E559516D8139E98F82C5D3D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DD6E5BC8A12C8D812F4BCDF91E0974C /* BCGenieEffect.modulemap */,
+				20F17B8CAC7A4920F20D5C7F90E5BFD7 /* BCGenieEffect.xcconfig */,
+				9649436E966455EFEEB5FD45496922B0 /* BCGenieEffect-dummy.m */,
+				9F1AD3D8DD5E1B41D9B74EF385D1877D /* BCGenieEffect-prefix.pch */,
+				D52953FEE5D336BDEEFEDA7BCB8DAAFB /* BCGenieEffect-umbrella.h */,
+				1D3E98F8AABB24203537003396A1797A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BCGenieEffect";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ABE6FB31A2A18A3E8317503188E2CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F1E07C69C0C43DB25B178200ECF9B45 /* ACEDrawingView.framework */,
+				5937DB908D642E578EBBA22F61624E31 /* BCGenieEffect.framework */,
+				18E539D3707C7BA7445357E47B431949 /* Pods_RocketPaint.framework */,
+				EA330EAD6D70980EBD775360AC42580F /* RESideMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60B0C8FF44391029154F61ABE3C30C62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E6B88439E6B88F979638B377962A614 /* ACEDrawingView.modulemap */,
+				8B41B613BD8C082B75EC90D9A38F9C65 /* ACEDrawingView.xcconfig */,
+				A213A364F44F7A8CE970182D0DDA3E3E /* ACEDrawingView-dummy.m */,
+				A40D49FD40638F401398007023AD45C3 /* ACEDrawingView-prefix.pch */,
+				C173525BA59B7A033162A08F25BB29A3 /* ACEDrawingView-umbrella.h */,
+				D676A8E6F4DE04DE961ADAA3566D25B0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ACEDrawingView";
+			sourceTree = "<group>";
+		};
+		68CC6F9515FD5614E3B232B2DB614452 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				161EC0601FF59B44BEA095877F649543 /* RECommonFunctions.h */,
+				44FDDD85C924780DEB879D7CD2DDF6B7 /* RECommonFunctions.m */,
+				93B47656167F31E2A105D651EC91CDBE /* RESideMenu.h */,
+				7ABA4760B060A70CDF219BDADD4DFA13 /* RESideMenu.m */,
+				0E19CDD5D4871EE1E34FA5B2CD4141BB /* UIViewController+RESideMenu.h */,
+				01910FDED27C82D346C9B2F36FED23D2 /* UIViewController+RESideMenu.m */,
+				C7539D95B689E36E1D4061B16665BD76 /* Support Files */,
+			);
+			name = RESideMenu;
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				31F7CA19FE18C042D0F690AC1E5B6B05 /* Pods */,
+				4ABE6FB31A2A18A3E8317503188E2CD1 /* Products */,
+				03C93C0853AB901D2957F0A98BFD4E5E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		ABE311B0B762B40BC4773CCF0B5F7F1D /* Pods-RocketPaint */ = {
+			isa = PBXGroup;
+			children = (
+				9E258F3AF3B4A6AF83CB22DF100AA695 /* Info.plist */,
+				050FE17BC31C98DB5C2FFEE8DCF03C74 /* Pods-RocketPaint.modulemap */,
+				44903B3744ADB19FBDED188A0BEE31AF /* Pods-RocketPaint-acknowledgements.markdown */,
+				6164C3678AA64E69F88F90A2D6E1CE0A /* Pods-RocketPaint-acknowledgements.plist */,
+				171F8CC9E696B0550236ADA80CF83C37 /* Pods-RocketPaint-dummy.m */,
+				879BECC79464962D26658B8396DADEB5 /* Pods-RocketPaint-frameworks.sh */,
+				E8523C70CA8C29F952E40A5097FACA3E /* Pods-RocketPaint-resources.sh */,
+				7113E7DBB53F20AC423FDDD34E8C2B46 /* Pods-RocketPaint-umbrella.h */,
+				FC7993050289585DC052209EAAB31925 /* Pods-RocketPaint.debug.xcconfig */,
+				AAA2AFC623A5483E19C489BCB54E7952 /* Pods-RocketPaint.release.xcconfig */,
+			);
+			name = "Pods-RocketPaint";
+			path = "Target Support Files/Pods-RocketPaint";
+			sourceTree = "<group>";
+		};
+		C7539D95B689E36E1D4061B16665BD76 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2308B055B9D7B19942B14B4FB6E37FBE /* Info.plist */,
+				304FB2A1EED4355B263D6CC41B8C085A /* RESideMenu.modulemap */,
+				79CA62F77F727421FDA38A30469CDBF8 /* RESideMenu.xcconfig */,
+				40A407F6BAB865C3ACF8A0FAA9E8D878 /* RESideMenu-dummy.m */,
+				7EF37DD398578C458DD3CF326D512A10 /* RESideMenu-prefix.pch */,
+				4AB97EDDA556E8F6F036BFD699F759F6 /* RESideMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RESideMenu";
+			sourceTree = "<group>";
+		};
+		D62DFD60DF6FC9DA3FF74D704E244C91 /* BCGenieEffect */ = {
+			isa = PBXGroup;
+			children = (
+				CA1D7397AEE47D31B140FDF762CAC4A5 /* UIView+Genie.h */,
+				3E2F6CE763B0AA1872B947C832E3ED32 /* UIView+Genie.m */,
+				40652881E559516D8139E98F82C5D3D9 /* Support Files */,
+			);
+			name = BCGenieEffect;
+			path = BCGenieEffect;
+			sourceTree = "<group>";
+		};
+		E64DB57933E0BBF2A59A3A01847BC374 /* ACEDrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				79C70BC05C49C3B7FD57374637EE2B44 /* ACEDrawingTools.h */,
+				F19F0D8509E47BFDA57A7E8962587F9F /* ACEDrawingTools.m */,
+				AFE3952DDC34CF85DD4491B143F4B76E /* ACEDrawingView.h */,
+				34744B66BE7FB19D738717390E79241E /* ACEDrawingView.m */,
+				60B0C8FF44391029154F61ABE3C30C62 /* Support Files */,
+			);
+			name = ACEDrawingView;
+			path = ACEDrawingView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11E6545A9B3B553678001FBC610FDF90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DC973D3EC12BE1B01683FE02A6CCC3 /* ACEDrawingTools.h in Headers */,
+				444641EAFA192F0B80B06857F484552C /* ACEDrawingView-umbrella.h in Headers */,
+				4DC47EBC026F369343C5E3998A1B5FC2 /* ACEDrawingView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6C36A63B444E48171A8FBA04B052CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F2D14757A0FABACDA942F0C91077D2 /* BCGenieEffect-umbrella.h in Headers */,
+				ABFE4AEBEF08F1112BE7CF5E9E365047 /* UIView+Genie.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96358C628DD6946D03936FBEC0517A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B705CC457786DC1C4F01161118822E72 /* Pods-RocketPaint-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA678EC98DE8148BEA1F72EF7D46AA15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3F7576A3511B2E8A7506CB797D5F0E /* RECommonFunctions.h in Headers */,
+				1060B4051B44E527EEBCA5F2E9C87D42 /* RESideMenu-umbrella.h in Headers */,
+				2DB6877B6DFF25F360EE90E14E3FB87D /* RESideMenu.h in Headers */,
+				680D33BA28662B152CF0A526135DDD9E /* UIViewController+RESideMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52C35DF898AD1329BB8170AEA5F2BC97 /* RESideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072511401A7C1D0BA72D9FC6D88D4BEB /* Build configuration list for PBXNativeTarget "RESideMenu" */;
+			buildPhases = (
+				58DA521DB58750A008938400593327DC /* Sources */,
+				2FBA98C2EF206AE5E8192C79BC3807F0 /* Frameworks */,
+				DA678EC98DE8148BEA1F72EF7D46AA15 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RESideMenu;
+			productName = RESideMenu;
+			productReference = EA330EAD6D70980EBD775360AC42580F /* RESideMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F401D88F72F64985AA40539BD5D4F4A /* BCGenieEffect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 193B6D5C0E2A44DF63ADE2533A2C4394 /* Build configuration list for PBXNativeTarget "BCGenieEffect" */;
+			buildPhases = (
+				661D205DEBB1E5C201224538B88F7328 /* Sources */,
+				06A142DB7E76D47FA5E2DB711ADCE0B1 /* Frameworks */,
+				5D6C36A63B444E48171A8FBA04B052CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCGenieEffect;
+			productName = BCGenieEffect;
+			productReference = 5937DB908D642E578EBBA22F61624E31 /* BCGenieEffect.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FD19184D363C1FA46DCBE9BCF31F26C /* Pods-RocketPaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C1EA5C169EEE2DE57351420EC27B1E /* Build configuration list for PBXNativeTarget "Pods-RocketPaint" */;
+			buildPhases = (
+				4C36A2D04EEDB2FCD97FCE455269209F /* Sources */,
+				B2BF0387B41299706D5738322B65359B /* Frameworks */,
+				C96358C628DD6946D03936FBEC0517A8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				822D09E9E267BABA7852361647EBE771 /* PBXTargetDependency */,
+				C6306DD6EA86458147F2FACDF641595B /* PBXTargetDependency */,
+				39D07ADC84EF7CF726D4034C61A3DF76 /* PBXTargetDependency */,
+			);
+			name = "Pods-RocketPaint";
+			productName = "Pods-RocketPaint";
+			productReference = 18E539D3707C7BA7445357E47B431949 /* Pods_RocketPaint.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E50ED8803B05816357E7578CE6824768 /* ACEDrawingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE893CD5DB7C352F540C851F3C54A2AB /* Build configuration list for PBXNativeTarget "ACEDrawingView" */;
+			buildPhases = (
+				4623D5C165B6F25B849E791B5AB86254 /* Sources */,
+				E56CF811A866BF5020BEF10E8C07F2A8 /* Frameworks */,
+				11E6545A9B3B553678001FBC610FDF90 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACEDrawingView;
+			productName = ACEDrawingView;
+			productReference = 1F1E07C69C0C43DB25B178200ECF9B45 /* ACEDrawingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4ABE6FB31A2A18A3E8317503188E2CD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E50ED8803B05816357E7578CE6824768 /* ACEDrawingView */,
+				6F401D88F72F64985AA40539BD5D4F4A /* BCGenieEffect */,
+				7FD19184D363C1FA46DCBE9BCF31F26C /* Pods-RocketPaint */,
+				52C35DF898AD1329BB8170AEA5F2BC97 /* RESideMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4623D5C165B6F25B849E791B5AB86254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84544BEB395446EBC189CA1EC3597416 /* ACEDrawingTools.m in Sources */,
+				4221E5691B6181348DC947329F89F672 /* ACEDrawingView-dummy.m in Sources */,
+				E40913D1FFD4D94905AF7410FB0B15B0 /* ACEDrawingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C36A2D04EEDB2FCD97FCE455269209F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC5CB243A5343E0B92FDE92130B6010 /* Pods-RocketPaint-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DA521DB58750A008938400593327DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333B58473D205BD25B37656CEB8BBF1C /* RECommonFunctions.m in Sources */,
+				D8DB1DE43C84A065423029602DF4DF90 /* RESideMenu-dummy.m in Sources */,
+				4C458EDEDD8AC8DF88C84F3BBFEAB8F4 /* RESideMenu.m in Sources */,
+				1C78051CE5F517F364F3993FFB3AEAF6 /* UIViewController+RESideMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661D205DEBB1E5C201224538B88F7328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D461BEA9CFC36DDFC2070445147884 /* BCGenieEffect-dummy.m in Sources */,
+				76EC155CCC985AFC4079A2C81256CC64 /* UIView+Genie.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39D07ADC84EF7CF726D4034C61A3DF76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RESideMenu;
+			target = 52C35DF898AD1329BB8170AEA5F2BC97 /* RESideMenu */;
+			targetProxy = F60A84E961E595EC121A23DE3504ABD5 /* PBXContainerItemProxy */;
+		};
+		822D09E9E267BABA7852361647EBE771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ACEDrawingView;
+			target = E50ED8803B05816357E7578CE6824768 /* ACEDrawingView */;
+			targetProxy = B4C1F788B6990FA1E8BA714076F661D9 /* PBXContainerItemProxy */;
+		};
+		C6306DD6EA86458147F2FACDF641595B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCGenieEffect;
+			target = 6F401D88F72F64985AA40539BD5D4F4A /* BCGenieEffect */;
+			targetProxy = 73A444060D6119DAE15C5EE0EA74826A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		291F1B6C270252820475D79D0CB6C562 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F17B8CAC7A4920F20D5C7F90E5BFD7 /* BCGenieEffect.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BCGenieEffect/BCGenieEffect-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BCGenieEffect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BCGenieEffect/BCGenieEffect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BCGenieEffect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		366D26EFAAB4E420D96FBCBB20B3CCE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7993050289585DC052209EAAB31925 /* Pods-RocketPaint.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RocketPaint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RocketPaint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8094040F70A85A967F8F39D562B6BC3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CA62F77F727421FDA38A30469CDBF8 /* RESideMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RESideMenu/RESideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RESideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RESideMenu/RESideMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RESideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		897F22A881B165129790C3390C5C6BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F17B8CAC7A4920F20D5C7F90E5BFD7 /* BCGenieEffect.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BCGenieEffect/BCGenieEffect-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BCGenieEffect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BCGenieEffect/BCGenieEffect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BCGenieEffect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD111788A99F8132D3458FD0092CABA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CA62F77F727421FDA38A30469CDBF8 /* RESideMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RESideMenu/RESideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RESideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RESideMenu/RESideMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RESideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAF5FF6AAF9781364F2634401BF9C3E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B41B613BD8C082B75EC90D9A38F9C65 /* ACEDrawingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ACEDrawingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ACEDrawingView/ACEDrawingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ACEDrawingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D20A524998CD67609BEE5701FD8058AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA2AFC623A5483E19C489BCB54E7952 /* Pods-RocketPaint.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RocketPaint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RocketPaint/Pods-RocketPaint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RocketPaint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DBC97794DA5CBF671CF6379BE98C4DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B41B613BD8C082B75EC90D9A38F9C65 /* ACEDrawingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ACEDrawingView/ACEDrawingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ACEDrawingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ACEDrawingView/ACEDrawingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ACEDrawingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		072511401A7C1D0BA72D9FC6D88D4BEB /* Build configuration list for PBXNativeTarget "RESideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8094040F70A85A967F8F39D562B6BC3F /* Debug */,
+				AD111788A99F8132D3458FD0092CABA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C1EA5C169EEE2DE57351420EC27B1E /* Build configuration list for PBXNativeTarget "Pods-RocketPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				366D26EFAAB4E420D96FBCBB20B3CCE8 /* Debug */,
+				D20A524998CD67609BEE5701FD8058AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		193B6D5C0E2A44DF63ADE2533A2C4394 /* Build configuration list for PBXNativeTarget "BCGenieEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				291F1B6C270252820475D79D0CB6C562 /* Debug */,
+				897F22A881B165129790C3390C5C6BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE893CD5DB7C352F540C851F3C54A2AB /* Build configuration list for PBXNativeTarget "ACEDrawingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF5FF6AAF9781364F2634401BF9C3E8 /* Debug */,
+				DBC97794DA5CBF671CF6379BE98C4DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

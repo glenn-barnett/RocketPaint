@@ -17,76 +17,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     //TODO move these out, and use the natural way of passing functions
-    static func promptOverwriteWithPhoto(vc: UIViewController) {
+    static func promptOverwriteWithPhoto(_ vc: UIViewController) {
         
         let alertTitle = "Load a photo?"
         
         let alertMessage = "Selecting a photo to load will overwrite your work"
         
-        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             // ...
         }
         alertController.addAction(cancelAction)
         
-        let destructiveAction = UIAlertAction(title: "Overwrite", style: .Destructive) { (action) in
+        let destructiveAction = UIAlertAction(title: "Overwrite", style: .destructive) { (action) in
             // ...
         }
         alertController.addAction(destructiveAction)
         
-        vc.presentViewController(alertController, animated: true) { }
+        vc.present(alertController, animated: true) { }
         // post notif - CONFIRM_OVERWRITE
     }
     
-    static func promptClearCanvas(vc: UIViewController) {
+    static func promptClearCanvas(_ vc: UIViewController) {
         
         let alertTitle = "Clear your canvas?"
         
         let alertMessage = "To erase your work, choose \"Erase\".\nTo keep your work, choose \"Cancel\""
         
-        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             // ...
         }
         alertController.addAction(cancelAction)
         
-        let destructiveAction = UIAlertAction(title: "Erase", style: .Destructive) { (action) in
+        let destructiveAction = UIAlertAction(title: "Erase", style: .destructive) { (action) in
             // ...
         }
         alertController.addAction(destructiveAction)
         
-        vc.presentViewController(alertController, animated: true) { }
+        vc.present(alertController, animated: true) { }
         // post notif - CONFIRM_OVERWRITE
     }
     
-    static func promptPhotoLibraryPermission(vc: UIViewController) {
+    static func promptPhotoLibraryPermission(_ vc: UIViewController) {
 
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = UserDefaults.standard
         
-        if NSUserDefaults.standardUserDefaults().boolForKey("never_ask_photo_permissions") {
+        if UserDefaults.standard.bool(forKey: "never_ask_photo_permissions") {
             return;
         }
 
-        let mustEnableController = UIAlertController(title: "Rocket Paint needs to access Photos", message: "To save and load, you must enable photos access.", preferredStyle: .Alert)
+        let mustEnableController = UIAlertController(title: "Rocket Paint needs to access Photos", message: "To save and load, you must enable photos access.", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Not right now", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Not right now", style: .cancel) { (action) in
             // ...
         }
         mustEnableController.addAction(cancelAction)
         
-        let OKAction = UIAlertAction(title: "OK, show me where to enable it", style: .Default) { (action) in
-            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        let OKAction = UIAlertAction(title: "OK, show me where to enable it", style: .default) { (action) in
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
             }
         }
         mustEnableController.addAction(OKAction)
         
-        let dontAskAction = UIAlertAction(title: "Don't ask again", style: .Destructive) { (action) in
+        let dontAskAction = UIAlertAction(title: "Don't ask again", style: .destructive) { (action) in
             // ...
             // write something to settings that aborts us out.  check it at top
-            userDefaults.setBool(true, forKey: "never_ask_photo_permissions")
+            userDefaults.set(true, forKey: "never_ask_photo_permissions")
             userDefaults.synchronize()
         }
         mustEnableController.addAction(dontAskAction)
@@ -94,23 +94,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
-        case .Authorized:
+        case .authorized:
             break;
-        case .Denied, .Restricted :
-            vc.presentViewController(mustEnableController, animated: true) { }
+        case .denied, .restricted :
+            vc.present(mustEnableController, animated: true) { }
             break;
-        case .NotDetermined:
+        case .notDetermined:
             // ask for permissions
             PHPhotoLibrary.requestAuthorization() { (status) -> Void in
                 switch status {
-                case .Authorized:
+                case .authorized:
                     break;
                 // as above
-                case .Denied, .Restricted:
-                    vc.presentViewController(mustEnableController, animated: true) { }
+                case .denied, .restricted:
+                    vc.present(mustEnableController, animated: true) { }
                     break;
                 // as above
-                case .NotDetermined:
+                case .notDetermined:
                     // won't happen but still
                     break;
                 }
@@ -120,33 +120,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        application.statusBarHidden = true
+        application.isStatusBarHidden = true
         
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
         DrawingService.SharedInstance.persistState()
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

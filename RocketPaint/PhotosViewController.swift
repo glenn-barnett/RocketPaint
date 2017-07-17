@@ -15,66 +15,65 @@ let imageReuseIdentifier = "PhotoCell"
 
 class PhotosViewController: UICollectionViewController
 {
-    var imageManager : PHCachingImageManager!
-    var images : PHFetchResult!
+    fileprivate let imageManager = PHCachingImageManager()
+    var images : PHFetchResult<PHAsset> = PHFetchResult()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageManager = PHCachingImageManager()
+//        imageManager = PHCachingImageManager()
         
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
-        images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+        images = PHAsset.fetchAssets(with: .image, options: fetchOptions) as! PHFetchResult<AnyObject> as! PHFetchResult<PHAsset>
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PhotosViewController.photoSaved(_:)),
-            name: Notifications.kPhotoSaved,
+            name: NSNotification.Name(rawValue: Notifications.kPhotoSaved),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PhotosViewController.photosMenuOpened(_:)),
-            name: Notifications.kLeftMenuOpened,
+            name: NSNotification.Name(rawValue: Notifications.kLeftMenuOpened),
             object: nil)
 
     }
     
-    func photosMenuOpened(notification:NSNotification) {
+    func photosMenuOpened(_ notification:Notification) {
         self.collectionView?.reloadData()
         
     }
     
-    func photoSaved(notification:NSNotification) {
+    func photoSaved(_ notification:Notification) {
+        let time : DispatchTime = .now() + .milliseconds(500)
+        let time2 : DispatchTime = .now() + .milliseconds(1000)
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 500 * Int64(NSEC_PER_MSEC))
-        let time2 = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1000 * Int64(NSEC_PER_MSEC))
-        
-        dispatch_after(time, dispatch_get_main_queue()) {
+        DispatchQueue.main.asyncAfter(deadline: time) {
             let fetchOptions = PHFetchOptions()
             fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-            self.images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+            self.images = PHAsset.fetchAssets(with: .image, options: fetchOptions)
             self.collectionView?.reloadData()
         }
 
-        dispatch_after(time2, dispatch_get_main_queue()) {
+        DispatchQueue.main.asyncAfter(deadline: time2) {
             let fetchOptions = PHFetchOptions()
             fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-            self.images = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
+            self.images = PHAsset.fetchAssets(with: .image, options: fetchOptions)
             self.collectionView?.reloadData()
         }
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        hasAppeared = true
     }
     
     // handle tap events
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // signal to parents:
         //   leftside: close self
@@ -96,13 +95,13 @@ class PhotosViewController: UICollectionViewController
 //            
 //        } else {
 //        
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kPhotoLoaded,
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kPhotoLoaded),
                 object: nil,
 //                userInfo: ["phAsset": images.objectAtIndex(indexPath.item-1) as! PHAsset])
-                userInfo: ["phAsset": images.objectAtIndex(indexPath.item) as! PHAsset])
+                userInfo: ["phAsset": images.object(at: indexPath.item) as! PHAsset])
 
-            collectionView.setContentOffset(CGPointZero, animated: true)
+            collectionView.setContentOffset(CGPoint.zero, animated: true)
 //        }
     }
     
@@ -119,15 +118,15 @@ class PhotosViewController: UICollectionViewController
     
     // #pragma mark UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView?) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
         return images.count // + 1
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
 //        if(indexPath.item == 0) {
 //            // special case for [+] row
@@ -144,18 +143,18 @@ class PhotosViewController: UICollectionViewController
 //        } else {
         
         
-            let cell : PhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
+            let cell : PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
             
             //let asset = images.objectAtIndex(indexPath.item-1) as! PHAsset
-            let asset = images.objectAtIndex(indexPath.item) as! PHAsset
+            let asset = images.object(at: indexPath.item) as! PHAsset
 
         
             let options = PHImageRequestOptions()
-            options.networkAccessAllowed = true
-            options.synchronous = false
+            options.isNetworkAccessAllowed = true
+            options.isSynchronous = false
 
-            PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSize(width: 480, height: 640), contentMode:.AspectFit, options:options, resultHandler:{(image, info) in
-                cell.ImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 480, height: 640), contentMode:.aspectFit, options:options, resultHandler:{(image, info) in
+                cell.ImageView?.contentMode = UIViewContentMode.scaleAspectFit
                 cell.ImageView?.image = image
             })
             

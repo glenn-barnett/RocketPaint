@@ -53,6 +53,8 @@
 		2A9FA2BC1CC2BC28000FF2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BA1CC2BC28000FF2A4 /* Main.storyboard */; };
 		2A9FA2BE1CC2BC28000FF2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */; };
 		2A9FA2C11CC2BC28000FF2A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9FA2BF1CC2BC28000FF2A4 /* LaunchScreen.storyboard */; };
+		2AC672D81D91DCF8003ABDA7 /* EasterEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC672D71D91DCF8003ABDA7 /* EasterEggView.swift */; };
+		2AC672DA1DAC8B32003ABDA7 /* Math+randomFractional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC672D91DAC8B32003ABDA7 /* Math+randomFractional.swift */; };
 		2AD4716C1D5FA34C0034DD73 /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD4716B1D5FA34C0034DD73 /* Icon-167.png */; };
 		2AD627101D427E8300C4F792 /* rocket-startup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD6270F1D427E8300C4F792 /* rocket-startup.png */; };
 		2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */; };
@@ -69,12 +71,10 @@
 		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
 		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
 		2AFB1E721D74E005009DBB28 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */; };
-		A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4252553278451327ABC0244 /* Pods_RocketPaint.framework */; };
+		3E07622AB263AE7A0449BC25 /* Pods_RocketPaint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4186FC5609490A901EBE53DD /* Pods_RocketPaint.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0885FB120941F280FAC85FDA /* Pods-RocketPaint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketPaint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint.debug.xcconfig"; sourceTree = "<group>"; };
-		177831622EF3A73515FFA14F /* Pods-RocketPaint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketPaint.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint.release.xcconfig"; sourceTree = "<group>"; };
 		2A0D65CE1D3CFF050057CB40 /* BlankCanvasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCanvasesViewController.swift; sourceTree = "<group>"; };
 		2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		2A0D65D31D3E59FC0057CB40 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -123,6 +123,8 @@
 		2A9FA2BD1CC2BC28000FF2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9FA2C01CC2BC28000FF2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A9FA2C21CC2BC28000FF2A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AC672D71D91DCF8003ABDA7 /* EasterEggView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasterEggView.swift; sourceTree = "<group>"; };
+		2AC672D91DAC8B32003ABDA7 /* Math+randomFractional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Math+randomFractional.swift"; sourceTree = "<group>"; };
 		2AD4716B1D5FA34C0034DD73 /* Icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-167.png"; sourceTree = "<group>"; };
 		2AD6270B1D41C4F300C4F792 /* RocketPaint-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketPaint-Bridging-Header.h"; sourceTree = "<group>"; };
 		2AD6270F1D427E8300C4F792 /* rocket-startup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket-startup.png"; sourceTree = "<group>"; };
@@ -141,7 +143,9 @@
 		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
 		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
 		2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
-		B4252553278451327ABC0244 /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4186FC5609490A901EBE53DD /* Pods_RocketPaint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketPaint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		767C7B180D54862F453F5666 /* Pods-RocketPaint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketPaint.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint.release.xcconfig"; sourceTree = "<group>"; };
+		D43C144B037684C02C1EFEE1 /* Pods-RocketPaint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketPaint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,19 +153,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CD3E213FE45BF95658CDB6 /* Pods_RocketPaint.framework in Frameworks */,
+				3E07622AB263AE7A0449BC25 /* Pods_RocketPaint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29DFFB67A1A02A4BA3B5834B /* Frameworks */ = {
+		209392C975A7519FF3D81C46 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B4252553278451327ABC0244 /* Pods_RocketPaint.framework */,
+				D43C144B037684C02C1EFEE1 /* Pods-RocketPaint.debug.xcconfig */,
+				767C7B180D54862F453F5666 /* Pods-RocketPaint.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		2A0D65D21D3E59ED0057CB40 /* Icons */ = {
@@ -218,8 +223,8 @@
 			children = (
 				2A9FA2B51CC2BC28000FF2A4 /* RocketPaint */,
 				2A9FA2B41CC2BC28000FF2A4 /* Products */,
-				9146B9AF4543BAC297C865A5 /* Pods */,
-				29DFFB67A1A02A4BA3B5834B /* Frameworks */,
+				209392C975A7519FF3D81C46 /* Pods */,
+				55E303116B82C665454ECDFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +246,7 @@
 				2A9FA2B61CC2BC28000FF2A4 /* AppDelegate.swift */,
 				2A43D40A1D2695520066FAD0 /* RootViewController.swift */,
 				2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */,
+				2AC672D71D91DCF8003ABDA7 /* EasterEggView.swift */,
 				2A43D40C1D2696390066FAD0 /* LeftSideViewController.swift */,
 				2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */,
 				2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */,
@@ -262,6 +268,7 @@
 				2AD627111D467A1000C4F792 /* NSUserDefaults+UIColor.swift */,
 				2AD627131D467A4000C4F792 /* NSUserDefaults+UIImage.swift */,
 				2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */,
+				2AC672D91DAC8B32003ABDA7 /* Math+randomFractional.swift */,
 			);
 			path = RocketPaint;
 			sourceTree = "<group>";
@@ -278,13 +285,12 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		9146B9AF4543BAC297C865A5 /* Pods */ = {
+		55E303116B82C665454ECDFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0885FB120941F280FAC85FDA /* Pods-RocketPaint.debug.xcconfig */,
-				177831622EF3A73515FFA14F /* Pods-RocketPaint.release.xcconfig */,
+				4186FC5609490A901EBE53DD /* Pods_RocketPaint.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,12 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A9FA2C51CC2BC28000FF2A4 /* Build configuration list for PBXNativeTarget "RocketPaint" */;
 			buildPhases = (
-				381EDD92BF02D7E69D627C86 /* Check Pods Manifest.lock */,
+				4DC9FF6FEED6C70C6ABEB8EF /* [CP] Check Pods Manifest.lock */,
 				2A9FA2AF1CC2BC28000FF2A4 /* Sources */,
 				2A9FA2B01CC2BC28000FF2A4 /* Frameworks */,
 				2A9FA2B11CC2BC28000FF2A4 /* Resources */,
-				0EB8807833B70A4033987B3B /* Embed Pods Frameworks */,
-				BB035EC8473294259E046E25 /* Copy Pods Resources */,
+				428669E8C8480D136C58D8CC /* [CP] Embed Pods Frameworks */,
+				3696434E783C526DF7585A8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +329,8 @@
 					2A9FA2B21CC2BC28000FF2A4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 3L6DL6862T;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -382,14 +390,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EB8807833B70A4033987B3B /* Embed Pods Frameworks */ = {
+		3696434E783C526DF7585A8F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		428669E8C8480D136C58D8CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,34 +420,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		381EDD92BF02D7E69D627C86 /* Check Pods Manifest.lock */ = {
+		4DC9FF6FEED6C70C6ABEB8EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BB035EC8473294259E046E25 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RocketPaint/Pods-RocketPaint-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -435,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AFB1E721D74E005009DBB28 /* UIImage+Rotate.swift in Sources */,
+				2AC672DA1DAC8B32003ABDA7 /* Math+randomFractional.swift in Sources */,
 				2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */,
 				2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */,
 				2AE65D8B1D50E6D3001559AA /* PaintcodeViews.swift in Sources */,
@@ -444,6 +453,7 @@
 				2A4B4DDE1D2BDB5900ECBD0C /* UndoBView.swift in Sources */,
 				2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */,
 				2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */,
+				2AC672D81D91DCF8003ABDA7 /* EasterEggView.swift in Sources */,
 				2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */,
 				2A3AFCB21D36E21300131761 /* PhotosViewController.swift in Sources */,
 				2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */,
@@ -584,11 +594,12 @@
 		};
 		2A9FA2C61CC2BC28000FF2A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0885FB120941F280FAC85FDA /* Pods-RocketPaint.debug.xcconfig */;
+			baseConfigurationReference = D43C144B037684C02C1EFEE1 /* Pods-RocketPaint.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3L6DL6862T;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
@@ -596,32 +607,27 @@
 					"-framework",
 					"\"ACEDrawingView\"",
 					"-framework",
-					"\"BSGridCollectionViewLayout\"",
-					"-framework",
-					"\"KRLCollectionViewGridLayout\"",
-					"-framework",
 					"\"RESideMenu\"",
-					"-framework",
-					"\"RFQuiltLayout\"",
-					"-framework",
-					"\"TOCropViewController\"",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.rocketpaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2A9FA2C71CC2BC28000FF2A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 177831622EF3A73515FFA14F /* Pods-RocketPaint.release.xcconfig */;
+			baseConfigurationReference = 767C7B180D54862F453F5666 /* Pods-RocketPaint.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Impresario Digital (3L6DL6862T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3L6DL6862T;
 				INFOPLIST_FILE = RocketPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				OTHER_LDFLAGS = (
@@ -629,21 +635,15 @@
 					"-framework",
 					"\"ACEDrawingView\"",
 					"-framework",
-					"\"BSGridCollectionViewLayout\"",
-					"-framework",
-					"\"KRLCollectionViewGridLayout\"",
-					"-framework",
 					"\"RESideMenu\"",
-					"-framework",
-					"\"RFQuiltLayout\"",
-					"-framework",
-					"\"TOCropViewController\"",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.impresariodigital.rocketpaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "17426e4b-bd7c-438b-9370-b91a57ef5188";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

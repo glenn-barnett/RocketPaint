@@ -20,21 +20,21 @@ class DynamicBrushBView: IconColoredBView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(DynamicBrushBView.brushChanged(_:)),
-            name: Notifications.kBrushChanged,
+            name: NSNotification.Name(rawValue: Notifications.kBrushChanged),
             object: nil)
         
     }
     
-    func brushChanged(notification:NSNotification){
+    func brushChanged(_ notification:Notification){
         brush = notification.userInfo!["brush"] as! String
         self.setNeedsDisplay();
     }
 
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         if(brush == "Pen") {
             let minLineWidth : CGFloat = 1.0

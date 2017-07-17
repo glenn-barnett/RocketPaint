@@ -21,24 +21,24 @@ class BlankCanvasesViewController: UICollectionViewController
     }
     
     // handle tap events
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         // pull the color from the cell
         // blow away the canvas
         // make sure undo works!
 
         // do stuff on selection
-        let cell : UICollectionViewCell = self.collectionView!.cellForItemAtIndexPath(indexPath)!
+        let cell : UICollectionViewCell = self.collectionView!.cellForItem(at: indexPath)!
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kCanvasCleared,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil,
             userInfo: ["color": cell.backgroundColor!])
 
         DrawingService.SharedInstance.resetBrush()
         
         // reset to top of list
-        collectionView.setContentOffset(CGPointZero, animated: true)
+        collectionView.setContentOffset(CGPoint.zero, animated: true)
 
     }
     
@@ -55,15 +55,15 @@ class BlankCanvasesViewController: UICollectionViewController
     
     // #pragma mark UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView?) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView?) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView?, numberOfItemsInSection section: Int) -> Int {
         return colorService.staticColorArray.count + colorService.randomColorArray.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         /*
          We can use multiple way to create a UICollectionViewCell.
          */
@@ -71,7 +71,7 @@ class BlankCanvasesViewController: UICollectionViewController
         //1.
         //We can use Reusablecell identifier with custom UICollectionViewCell
         
-         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BlankCanvasCell", forIndexPath: indexPath) as UICollectionViewCell
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlankCanvasCell", for: indexPath) as UICollectionViewCell
 
         if(indexPath.item < colorService.staticColorArray.count) {
             cell.backgroundColor = colorService.staticColorArray[indexPath.item];

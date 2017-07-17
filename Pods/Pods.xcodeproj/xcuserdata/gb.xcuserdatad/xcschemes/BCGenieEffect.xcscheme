@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '15EC1D636B67183C45B044C4'
+               BlueprintIdentifier = '6F401D88F72F64985AA40539BD5D4F4A'
                BlueprintName = 'BCGenieEffect'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'BCGenieEffect.framework'>

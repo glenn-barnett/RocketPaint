@@ -13,8 +13,8 @@ import ACEDrawingView
 
 class RocketDrawingView: ACEDrawingView {
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         
         DrawingService.SharedInstance.isModified = true
         

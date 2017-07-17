@@ -6,22 +6,22 @@
 //  Copyright © 2016 Glenn Barnett. All rights reserved.
 //
 
-extension NSUserDefaults {
+extension UserDefaults {
     
-    func imageForKey(key: String) -> UIImage? {
+    func imageForKey(_ key: String) -> UIImage? {
         var image: UIImage?
-        if let imageData = dataForKey(key) {
-            image = NSKeyedUnarchiver.unarchiveObjectWithData(imageData) as? UIImage
+        if let imageData = data(forKey: key) {
+            image = NSKeyedUnarchiver.unarchiveObject(with: imageData) as? UIImage
         }
         return image
     }
     
-    func setImage(image: UIImage?, forKey key: String) {
-        var imageData: NSData?
+    func setImage(_ image: UIImage?, forKey key: String) {
+        var imageData: Data?
         if let image = image {
-            imageData = NSKeyedArchiver.archivedDataWithRootObject(image)
+            imageData = NSKeyedArchiver.archivedData(withRootObject: image)
         }
-        setObject(imageData, forKey: key)
+        set(imageData, forKey: key)
     }
     
 }

@@ -6,22 +6,22 @@
 //  Copyright © 2016 Glenn Barnett. All rights reserved.
 //
 
-extension NSUserDefaults {
+extension UserDefaults {
     
-    func colorForKey(key: String) -> UIColor? {
+    func colorForKey(_ key: String) -> UIColor? {
         var color: UIColor?
-        if let colorData = dataForKey(key) {
-            color = NSKeyedUnarchiver.unarchiveObjectWithData(colorData) as? UIColor
+        if let colorData = data(forKey: key) {
+            color = NSKeyedUnarchiver.unarchiveObject(with: colorData) as? UIColor
         }
         return color
     }
     
-    func setColor(color: UIColor?, forKey key: String) {
-        var colorData: NSData?
+    func setColor(_ color: UIColor?, forKey key: String) {
+        var colorData: Data?
         if let color = color {
-            colorData = NSKeyedArchiver.archivedDataWithRootObject(color)
+            colorData = NSKeyedArchiver.archivedData(withRootObject: color)
         }
-        setObject(colorData, forKey: key)
+        set(colorData, forKey: key)
     }
     
 }

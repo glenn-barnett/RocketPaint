@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-public class DrawingService {
+open class DrawingService {
     static let SharedInstance = DrawingService()
-    private let _userDefaults = NSUserDefaults.standardUserDefaults()
+    fileprivate let _userDefaults = UserDefaults.standard
     
     static let kDefaultLineWidth = 6.0;
     
@@ -23,51 +23,51 @@ public class DrawingService {
     var lastBrushName : String? = nil;
     
     func initNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(DrawingService.brushChanged(_:)),
-            name: Notifications.kBrushChanged,
+            name: NSNotification.Name(rawValue: Notifications.kBrushChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(DrawingService.photoSaved(_:)),
-            name: Notifications.kPhotoSaved,
+            name: NSNotification.Name(rawValue: Notifications.kPhotoSaved),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(DrawingService.canvasCleared(_:)),
-            name: Notifications.kCanvasCleared,
+            name: NSNotification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil)
         
         
     }
 
-    @objc func brushChanged(notification:NSNotification){
+    @objc func brushChanged(_ notification:Notification){
         lastBrushName = notification.userInfo!["brush"] as? String
         drawingViews[0].commitAndDiscardToolStack()
     }
-    @objc func photoSaved(notification:NSNotification){
+    @objc func photoSaved(_ notification:Notification){
         isModified = false
         isSaved = true
         drawingViews[0].commitAndDiscardToolStack()
     }
-    @objc func canvasCleared(notification:NSNotification){
+    @objc func canvasCleared(_ notification:Notification){
         isModified = false
         isSaved = false
         drawingViews[0].commitAndDiscardToolStack()
     }
 
-    func addDrawingView(drawingView : RocketDrawingView) {
+    func addDrawingView(_ drawingView : RocketDrawingView) {
         drawingViews.append(drawingView)
     }
     
-    func loadImage0(image : UIImage) {
+    func loadImage0(_ image : UIImage) {
         isModified = false
         isSaved = false
         drawingViews[0].commitAndDiscardToolStack()
-        drawingViews[0].drawMode = .Scale;
+        drawingViews[0].drawMode = .scale;
         drawingViews[0].loadImage(image);
     }
     
@@ -99,14 +99,14 @@ public class DrawingService {
         canvasColor.setFill()
         UIRectFill(rect)
         
-        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return composedImage
         
     }
     
-    func composeImageOnCanvasColor(image : UIImage) -> UIImage {
+    func composeImageOnCanvasColor(_ image : UIImage) -> UIImage {
         
         let canvasColor = ColorService.SharedInstance.canvasColor
         
@@ -116,9 +116,9 @@ public class DrawingService {
         
         canvasColor.setFill()
         UIRectFill(rect)
-        image.drawInRect(rect)
+        image.draw(in: rect)
         
-        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let composedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return composedImage
@@ -127,20 +127,20 @@ public class DrawingService {
     
     func persistState() {
                 
-        _userDefaults.removeObjectForKey("brushName")
-        _userDefaults.setObject(lastBrushName, forKey: "brushName")
+        _userDefaults.removeObject(forKey: "brushName")
+        _userDefaults.set(lastBrushName, forKey: "brushName")
         
-        _userDefaults.removeObjectForKey("brushColor")
+        _userDefaults.removeObject(forKey: "brushColor")
         _userDefaults.setColor(ColorService.SharedInstance.selectedColor, forKey: "brushColor")
 
-        _userDefaults.removeObjectForKey("lineWidth")
-        _userDefaults.setObject(drawingViews[0].lineWidth, forKey: "lineWidth")
+        _userDefaults.removeObject(forKey: "lineWidth")
+        _userDefaults.set(Float(drawingViews[0].lineWidth), forKey: "lineWidth")
 
-        _userDefaults.removeObjectForKey("lineAlpha")
-        _userDefaults.setObject(drawingViews[0].lineAlpha, forKey: "lineAlpha")
+        _userDefaults.removeObject(forKey: "lineAlpha")
+        _userDefaults.set(Float(drawingViews[0].lineAlpha), forKey: "lineAlpha")
 
 //        if(isModified) {
-            _userDefaults.removeObjectForKey("image")
+            _userDefaults.removeObject(forKey: "image")
             _userDefaults.setImage(getImageOnCanvasColor(), forKey: "image")
 //        }
         _userDefaults.synchronize()
@@ -148,36 +148,36 @@ public class DrawingService {
     }
     
     func restoreState() {
-        if let brushName = NSUserDefaults.standardUserDefaults().objectForKey("brushName") as? String {
+        if let brushName = UserDefaults.standard.object(forKey: "brushName") as? String {
             lastBrushName = brushName // TODO redundant?
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kBrushChanged,
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kBrushChanged),
                 object: nil,
                 userInfo: ["brush": brushName])
         }
 
-        if let brushColor = NSUserDefaults.standardUserDefaults().colorForKey("brushColor") {
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kColorChanged,
+        if let brushColor = UserDefaults.standard.colorForKey("brushColor") {
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kColorChanged),
                 object: nil,
                 userInfo: ["color": brushColor])
         }
 
-        if let lineWidth = NSUserDefaults.standardUserDefaults().objectForKey("lineWidth") as? CGFloat {
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kLineWidthChanged,
+        if let lineWidth = UserDefaults.standard.object(forKey: "lineWidth") as? Float {
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kLineWidthChanged),
                 object: nil,
                 userInfo: ["lineWidth": lineWidth])
         }
 
-        if let lineAlpha = NSUserDefaults.standardUserDefaults().objectForKey("lineAlpha") as? CGFloat {
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kLineAlphaChanged,
+        if let lineAlpha = UserDefaults.standard.object(forKey: "lineAlpha") as? Float {
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kLineAlphaChanged),
                 object: nil,
                 userInfo: ["lineAlpha": max(0.05, lineAlpha)]) // GB bump up to min of 5% in case they get confused
         }
 
-        if let image = NSUserDefaults.standardUserDefaults().imageForKey("image") {
+        if let image = UserDefaults.standard.imageForKey("image") {
             // load image
             loadImage0(image)
         }
@@ -189,25 +189,26 @@ public class DrawingService {
     func resetBrush() {
 
         lastBrushName = "pen" // TODO redundant?
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "Pen"])
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kColorChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kColorChanged),
             object: nil,
             userInfo: ["color": ColorService.SharedInstance.defaultPaintColor()])
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineWidthChanged,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil,
             userInfo: ["lineWidth": DrawingService.kDefaultLineWidth])
-        
+/*
         NSNotificationCenter.defaultCenter().postNotificationName(
             Notifications.kLineAlphaChanged,
             object: nil,
-            userInfo: ["lineAlpha":1.0])
+            userInfo: ["lineAlpha":0.7])
+*/
     }
     
 }

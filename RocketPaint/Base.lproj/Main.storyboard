@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y3M-7Y-qg8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3M-7Y-qg8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -16,9 +17,9 @@
                         <viewControllerLayoutGuide type="bottom" id="7yx-ZL-Xda"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zJb-Mo-7oa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEX-pM-WLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,11 +39,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="The-Z5-O14" customClass="GradientFadeView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maU-Mk-34H" customClass="LoadBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="0as-lc-l4q"/>
@@ -65,8 +64,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whg-Wr-ash" customClass="ClearBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="4Ly-aZ-sIL"/>
@@ -89,8 +87,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-U6-pCE" customClass="ClearColorBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="KnB-sq-sLk"/>
@@ -113,8 +110,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7t-eC-NB9" customClass="SaveBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="2GZ-hP-2o6"/>
@@ -143,7 +139,7 @@
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="maU-Mk-34H" firstAttribute="top" secondItem="The-Z5-O14" secondAttribute="top" constant="14" id="1Aw-Sr-3hA"/>
                                     <constraint firstAttribute="trailing" secondItem="Y7t-eC-NB9" secondAttribute="trailing" constant="120" id="6tR-oR-3VM"/>
@@ -192,14 +188,12 @@
                                 </variation>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-dt-hia" userLabel="reside center content">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.9967240678" green="0.46472928749999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="529" y="168" width="240" height="715"/>
-                                </variation>
+                                <frame key="frameInset" minX="529" minY="168" width="240" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9967240678" green="0.46472928749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jrJ-AS-ZYT" firstAttribute="top" secondItem="The-Z5-O14" secondAttribute="bottom" id="Bqz-nl-1J6"/>
                             <constraint firstItem="The-Z5-O14" firstAttribute="top" secondItem="5oM-Bg-7Sn" secondAttribute="topMargin" id="PV9-Hu-MhL"/>
@@ -270,11 +264,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hva-ee-yGZ" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMS-Ls-Jmm" customClass="HamburgerBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="K1A-Qs-R8B">
@@ -301,8 +293,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-kx-mDb" customClass="UndoBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="92" id="2dj-Xw-XZA">
@@ -329,8 +320,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-Av-WXL" customClass="DynamicBrushBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="92" id="BBU-F3-k1T">
@@ -357,8 +347,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLF-fh-5sx" customClass="RedoBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="DYg-U9-D7M">
@@ -385,7 +374,7 @@
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="aLF-fh-5sx" secondAttribute="trailing" constant="8" id="1G0-5K-V8A"/>
                                     <constraint firstItem="rHj-Av-WXL" firstAttribute="top" secondItem="hva-ee-yGZ" secondAttribute="top" constant="8" id="921-Mz-2kk"/>
@@ -449,35 +438,130 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-s6-nAP" customClass="EasterEggDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caroline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-6S-51u">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Dhh-A5-Hzj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="120"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Dhh-A5-Hzj"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Dhh-A5-Hzj"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uct-To-w6S">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="fYL-bC-wwV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="120"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fYL-bC-wwV"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="fYL-bC-wwV"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gNK-6S-51u" firstAttribute="top" secondItem="jFN-s6-nAP" secondAttribute="top" constant="236" id="1fs-14-sJ0">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="279"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="uct-To-w6S" secondAttribute="bottom" constant="285" id="8q1-rl-THE"/>
+                                    <constraint firstItem="uct-To-w6S" firstAttribute="top" secondItem="gNK-6S-51u" secondAttribute="bottom" constant="60" id="Wau-kK-wUe"/>
+                                    <constraint firstAttribute="trailing" secondItem="uct-To-w6S" secondAttribute="trailing" id="fb3-jc-Mbc"/>
+                                    <constraint firstItem="gNK-6S-51u" firstAttribute="leading" secondItem="jFN-s6-nAP" secondAttribute="leading" id="hDb-Jr-ohj"/>
+                                    <constraint firstItem="uct-To-w6S" firstAttribute="leading" secondItem="jFN-s6-nAP" secondAttribute="leading" id="kDG-Qd-f9f"/>
+                                    <constraint firstAttribute="trailing" secondItem="gNK-6S-51u" secondAttribute="trailing" id="lyz-nW-Rnc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="gNK-6S-51u"/>
+                                        <exclude reference="uct-To-w6S"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="1fs-14-sJ0"/>
+                                        <exclude reference="hDb-Jr-ohj"/>
+                                        <exclude reference="lyz-nW-Rnc"/>
+                                        <exclude reference="8q1-rl-THE"/>
+                                        <exclude reference="Wau-kK-wUe"/>
+                                        <exclude reference="fb3-jc-Mbc"/>
+                                        <exclude reference="kDG-Qd-f9f"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="gNK-6S-51u"/>
+                                        <include reference="uct-To-w6S"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="1fs-14-sJ0"/>
+                                        <include reference="hDb-Jr-ohj"/>
+                                        <include reference="lyz-nW-Rnc"/>
+                                        <include reference="8q1-rl-THE"/>
+                                        <include reference="Wau-kK-wUe"/>
+                                        <include reference="fb3-jc-Mbc"/>
+                                        <include reference="kDG-Qd-f9f"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hva-ee-yGZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AWj-hY-nWN"/>
+                            <constraint firstItem="jFN-s6-nAP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DQd-bf-z0F"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hva-ee-yGZ" secondAttribute="bottom" id="HkE-EU-mYF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hva-ee-yGZ" secondAttribute="trailing" constant="-20" id="JyV-cZ-tGq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jFN-s6-nAP" secondAttribute="trailing" constant="-20" id="KOD-aG-vjf"/>
+                            <constraint firstItem="jFN-s6-nAP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="NT1-AY-sjn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jFN-s6-nAP" secondAttribute="bottom" id="bHK-o0-zbW"/>
                             <constraint firstItem="hva-ee-yGZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cf8-na-tZZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hva-ee-yGZ"/>
+                                <exclude reference="jFN-s6-nAP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="HkE-EU-mYF"/>
+                                <exclude reference="bHK-o0-zbW"/>
                                 <exclude reference="AWj-hY-nWN"/>
                                 <exclude reference="JyV-cZ-tGq"/>
                                 <exclude reference="cf8-na-tZZ"/>
+                                <exclude reference="DQd-bf-z0F"/>
+                                <exclude reference="KOD-aG-vjf"/>
+                                <exclude reference="NT1-AY-sjn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="hva-ee-yGZ"/>
+                                <include reference="jFN-s6-nAP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="HkE-EU-mYF"/>
+                                <include reference="bHK-o0-zbW"/>
                                 <include reference="AWj-hY-nWN"/>
                                 <include reference="JyV-cZ-tGq"/>
                                 <include reference="cf8-na-tZZ"/>
+                                <include reference="DQd-bf-z0F"/>
+                                <include reference="KOD-aG-vjf"/>
+                                <include reference="NT1-AY-sjn"/>
                             </mask>
                         </variation>
                     </view>
@@ -486,6 +570,7 @@
                     <connections>
                         <outlet property="BrushBView" destination="rHj-Av-WXL" id="xgY-9y-Vv6"/>
                         <outlet property="DrawingView" destination="hva-ee-yGZ" id="jy2-Xi-NOh"/>
+                        <outlet property="EasterEggView" destination="jFN-s6-nAP" id="8J7-h1-qbR"/>
                         <outlet property="HamburgerBView" destination="mMS-Ls-Jmm" id="jId-sG-tF9"/>
                         <outlet property="RedoBView" destination="aLF-fh-5sx" id="YGi-pY-gOF"/>
                         <outlet property="UndoBView" destination="LPN-kx-mDb" id="j1e-Aq-hmK"/>
@@ -533,225 +618,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-b4-mgf" customClass="GradientFadeView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-BZ-8to" userLabel="Palette Container">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="ExW-R0-Pea"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ExW-R0-Pea"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="ExW-R0-Pea"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="nLV-Lp-BLU" kind="embed" id="k9f-ln-Rnb"/>
-                                </connections>
-                            </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-uj-vOh" userLabel="Brush Holder">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9D-tN-iTn" customClass="BrushWirePenBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="2Sd-rH-ALg"/>
-                                            <constraint firstAttribute="height" constant="82" id="ylt-O2-bhE"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2Sd-rH-ALg"/>
-                                                <exclude reference="ylt-O2-bhE"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="2Sd-rH-ALg"/>
-                                                <include reference="ylt-O2-bhE"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="mMm-cd-mZC" appends="YES" id="dE9-JK-QUs"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVR-SY-cb9" customClass="BrushWireLineBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Zip-vW-VJn"/>
-                                            <constraint firstAttribute="height" constant="82" id="pRE-vx-Qup"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Zip-vW-VJn"/>
-                                                <exclude reference="pRE-vx-Qup"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="Zip-vW-VJn"/>
-                                                <include reference="pRE-vx-Qup"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="AOa-gU-y5K" appends="YES" id="4hQ-DY-vnd"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-ls-lYj" customClass="BrushWireEllipseSolidBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="2oI-qf-6gk"/>
-                                            <constraint firstAttribute="height" constant="82" id="72Z-4H-Jch"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2oI-qf-6gk"/>
-                                                <exclude reference="72Z-4H-Jch"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="2oI-qf-6gk"/>
-                                                <include reference="72Z-4H-Jch"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ZWB-IV-8nT" appends="YES" id="wNE-gM-jQE"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-nx-zLE" customClass="BrushWireEllipseOutlineBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Lgx-IP-6ms"/>
-                                            <constraint firstAttribute="height" constant="82" id="PIu-Om-JX0"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Lgx-IP-6ms"/>
-                                                <exclude reference="PIu-Om-JX0"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="Lgx-IP-6ms"/>
-                                                <include reference="PIu-Om-JX0"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="lNP-Pr-5lv" appends="YES" id="wxh-mL-LjK"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNT-Bd-ml7" customClass="BrushWireRectSolidBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="2kP-C0-BNn"/>
-                                            <constraint firstAttribute="height" constant="82" id="3Zg-1i-Ztz"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2kP-C0-BNn"/>
-                                                <exclude reference="3Zg-1i-Ztz"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="2kP-C0-BNn"/>
-                                                <include reference="3Zg-1i-Ztz"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="idW-TJ-i48" appends="YES" id="4IV-l0-fpV"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-Hc-QHK" customClass="BrushWireRectOutlineBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Fh4-WS-QKB"/>
-                                            <constraint firstAttribute="height" constant="82" id="Ve9-D0-kg2"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Fh4-WS-QKB"/>
-                                                <exclude reference="Ve9-D0-kg2"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="Fh4-WS-QKB"/>
-                                                <include reference="Ve9-D0-kg2"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="c1q-Ft-bh8" appends="YES" id="G3d-mX-iH7"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-kW-z5b" customClass="BrushWireTextSansBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="TfE-8z-lJA"/>
-                                            <constraint firstAttribute="width" constant="120" id="hrq-rF-Rok"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="TfE-8z-lJA"/>
-                                                <exclude reference="hrq-rF-Rok"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="TfE-8z-lJA"/>
-                                                <include reference="hrq-rF-Rok"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="IhX-9a-TfO" appends="YES" id="kRi-ev-sqL"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-Hj-ezS" customClass="BrushWireTextSerifBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="6Ge-GP-ReW"/>
-                                            <constraint firstAttribute="width" constant="120" id="H4C-qj-kNu"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="6Ge-GP-ReW"/>
-                                                <exclude reference="H4C-qj-kNu"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="6Ge-GP-ReW"/>
-                                                <include reference="H4C-qj-kNu"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="aeC-yZ-gyS" appends="YES" id="jB7-Lw-PrI"/>
-                                        </connections>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-So-8eL" customClass="ClearCanvasBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="79" id="FqO-AF-X6W"/>
@@ -774,22 +643,19 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvv-GA-LB9" customClass="SaveBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Pys-Oh-7Gj"/>
                                             <constraint firstAttribute="width" constant="79" id="QWn-l8-Y0F"/>
+                                            <constraint firstAttribute="height" constant="100" id="dVZ-KS-uxw"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="Pys-Oh-7Gj"/>
                                                 <exclude reference="QWn-l8-Y0F"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <include reference="Pys-Oh-7Gj"/>
                                                 <include reference="QWn-l8-Y0F"/>
                                             </mask>
                                         </variation>
@@ -798,8 +664,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-9K-ZKo" customClass="LoadBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="nes-vw-joU"/>
@@ -821,35 +686,238 @@
                                             <outletCollection property="gestureRecognizers" destination="At1-NS-AEs" appends="YES" id="LQS-V5-g8n"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-IY-d8p">
+                                        <frame key="frameInset" minX="720" minY="1003" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Rvv-GA-LB9" firstAttribute="leading" secondItem="6Ve-9K-ZKo" secondAttribute="trailing" constant="6" id="4ec-pH-lwD"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Ve-9K-ZKo" secondAttribute="bottom" constant="21" id="75a-YA-hPc"/>
+                                    <constraint firstItem="DcH-So-8eL" firstAttribute="leading" secondItem="gYA-b4-mgf" secondAttribute="leading" constant="21" id="Jx5-Lb-ktP"/>
+                                    <constraint firstAttribute="bottom" secondItem="DcH-So-8eL" secondAttribute="bottom" constant="21" id="WWF-ua-SX4"/>
+                                    <constraint firstItem="6Ve-9K-ZKo" firstAttribute="leading" secondItem="DcH-So-8eL" secondAttribute="trailing" constant="228" id="XGs-l2-8kM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rvv-GA-LB9" secondAttribute="bottom" constant="21" id="jSe-Xp-ofB"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-BZ-8to" userLabel="Palette Container">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="ExW-R0-Pea"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ExW-R0-Pea"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ExW-R0-Pea"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="nLV-Lp-BLU" kind="embed" id="k9f-ln-Rnb"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-uj-vOh" userLabel="Brush Holder">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9D-tN-iTn" customClass="BrushWirePenBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="2Sd-rH-ALg"/>
+                                            <constraint firstAttribute="height" constant="82" id="ylt-O2-bhE"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2Sd-rH-ALg"/>
+                                                <exclude reference="ylt-O2-bhE"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="2Sd-rH-ALg"/>
+                                                <include reference="ylt-O2-bhE"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="mMm-cd-mZC" appends="YES" id="dE9-JK-QUs"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVR-SY-cb9" customClass="BrushWireLineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Zip-vW-VJn"/>
+                                            <constraint firstAttribute="height" constant="82" id="pRE-vx-Qup"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Zip-vW-VJn"/>
+                                                <exclude reference="pRE-vx-Qup"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Zip-vW-VJn"/>
+                                                <include reference="pRE-vx-Qup"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="AOa-gU-y5K" appends="YES" id="4hQ-DY-vnd"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-ls-lYj" customClass="BrushWireEllipseSolidBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="2oI-qf-6gk"/>
+                                            <constraint firstAttribute="height" constant="82" id="72Z-4H-Jch"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2oI-qf-6gk"/>
+                                                <exclude reference="72Z-4H-Jch"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="2oI-qf-6gk"/>
+                                                <include reference="72Z-4H-Jch"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ZWB-IV-8nT" appends="YES" id="wNE-gM-jQE"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-nx-zLE" customClass="BrushWireEllipseOutlineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Lgx-IP-6ms"/>
+                                            <constraint firstAttribute="height" constant="82" id="PIu-Om-JX0"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Lgx-IP-6ms"/>
+                                                <exclude reference="PIu-Om-JX0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Lgx-IP-6ms"/>
+                                                <include reference="PIu-Om-JX0"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="lNP-Pr-5lv" appends="YES" id="wxh-mL-LjK"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNT-Bd-ml7" customClass="BrushWireRectSolidBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="2kP-C0-BNn"/>
+                                            <constraint firstAttribute="height" constant="82" id="3Zg-1i-Ztz"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2kP-C0-BNn"/>
+                                                <exclude reference="3Zg-1i-Ztz"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="2kP-C0-BNn"/>
+                                                <include reference="3Zg-1i-Ztz"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="idW-TJ-i48" appends="YES" id="4IV-l0-fpV"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-Hc-QHK" customClass="BrushWireRectOutlineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Fh4-WS-QKB"/>
+                                            <constraint firstAttribute="height" constant="82" id="Ve9-D0-kg2"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Fh4-WS-QKB"/>
+                                                <exclude reference="Ve9-D0-kg2"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Fh4-WS-QKB"/>
+                                                <include reference="Ve9-D0-kg2"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="c1q-Ft-bh8" appends="YES" id="G3d-mX-iH7"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-kW-z5b" customClass="BrushWireTextSansBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="TfE-8z-lJA"/>
+                                            <constraint firstAttribute="width" constant="120" id="hrq-rF-Rok"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="TfE-8z-lJA"/>
+                                                <exclude reference="hrq-rF-Rok"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="TfE-8z-lJA"/>
+                                                <include reference="hrq-rF-Rok"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="IhX-9a-TfO" appends="YES" id="kRi-ev-sqL"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-Hj-ezS" customClass="BrushWireTextSerifBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="6Ge-GP-ReW"/>
+                                            <constraint firstAttribute="width" constant="120" id="H4C-qj-kNu"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6Ge-GP-ReW"/>
+                                                <exclude reference="H4C-qj-kNu"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="6Ge-GP-ReW"/>
+                                                <include reference="H4C-qj-kNu"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aeC-yZ-gyS" appends="YES" id="jB7-Lw-PrI"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="e9D-tN-iTn" firstAttribute="leading" secondItem="CEO-uj-vOh" secondAttribute="leading" constant="8" id="23h-9c-8TR"/>
                                     <constraint firstItem="e9D-tN-iTn" firstAttribute="top" secondItem="CEO-uj-vOh" secondAttribute="top" constant="8" id="3eB-yu-PCe"/>
                                     <constraint firstItem="OVR-SY-cb9" firstAttribute="leading" secondItem="e9D-tN-iTn" secondAttribute="trailing" constant="3" id="6Ic-d2-qhH"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Ve-9K-ZKo" secondAttribute="bottom" constant="6" id="6y7-XO-ToR">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="12"/>
-                                    </constraint>
-                                    <constraint firstItem="Rvv-GA-LB9" firstAttribute="leading" secondItem="6Ve-9K-ZKo" secondAttribute="trailing" constant="8" id="AfN-hW-hpD">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="6"/>
-                                    </constraint>
                                     <constraint firstItem="Ztg-kW-z5b" firstAttribute="top" secondItem="eNT-Bd-ml7" secondAttribute="bottom" constant="13" id="F28-IM-zmj"/>
                                     <constraint firstItem="Iug-Hc-QHK" firstAttribute="top" secondItem="XLi-nx-zLE" secondAttribute="bottom" constant="13" id="Fen-cr-eIy"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rvv-GA-LB9" secondAttribute="bottom" constant="6" id="JiF-Kz-7ag">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="12"/>
-                                    </constraint>
                                     <constraint firstItem="HD5-Hj-ezS" firstAttribute="leading" secondItem="Ztg-kW-z5b" secondAttribute="trailing" constant="3" id="KdD-ov-1eH"/>
                                     <constraint firstItem="Ztg-kW-z5b" firstAttribute="leading" secondItem="CEO-uj-vOh" secondAttribute="leading" constant="8" id="NTx-yg-meK"/>
                                     <constraint firstItem="9Qe-ls-lYj" firstAttribute="leading" secondItem="CEO-uj-vOh" secondAttribute="leading" constant="8" id="Nae-x0-FZA"/>
-                                    <constraint firstItem="DcH-So-8eL" firstAttribute="leading" secondItem="CEO-uj-vOh" secondAttribute="leading" constant="3" id="OjX-AA-Tno">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="3"/>
-                                    </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="Rvv-GA-LB9" secondAttribute="trailing" constant="3" id="Q2K-DM-MCS">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="7"/>
-                                    </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="DcH-So-8eL" secondAttribute="bottom" constant="6" id="QB7-31-vaa">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="12"/>
-                                    </constraint>
                                     <constraint firstItem="HD5-Hj-ezS" firstAttribute="top" secondItem="Iug-Hc-QHK" secondAttribute="bottom" constant="13" id="See-wO-mso"/>
                                     <constraint firstItem="OVR-SY-cb9" firstAttribute="top" secondItem="CEO-uj-vOh" secondAttribute="top" constant="8" id="WLP-6T-Uth"/>
                                     <constraint firstItem="XLi-nx-zLE" firstAttribute="top" secondItem="OVR-SY-cb9" secondAttribute="bottom" constant="13" id="cwV-Lz-cWk"/>
@@ -870,26 +938,17 @@
                                         <exclude reference="Iug-Hc-QHK"/>
                                         <exclude reference="Ztg-kW-z5b"/>
                                         <exclude reference="HD5-Hj-ezS"/>
-                                        <exclude reference="DcH-So-8eL"/>
-                                        <exclude reference="Rvv-GA-LB9"/>
-                                        <exclude reference="6Ve-9K-ZKo"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="uGS-Pt-gc9"/>
-                                        <exclude reference="6y7-XO-ToR"/>
                                         <exclude reference="Nae-x0-FZA"/>
                                         <exclude reference="zWA-fS-W1B"/>
-                                        <exclude reference="OjX-AA-Tno"/>
-                                        <exclude reference="QB7-31-vaa"/>
                                         <exclude reference="KdD-ov-1eH"/>
                                         <exclude reference="See-wO-mso"/>
                                         <exclude reference="Fen-cr-eIy"/>
                                         <exclude reference="l5T-IL-Eyo"/>
                                         <exclude reference="6Ic-d2-qhH"/>
                                         <exclude reference="WLP-6T-Uth"/>
-                                        <exclude reference="AfN-hW-hpD"/>
-                                        <exclude reference="JiF-Kz-7ag"/>
-                                        <exclude reference="Q2K-DM-MCS"/>
                                         <exclude reference="cwV-Lz-cWk"/>
                                         <exclude reference="lQz-UB-YQ1"/>
                                         <exclude reference="F28-IM-zmj"/>
@@ -910,26 +969,17 @@
                                         <include reference="Iug-Hc-QHK"/>
                                         <include reference="Ztg-kW-z5b"/>
                                         <include reference="HD5-Hj-ezS"/>
-                                        <include reference="DcH-So-8eL"/>
-                                        <include reference="Rvv-GA-LB9"/>
-                                        <include reference="6Ve-9K-ZKo"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="uGS-Pt-gc9"/>
-                                        <include reference="6y7-XO-ToR"/>
                                         <include reference="Nae-x0-FZA"/>
                                         <include reference="zWA-fS-W1B"/>
-                                        <include reference="OjX-AA-Tno"/>
-                                        <include reference="QB7-31-vaa"/>
                                         <include reference="KdD-ov-1eH"/>
                                         <include reference="See-wO-mso"/>
                                         <include reference="Fen-cr-eIy"/>
                                         <include reference="l5T-IL-Eyo"/>
                                         <include reference="6Ic-d2-qhH"/>
                                         <include reference="WLP-6T-Uth"/>
-                                        <include reference="AfN-hW-hpD"/>
-                                        <include reference="JiF-Kz-7ag"/>
-                                        <include reference="Q2K-DM-MCS"/>
                                         <include reference="cwV-Lz-cWk"/>
                                         <include reference="lQz-UB-YQ1"/>
                                         <include reference="F28-IM-zmj"/>
@@ -942,8 +992,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-98-u7G" customClass="LineWidthSliderView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="K2f-4Q-B9Y"/>
                                 </constraints>
@@ -962,8 +1011,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-0B-nLz" customClass="LineAlphaSliderView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="RdK-Oa-8So"/>
                                 </constraints>
@@ -982,23 +1030,23 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Kpb-BZ-8to" secondAttribute="trailing" constant="-20" id="21s-47-Ers"/>
-                            <constraint firstItem="Dg8-98-u7G" firstAttribute="top" secondItem="gf9-jh-hI9" secondAttribute="bottom" id="3bf-cc-7BI"/>
-                            <constraint firstItem="CEO-uj-vOh" firstAttribute="top" secondItem="Dg8-98-u7G" secondAttribute="bottom" constant="15" id="7Y6-5k-pFg"/>
+                            <constraint firstItem="Dg8-98-u7G" firstAttribute="top" secondItem="gf9-jh-hI9" secondAttribute="bottom" constant="-12" id="3bf-cc-7BI"/>
+                            <constraint firstItem="CEO-uj-vOh" firstAttribute="top" secondItem="Dg8-98-u7G" secondAttribute="bottom" constant="64" id="7Y6-5k-pFg"/>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="Kpb-BZ-8to" secondAttribute="bottom" id="9Pp-89-ubU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CEO-uj-vOh" secondAttribute="trailing" constant="240" id="9S6-jx-gVo"/>
-                            <constraint firstItem="Xeh-0B-nLz" firstAttribute="top" secondItem="CEO-uj-vOh" secondAttribute="bottom" constant="15" id="DfU-zw-v6g"/>
+                            <constraint firstItem="Xeh-0B-nLz" firstAttribute="top" secondItem="CEO-uj-vOh" secondAttribute="bottom" constant="-843" id="DfU-zw-v6g"/>
                             <constraint firstItem="gYA-b4-mgf" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-20" id="Ifv-fP-65p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xeh-0B-nLz" secondAttribute="trailing" constant="244" id="Ofr-JD-FoI"/>
                             <constraint firstItem="Dg8-98-u7G" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-11" id="TtR-3m-sz0"/>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="gYA-b4-mgf" secondAttribute="bottom" id="X1t-mE-ycx"/>
                             <constraint firstItem="Xeh-0B-nLz" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-11" id="Xuu-xH-4yP"/>
-                            <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="Xeh-0B-nLz" secondAttribute="bottom" constant="20" id="gae-SB-oM0"/>
                             <constraint firstItem="gYA-b4-mgf" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="kd7-wW-L1b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dg8-98-u7G" secondAttribute="trailing" constant="244" id="mmN-wE-Um1"/>
                             <constraint firstItem="Kpb-BZ-8to" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="oBU-qv-o1M"/>
+                            <constraint firstItem="Xeh-0B-nLz" firstAttribute="top" secondItem="gf9-jh-hI9" secondAttribute="bottom" constant="63" id="oz4-J3-nG8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gYA-b4-mgf" secondAttribute="trailing" constant="-20" id="slW-Px-2GC"/>
                         </constraints>
                         <variation key="default">
@@ -1010,22 +1058,21 @@
                                 <exclude reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9Pp-89-ubU"/>
-                                <exclude reference="X1t-mE-ycx"/>
-                                <exclude reference="gae-SB-oM0"/>
-                                <exclude reference="7Y6-5k-pFg"/>
-                                <exclude reference="9S6-jx-gVo"/>
-                                <exclude reference="3bf-cc-7BI"/>
-                                <exclude reference="TtR-3m-sz0"/>
-                                <exclude reference="mmN-wE-Um1"/>
-                                <exclude reference="21s-47-Ers"/>
-                                <exclude reference="oBU-qv-o1M"/>
-                                <exclude reference="DfU-zw-v6g"/>
-                                <exclude reference="Ofr-JD-FoI"/>
-                                <exclude reference="Xuu-xH-4yP"/>
                                 <exclude reference="Ifv-fP-65p"/>
                                 <exclude reference="kd7-wW-L1b"/>
                                 <exclude reference="slW-Px-2GC"/>
+                                <exclude reference="3bf-cc-7BI"/>
+                                <exclude reference="TtR-3m-sz0"/>
+                                <exclude reference="mmN-wE-Um1"/>
+                                <exclude reference="DfU-zw-v6g"/>
+                                <exclude reference="Ofr-JD-FoI"/>
+                                <exclude reference="Xuu-xH-4yP"/>
+                                <exclude reference="7Y6-5k-pFg"/>
+                                <exclude reference="9S6-jx-gVo"/>
+                                <exclude reference="21s-47-Ers"/>
+                                <exclude reference="oBU-qv-o1M"/>
+                                <exclude reference="9Pp-89-ubU"/>
+                                <exclude reference="X1t-mE-ycx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1037,22 +1084,21 @@
                                 <include reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9Pp-89-ubU"/>
-                                <include reference="X1t-mE-ycx"/>
-                                <include reference="gae-SB-oM0"/>
-                                <include reference="7Y6-5k-pFg"/>
-                                <include reference="9S6-jx-gVo"/>
-                                <include reference="3bf-cc-7BI"/>
-                                <include reference="TtR-3m-sz0"/>
-                                <include reference="mmN-wE-Um1"/>
-                                <include reference="21s-47-Ers"/>
-                                <include reference="oBU-qv-o1M"/>
-                                <include reference="DfU-zw-v6g"/>
-                                <include reference="Ofr-JD-FoI"/>
-                                <include reference="Xuu-xH-4yP"/>
                                 <include reference="Ifv-fP-65p"/>
                                 <include reference="kd7-wW-L1b"/>
                                 <include reference="slW-Px-2GC"/>
+                                <include reference="3bf-cc-7BI"/>
+                                <include reference="TtR-3m-sz0"/>
+                                <include reference="mmN-wE-Um1"/>
+                                <include reference="DfU-zw-v6g"/>
+                                <include reference="Ofr-JD-FoI"/>
+                                <include reference="Xuu-xH-4yP"/>
+                                <include reference="7Y6-5k-pFg"/>
+                                <include reference="9S6-jx-gVo"/>
+                                <include reference="21s-47-Ers"/>
+                                <include reference="oBU-qv-o1M"/>
+                                <include reference="9Pp-89-ubU"/>
+                                <include reference="X1t-mE-ycx"/>
                             </mask>
                         </variation>
                     </view>
@@ -1061,8 +1107,10 @@
                     <connections>
                         <outlet property="ColorPaletteView" destination="Kpb-BZ-8to" id="ymi-nM-yNV"/>
                         <outlet property="clearCanvasBView" destination="DcH-So-8eL" id="u5h-8u-QwC"/>
+                        <outlet property="saveBView" destination="Rvv-GA-LB9" id="l7Y-Ru-6dL"/>
                         <outlet property="sliderLineAlpha" destination="Xeh-0B-nLz" id="7q3-0S-D7X"/>
                         <outlet property="sliderLineWidth" destination="Dg8-98-u7G" id="N7y-vM-jMY"/>
+                        <outlet property="versionLabel" destination="OQA-IY-d8p" id="2Gp-cs-nnV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ect-Qv-bcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1129,9 +1177,9 @@
             <objects>
                 <collectionViewController id="nLV-Lp-BLU" customClass="ColorPaletteViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gE0-Gn-SbX">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="kRH-KK-E4f">
                             <size key="itemSize" width="75" height="62"/>
                             <size key="headerReferenceSize" width="0.0" height="20"/>
@@ -1145,56 +1193,51 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell2" id="OzW-2o-DGe" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="157" y="20" width="75" height="62"/>
+                                <rect key="frame" x="91" y="20" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell3" id="5gH-16-6vx" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="173" y="20" width="75" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell4" id="ISe-uh-sL2" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="8" y="86" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell4" id="ISe-uh-sL2" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="157" y="86" width="75" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell5" id="1Gg-od-Rsw" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="8" y="152" width="75" height="62"/>
+                                <rect key="frame" x="91" y="86" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="W2t-o9-p5t">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="256" height="20"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tmr-NQ-jdX">
-                            <rect key="frame" x="0.0" y="214" width="240" height="20"/>
+                            <rect key="frame" x="0.0" y="148" width="256" height="20"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
@@ -1214,7 +1257,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eXw-EK-hki">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="aGL-Af-J1P">
                             <size key="itemSize" width="240" height="240"/>
                             <size key="headerReferenceSize" width="0.0" height="15"/>
@@ -1229,30 +1272,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31d-Kc-cYd">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                            </variation>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31d-Kc-cYd">
+                                            <frame key="frameInset" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKH-6a-Jmg">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                            </variation>
+                                        <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKH-6a-Jmg">
+                                            <frame key="frameInset" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-eE-7lw" customClass="SavePlusOverlay" customModule="RocketPaint" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="0.0" colorSpace="calibratedRGB"/>
-                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                            </variation>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-eE-7lw" customClass="SavePlusOverlay" customModule="RocketPaint" customModuleProvider="target">
+                                            <frame key="frameInset" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="31d-Kc-cYd"/>
@@ -1278,16 +1314,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-R1-j70">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                            </variation>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-R1-j70">
+                                            <frame key="frameInset" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="hoB-R1-j70"/>
@@ -1308,9 +1341,8 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell4" id="Rw4-Em-Ohu" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="750" width="240" height="240"/>
@@ -1318,9 +1350,8 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell5" id="I48-8V-3DN" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="995" width="240" height="240"/>
@@ -1328,9 +1359,8 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="04m-e7-kGb">
@@ -1360,7 +1390,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PJO-CU-yyl">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Ahi-VZ-ff2">
                             <size key="itemSize" width="240" height="240"/>
                             <size key="headerReferenceSize" width="0.0" height="15"/>
@@ -1375,14 +1405,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-DL-6Sz" customClass="CanvasClearOverlay" customModule="RocketPaint" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                            </variation>
+                                        <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-DL-6Sz" customClass="CanvasClearOverlay" customModule="RocketPaint" customModuleProvider="target">
+                                            <frame key="frameInset" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <variation key="default">
                                     <mask key="subviews">

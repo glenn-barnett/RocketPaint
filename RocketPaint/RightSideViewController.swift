@@ -21,65 +21,73 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
 
     @IBOutlet weak var clearCanvasBView: ClearCanvasBView!
 
+    @IBOutlet weak var saveBView: SaveBView!
+    
+    @IBOutlet weak var versionLabel: UILabel!
+
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.versionLabel.text = version
+        }
+        
         imagePicker.delegate = self
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RightSideViewController.lineWidthChanged(_:)),
-            name: Notifications.kLineWidthChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RightSideViewController.lineAlphaChanged(_:)),
-            name: Notifications.kLineAlphaChanged,
+            name: NSNotification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RightSideViewController.colorChanged(_:)),
-            name: Notifications.kColorChanged,
+            name: NSNotification.Name(rawValue: Notifications.kColorChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RightSideViewController.menuOpened(_:)),
-            name: Notifications.kRightMenuOpened,
+            name: NSNotification.Name(rawValue: Notifications.kRightMenuOpened),
             object: nil)
 
     }
 
     
-    @IBAction func lineWidthAdjusted(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineWidthChanged,
+    @IBAction func lineWidthAdjusted(_ sender: AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kLineWidthChanged),
             object: nil,
-            userInfo: ["lineWidth": (sender as! LineWidthSliderView).value])
+            userInfo: ["lineWidth": Float((sender as! LineWidthSliderView).value)])
     }
     
-    @IBAction func lineAlphaAdjusted(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLineAlphaChanged,
+    @IBAction func lineAlphaAdjusted(_ sender: AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kLineAlphaChanged),
             object: nil,
-            userInfo: ["lineAlpha": (sender as! LineAlphaSliderView).value])
+            userInfo: ["lineAlpha": Float((sender as! LineAlphaSliderView).value)])
     }
 
-    func lineWidthChanged(notification:NSNotification){
+    func lineWidthChanged(_ notification:Notification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         sliderLineWidth.value = CGFloat(lineWidth)
     }
     
-    func lineAlphaChanged(notification:NSNotification){
+    func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         sliderLineAlpha.value = CGFloat(lineAlpha)
     }
 
-    func colorChanged(notification:NSNotification){
+    func colorChanged(_ notification:Notification){
         let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
 
         clearCanvasBView.iconColor = selectedColor
@@ -93,61 +101,61 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
 
     }
 
-    func menuOpened(notification:NSNotification){
-        clearCanvasBView.iconColor = UIColor.whiteColor()
+    func menuOpened(_ notification:Notification){
+        clearCanvasBView.iconColor = UIColor.white
         clearCanvasBView.setNeedsDisplay()
     }
     
-    @IBAction func pickedPen(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedPen(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "Pen"])
     }
-    @IBAction func pickedLine(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedLine(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "Line"])
     }
-    @IBAction func pickedRectSolid(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedRectSolid(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "RectSolid"])
     }
-    @IBAction func pickedRectOutline(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedRectOutline(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "RectOutline"])
     }
-    @IBAction func pickedEllipseSolid(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedEllipseSolid(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "EllipseSolid"])
     }
-    @IBAction func pickedEllipseOutline(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedEllipseOutline(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "EllipseOutline"])
     }
-    @IBAction func pickedTextSerif(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedTextSerif(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "TextSerif"])
     }
-    @IBAction func pickedTextSans(sender : AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kBrushChanged,
+    @IBAction func pickedTextSans(_ sender : AnyObject) {
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kBrushChanged),
             object: nil,
             userInfo: ["brush": "TextSans"])
     }
 
-    @IBAction func clearTapped(sender : AnyObject) {
+    @IBAction func clearTapped(_ sender : AnyObject) {
         
         if(DrawingService.SharedInstance.isModified) {
         
@@ -155,19 +163,19 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
             
             let alertMessage = "To erase your work, choose \"Erase\".\nTo keep your work, choose \"Cancel\""
             
-            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                 // ...
             }
             alertController.addAction(cancelAction)
             
-            let destructiveAction = UIAlertAction(title: "Erase", style: .Destructive) { (action) in
+            let destructiveAction = UIAlertAction(title: "Erase", style: .destructive) { (action) in
                 self.executeClear()
             }
             alertController.addAction(destructiveAction)
             
-            self.presentViewController(alertController, animated: true) { }
+            self.present(alertController, animated: true) { }
             // post notif - CONFIRM_OVERWRITE
         }
         else {
@@ -177,10 +185,10 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func executeClear() {
-        let clearColor = self.clearCanvasBView.iconColor.colorWithAlphaComponent(1.0)
+        let clearColor = self.clearCanvasBView.iconColor.withAlphaComponent(1.0)
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kCanvasCleared,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil,
             userInfo: ["color": clearColor])
         
@@ -192,35 +200,35 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
         clearColor.getHue(&srcHue, saturation: &srcSaturation, brightness: &srcBrightness, alpha: &srcAlpha)
         
         if(!(srcBrightness > 0.98 && srcSaturation < 0.02)) {
-            NSNotificationCenter.defaultCenter().postNotificationName(
-                Notifications.kColorChanged,
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: Notifications.kColorChanged),
                 object: nil,
-                userInfo: ["color": UIColor.whiteColor()])
+                userInfo: ["color": UIColor.white])
         }
  
     }
     
-    @IBAction func loadTapped(sender : AnyObject) {
+    @IBAction func loadTapped(_ sender : AnyObject) {
 
         if(DrawingService.SharedInstance.isModified) {
             let alertTitle = "Load a Photo?"
             
             let alertMessage = "Selecting a photo to load will overwrite your work"
             
-            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                 // ...
             }
             alertController.addAction(cancelAction)
             
-            let destructiveAction = UIAlertAction(title: "Load a Photo", style: .Destructive) { (action) in
+            let destructiveAction = UIAlertAction(title: "Load a Photo", style: .destructive) { (action) in
                 // ...
                 self.executeLoad()
             }
             alertController.addAction(destructiveAction)
             
-            self.presentViewController(alertController, animated: true) { }
+            self.present(alertController, animated: true) { }
         } else {
             // not modified, just do it
             executeLoad()
@@ -229,22 +237,22 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
     
     func executeLoad() {
         self.imagePicker.allowsEditing = false
-        self.imagePicker.sourceType = .PhotoLibrary
+        self.imagePicker.sourceType = .photoLibrary
         
-        self.presentViewController(self.imagePicker, animated: true, completion: nil)
+        self.present(self.imagePicker, animated: true, completion: nil)
     
     }
     
-    @IBAction func saveTapped(sender : AnyObject) {
+    @IBAction func saveTapped(_ sender : AnyObject) {
         // compose the image against the canvas color
         let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
         
         let imageView = UIImageView(image: composedImage)
-        imageView.frame = CGRect(x: -200, y: 154, width: 465, height: 620)
-        view.insertSubview(imageView, atIndex: 3)
+        imageView.frame = CGRect(x: -200, y: 154, width: 465, height: 670)
+        view.insertSubview(imageView, belowSubview: saveBView)
         
         // animate it
-        imageView.genieInTransitionWithDuration(0.7, destinationRect: CGRect(x:435, y:855, width: 55, height:1), destinationEdge: BCRectEdge.Top, completion: {
+        imageView.genieInTransition(withDuration: 0.7, destinationRect: CGRect(x:saveBView.frame.minX + 11, y:saveBView.frame.maxY - 11, width: 55, height:2), destinationEdge: BCRectEdge.top, completion: {
             
             imageView.removeFromSuperview()
         })
@@ -252,12 +260,12 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
         // if we've already written the same image and it isn't modified, skip
         CameraRollService.SharedInstance.WriteImage(composedImage)
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kPhotoSaved,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kPhotoSaved),
             object: nil)
     }
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             //            NSNotificationCenter.defaultCenter().postNotificationName(
             //                Notifications.kColorChanged,
@@ -269,13 +277,13 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
                 DrawingService.SharedInstance.loadImage0(pickedImage.imageRotatedByDegrees(90, flip: false));
             }
             
-            dismissViewControllerAnimated(true, completion: {
+            dismiss(animated: true, completion: {
 //                let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
 //                rootViewController!.hideMenuViewController();
             })
            
         } else {
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
         
     }

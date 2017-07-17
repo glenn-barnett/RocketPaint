@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class TimerService {
+open class TimerService {
     static let SharedInstance = TimerService()
     
-    var backupTimer : NSTimer?
+    var backupTimer : Timer?
 
     init() {
-        backupTimer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: #selector(TimerService.backupState), userInfo: nil, repeats: true)
+        backupTimer = Timer.scheduledTimer(timeInterval: 15.0, target: self, selector: #selector(TimerService.backupState), userInfo: nil, repeats: true)
         
     }
     

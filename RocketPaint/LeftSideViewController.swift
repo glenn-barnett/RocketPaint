@@ -8,9 +8,8 @@
 
 import UIKit
 import RESideMenu
-import TOCropViewController
 
-class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
+class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let imagePicker = UIImagePickerController()
     
@@ -27,40 +26,40 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func savePictureTapped(sender : AnyObject) {
+    @IBAction func savePictureTapped(_ sender : AnyObject) {
         // compose the image against the canvas color
         let composedImage = DrawingService.SharedInstance.getImageOnCanvasColor()
         
         CameraRollService.SharedInstance.WriteImage(composedImage)
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kPhotoSaved,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kPhotoSaved),
             object: nil)
         
     }
     
-    @IBAction func loadPictureTapped(sender : AnyObject) {
+    @IBAction func loadPictureTapped(_ sender : AnyObject) {
         // TODO DEAD CODE
         imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.sourceType = .photoLibrary
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
 
-    @IBAction func clearTapped(sender : AnyObject) {
+    @IBAction func clearTapped(_ sender : AnyObject) {
         // TODO DEAD CODE
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kCanvasCleared,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil,
-            userInfo: ["color": UIColor.whiteColor()])
+            userInfo: ["color": UIColor.white])
         
         DrawingService.SharedInstance.resetBrush()
     }
 
-    @IBAction func clearColorTapped(sender : AnyObject) {
+    @IBAction func clearColorTapped(_ sender : AnyObject) {
         // TODO DEAD CODE
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kCanvasCleared,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kCanvasCleared),
             object: nil,
             userInfo: ["color": ColorService.SharedInstance.selectedColor])
         
@@ -68,51 +67,28 @@ class LeftSideViewController: UIViewController, UIImagePickerControllerDelegate,
         DrawingService.SharedInstance.resetBrush()
     }
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             //            NSNotificationCenter.defaultCenter().postNotificationName(
             //                Notifications.kColorChanged,
             //                object: pickedImage)
             
             DrawingService.SharedInstance.loadImage0(pickedImage);
-            let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
+            let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? RESideMenu;
             
-            dismissViewControllerAnimated(true, completion: {
-                rootViewController!.hideMenuViewController();
+            dismiss(animated: true, completion: {
+                rootViewController!.hideViewController();
             })
             
 
-// DISABLED crop controller
-//            let cvc = TOCropViewController(image:pickedImage)
-//            cvc.delegate = self
-//            
-//            cvc.aspectRatioPreset = .PresetCustom
-//            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
-//            cvc.aspectRatioLockEnabled = true
-//            cvc.rotateClockwiseButtonHidden = false
-//            cvc.aspectRatioPickerButtonHidden = true
-//            
-//            dismissViewControllerAnimated(true, completion: {
-//                self.presentViewController(cvc, animated: true, completion: nil)
-//            })
-            
         } else {
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
         
         
         
     }
 
-    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
-
-        DrawingService.SharedInstance.loadImage0(image);
-        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? RESideMenu;
-
-        dismissViewControllerAnimated(true, completion: {
-            rootViewController!.hideMenuViewController();
-        })
-    }
     
     /*
      // MARK: - Navigation

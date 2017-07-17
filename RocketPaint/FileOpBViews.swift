@@ -10,33 +10,33 @@ import Foundation
 import UIKit
 
 class LoadBView: BView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawLoadFromPhotos();
     }
 }
 
 class SaveBView: BView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawSaveToPhotos();
     }
 }
 
 class ClearCanvasBView: BView {
-    var iconColor:UIColor = UIColor.whiteColor()
+    var iconColor:UIColor = UIColor.white
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawClearCanvas(iconColor: iconColor);
     }
 }
 
 class ClearBView: BView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawClearWhite();
     }
 }
 
 class ClearColorBView: IconColoredBView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         RocketPaintStyleKit.drawClearColor(iconColor: iconColor);
     }
 }

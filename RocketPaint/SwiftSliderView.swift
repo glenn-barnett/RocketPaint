@@ -24,7 +24,7 @@ class SwiftSliderView: UIControl {
         didSet { self.setNeedsDisplay(); }
     }
     
-    var brushColor : UIColor = UIColor.orangeColor()
+    var brushColor : UIColor = UIColor.orange
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,46 +46,46 @@ class SwiftSliderView: UIControl {
         return (self.value - self.minimumValue) / (self.maximumValue - self.minimumValue)
     }
     
-    func valueFromPercentage(percentage: CGFloat) -> CGFloat {
+    func valueFromPercentage(_ percentage: CGFloat) -> CGFloat {
         return percentage * (self.maximumValue - self.minimumValue) + self.minimumValue
     }
     
-    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        super.beginTrackingWithTouch(touch, withEvent: event)
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        super.beginTracking(touch, with: event)
         return true
     }
     
-    override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        super.continueTrackingWithTouch(touch, withEvent: event)
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        super.continueTracking(touch, with: event)
         
-        let lastPoint : CGPoint = touch.locationInView(self)
+        let lastPoint : CGPoint = touch.location(in: self)
         moveThumbToPoint(lastPoint)
-        sendActionsForControlEvents(.ValueChanged)
+        sendActions(for: .valueChanged)
         return true
     }
     
-    override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        super.endTrackingWithTouch(touch, withEvent: event)
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with: event)
     }
     
-    func moveThumbToPoint(point: CGPoint) {
-        let percentage : CGFloat = (point.x - 10) / (CGRectGetWidth(self.bounds) - 20);
+    func moveThumbToPoint(_ point: CGPoint) {
+        let percentage : CGFloat = (point.x - 10) / (self.bounds.width - 20);
         
         self.value = valueFromPercentage(percentage)
         
         setNeedsDisplay()
     }
     
-    override func intrinsicContentSize() -> CGSize {
-        return CGSizeMake(UIViewNoIntrinsicMetric, 20)
+    override var intrinsicContentSize : CGSize {
+        return CGSize(width: UIViewNoIntrinsicMetric, height: 20)
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         let sliderFrame: CGRect = rect //GB ADDED   //CGRect(x: 31, y: 41, width: 132, height: 20)
         
         //// General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()!
         
         //// Color Declarations
         let thumbColor = UIColor(red: 0.833, green: 0.833, blue: 0.833, alpha: 1.000)
@@ -94,7 +94,7 @@ class SwiftSliderView: UIControl {
         
         //// Shadow Declarations
         let shadow = NSShadow()
-        shadow.shadowColor = UIColor.darkGrayColor()
+        shadow.shadowColor = UIColor.darkGray
         shadow.shadowOffset = CGSize(width: 0.1, height: -0.1)
         shadow.shadowBlurRadius = 3
         
@@ -105,22 +105,22 @@ class SwiftSliderView: UIControl {
         
         let percentage : CGFloat = self.percentageValue() // GB ADDED
         
-        let thumbRect : CGRect = CGRectMake(CGRectGetMinX(sliderFrame) + floor((CGRectGetWidth(sliderFrame) - 20) * percentage), CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5), 20, 20)
-        let minimumTrackRect : CGRect = CGRectMake(CGRectGetMinX(trackFrame), CGRectGetMinY(trackFrame), floor((CGRectGetWidth(trackFrame)) * percentage), 4)
-        let maximumTrackRect : CGRect = CGRectMake(CGRectGetMinX(trackFrame) + floor((CGRectGetWidth(trackFrame)) * percentage), CGRectGetMinY(trackFrame), CGRectGetWidth(trackFrame) - floor((CGRectGetWidth(trackFrame)) * percentage), 4)
+        let thumbRect : CGRect = CGRect(x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage), y: sliderFrame.minY + floor((sliderFrame.height - 20) * 0.50000 + 0.5), width: 20, height: 20)
+        let minimumTrackRect : CGRect = CGRect(x: trackFrame.minX, y: trackFrame.minY, width: floor((trackFrame.width) * percentage), height: 4)
+        let maximumTrackRect : CGRect = CGRect(x: trackFrame.minX + floor((trackFrame.width) * percentage), y: trackFrame.minY, width: trackFrame.width - floor((trackFrame.width) * percentage), height: 4)
         
         
         //// Track
         //// Minimum Track Drawing
-        let minimumTrackPath = UIBezierPath(roundedRect: minimumTrackRect, byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.BottomLeft], cornerRadii: CGSize(width: 2, height: 2))
-        minimumTrackPath.closePath()
+        let minimumTrackPath = UIBezierPath(roundedRect: minimumTrackRect, byRoundingCorners: [UIRectCorner.topLeft, UIRectCorner.bottomLeft], cornerRadii: CGSize(width: 2, height: 2))
+        minimumTrackPath.close()
         minimumTrackColor.setFill()
         minimumTrackPath.fill()
         
         
         //// Maximum Track Drawing
-        let maximumTrackPath = UIBezierPath(roundedRect: maximumTrackRect, byRoundingCorners: [UIRectCorner.TopRight, UIRectCorner.BottomRight], cornerRadii: CGSize(width: 2, height: 2))
-        maximumTrackPath.closePath()
+        let maximumTrackPath = UIBezierPath(roundedRect: maximumTrackRect, byRoundingCorners: [UIRectCorner.topRight, UIRectCorner.bottomRight], cornerRadii: CGSize(width: 2, height: 2))
+        maximumTrackPath.close()
         maximumTrackColor.setFill()
         maximumTrackPath.fill()
         
@@ -128,27 +128,27 @@ class SwiftSliderView: UIControl {
         
         
         //// Thumb Drawing
-        let thumbPath = UIBezierPath(ovalInRect: thumbRect)
+        let thumbPath = UIBezierPath(ovalIn: thumbRect)
         thumbColor.setFill()
         thumbPath.fill()
         
         ////// Thumb Inner Shadow
-        CGContextSaveGState(context)
-        CGContextClipToRect(context, thumbPath.bounds)
-        CGContextSetShadow(context, CGSize.zero, 0)
-        CGContextSetAlpha(context, CGColorGetAlpha((shadow.shadowColor as! UIColor).CGColor))
-        CGContextBeginTransparencyLayer(context, nil)
-        let thumbOpaqueShadow = (shadow.shadowColor as! UIColor).colorWithAlphaComponent(1)
-        CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, thumbOpaqueShadow.CGColor)
-        CGContextSetBlendMode(context, .SourceOut)
-        CGContextBeginTransparencyLayer(context, nil)
+        context.saveGState()
+        context.clip(to: thumbPath.bounds)
+        context.setShadow(offset: CGSize.zero, blur: 0)
+        context.setAlpha((shadow.shadowColor as! UIColor).cgColor.alpha)
+        context.beginTransparencyLayer(auxiliaryInfo: nil)
+        let thumbOpaqueShadow = (shadow.shadowColor as! UIColor).withAlphaComponent(1)
+        context.setShadow(offset: shadow.shadowOffset, blur: shadow.shadowBlurRadius, color: thumbOpaqueShadow.cgColor)
+        context.setBlendMode(.sourceOut)
+        context.beginTransparencyLayer(auxiliaryInfo: nil)
         
         thumbOpaqueShadow.setFill()
         thumbPath.fill()
         
-        CGContextEndTransparencyLayer(context)
-        CGContextEndTransparencyLayer(context)
-        CGContextRestoreGState(context)
+        context.endTransparencyLayer()
+        context.endTransparencyLayer()
+        context.restoreGState()
         
         
     }

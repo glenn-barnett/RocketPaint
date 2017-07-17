@@ -9,13 +9,12 @@
 import Foundation
 import RESideMenu
 import Photos
-import TOCropViewController
 
-class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDelegate {
+class RootViewController: RESideMenu, RESideMenuDelegate {
 
-    var rightSideViewController : RightSideViewController?;
+    var rightSideViewController : RightSideViewController?
     
-        override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
     }
@@ -23,16 +22,16 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RootViewController.hideSideMenus(_:)),
-            name: Notifications.kBrushChanged,
+            name: NSNotification.Name(rawValue: Notifications.kBrushChanged),
             object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(RootViewController.photoLoaded(_:)),
-            name: Notifications.kPhotoLoaded,
+            name: NSNotification.Name(rawValue: Notifications.kPhotoLoaded),
             object: nil)
 
 //        NSNotificationCenter.defaultCenter().addObserver(
@@ -42,64 +41,50 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
 //            object: nil)
 
         self.parallaxEnabled = false
-        self.contentViewShadowColor = UIColor.blackColor()
+        self.contentViewShadowColor = UIColor.black
         self.contentViewShadowRadius = 30.0
         
         // Do any additional setup after loading the view.
     }
     
-    func hideSideMenus(notification:NSNotification){
-        self.hideMenuViewController()
+    func hideSideMenus(_ notification:Notification){
+        self.hideViewController()
     }
-    func photoLoaded(notification:NSNotification){
+    func photoLoaded(_ notification:Notification){
 //        self.hideMenuViewController()
         let asset = notification.userInfo!["phAsset"] as! PHAsset
 
         let options = PHImageRequestOptions()
-        options.networkAccessAllowed = true
-        options.deliveryMode = PHImageRequestOptionsDeliveryMode.HighQualityFormat
-        options.synchronous = true
+        options.isNetworkAccessAllowed = true
+        options.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
+        options.isSynchronous = true
 
-        PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSize(width: 768, height: 1024), contentMode:.AspectFit, options:options, resultHandler:{(image, info)in
+        PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 768, height: 1024), contentMode:.aspectFit, options:options, resultHandler:{(image, info)in
 
-            let cvc = TOCropViewController(image:image)
-            cvc.delegate = self
+            DrawingService.SharedInstance.loadImage0(image!);
             
-            cvc.aspectRatioPreset = .PresetCustom
-            cvc.customAspectRatio = CGSize(width: 768, height: 1024)
-            cvc.aspectRatioLockEnabled = true
-            cvc.rotateClockwiseButtonHidden = false
-            cvc.aspectRatioPickerButtonHidden = true
-            
-            self.presentViewController(cvc, animated: true, completion: nil)
+            self.dismiss(animated: true, completion:nil)
 
         })
         
         
     }
 
-    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
-        
-        DrawingService.SharedInstance.loadImage0(image);
-        
-        dismissViewControllerAnimated(true, completion:nil)
-    }
-
     override func awakeFromNib() {
         
-        self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
-        self.contentViewShadowColor = UIColor.blackColor();
-        self.contentViewShadowOffset = CGSizeMake(0, 0);
+        self.menuPreferredStatusBarStyle = UIStatusBarStyle.lightContent
+        self.contentViewShadowColor = UIColor.black;
+        self.contentViewShadowOffset = CGSize(width: 0, height: 0);
         self.contentViewShadowOpacity = 0.6;
         self.contentViewShadowRadius = 12;
         self.contentViewShadowEnabled = true;
         
         self.panGestureEnabled = false;
         
-        self.contentViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("PaintingViewController"))! as UIViewController
-        self.leftMenuViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("LeftSideViewController"))! as UIViewController
+        self.contentViewController = (self.storyboard?.instantiateViewController(withIdentifier: "PaintingViewController"))! as UIViewController
+        self.leftMenuViewController = (self.storyboard?.instantiateViewController(withIdentifier: "LeftSideViewController"))! as UIViewController
         
-        rightSideViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("RightSideViewController"))! as? RightSideViewController;
+        rightSideViewController = (self.storyboard?.instantiateViewController(withIdentifier: "RightSideViewController"))! as? RightSideViewController;
         self.rightMenuViewController = rightSideViewController;
 
         AppDelegate.promptPhotoLibraryPermission(self)
@@ -111,8 +96,8 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
     func showRightBrushes() {
 //        self.contentViewInPortraitOffsetCenterX = 40.0
 
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kRightMenuOpened,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kRightMenuOpened),
             object: nil)
 
         self.presentRightMenuViewController();
@@ -123,8 +108,8 @@ class RootViewController: RESideMenu, RESideMenuDelegate, TOCropViewControllerDe
 
 //        AppDelegate.promptPhotoLibraryPermission(self)
 
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            Notifications.kLeftMenuOpened,
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Notifications.kLeftMenuOpened),
             object: nil)
         
         self.presentLeftMenuViewController();

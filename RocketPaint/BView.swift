@@ -14,14 +14,14 @@ class BView : UIView {
 
     var disabled = false;
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.alpha = 0.4;
     }
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {}
-    override func touchesCancelled(touches: Set<UITouch>!, withEvent event: UIEvent!) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {}
+    override func touchesCancelled(_ touches: Set<UITouch>!, with event: UIEvent!) {
         self.alpha = self.disabled ? 0.2 : 1.0;
     }
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.alpha = self.disabled ? 0.2 : 1.0;
     }
 
