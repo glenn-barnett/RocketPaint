@@ -16,7 +16,7 @@ struct Math {
     static func randomFractional() -> CGFloat {
         
         if !Math.seeded {
-            let time = Int(Date().timeIntervalSinceReferenceDate)
+            let time = Int(NSDate().timeIntervalSinceReferenceDate)
             srand48(time)
             Math.seeded = true
         }

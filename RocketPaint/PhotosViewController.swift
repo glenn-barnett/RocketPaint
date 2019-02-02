@@ -99,7 +99,7 @@ class PhotosViewController: UICollectionViewController
                 name: Notification.Name(rawValue: Notifications.kPhotoLoaded),
                 object: nil,
 //                userInfo: ["phAsset": images.objectAtIndex(indexPath.item-1) as! PHAsset])
-                userInfo: ["phAsset": images.object(at: indexPath.item) as! PHAsset])
+                userInfo: ["phAsset": images.object(at: indexPath.item) ])
 
             collectionView.setContentOffset(CGPoint.zero, animated: true)
 //        }
@@ -146,7 +146,7 @@ class PhotosViewController: UICollectionViewController
             let cell : PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
             
             //let asset = images.objectAtIndex(indexPath.item-1) as! PHAsset
-            let asset = images.object(at: indexPath.item) as! PHAsset
+            let asset = images.object(at: indexPath.item) 
 
         
             let options = PHImageRequestOptions()
