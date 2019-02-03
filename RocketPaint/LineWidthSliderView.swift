@@ -43,7 +43,7 @@ class LineWidthSliderView: UIControl {
             object: nil)
     }
     
-    func colorChanged(_ notification:Notification){
+    @objc func colorChanged(_ notification:Notification){
         iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
     }
@@ -86,7 +86,7 @@ class LineWidthSliderView: UIControl {
     }
     
     override var intrinsicContentSize : CGSize {
-        return CGSize(width: UIViewNoIntrinsicMetric, height: 20)
+        return CGSize(width: UIView.noIntrinsicMetric, height: 20)
     }
     
     override func draw(_ rect: CGRect) {

@@ -74,20 +74,20 @@ class IconColoredBView: BView {
 
     }
     
-    func colorChanged(_ notification:Notification){
+    @objc func colorChanged(_ notification:Notification){
         iconColor = notification.userInfo!["color"] as! UIColor
         self.setNeedsDisplay()
     }
 
     
-    func lineAlphaChanged(_ notification:Notification){
+    @objc func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         
         iconColor = iconColor.withAlphaComponent(CGFloat(lineAlpha))
         self.setNeedsDisplay();
     }
 
-    func lineWidthChanged(_ notification:Notification){
+    @objc func lineWidthChanged(_ notification:Notification){
         let inputLineWidth = notification.userInfo!["lineWidth"] as! Float
         let adjustedLineWidth = getLineWidthMin() + (inputLineWidth / 40.0) * (getLineWidthMax() - getLineWidthMin());
         

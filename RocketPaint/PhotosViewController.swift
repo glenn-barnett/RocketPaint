@@ -42,12 +42,12 @@ class PhotosViewController: UICollectionViewController
 
     }
     
-    func photosMenuOpened(_ notification:Notification) {
+    @objc func photosMenuOpened(_ notification:Notification) {
         self.collectionView?.reloadData()
         
     }
     
-    func photoSaved(_ notification:Notification) {
+    @objc func photoSaved(_ notification:Notification) {
         let time : DispatchTime = .now() + .milliseconds(500)
         let time2 : DispatchTime = .now() + .milliseconds(1000)
         
@@ -154,7 +154,7 @@ class PhotosViewController: UICollectionViewController
             options.isSynchronous = false
 
             PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 480, height: 640), contentMode:.aspectFit, options:options, resultHandler:{(image, info) in
-                cell.ImageView?.contentMode = UIViewContentMode.scaleAspectFit
+                cell.ImageView?.contentMode = UIView.ContentMode.scaleAspectFit
                 cell.ImageView?.image = image
             })
             

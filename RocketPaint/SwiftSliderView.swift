@@ -77,7 +77,7 @@ class SwiftSliderView: UIControl {
     }
     
     override var intrinsicContentSize : CGSize {
-        return CGSize(width: UIViewNoIntrinsicMetric, height: 20)
+        return CGSize(width: UIView.noIntrinsicMetric, height: 20)
     }
     
     override func draw(_ rect: CGRect) {

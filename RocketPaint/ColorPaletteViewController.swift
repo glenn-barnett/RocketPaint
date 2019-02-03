@@ -84,7 +84,7 @@ class ColorPaletteViewController: UICollectionViewController
         
     }
     
-    func colorChanged(_ notification:Notification){
+    @objc func colorChanged(_ notification:Notification){
         colorService.selectedColor = notification.userInfo!["color"] as! UIColor
         
         // derive variants!
@@ -94,16 +94,16 @@ class ColorPaletteViewController: UICollectionViewController
         collectionView?.reloadData()
     }
     
-    func colorUsed(_ notification:Notification){
+    @objc func colorUsed(_ notification:Notification){
         // refresh table
         self.collectionView!.reloadData()
     }
     
-    func colorPaletteClosed(_ notification:Notification){
+    @objc func colorPaletteClosed(_ notification:Notification){
         collectionView!.setContentOffset(CGPoint.zero, animated: true)
     }
     
-    func lineAlphaChanged(_ notification:Notification){
+    @objc func lineAlphaChanged(_ notification:Notification){
         lastAlpha = notification.userInfo!["lineAlpha"] as! Float
     }
     

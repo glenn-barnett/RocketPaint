@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let OKAction = UIAlertAction(title: "OK, show me where to enable it", style: .default) { (action) in
             DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
-                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+                UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
             }
         }
         mustEnableController.addAction(OKAction)
@@ -120,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         application.isStatusBarHidden = true
         

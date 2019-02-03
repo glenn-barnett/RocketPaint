@@ -77,7 +77,7 @@ class EasterEggDrawingView : UIView {
 //    }
     
     
-    func tick() {
+    @objc func tick() {
         time = time - 1;
         if time == 0 { timer.invalidate() }
         

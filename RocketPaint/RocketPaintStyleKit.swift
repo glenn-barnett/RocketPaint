@@ -600,9 +600,9 @@ open class RocketPaintStyleKit : NSObject {
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: lineWidthTextSize), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.systemFont(ofSize: lineWidthTextSize), convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): iconColor, convertFromNSAttributedStringKey(NSAttributedString.Key.paragraphStyle): textStyle]
 
-        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 2), withAttributes: textFontAttributes)
+        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 2), withAttributes: convertToOptionalNSAttributedStringKeyDictionary(textFontAttributes))
     }
 
     open class func drawWTextSerif(iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
@@ -659,9 +659,9 @@ open class RocketPaintStyleKit : NSObject {
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: lineWidthTextSize)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont(name: "Georgia", size: lineWidthTextSize)!, convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): iconColor, convertFromNSAttributedStringKey(NSAttributedString.Key.paragraphStyle): textStyle]
 
-        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 1), withAttributes: textFontAttributes)
+        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 1), withAttributes: convertToOptionalNSAttributedStringKeyDictionary(textFontAttributes))
     }
 
     open class func drawWRectSolid(iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
@@ -940,9 +940,9 @@ open class RocketPaintStyleKit : NSObject {
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: lineWidthTextSize), NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.systemFont(ofSize: lineWidthTextSize), convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): iconColor, convertFromNSAttributedStringKey(NSAttributedString.Key.paragraphStyle): textStyle]
 
-        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 2), withAttributes: textFontAttributes)
+        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 2), withAttributes: convertToOptionalNSAttributedStringKeyDictionary(textFontAttributes))
     }
 
     open class func drawGEllipseSolid(iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000)) {
@@ -1108,9 +1108,9 @@ open class RocketPaintStyleKit : NSObject {
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
 
-        let textFontAttributes = [NSFontAttributeName: UIFont(name: "Georgia", size: lineWidthTextSize)!, NSForegroundColorAttributeName: iconColor, NSParagraphStyleAttributeName: textStyle]
+        let textFontAttributes = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont(name: "Georgia", size: lineWidthTextSize)!, convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): iconColor, convertFromNSAttributedStringKey(NSAttributedString.Key.paragraphStyle): textStyle]
 
-        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 1), withAttributes: textFontAttributes)
+        "Aa".draw(in: textRect.insetBy(dx: 0, dy: 1), withAttributes: convertToOptionalNSAttributedStringKeyDictionary(textFontAttributes))
     }
 
     open class func drawGRectOutline(iconColor: UIColor = UIColor(red: 0.320, green: 0.729, blue: 0.800, alpha: 1.000), lineWidth: CGFloat = 6) {
@@ -1973,4 +1973,15 @@ open class RocketPaintStyleKit : NSObject {
         bezierPath.fill()
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

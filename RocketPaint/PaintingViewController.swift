@@ -125,7 +125,7 @@ class PaintingViewController: UIViewController,
         super.viewWillAppear(animated)
         
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-        NotificationCenter.default.addObserver(self, selector: #selector(PaintingViewController.deviceDidRotate(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(PaintingViewController.deviceDidRotate(_:)), name: UIDevice.orientationDidChangeNotification, object: nil)
         
         // Initial device orientation
         self.currentDeviceOrientation = UIDevice.current.orientation
@@ -178,7 +178,7 @@ class PaintingViewController: UIViewController,
         }
     }
     
-    func deviceDidRotate(_ notification: Notification) {
+    @objc func deviceDidRotate(_ notification: Notification) {
         self.currentDeviceOrientation = UIDevice.current.orientation
 
         if(self.currentDeviceOrientation == .faceDown
@@ -186,7 +186,7 @@ class PaintingViewController: UIViewController,
             ) {
             self.EasterEggView.start()
             
-            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.beginFromCurrentState,
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIView.AnimationOptions.beginFromCurrentState,
                                        animations: {
                 self.EasterEggView.alpha = 1.0
                 }, completion: {
@@ -196,7 +196,7 @@ class PaintingViewController: UIViewController,
             
         } else {
 
-            UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.beginFromCurrentState,
+            UIView.animate(withDuration: 2.0, delay: 0.0, options: UIView.AnimationOptions.beginFromCurrentState,
                                        animations: {
                 self.EasterEggView.alpha = 0.0
                 }, completion: {
@@ -277,7 +277,7 @@ class PaintingViewController: UIViewController,
         
     }
 
-    func colorChanged(_ notification:Notification){
+    @objc func colorChanged(_ notification:Notification){
         let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
         
         var hue: CGFloat = 0
@@ -294,7 +294,7 @@ class PaintingViewController: UIViewController,
         
     }
 
-    func brushChanged(_ notification:Notification){
+    @objc func brushChanged(_ notification:Notification){
         let brush = notification.userInfo!["brush"] as! String
 
         DrawingView.lineColor = lastColor
@@ -332,19 +332,19 @@ class PaintingViewController: UIViewController,
         
     }
     
-    func lineWidthChanged(_ notification:Notification){
+    @objc func lineWidthChanged(_ notification:Notification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         requestedLineWidth = CGFloat(lineWidth)
         DrawingView.lineWidth = requestedLineWidth
         enforceMinimumTextSize()
     }
     
-    func lineAlphaChanged(_ notification:Notification){
+    @objc func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         DrawingView.lineAlpha = CGFloat(lineAlpha)
     }
     
-    func canvasCleared(_ notification:Notification){
+    @objc func canvasCleared(_ notification:Notification){
         let canvasColor : UIColor = notification.userInfo!["color"] as! UIColor
         
         colorService.canvasColor = canvasColor
@@ -355,7 +355,7 @@ class PaintingViewController: UIViewController,
         updateUndoRedo()
     }
     
-    func photoLoaded(_ notification:Notification) {
+    @objc func photoLoaded(_ notification:Notification) {
         updateUndoRedo()
     }
     

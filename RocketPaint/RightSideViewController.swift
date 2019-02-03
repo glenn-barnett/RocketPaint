@@ -77,17 +77,17 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
             userInfo: ["lineAlpha": Float((sender as! LineAlphaSliderView).value)])
     }
 
-    func lineWidthChanged(_ notification:Notification){
+    @objc func lineWidthChanged(_ notification:Notification){
         let lineWidth = notification.userInfo!["lineWidth"] as! Float
         sliderLineWidth.value = CGFloat(lineWidth)
     }
     
-    func lineAlphaChanged(_ notification:Notification){
+    @objc func lineAlphaChanged(_ notification:Notification){
         let lineAlpha = notification.userInfo!["lineAlpha"] as! Float
         sliderLineAlpha.value = CGFloat(lineAlpha)
     }
 
-    func colorChanged(_ notification:Notification){
+    @objc func colorChanged(_ notification:Notification){
         let selectedColor : UIColor = notification.userInfo!["color"] as! UIColor
 
         clearCanvasBView.iconColor = selectedColor
@@ -101,7 +101,7 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
 
     }
 
-    func menuOpened(_ notification:Notification){
+    @objc func menuOpened(_ notification:Notification){
         clearCanvasBView.iconColor = UIColor.white
         clearCanvasBView.setNeedsDisplay()
     }
@@ -265,8 +265,11 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
             object: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        if let pickedImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage {
             //            NSNotificationCenter.defaultCenter().postNotificationName(
             //                Notifications.kColorChanged,
             //                object: pickedImage)
@@ -288,4 +291,14 @@ class RightSideViewController: UIViewController, UIImagePickerControllerDelegate
         
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

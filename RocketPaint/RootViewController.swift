@@ -47,10 +47,10 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func hideSideMenus(_ notification:Notification){
+    @objc func hideSideMenus(_ notification:Notification){
         self.hideViewController()
     }
-    func photoLoaded(_ notification:Notification){
+    @objc func photoLoaded(_ notification:Notification){
 //        self.hideMenuViewController()
         let asset = notification.userInfo!["phAsset"] as! PHAsset
 
