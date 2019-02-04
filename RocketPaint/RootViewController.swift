@@ -89,8 +89,9 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
 
         AppDelegate.promptPhotoLibraryPermission(self)
         
-
-        
+        self.scaleContentView = false
+//        self.contentViewScaleValue = 1.0
+        self.contentViewInPortraitOffsetCenterX = 280.0
     }
 
     func showRightBrushes() {
@@ -103,6 +104,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         self.presentRightMenuViewController();
     }
 
+    // DEAD CODE!!
     func showLeftMenu() {
 //        self.contentViewInPortraitOffsetCenterX = -300.0
 

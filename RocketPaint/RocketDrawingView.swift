@@ -23,5 +23,12 @@ class RocketDrawingView: ACEDrawingView {
 //            object: nil)
 
     }
+
+    override var bounds: CGRect {
+        didSet {
+            // Do stuff here
+            print(bounds)
+        }
+    }
     
 }

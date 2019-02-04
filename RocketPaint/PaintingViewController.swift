@@ -111,6 +111,8 @@ class PaintingViewController: UIViewController,
         if(initialLoad) {
             DrawingService.SharedInstance.restoreState()
             DrawingService.SharedInstance.initNotifications()
+        } else {
+            print(self.view.bounds)
         }
         
         initialLoad = false
