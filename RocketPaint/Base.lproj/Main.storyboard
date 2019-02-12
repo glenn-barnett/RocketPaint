@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3M-7Y-qg8">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3M-7Y-qg8">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,231 +27,6 @@
             </objects>
             <point key="canvasLocation" x="89.25" y="-324.75"/>
         </scene>
-        <!--Left Side View Controller-->
-        <scene sceneID="hPe-Pb-lOj">
-            <objects>
-                <viewController storyboardIdentifier="LeftSideViewController" id="CRB-PW-sGX" customClass="LeftSideViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vVL-W4-dsn"/>
-                        <viewControllerLayoutGuide type="bottom" id="jrJ-AS-ZYT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5oM-Bg-7Sn">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="The-Z5-O14" customClass="GradientFadeView" customModule="RocketPaint" customModuleProvider="target">
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maU-Mk-34H" customClass="LoadBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="0as-lc-l4q"/>
-                                            <constraint firstAttribute="width" constant="115" id="emD-sk-Kxl"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="0as-lc-l4q"/>
-                                                <exclude reference="emD-sk-Kxl"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="0as-lc-l4q"/>
-                                                <include reference="emD-sk-Kxl"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="FfK-5e-pbP" appends="YES" id="2cp-jy-FH1"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whg-Wr-ash" customClass="ClearBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="4Ly-aZ-sIL"/>
-                                            <constraint firstAttribute="width" constant="115" id="mHv-o4-pqR"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="4Ly-aZ-sIL"/>
-                                                <exclude reference="mHv-o4-pqR"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="4Ly-aZ-sIL"/>
-                                                <include reference="mHv-o4-pqR"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="laS-po-pFR" appends="YES" id="qxk-MP-EKD"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-U6-pCE" customClass="ClearColorBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="KnB-sq-sLk"/>
-                                            <constraint firstAttribute="width" constant="115" id="OI3-a7-w6e"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="KnB-sq-sLk"/>
-                                                <exclude reference="OI3-a7-w6e"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="KnB-sq-sLk"/>
-                                                <include reference="OI3-a7-w6e"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="FUx-UE-qOm" appends="YES" id="8mP-i6-XGT"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7t-eC-NB9" customClass="SaveBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="2GZ-hP-2o6"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="6Pp-wJ-FZ9"/>
-                                            <constraint firstAttribute="width" constant="115" id="P5X-jM-CD9"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="kfO-3p-CI1"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2GZ-hP-2o6"/>
-                                                <exclude reference="6Pp-wJ-FZ9"/>
-                                                <exclude reference="P5X-jM-CD9"/>
-                                                <exclude reference="kfO-3p-CI1"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="2GZ-hP-2o6"/>
-                                                <include reference="6Pp-wJ-FZ9"/>
-                                                <include reference="P5X-jM-CD9"/>
-                                                <include reference="kfO-3p-CI1"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="udV-cj-ihi" appends="YES" id="JxC-jU-IHS"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="maU-Mk-34H" firstAttribute="top" secondItem="The-Z5-O14" secondAttribute="top" constant="14" id="1Aw-Sr-3hA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Y7t-eC-NB9" secondAttribute="trailing" constant="120" id="6tR-oR-3VM"/>
-                                    <constraint firstAttribute="bottom" secondItem="whg-Wr-ash" secondAttribute="bottom" constant="8" id="CDH-FL-WyC"/>
-                                    <constraint firstAttribute="trailing" secondItem="whg-Wr-ash" secondAttribute="trailing" constant="8" id="GVg-go-Tez"/>
-                                    <constraint firstItem="Y7t-eC-NB9" firstAttribute="top" secondItem="The-Z5-O14" secondAttribute="top" constant="14" id="SyY-VN-Y5r"/>
-                                    <constraint firstAttribute="trailing" secondItem="maU-Mk-34H" secondAttribute="trailing" constant="8" id="dhO-87-l3K"/>
-                                    <constraint firstAttribute="bottom" secondItem="w4X-U6-pCE" secondAttribute="bottom" constant="8" id="wSM-zH-GAb"/>
-                                    <constraint firstAttribute="trailing" secondItem="w4X-U6-pCE" secondAttribute="trailing" constant="120" id="xBi-Tq-sxm"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="maU-Mk-34H"/>
-                                        <exclude reference="whg-Wr-ash"/>
-                                        <exclude reference="w4X-U6-pCE"/>
-                                        <exclude reference="Y7t-eC-NB9"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="6tR-oR-3VM"/>
-                                        <exclude reference="SyY-VN-Y5r"/>
-                                        <exclude reference="1Aw-Sr-3hA"/>
-                                        <exclude reference="dhO-87-l3K"/>
-                                        <exclude reference="wSM-zH-GAb"/>
-                                        <exclude reference="xBi-Tq-sxm"/>
-                                        <exclude reference="CDH-FL-WyC"/>
-                                        <exclude reference="GVg-go-Tez"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="maU-Mk-34H"/>
-                                        <include reference="whg-Wr-ash"/>
-                                        <include reference="w4X-U6-pCE"/>
-                                        <include reference="Y7t-eC-NB9"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="6tR-oR-3VM"/>
-                                        <include reference="SyY-VN-Y5r"/>
-                                        <include reference="1Aw-Sr-3hA"/>
-                                        <include reference="dhO-87-l3K"/>
-                                        <include reference="wSM-zH-GAb"/>
-                                        <include reference="xBi-Tq-sxm"/>
-                                        <include reference="CDH-FL-WyC"/>
-                                        <include reference="GVg-go-Tez"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-dt-hia" userLabel="reside center content">
-                                <frame key="frameInset" minX="529" minY="168" width="240" height="715"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9967240678" green="0.46472928749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jrJ-AS-ZYT" firstAttribute="top" secondItem="The-Z5-O14" secondAttribute="bottom" id="Bqz-nl-1J6"/>
-                            <constraint firstItem="The-Z5-O14" firstAttribute="top" secondItem="5oM-Bg-7Sn" secondAttribute="topMargin" id="PV9-Hu-MhL"/>
-                            <constraint firstItem="The-Z5-O14" firstAttribute="leading" secondItem="5oM-Bg-7Sn" secondAttribute="leadingMargin" constant="-20" id="Wro-0P-GdD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="The-Z5-O14" secondAttribute="trailing" constant="-21" id="kDk-qG-yS1"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="The-Z5-O14"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Bqz-nl-1J6"/>
-                                <exclude reference="PV9-Hu-MhL"/>
-                                <exclude reference="Wro-0P-GdD"/>
-                                <exclude reference="kDk-qG-yS1"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="The-Z5-O14"/>
-                                <include reference="hy8-dt-hia"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Bqz-nl-1J6"/>
-                                <include reference="PV9-Hu-MhL"/>
-                                <include reference="Wro-0P-GdD"/>
-                                <include reference="kDk-qG-yS1"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="768" height="1024"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mHP-m3-b8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FfK-5e-pbP" userLabel="Tap Load">
-                    <connections>
-                        <action selector="loadPictureTapped:" destination="CRB-PW-sGX" id="Ib9-eE-jCE"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="laS-po-pFR" userLabel="Tap Clear">
-                    <connections>
-                        <action selector="clearTapped:" destination="CRB-PW-sGX" id="zOo-cA-OaL"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="FUx-UE-qOm" userLabel="Tap Clear Color">
-                    <connections>
-                        <action selector="clearColorTapped:" destination="CRB-PW-sGX" id="FAk-xb-p0O"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="udV-cj-ihi" userLabel="Tap Save">
-                    <connections>
-                        <action selector="savePictureTapped:" destination="CRB-PW-sGX" id="hVt-Oh-Vz7"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-535.5" y="370.5"/>
-        </scene>
         <!--Painting View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -263,9 +39,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hva-ee-yGZ" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hva-ee-yGZ" customClass="RocketDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMS-Ls-Jmm" customClass="HamburgerBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -292,7 +70,8 @@
                                             <outletCollection property="gestureRecognizers" destination="f9k-0Z-a5H" appends="YES" id="c8o-px-ZU8"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-kx-mDb" customClass="UndoBView" customModule="RocketPaint" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-kx-mDb" customClass="UndoBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="934" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -320,6 +99,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-Av-WXL" customClass="DynamicBrushBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="640" y="8" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -346,7 +126,8 @@
                                             <outletCollection property="gestureRecognizers" destination="lpy-Gl-FKB" appends="YES" id="fsv-GH-cOr"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLF-fh-5sx" customClass="RedoBView" customModule="RocketPaint" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLF-fh-5sx" customClass="RedoBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="640" y="934" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -439,8 +220,10 @@
                                 </variation>
                             </view>
                             <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-s6-nAP" customClass="EasterEggDrawingView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caroline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-6S-51u">
+                                        <rect key="frame" x="0.0" y="279" width="768" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="Dhh-A5-Hzj"/>
                                         </constraints>
@@ -459,6 +242,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uct-To-w6S">
+                                        <rect key="frame" x="0.0" y="539" width="768" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="fYL-bC-wwV"/>
                                         </constraints>
@@ -618,8 +402,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-b4-mgf" customClass="GradientFadeView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-So-8eL" customClass="ClearCanvasBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -643,6 +429,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvv-GA-LB9" customClass="SaveBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="413" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -664,6 +451,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-9K-ZKo" customClass="LoadBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="328" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -687,7 +475,7 @@
                                         </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-IY-d8p">
-                                        <frame key="frameInset" minX="720" minY="1003" width="42" height="21"/>
+                                        <rect key="frame" x="720" y="1003" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -704,6 +492,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-BZ-8to" userLabel="Palette Container">
+                                <rect key="frame" x="512" y="20" width="256" height="1004"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="ExW-R0-Pea"/>
                                 </constraints>
@@ -722,8 +511,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-uj-vOh" userLabel="Brush Holder">
+                                <rect key="frame" x="249" y="172" width="259" height="754"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9D-tN-iTn" customClass="BrushWirePenBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -747,6 +538,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVR-SY-cb9" customClass="BrushWireLineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="8" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -770,6 +562,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-ls-lYj" customClass="BrushWireEllipseSolidBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="103" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -793,6 +586,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-nx-zLE" customClass="BrushWireEllipseOutlineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="103" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -816,6 +610,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNT-Bd-ml7" customClass="BrushWireRectSolidBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="198" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -839,6 +634,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-Hc-QHK" customClass="BrushWireRectOutlineBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="198" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -862,6 +658,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-kW-z5b" customClass="BrushWireTextSansBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="293" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -885,6 +682,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-Hj-ezS" customClass="BrushWireTextSerifBView" customModule="RocketPaint" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="293" width="120" height="82"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -992,6 +790,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-98-u7G" customClass="LineWidthSliderView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="9" y="8" width="495" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="K2f-4Q-B9Y"/>
@@ -1011,6 +810,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-0B-nLz" customClass="LineAlphaSliderView" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="9" y="83" width="495" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="RdK-Oa-8So"/>
@@ -1058,21 +858,21 @@
                                 <exclude reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Ifv-fP-65p"/>
-                                <exclude reference="kd7-wW-L1b"/>
-                                <exclude reference="slW-Px-2GC"/>
+                                <exclude reference="9Pp-89-ubU"/>
+                                <exclude reference="X1t-mE-ycx"/>
+                                <exclude reference="7Y6-5k-pFg"/>
+                                <exclude reference="9S6-jx-gVo"/>
                                 <exclude reference="3bf-cc-7BI"/>
                                 <exclude reference="TtR-3m-sz0"/>
                                 <exclude reference="mmN-wE-Um1"/>
+                                <exclude reference="21s-47-Ers"/>
+                                <exclude reference="oBU-qv-o1M"/>
                                 <exclude reference="DfU-zw-v6g"/>
                                 <exclude reference="Ofr-JD-FoI"/>
                                 <exclude reference="Xuu-xH-4yP"/>
-                                <exclude reference="7Y6-5k-pFg"/>
-                                <exclude reference="9S6-jx-gVo"/>
-                                <exclude reference="21s-47-Ers"/>
-                                <exclude reference="oBU-qv-o1M"/>
-                                <exclude reference="9Pp-89-ubU"/>
-                                <exclude reference="X1t-mE-ycx"/>
+                                <exclude reference="Ifv-fP-65p"/>
+                                <exclude reference="kd7-wW-L1b"/>
+                                <exclude reference="slW-Px-2GC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1084,21 +884,21 @@
                                 <include reference="Xeh-0B-nLz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Ifv-fP-65p"/>
-                                <include reference="kd7-wW-L1b"/>
-                                <include reference="slW-Px-2GC"/>
+                                <include reference="9Pp-89-ubU"/>
+                                <include reference="X1t-mE-ycx"/>
+                                <include reference="7Y6-5k-pFg"/>
+                                <include reference="9S6-jx-gVo"/>
                                 <include reference="3bf-cc-7BI"/>
                                 <include reference="TtR-3m-sz0"/>
                                 <include reference="mmN-wE-Um1"/>
+                                <include reference="21s-47-Ers"/>
+                                <include reference="oBU-qv-o1M"/>
                                 <include reference="DfU-zw-v6g"/>
                                 <include reference="Ofr-JD-FoI"/>
                                 <include reference="Xuu-xH-4yP"/>
-                                <include reference="7Y6-5k-pFg"/>
-                                <include reference="9S6-jx-gVo"/>
-                                <include reference="21s-47-Ers"/>
-                                <include reference="oBU-qv-o1M"/>
-                                <include reference="9Pp-89-ubU"/>
-                                <include reference="X1t-mE-ycx"/>
+                                <include reference="Ifv-fP-65p"/>
+                                <include reference="kd7-wW-L1b"/>
+                                <include reference="slW-Px-2GC"/>
                             </mask>
                         </variation>
                     </view>
@@ -1177,7 +977,7 @@
             <objects>
                 <collectionViewController id="nLV-Lp-BLU" customClass="ColorPaletteViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gE0-Gn-SbX">
-                        <rect key="frame" x="0.0" y="0.0" width="256" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="kRH-KK-E4f">
@@ -1187,7 +987,7 @@
                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell" id="erq-wj-bWy" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PaletteCell" id="erq-wj-bWy" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="8" y="20" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1195,8 +995,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell2" id="OzW-2o-DGe" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="91" y="20" width="75" height="62"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PaletteCell2" id="OzW-2o-DGe" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="90.5" y="20" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
@@ -1204,7 +1004,7 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell3" id="5gH-16-6vx" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PaletteCell3" id="5gH-16-6vx" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="173" y="20" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1213,7 +1013,7 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell4" id="ISe-uh-sL2" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PaletteCell4" id="ISe-uh-sL2" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
                                 <rect key="frame" x="8" y="86" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1222,8 +1022,8 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaletteCell5" id="1Gg-od-Rsw" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="91" y="86" width="75" height="62"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PaletteCell5" id="1Gg-od-Rsw" customClass="ColorCell" customModule="RocketPaint" customModuleProvider="target">
+                                <rect key="frame" x="90.5" y="86" width="75" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="62"/>
@@ -1249,199 +1049,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAC-CM-mgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687" y="1327.5"/>
-        </scene>
-        <!--Photos View Controller-->
-        <scene sceneID="GKg-rT-hUD">
-            <objects>
-                <collectionViewController id="Iub-H6-rOi" customClass="PhotosViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eXw-EK-hki">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="800"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="aGL-Af-J1P">
-                            <size key="itemSize" width="240" height="240"/>
-                            <size key="headerReferenceSize" width="0.0" height="15"/>
-                            <size key="footerReferenceSize" width="0.0" height="20"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SaveNewCell" id="6ng-d0-fDt" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="15" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31d-Kc-cYd">
-                                            <frame key="frameInset" width="240" height="240"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKH-6a-Jmg">
-                                            <frame key="frameInset" width="240" height="240"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-eE-7lw" customClass="SavePlusOverlay" customModule="RocketPaint" customModuleProvider="target">
-                                            <frame key="frameInset" width="240" height="240"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="0.664216162" blue="0.0062074390320000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="31d-Kc-cYd"/>
-                                        <exclude reference="AKH-6a-Jmg"/>
-                                        <exclude reference="tN4-eE-7lw"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="31d-Kc-cYd"/>
-                                        <include reference="AKH-6a-Jmg"/>
-                                        <include reference="tN4-eE-7lw"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="ImageView" destination="31d-Kc-cYd" id="1G3-fh-J5n"/>
-                                </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="0C0-4G-hZv" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="260" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-R1-j70">
-                                            <frame key="frameInset" width="240" height="240"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="hoB-R1-j70"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="hoB-R1-j70"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="ImageView" destination="hoB-R1-j70" id="wyA-nd-YQv"/>
-                                </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell3" id="WV2-TD-DJG" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="505" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell4" id="Rw4-Em-Ohu" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="750" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell5" id="I48-8V-3DN" customClass="PhotoCell" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="995" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </collectionViewCell>
-                        </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="04m-e7-kGb">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="15"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fih-Jk-OXa">
-                            <rect key="frame" x="0.0" y="1235" width="240" height="20"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
-                        <connections>
-                            <outlet property="dataSource" destination="Iub-H6-rOi" id="Ktj-xl-ZjS"/>
-                            <outlet property="delegate" destination="Iub-H6-rOi" id="8Vm-vc-MLl"/>
-                        </connections>
-                    </collectionView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="240" height="800"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="coK-dj-9Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-679.5" y="1135.5"/>
-        </scene>
-        <!--Blank Canvases View Controller-->
-        <scene sceneID="h5P-Lh-4XW">
-            <objects>
-                <collectionViewController id="goi-4P-Mol" customClass="BlankCanvasesViewController" customModule="RocketPaint" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PJO-CU-yyl">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="800"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Ahi-VZ-ff2">
-                            <size key="itemSize" width="240" height="240"/>
-                            <size key="headerReferenceSize" width="0.0" height="15"/>
-                            <size key="footerReferenceSize" width="0.0" height="20"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlankCanvasCell" id="HmU-ZN-y69" userLabel="BlankCanvasCell">
-                                <rect key="frame" x="0.0" y="15" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-DL-6Sz" customClass="CanvasClearOverlay" customModule="RocketPaint" customModuleProvider="target">
-                                            <frame key="frameInset" width="240" height="240"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </view>
-                                    </subviews>
-                                </view>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="G2q-DL-6Sz"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="G2q-DL-6Sz"/>
-                                    </mask>
-                                </variation>
-                            </collectionViewCell>
-                        </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OWB-E3-7Vg">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="15"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f2b-A1-hI6">
-                            <rect key="frame" x="0.0" y="255" width="240" height="20"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
-                        <connections>
-                            <outlet property="dataSource" destination="goi-4P-Mol" id="DXF-7c-J4R"/>
-                            <outlet property="delegate" destination="goi-4P-Mol" id="hhN-XR-HWu"/>
-                        </connections>
-                    </collectionView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="240" height="800"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RDX-nb-GA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-340.5" y="1135.5"/>
         </scene>
     </scenes>
 </document>

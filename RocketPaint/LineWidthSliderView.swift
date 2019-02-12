@@ -162,7 +162,7 @@ class LineWidthSliderView: UIControl {
                 ),
             radius: minRadius + percentageValue() * (maxRadius - minRadius),
             startAngle: 0,
-            endAngle: CGFloat(M_PI * 2),
+            endAngle: CGFloat(Double.pi * 2),
             clockwise: true)
         
         iconColor.withAlphaComponent(1.0).setFill()

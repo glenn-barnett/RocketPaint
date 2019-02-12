@@ -172,7 +172,7 @@ class LineAlphaSliderView: UIControl {
                 ),
             radius: 20,
             startAngle: 0,
-            endAngle: CGFloat(M_PI),
+            endAngle: CGFloat(Double.pi),
             clockwise: true)
         
         iconColor.withAlphaComponent(1.0).setFill()
@@ -188,8 +188,8 @@ class LineAlphaSliderView: UIControl {
                 y: sliderFrame.height / 2
             ),
             radius: 20,
-            startAngle: CGFloat(M_PI),
-            endAngle: CGFloat(M_PI*2),
+            startAngle: CGFloat(Double.pi),
+            endAngle: CGFloat(Double.pi*2),
             clockwise: true)
         iconColor.withAlphaComponent(percentage).setFill()
         thumbPath2.fill()

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0D65CF1D3CFF050057CB40 /* BlankCanvasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D65CE1D3CFF050057CB40 /* BlankCanvasesViewController.swift */; };
 		2A0D65D11D3D8D7B0057CB40 /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */; };
 		2A0D65E51D3E59FC0057CB40 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D65D31D3E59FC0057CB40 /* Icon-60.png */; };
 		2A0D65E61D3E59FC0057CB40 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D65D41D3E59FC0057CB40 /* Icon-60@2x.png */; };
@@ -31,10 +30,8 @@
 		2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1582871CCF19D80030BB45 /* ColorCell.swift */; };
 		2A1582B71CD8CF500030BB45 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1582B61CD8CF500030BB45 /* Notifications.swift */; };
 		2A19C4771D24735D0099D1E8 /* RocketPaintStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */; };
-		2A3AFCB21D36E21300131761 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AFCB11D36E21300131761 /* PhotosViewController.swift */; };
 		2A3AFCB41D36E36E00131761 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AFCB31D36E36E00131761 /* PhotoCell.swift */; };
 		2A43D40B1D2695520066FAD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40A1D2695520066FAD0 /* RootViewController.swift */; };
-		2A43D40D1D2696390066FAD0 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40C1D2696390066FAD0 /* LeftSideViewController.swift */; };
 		2A43D40F1D28BD520066FAD0 /* CameraRollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D40E1D28BD520066FAD0 /* CameraRollService.swift */; };
 		2A43D4151D28C37C0066FAD0 /* FileOpBViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4141D28C37C0066FAD0 /* FileOpBViews.swift */; };
 		2A43D4171D28C38A0066FAD0 /* BView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43D4161D28C38A0066FAD0 /* BView.swift */; };
@@ -75,7 +72,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A0D65CE1D3CFF050057CB40 /* BlankCanvasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCanvasesViewController.swift; sourceTree = "<group>"; };
 		2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		2A0D65D31D3E59FC0057CB40 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		2A0D65D41D3E59FC0057CB40 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -99,10 +95,8 @@
 		2A1582871CCF19D80030BB45 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		2A1582B61CD8CF500030BB45 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		2A19C4761D24735D0099D1E8 /* RocketPaintStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketPaintStyleKit.swift; sourceTree = "<group>"; };
-		2A3AFCB11D36E21300131761 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		2A3AFCB31D36E36E00131761 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		2A43D40A1D2695520066FAD0 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		2A43D40C1D2696390066FAD0 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
 		2A43D40E1D28BD520066FAD0 /* CameraRollService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollService.swift; sourceTree = "<group>"; };
 		2A43D4141D28C37C0066FAD0 /* FileOpBViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOpBViews.swift; sourceTree = "<group>"; };
 		2A43D4161D28C38A0066FAD0 /* BView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
@@ -247,11 +241,8 @@
 				2A43D40A1D2695520066FAD0 /* RootViewController.swift */,
 				2A9FA2B81CC2BC28000FF2A4 /* PaintingViewController.swift */,
 				2AC672D71D91DCF8003ABDA7 /* EasterEggView.swift */,
-				2A43D40C1D2696390066FAD0 /* LeftSideViewController.swift */,
 				2A4B4DEA1D2E7B1300ECBD0C /* RightSideViewController.swift */,
 				2A1582851CCF19A30030BB45 /* ColorPaletteViewController.swift */,
-				2A3AFCB11D36E21300131761 /* PhotosViewController.swift */,
-				2A0D65CE1D3CFF050057CB40 /* BlankCanvasesViewController.swift */,
 				2A9FA2C21CC2BC28000FF2A4 /* Info.plist */,
 				2ADCB6681CE4A72600FDACC0 /* RocketDrawingView.swift */,
 				2A1582871CCF19D80030BB45 /* ColorCell.swift */,
@@ -455,12 +446,10 @@
 				2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */,
 				2AC672D81D91DCF8003ABDA7 /* EasterEggView.swift in Sources */,
 				2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */,
-				2A3AFCB21D36E21300131761 /* PhotosViewController.swift in Sources */,
 				2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */,
 				2A4B4DEB1D2E7B1300ECBD0C /* RightSideViewController.swift in Sources */,
 				2A4B4DE01D2BDB6C00ECBD0C /* RedoBView.swift in Sources */,
 				2A43D40B1D2695520066FAD0 /* RootViewController.swift in Sources */,
-				2A0D65CF1D3CFF050057CB40 /* BlankCanvasesViewController.swift in Sources */,
 				2A19C4771D24735D0099D1E8 /* RocketPaintStyleKit.swift in Sources */,
 				2A43D40F1D28BD520066FAD0 /* CameraRollService.swift in Sources */,
 				2A43D4151D28C37C0066FAD0 /* FileOpBViews.swift in Sources */,
@@ -474,7 +463,6 @@
 				2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */,
 				2A4B4DE41D2BDBBC00ECBD0C /* PaletteBView.swift in Sources */,
 				2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */,
-				2A43D40D1D2696390066FAD0 /* LeftSideViewController.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 				2A4B4DE61D2BDC0700ECBD0C /* IconColoredBView.swift in Sources */,
 				2AEA13091D4A398300A857BE /* SliderView.m in Sources */,
@@ -616,7 +604,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -644,7 +632,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RocketPaint/RocketPaint-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

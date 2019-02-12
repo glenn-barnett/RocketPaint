@@ -82,7 +82,6 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         self.panGestureEnabled = false;
         
         self.contentViewController = (self.storyboard?.instantiateViewController(withIdentifier: "PaintingViewController"))! as UIViewController
-        self.leftMenuViewController = (self.storyboard?.instantiateViewController(withIdentifier: "LeftSideViewController"))! as UIViewController
         
         rightSideViewController = (self.storyboard?.instantiateViewController(withIdentifier: "RightSideViewController"))! as? RightSideViewController;
         self.rightMenuViewController = rightSideViewController;
@@ -102,19 +101,6 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
             object: nil)
 
         self.presentRightMenuViewController();
-    }
-
-    // DEAD CODE!!
-    func showLeftMenu() {
-//        self.contentViewInPortraitOffsetCenterX = -300.0
-
-//        AppDelegate.promptPhotoLibraryPermission(self)
-
-        NotificationCenter.default.post(
-            name: Notification.Name(rawValue: Notifications.kLeftMenuOpened),
-            object: nil)
-        
-        self.presentLeftMenuViewController();
     }
 
 

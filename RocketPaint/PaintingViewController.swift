@@ -264,14 +264,6 @@ class PaintingViewController: UIViewController,
         updateUndoRedo()
     }
 
-    @IBAction func hamburgerTapped(_ sender : AnyObject) {
-        
-        let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? RootViewController;
-        
-        rootViewController!.showLeftMenu();
-        
-    }
-
     @IBAction func brushButtonTapped(_ sender : AnyObject) {
         
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? RootViewController;

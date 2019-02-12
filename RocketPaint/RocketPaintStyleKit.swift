@@ -105,7 +105,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 42.72, y: 48.04)
-        context.rotate(by: -150 * CGFloat(M_PI) / 180)
+        context.rotate(by: -150 * CGFloat(Double.pi) / 180)
 
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint(x: 9.94, y: -0))
@@ -167,7 +167,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 83.44, y: 53.89)
-        context.rotate(by: 150 * CGFloat(M_PI) / 180)
+        context.rotate(by: 150 * CGFloat(Double.pi) / 180)
 
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint(x: -4.22, y: 9.68))
@@ -219,14 +219,14 @@ open class RocketPaintStyleKit : NSObject {
         //// Group
         context.saveGState()
         context.translateBy(x: 79.89, y: 71)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
 
 
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 16.32, y: 55.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint(x: -6, y: 9.68))
@@ -468,7 +468,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval Drawing
         context.saveGState()
         context.translateBy(x: 34.41, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -537,7 +537,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.71, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -570,7 +570,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 82.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         textBoxOutline.setStroke()
@@ -629,7 +629,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 82.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         textBoxOutline.setStroke()
@@ -685,7 +685,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 83.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         iconColor.setFill()
@@ -712,7 +712,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -742,7 +742,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 81.58, y: 54.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 44.15, height: 31.36))
         iconColor.setStroke()
@@ -770,7 +770,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -815,7 +815,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -868,7 +868,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -910,7 +910,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 82.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         textBoxOutline.setStroke()
@@ -981,7 +981,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1032,7 +1032,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval Drawing
         context.saveGState()
         context.translateBy(x: 34.41, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1078,7 +1078,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 82.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         textBoxOutline.setStroke()
@@ -1134,7 +1134,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 81.58, y: 54.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 44.15, height: 31.36))
         iconColor.setStroke()
@@ -1162,7 +1162,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1218,7 +1218,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.71, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1248,7 +1248,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle 2 Drawing
         context.saveGState()
         context.translateBy(x: 83.58, y: 57.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let rectangle2Path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 49.15, height: 37.36))
         iconColor.setFill()
@@ -1275,7 +1275,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1320,7 +1320,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Oval 2 Drawing
         context.saveGState()
         context.translateBy(x: 34.95, y: 18.04)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 3.51, height: 3.51))
         textBoxOutline.setFill()
@@ -1356,7 +1356,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 115.84, y: 144.73)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint(x: -6.96, y: 9.68))
@@ -1398,7 +1398,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Rectangle Drawing
         context.saveGState()
         context.translateBy(x: 220.06, y: 14.28)
-        context.rotate(by: 45 * CGFloat(M_PI) / 180)
+        context.rotate(by: 45 * CGFloat(Double.pi) / 180)
 
         let rectanglePath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 8, height: 290), cornerRadius: 2)
         utilityIconFaded.setFill()
@@ -1652,7 +1652,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 16.32, y: 55.68)
-        context.rotate(by: -180 * CGFloat(M_PI) / 180)
+        context.rotate(by: -180 * CGFloat(Double.pi) / 180)
 
         let polygonPath = UIBezierPath()
         polygonPath.move(to: CGPoint(x: -6, y: 9.68))
@@ -1732,7 +1732,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 33.12, y: 6.82)
-        context.rotate(by: 180 * CGFloat(M_PI) / 180)
+        context.rotate(by: 180 * CGFloat(Double.pi) / 180)
         context.scaleBy(x: 1, y: -1)
 
         let polygonPath = UIBezierPath()
@@ -1810,7 +1810,7 @@ open class RocketPaintStyleKit : NSObject {
         //// Polygon Drawing
         context.saveGState()
         context.translateBy(x: 9.12, y: -9.68)
-        context.rotate(by: 180 * CGFloat(M_PI) / 180)
+        context.rotate(by: 180 * CGFloat(Double.pi) / 180)
         context.scaleBy(x: 1, y: -1)
 
         let polygonPath = UIBezierPath()

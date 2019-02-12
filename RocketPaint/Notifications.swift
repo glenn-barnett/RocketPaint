@@ -22,7 +22,6 @@ struct Notifications {
     static let kPhotoLoaded = "kPhotoLoaded"
     static let kPhotoSaved = "kPhotoSaved" // to reload data and reset scroll pos to top
 
-    static let kLeftMenuOpened = "kLeftMenuOpened" // to reload data
     static let kRightMenuOpened = "kRightMenuOpened" // to reset clear canvas icon to white
 }
 
