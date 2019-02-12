@@ -29,7 +29,6 @@ class PaintingViewController: UIViewController,
     @IBOutlet var DrawingView : RocketDrawingView!
     @IBOutlet var EasterEggView : EasterEggDrawingView!
     
-    @IBOutlet var HamburgerBView : BView?
     @IBOutlet var UndoBView : BView?
     @IBOutlet var RedoBView : BView?
     @IBOutlet var BrushBView : BView?
@@ -63,7 +62,6 @@ class PaintingViewController: UIViewController,
 
         updateUndoRedo()
         
-        rotatingButtonArray.append(HamburgerBView!);
         rotatingButtonArray.append(UndoBView!);
         rotatingButtonArray.append(RedoBView!);
 

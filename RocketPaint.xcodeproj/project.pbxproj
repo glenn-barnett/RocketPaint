@@ -38,7 +38,6 @@
 		2A4B4DD81D2B5CC400ECBD0C /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DD71D2B5CC400ECBD0C /* DrawingService.swift */; };
 		2A4B4DDE1D2BDB5900ECBD0C /* UndoBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DDD1D2BDB5900ECBD0C /* UndoBView.swift */; };
 		2A4B4DE01D2BDB6C00ECBD0C /* RedoBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DDF1D2BDB6C00ECBD0C /* RedoBView.swift */; };
-		2A4B4DE21D2BDB9600ECBD0C /* HamburgerBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DE11D2BDB9600ECBD0C /* HamburgerBView.swift */; };
 		2A4B4DE41D2BDBBC00ECBD0C /* PaletteBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DE31D2BDBBC00ECBD0C /* PaletteBView.swift */; };
 		2A4B4DE61D2BDC0700ECBD0C /* IconColoredBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DE51D2BDC0700ECBD0C /* IconColoredBView.swift */; };
 		2A4B4DE91D2C556100ECBD0C /* DynamicBrushBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */; };
@@ -64,7 +63,6 @@
 		2AE65D891D4FF245001559AA /* checker-20px-darkgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE65D881D4FF245001559AA /* checker-20px-darkgray.png */; };
 		2AE65D8B1D50E6D3001559AA /* PaintcodeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE65D8A1D50E6D3001559AA /* PaintcodeViews.swift */; };
 		2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */; };
-		2AEA13091D4A398300A857BE /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA13081D4A398300A857BE /* SliderView.m */; };
 		2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */; };
 		2AEA130D1D4B9CCC00A857BE /* LineAlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */; };
 		2AFB1E721D74E005009DBB28 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */; };
@@ -103,7 +101,6 @@
 		2A4B4DD71D2B5CC400ECBD0C /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		2A4B4DDD1D2BDB5900ECBD0C /* UndoBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndoBView.swift; sourceTree = "<group>"; };
 		2A4B4DDF1D2BDB6C00ECBD0C /* RedoBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedoBView.swift; sourceTree = "<group>"; };
-		2A4B4DE11D2BDB9600ECBD0C /* HamburgerBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerBView.swift; sourceTree = "<group>"; };
 		2A4B4DE31D2BDBBC00ECBD0C /* PaletteBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteBView.swift; sourceTree = "<group>"; };
 		2A4B4DE51D2BDC0700ECBD0C /* IconColoredBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconColoredBView.swift; sourceTree = "<group>"; };
 		2A4B4DE81D2C556100ECBD0C /* DynamicBrushBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBrushBView.swift; sourceTree = "<group>"; };
@@ -132,8 +129,6 @@
 		2AE65D881D4FF245001559AA /* checker-20px-darkgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checker-20px-darkgray.png"; sourceTree = "<group>"; };
 		2AE65D8A1D50E6D3001559AA /* PaintcodeViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintcodeViews.swift; sourceTree = "<group>"; };
 		2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSliderView.swift; sourceTree = "<group>"; };
-		2AEA13071D4A398300A857BE /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
-		2AEA13081D4A398300A857BE /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthSliderView.swift; sourceTree = "<group>"; };
 		2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaSliderView.swift; sourceTree = "<group>"; };
 		2AFB1E711D74E005009DBB28 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
@@ -196,7 +191,6 @@
 				2A4B4DE51D2BDC0700ECBD0C /* IconColoredBView.swift */,
 				2A4B4DDF1D2BDB6C00ECBD0C /* RedoBView.swift */,
 				2A4B4DDD1D2BDB5900ECBD0C /* UndoBView.swift */,
-				2A4B4DE11D2BDB9600ECBD0C /* HamburgerBView.swift */,
 				2A4B4DE31D2BDBBC00ECBD0C /* PaletteBView.swift */,
 				2A4B4DEE1D2EFAC300ECBD0C /* BrushBViews.swift */,
 				2A79ACE21D3ED9D4007C6996 /* BrushWireBViews.swift */,
@@ -206,8 +200,6 @@
 				2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */,
 				2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */,
 				2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */,
-				2AEA13071D4A398300A857BE /* SliderView.h */,
-				2AEA13081D4A398300A857BE /* SliderView.m */,
 			);
 			name = "Paintcode Classes";
 			sourceTree = "<group>";
@@ -459,13 +451,11 @@
 				2A0D65D11D3D8D7B0057CB40 /* ColorService.swift in Sources */,
 				2A3AFCB41D36E36E00131761 /* PhotoCell.swift in Sources */,
 				2A4B4DD81D2B5CC400ECBD0C /* DrawingService.swift in Sources */,
-				2A4B4DE21D2BDB9600ECBD0C /* HamburgerBView.swift in Sources */,
 				2A9FA2B71CC2BC28000FF2A4 /* AppDelegate.swift in Sources */,
 				2A4B4DE41D2BDBBC00ECBD0C /* PaletteBView.swift in Sources */,
 				2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 				2A4B4DE61D2BDC0700ECBD0C /* IconColoredBView.swift in Sources */,
-				2AEA13091D4A398300A857BE /* SliderView.m in Sources */,
 				2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
