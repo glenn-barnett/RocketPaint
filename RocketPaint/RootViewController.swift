@@ -90,7 +90,7 @@ class RootViewController: RESideMenu, RESideMenuDelegate {
         
         self.scaleContentView = false
 //        self.contentViewScaleValue = 1.0
-        self.contentViewInPortraitOffsetCenterX = 280.0
+        self.contentViewInPortraitOffsetCenterX = 200.0
     }
 
     func showRightBrushes() {

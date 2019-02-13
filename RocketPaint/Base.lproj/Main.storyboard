@@ -363,7 +363,7 @@
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-So-8eL" customClass="ClearCanvasBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="21" y="883" width="79" height="100"/>
+                                        <rect key="frame" x="210" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -387,7 +387,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvv-GA-LB9" customClass="SaveBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="413" y="883" width="79" height="100"/>
+                                        <rect key="frame" x="422" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -409,7 +409,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-9K-ZKo" customClass="LoadBView" customModule="RocketPaint" customModuleProvider="target">
-                                        <rect key="frame" x="328" y="883" width="79" height="100"/>
+                                        <rect key="frame" x="337" y="883" width="79" height="100"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -432,9 +432,12 @@
                                             <outletCollection property="gestureRecognizers" destination="At1-NS-AEs" appends="YES" id="LQS-V5-g8n"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-IY-d8p">
-                                        <rect key="frame" x="720" y="1003" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-IY-d8p">
+                                        <rect key="frame" x="720" y="979" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="bL1-ZW-lEv"/>
+                                            <constraint firstAttribute="height" constant="21" id="jyK-sH-SE2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -443,9 +446,11 @@
                                 <constraints>
                                     <constraint firstItem="Rvv-GA-LB9" firstAttribute="leading" secondItem="6Ve-9K-ZKo" secondAttribute="trailing" constant="6" id="4ec-pH-lwD"/>
                                     <constraint firstAttribute="bottom" secondItem="6Ve-9K-ZKo" secondAttribute="bottom" constant="21" id="75a-YA-hPc"/>
-                                    <constraint firstItem="DcH-So-8eL" firstAttribute="leading" secondItem="gYA-b4-mgf" secondAttribute="leading" constant="21" id="Jx5-Lb-ktP"/>
+                                    <constraint firstAttribute="bottom" secondItem="OQA-IY-d8p" secondAttribute="bottom" constant="4" id="H8W-qM-KdA"/>
+                                    <constraint firstItem="DcH-So-8eL" firstAttribute="leading" secondItem="gYA-b4-mgf" secondAttribute="leading" constant="210" id="Jx5-Lb-ktP"/>
                                     <constraint firstAttribute="bottom" secondItem="DcH-So-8eL" secondAttribute="bottom" constant="21" id="WWF-ua-SX4"/>
-                                    <constraint firstItem="6Ve-9K-ZKo" firstAttribute="leading" secondItem="DcH-So-8eL" secondAttribute="trailing" constant="228" id="XGs-l2-8kM"/>
+                                    <constraint firstItem="6Ve-9K-ZKo" firstAttribute="leading" secondItem="DcH-So-8eL" secondAttribute="trailing" constant="48" id="XGs-l2-8kM"/>
+                                    <constraint firstAttribute="trailing" secondItem="OQA-IY-d8p" secondAttribute="trailing" constant="6" id="ZUR-gG-EvQ"/>
                                     <constraint firstAttribute="bottom" secondItem="Rvv-GA-LB9" secondAttribute="bottom" constant="21" id="jSe-Xp-ofB"/>
                                 </constraints>
                             </view>
@@ -748,7 +753,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-98-u7G" customClass="LineWidthSliderView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="9" y="8" width="495" height="100"/>
+                                <rect key="frame" x="184" y="8" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="K2f-4Q-B9Y"/>
@@ -768,7 +773,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-0B-nLz" customClass="LineAlphaSliderView" customModule="RocketPaint" customModuleProvider="target">
-                                <rect key="frame" x="9" y="83" width="495" height="100"/>
+                                <rect key="frame" x="184" y="83" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="RdK-Oa-8So"/>
@@ -798,9 +803,9 @@
                             <constraint firstItem="Xeh-0B-nLz" firstAttribute="top" secondItem="CEO-uj-vOh" secondAttribute="bottom" constant="-843" id="DfU-zw-v6g"/>
                             <constraint firstItem="gYA-b4-mgf" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-20" id="Ifv-fP-65p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xeh-0B-nLz" secondAttribute="trailing" constant="244" id="Ofr-JD-FoI"/>
-                            <constraint firstItem="Dg8-98-u7G" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-11" id="TtR-3m-sz0"/>
+                            <constraint firstItem="Dg8-98-u7G" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="164" id="TtR-3m-sz0"/>
                             <constraint firstItem="QAO-ke-WvG" firstAttribute="top" secondItem="gYA-b4-mgf" secondAttribute="bottom" id="X1t-mE-ycx"/>
-                            <constraint firstItem="Xeh-0B-nLz" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="-11" id="Xuu-xH-4yP"/>
+                            <constraint firstItem="Xeh-0B-nLz" firstAttribute="leading" secondItem="pHv-p4-YwD" secondAttribute="leadingMargin" constant="164" id="Xuu-xH-4yP"/>
                             <constraint firstItem="gYA-b4-mgf" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="kd7-wW-L1b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dg8-98-u7G" secondAttribute="trailing" constant="244" id="mmN-wE-Um1"/>
                             <constraint firstItem="Kpb-BZ-8to" firstAttribute="top" secondItem="pHv-p4-YwD" secondAttribute="topMargin" id="oBU-qv-o1M"/>
@@ -928,7 +933,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="846.75" y="412.5"/>
+            <point key="canvasLocation" x="846.09375" y="412.5"/>
         </scene>
         <!--Color Palette View Controller-->
         <scene sceneID="5uK-be-48Q">

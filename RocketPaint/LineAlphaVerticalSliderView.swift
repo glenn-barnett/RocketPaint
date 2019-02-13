@@ -38,21 +38,32 @@ class LineAlphaVerticalSliderView: SwiftVerticalSliderView {
     
     
     override func draw(_ rect: CGRect) {
-        
+
+        let lineWidth = CGFloat(2.0)
+
         let buffer = CGFloat(20.0);
         let sliderFrame: CGRect = CGRect(
-            x: rect.origin.x + buffer,
-            y: rect.origin.y,
-            width:rect.size.width - buffer * 2,
-            height:rect.size.height)
+            x: rect.origin.x,
+            y: rect.origin.y + buffer,
+            width:rect.size.width,
+            height:rect.size.height - buffer * 2)
+
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        // This non-generic function dramatically improves compilation times of complex expressions.
+        func fastFloor(_ x: CGFloat) -> CGFloat { return floor(x) }
+
+        //// Color Declarations
+        let maximumTrackColor = UIColor(red: 0.522, green: 0.522, blue: 0.522, alpha: 1.000)
         
-        let context = UIGraphicsGetCurrentContext()
+        //// Variable Declarations
+        let lineWidthSliderScale: CGFloat = (6 + lineWidth * 3) / 20.0
         
         //// Subframes
-        let track: CGRect = CGRect(x: sliderFrame.minX, y: sliderFrame.minY + floor((sliderFrame.height - 4) * 0.50000 + 0.5), width: sliderFrame.width, height: 4)
-        let trackFrame = CGRect(x: track.minX + floor(track.width * 0.00000 + 0.5), y: track.minY, width: floor(track.width * 1.00000 + 0.5) - floor(track.width * 0.00000 + 0.5), height: 4)
+        let track: CGRect = CGRect(x: sliderFrame.minX, y: sliderFrame.minY + fastFloor((sliderFrame.height - 351) * 0.00000 + 0.5), width: sliderFrame.width + 9, height: 351)
+        let trackFrame = CGRect(x: track.minX + fastFloor(track.width * 0.00000 + 0.5), y: track.minY, width: fastFloor(track.width * 1.00000 + 0.5) - fastFloor(track.width * 0.00000 + 0.5), height: 350)
 
-        
+//GB UNTOUCHED DEBRIS BEGIN
         //// AlphaGradient Drawing
 //        let alphaGradientRect = CGRect(x: trackFrame.minX, y: trackFrame.minY - 18, width: trackFrame.width, height: trackFrame.height + 36)
 //        let alphaGradientPath = UIBezierPath(rect: alphaGradientRect)
@@ -84,37 +95,42 @@ class LineAlphaVerticalSliderView: SwiftVerticalSliderView {
             x += checkSize
         }
         
+//GB UNTOUCHED DEBRIS END
 
         
         //// Track
         //// Minimum Track Drawing
-        let minimumTrackPath = UIBezierPath(roundedRect: minimumTrackRect, byRoundingCorners: [UIRectCorner.topLeft, UIRectCorner.bottomLeft], cornerRadii: CGSize(width: 2, height: 2))
+        let minimumTrackPath = UIBezierPath(roundedRect: CGRect(x: trackFrame.minX + 9, y: trackFrame.minY + trackFrame.height - 249, width: fastFloor((trackFrame.width - 9) * 0.25000 + 0.5), height: 250), byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: CGSize(width: 2, height: 2))
         minimumTrackPath.close()
-        UIColor.black.setFill()
+        iconColor.setFill()
         minimumTrackPath.fill()
 
         
-        
         //// Maximum Track Drawing
-        let maximumTrackPath = UIBezierPath(roundedRect: maximumTrackRect, byRoundingCorners: [UIRectCorner.topRight, UIRectCorner.bottomRight], cornerRadii: CGSize(width: 2, height: 2))
+        let maximumTrackPath = UIBezierPath(roundedRect: CGRect(x: trackFrame.minX + fastFloor((trackFrame.width - 12) * 0.69231 + 0.5), y: trackFrame.minY + trackFrame.height - 341, width: trackFrame.width - 12 - fastFloor((trackFrame.width - 12) * 0.69231 + 0.5), height: 88), byRoundingCorners: [.topRight, .bottomRight], cornerRadii: CGSize(width: 2, height: 2))
         maximumTrackPath.close()
-        UIColor.black.setFill()
+        maximumTrackColor.setFill()
         maximumTrackPath.fill()
         
         
         
-        
         //// Thumb Drawing
-        context!.saveGState()
+        //// Thumb Drawing
+        context.saveGState()
+//GB NEW BUT COMMENTED BEGIN
+//        context.translateBy(x: 31.3, y: 113)
+//        context.scaleBy(x: lineWidthSliderScale, y: lineWidthSliderScale)
+//GB NEW BUT COMMENTED END
+
 //        CGContextTranslateCTM(context, sliderFrame.maxX - 104.7, sliderFrame.maxY - 10)
 //        CGContextScaleCTM(context, lineWidthSliderScale, lineWidthSliderScale)
         
         //let thumbPath = UIBezierPath(ovalInRect: thumbRect)
         let thumbPath = UIBezierPath(
             arcCenter: CGPoint(
-                x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage),
+                x: sliderFrame.width / 2,
 //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
-                y: sliderFrame.height / 2
+                y: sliderFrame.minY + floor((sliderFrame.height - 20) * percentage)
                 ),
             radius: 20,
             startAngle: 0,
@@ -129,9 +145,9 @@ class LineAlphaVerticalSliderView: SwiftVerticalSliderView {
 
         let thumbPath2 = UIBezierPath(
             arcCenter: CGPoint(
-                x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage),
+                x: sliderFrame.width / 2,
                 //                y: CGRectGetMinY(sliderFrame) + floor((CGRectGetHeight(sliderFrame) - 20) * 0.50000 + 0.5)
-                y: sliderFrame.height / 2
+                y: sliderFrame.minY + floor((sliderFrame.height - 20) * percentage)
             ),
             radius: 20,
             startAngle: CGFloat(Double.pi),
@@ -141,7 +157,6 @@ class LineAlphaVerticalSliderView: SwiftVerticalSliderView {
         thumbPath2.fill()
         
 
-        context!.restoreGState()
-        
+        context.restoreGState()
     }
 }

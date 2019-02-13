@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		260AB9532213A8150037CD85 /* SwiftVerticalSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AB9522213A8150037CD85 /* SwiftVerticalSliderView.swift */; };
-		260AB9552213A8220037CD85 /* LineWidthVerticalSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AB9542213A8220037CD85 /* LineWidthVerticalSliderView.swift */; };
-		260AB9572213A82D0037CD85 /* LineAlphaVerticalSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260AB9562213A82D0037CD85 /* LineAlphaVerticalSliderView.swift */; };
 		2A0D65D11D3D8D7B0057CB40 /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */; };
 		2A0D65E51D3E59FC0057CB40 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D65D31D3E59FC0057CB40 /* Icon-60.png */; };
 		2A0D65E61D3E59FC0057CB40 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D65D41D3E59FC0057CB40 /* Icon-60@2x.png */; };
@@ -73,9 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		260AB9522213A8150037CD85 /* SwiftVerticalSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftVerticalSliderView.swift; sourceTree = "<group>"; };
-		260AB9542213A8220037CD85 /* LineWidthVerticalSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineWidthVerticalSliderView.swift; sourceTree = "<group>"; };
-		260AB9562213A82D0037CD85 /* LineAlphaVerticalSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAlphaVerticalSliderView.swift; sourceTree = "<group>"; };
 		2A0D65D01D3D8D7B0057CB40 /* ColorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
 		2A0D65D31D3E59FC0057CB40 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		2A0D65D41D3E59FC0057CB40 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -204,11 +198,8 @@
 				2A43D4141D28C37C0066FAD0 /* FileOpBViews.swift */,
 				2AE65D8A1D50E6D3001559AA /* PaintcodeViews.swift */,
 				2AEA13051D4A38AA00A857BE /* SwiftSliderView.swift */,
-				260AB9522213A8150037CD85 /* SwiftVerticalSliderView.swift */,
 				2AEA130A1D4AF3B400A857BE /* LineWidthSliderView.swift */,
-				260AB9542213A8220037CD85 /* LineWidthVerticalSliderView.swift */,
 				2AEA130C1D4B9CCC00A857BE /* LineAlphaSliderView.swift */,
-				260AB9562213A82D0037CD85 /* LineAlphaVerticalSliderView.swift */,
 			);
 			name = "Paintcode Classes";
 			sourceTree = "<group>";
@@ -441,12 +432,10 @@
 				2AE65D8B1D50E6D3001559AA /* PaintcodeViews.swift in Sources */,
 				2ADDD6CB1D59101A0027B067 /* TimerService.swift in Sources */,
 				2A43D4171D28C38A0066FAD0 /* BView.swift in Sources */,
-				260AB9532213A8150037CD85 /* SwiftVerticalSliderView.swift in Sources */,
 				2A9FA2B91CC2BC28000FF2A4 /* PaintingViewController.swift in Sources */,
 				2A4B4DDE1D2BDB5900ECBD0C /* UndoBView.swift in Sources */,
 				2A1582861CCF19A30030BB45 /* ColorPaletteViewController.swift in Sources */,
 				2AD627121D467A1000C4F792 /* NSUserDefaults+UIColor.swift in Sources */,
-				260AB9572213A82D0037CD85 /* LineAlphaVerticalSliderView.swift in Sources */,
 				2AC672D81D91DCF8003ABDA7 /* EasterEggView.swift in Sources */,
 				2AEA130B1D4AF3B400A857BE /* LineWidthSliderView.swift in Sources */,
 				2AD627141D467A4000C4F792 /* NSUserDefaults+UIImage.swift in Sources */,
@@ -467,7 +456,6 @@
 				2A1582881CCF19D80030BB45 /* ColorCell.swift in Sources */,
 				2ADCB6691CE4A72600FDACC0 /* RocketDrawingView.swift in Sources */,
 				2A4B4DE61D2BDC0700ECBD0C /* IconColoredBView.swift in Sources */,
-				260AB9552213A8220037CD85 /* LineWidthVerticalSliderView.swift in Sources */,
 				2AEA13061D4A38AA00A857BE /* SwiftSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +574,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D43C144B037684C02C1EFEE1 /* Pods-RocketPaint.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -615,6 +605,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 767C7B180D54862F453F5666 /* Pods-RocketPaint.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Impresario Digital (3L6DL6862T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
