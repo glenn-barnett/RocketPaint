@@ -10,66 +10,10 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class SwiftSliderView: UIControl {
-
-    var value : CGFloat = 0.5 {
-        didSet { self.setNeedsDisplay(); }
-    }
-
-    var minimumValue : CGFloat = 0.0 {
-        didSet { self.setNeedsDisplay(); }
-    }
+class SwiftVerticalSliderView: SwiftSliderView {
     
-    var maximumValue : CGFloat = 1.0 {
-        didSet { self.setNeedsDisplay(); }
-    }
-    
-    var brushColor : UIColor = UIColor.orange
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configure()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        configure()
-    }
-    
-    func configure() {
-    }
-    
-    func percentageValue() -> CGFloat {
-        if (self.maximumValue == self.minimumValue) {
-            return 0.5
-        }
-        
-        return (self.value - self.minimumValue) / (self.maximumValue - self.minimumValue)
-    }
-    
-    func valueFromPercentage(_ percentage: CGFloat) -> CGFloat {
-        return percentage * (self.maximumValue - self.minimumValue) + self.minimumValue
-    }
-    
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        super.beginTracking(touch, with: event)
-        return true
-    }
-    
-    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        super.continueTracking(touch, with: event)
-        
-        let lastPoint : CGPoint = touch.location(in: self)
-        moveThumbToPoint(lastPoint)
-        sendActions(for: .valueChanged)
-        return true
-    }
-    
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        super.endTracking(touch, with: event)
-    }
-    
-    func moveThumbToPoint(_ point: CGPoint) {
-        let percentage : CGFloat = (point.x - 10) / (self.bounds.width - 20); // keep x, force y to half of width
+    override func moveThumbToPoint(_ point: CGPoint) {
+        let percentage : CGFloat = (point.y - 10) / (self.bounds.height - 25);
         
         self.value = valueFromPercentage(percentage)
         
@@ -77,13 +21,15 @@ class SwiftSliderView: UIControl {
     }
     
     override var intrinsicContentSize : CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: 20) // fixed height
+        return CGSize(width: 20, height: UIView.noIntrinsicMetric) // fixed width
     }
     
     override func draw(_ rect: CGRect) {
         
         let sliderFrame: CGRect = rect //GB ADDED   //CGRect(x: 31, y: 41, width: 132, height: 20)
-        
+
+        let percentage : CGFloat = self.percentageValue() // GB ADDED
+
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -103,7 +49,6 @@ class SwiftSliderView: UIControl {
         let track: CGRect = CGRect(x: sliderFrame.minX, y: sliderFrame.minY + floor((sliderFrame.height - 4) * 0.50000 + 0.5), width: sliderFrame.width, height: 4)
         let trackFrame = CGRect(x: track.minX + floor(track.width * 0.00000 + 0.5), y: track.minY, width: floor(track.width * 1.00000 + 0.5) - floor(track.width * 0.00000 + 0.5), height: 4)
         
-        let percentage : CGFloat = self.percentageValue() // GB ADDED
         
         let thumbRect : CGRect = CGRect(x: sliderFrame.minX + floor((sliderFrame.width - 20) * percentage), y: sliderFrame.minY + floor((sliderFrame.height - 20) * 0.50000 + 0.5), width: 20, height: 20)
         let minimumTrackRect : CGRect = CGRect(x: trackFrame.minX, y: trackFrame.minY, width: floor((trackFrame.width) * percentage), height: 4)
